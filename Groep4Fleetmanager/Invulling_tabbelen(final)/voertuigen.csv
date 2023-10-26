@@ -1,0 +1,41 @@
+Id_Voertuig,Merk,Model,Chassisnummer,Nummerplaat,Brandstoftype,Type_voertuig,Kleur,Aantal_deuren,Bestuurder_Id
+101,Toyota,Corolla,12345678901234567,ABC-123,Diesel,Personenauto,Zwart,4,1
+102,Honda,Civic,23456789012345678,DEF-456,Benzine,Personenauto,Blauw,4,2
+103,Ford,Focus,34567890123456789,GHI-789,Diesel,Personenauto,Rood,4,3
+104,Chevrolet,Cruze,45678901234567890,JKL-012,Benzine,Personenauto,Grijs,4,4
+105,Nissan,Altima,56789012345678901,MNO-345,Diesel,Personenauto,Zilver,4,5
+106,Hyundai,Sonata,67890123456789012,PQR-678,Benzine,Personenauto,Wit,4,6
+107,Subaru,Impreza,78901234567890123,STU-901,Diesel,Personenauto,Zwart,4,7
+108,Mercedes-Benz,C-Class,89012345678901234,VWX-234,Benzine,Personenauto,Zwart,4,8
+109,BMW,3 Series,90123456789012345,YZA-456,Diesel,Personenauto,Blauw,4,9
+110,Audi,A4,01234567890123456,BCD-789,Benzine,Personenauto,Grijs,4,10
+111,Toyota,Camry,11223344556677889,EFG-012,Diesel,Personenauto,Wit,4,11
+112,Honda,Accord,22334455667789001,HIJ-345,Benzine,Personenauto,Zilver,4,12
+113,Ford,Fusion,33445566778890012,KLM-678,Diesel,Personenauto,Zwart,4,13
+114,Chevrolet,Malibu,44556677889901123,NOP-901,Benzine,Personenauto,Rood,4,14
+115,Nissan,Sentra,55667788990011234,QRS-234,Diesel,Personenauto,Grijs,4,15
+116,Hyundai,Elantra,66778899001122345,TUV-345,Benzine,Personenauto,Blauw,4,16
+117,Subaru,Legacy,77889900112233456,VWX-456,Diesel,Personenauto,Wit,4,17
+118,Mercedes-Benz,E-Class,88990011223344567,YZA-567,Benzine,Personenauto,Zwart,4,18
+119,BMW,5 Series,99001122334455678,BCD-678,Diesel,Personenauto,Zwart,4,19
+120,Audi,A6,00112233445566789,EFG-789,Benzine,Personenauto,Grijs,4,20
+121,Toyota,Rav4,11223344556677890,ABC-901,Diesel,SUV,Zilver,4,21
+122,Honda,CR-V,22334455667789012,DEF-234,Benzine,SUV,Rood,4,22
+123,Ford,Escape,33445566778890023,GHI-567,Diesel,SUV,Grijs,4,23
+124,Chevrolet,Traverse,44556677889901134,JKL-890,Benzine,SUV,Blauw,4,24
+125,Nissan,Rogue,55667788990011245,MNO-123,Diesel,SUV,Zwart,4,25
+126,Hyundai,Tucson,66778899001122356,PQR-456,Benzine,SUV,Wit,4,26
+127,Subaru,Outback,77889900112233467,STU-789,Diesel,SUV,Zwart,4,27
+128,Mercedes-Benz,GLC,88990011223344578,VWX-234,Benzine,SUV,Rood,4,28
+129,BMW,X3,99001122334455689,YZA-567,Diesel,SUV,Zilver,4,29
+130,Audi,Q5,00112233445566790,BCD-123,Benzine,SUV,Blauw,4,30
+131,Toyota,Highlander,11223344556677891,XYZ-987,Diesel,SUV,Grijs,4,31
+132,Honda,CR-V,22334455667789012,LMN-654,Benzine,SUV,Zwart,4,32
+133,Ford,Escape,33445566778890023,OPQ-321,Diesel,SUV,Rood,4,33
+134,Chevrolet,Equinox,44556677889901134,RST-123,Benzine,SUV,Blauw,4,34
+135,Nissan,Murano,55667788990011245,UVW-987,Diesel,SUV,Zilver,4,35
+136,Hyundai,Santa Fe,66778899001122356,WXY-456,Benzine,SUV,Wit,4,36
+137,Subaru,Forester,77889900112233467,YZA-789,Diesel,SUV,Rood,4,37
+138,Mercedes-Benz,GLE,88990011223344578,ZAB-101,Benzine,SUV,Zwart,4,38
+139,BMW,X5,99001122334455689,BCD-202,Diesel,SUV,Grijs,4,39
+140,Audi,Q7,00112233445566790,CDE-303,Benzine,SUV,Blauw,4,40
