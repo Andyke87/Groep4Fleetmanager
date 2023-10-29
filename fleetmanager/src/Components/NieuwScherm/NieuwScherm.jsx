@@ -16,7 +16,7 @@ const NieuwScherm = () => {
      </div>
       <div className='thirdScreenContainer'>
         <div className='buttonsThirdScreen'>
-      <button className='buttons' >Voertuigen</button>
+      <button className='buttons' id = '' >Voertuigen</button>
       <button className='buttons' id='selected'>Tankkaarten</button>
       <button className='buttons'id='selected'>Bestuurders</button>
       </div>
