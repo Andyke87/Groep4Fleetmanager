@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Login.css';
 
+
 const Login = () => {
   const [action, setAction] = useState('Login');
   const [gebruikersnaam, setGebruikersnaam] = useState('');
@@ -15,9 +16,12 @@ const Login = () => {
   };
 
   return (
-    <div className='container'>
+
+  
+
+    <div className='containerLogin'>
       <div className='border'>
-      <div className='headerGebruikersnaam'>
+      <div className='headerText'>
         <div className='text'>Gebruikersnaam</div>
       </div>
           <input
@@ -27,7 +31,7 @@ const Login = () => {
             value={gebruikersnaam}
             onChange={(e) => setGebruikersnaam(e.target.value)}
           />
-        <div className='headerWachtwoord'>
+        <div className='headerText'>
           <div className='text'>Wachtwoord</div>
         </div>
           <input
@@ -38,7 +42,7 @@ const Login = () => {
             onChange={(e) => setWachtwoord(e.target.value)}
           />
       <div className="submit-container">
-        <button className="submit" onClick={handleLogin}>
+        <button className="submit" onClick={handleLogin} >
           {action}
         </button>
       </div>
@@ -48,6 +52,13 @@ const Login = () => {
 };
 
 export default Login;
+
+
+
+
+
+
+
 
 
 // const handleLogin = async () => {
