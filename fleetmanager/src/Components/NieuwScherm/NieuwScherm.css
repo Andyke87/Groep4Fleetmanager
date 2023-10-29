@@ -61,9 +61,8 @@ margin-right: 10px;
 
 .thirdScreenContainer{
    
-   
-    width: 675px;
-    height: 659px;
+    
+    height: 759px;
     flex-shrink: 0;
     padding-bottom: 0px;
     
@@ -111,14 +110,14 @@ opacity: 60%;
 }
 table {
     
-    width: 800px;
+    width: auto;
    max-height: 300px;
     border-radius: 5px;
     border: 1px solid #000;
     background: #DDD;
     overflow-y: auto;
     display: block;
-}
+opacity: 100%;}
 
 th {
     border: 1px solid black;
