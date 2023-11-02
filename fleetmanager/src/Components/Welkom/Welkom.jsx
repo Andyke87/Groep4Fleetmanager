@@ -30,7 +30,7 @@ const Welkom = () => {
     
 
      <div className='secondScreenContainer'>
-      <h1 className='nameAdress'>Welkom Patrick</h1>
+      <h1 className='nameAdress'>Welkom Anke</h1>
       <button className='button' onClick={handleVoertuigen} >Voertuigen</button>
       <button className='button' onClick={handleTankkaarten}>Tankkaarten</button>
       <button className='button' onClick={handleBestuurders}>Bestuurders</button>
