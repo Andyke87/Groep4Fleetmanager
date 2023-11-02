@@ -1,3 +1,7 @@
+.containerBackground{
+    background: url(../Assets/Achtergrond.jpg) center/cover no-repeat ;
+    background-size:  759px 779px;
+}
 .containerWelkom {
     display: flex;
     flex-direction: column;
@@ -5,10 +9,7 @@
     margin: auto;
     margin-top: 50px;
     width: 90%; 
-   
     flex-shrink: 0;
-    background: url(../Assets/Achtergrond.jpg) center/cover no-repeat ;
-    background-size:  759px 779px;
     padding-bottom: 30px;
 }
 

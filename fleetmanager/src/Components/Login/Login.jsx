@@ -10,6 +10,7 @@ const Login = () => {
   const handleLogin = () => {
     if (gebruikersnaam && wachtwoord) {
       setAction('Logging in...');
+      window.location.href = '/Welkom';
     } else {
       alert('Vul in de gebruikersnaam en wachtwoord velden in.');
     }
@@ -17,9 +18,9 @@ const Login = () => {
 
   return (
 
-  
-
+    <div className='containerBackground'>
     <div className='containerLogin'>
+    
       <div className='border'>
       <div className='headerText'>
         <div className='text'>Gebruikersnaam</div>
@@ -47,6 +48,7 @@ const Login = () => {
         </button>
       </div>
       </div>
+    </div>
     </div>
   );
 };

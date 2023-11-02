@@ -2,27 +2,36 @@ import React from 'react'
 import './NieuwScherm.css'
 import '../Welkom/Welkom.css';
 import '../Login/Login.css';
+import LogoutButton from '../Buttons/LogoutButton';
+import BrightnessButton from '../Buttons/BrightnessButton';
+import HomeButton from '../Buttons/HomeButton';
+import VoertuigenButton from '../Buttons/VoertuigenButton';
+import TankkaartenButton from '../Buttons/TankkaartenButton';
+import BestuurdersButton from '../Buttons/BestuurdersButton';
 
-const NieuwScherm = () => {
+const NieuwSchermVoertuigen = () => {
   return (
 
 
     <div className='containerNieuwScherm'> 
     <div className='containerButtons'> 
-     <button className='brightnessButton'></button>
-     <button className='homeButton'></button>
-     <button className ='logOutButton'>Log out</button>
+    <BrightnessButton/>
+    <HomeButton/>
+     <LogoutButton></LogoutButton>
      
      </div>
       <div className='thirdScreenContainer'>
         <div className='buttonsThirdScreen'>
-      <button className='buttons' id = '' >Voertuigen</button>
-      <button className='buttons' id='selected'>Tankkaarten</button>
-      <button className='buttons'id='selected'>Bestuurders</button>
+        <VoertuigenButton />
+      <TankkaartenButton  />
+      <BestuurdersButton  />
       </div>
       <table>
   <tr>
     <th>Id_Voertuig</th>
+
+
+    
     <th>Merk</th>
     <th>Model</th>
     <th>Chassisnummer</th>
@@ -525,4 +534,4 @@ const NieuwScherm = () => {
   )
 }
 
-export default NieuwScherm
+export default NieuwSchermVoertuigen
