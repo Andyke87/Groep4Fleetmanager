@@ -9,7 +9,7 @@ const Login = () => {
 
   const handleLogin = () => {
     if (gebruikersnaam && wachtwoord) {
-      setAction('Logging in...');
+      setAction('Logging in');
       window.location.href = '/Welkom';
     } else {
       alert('Vul in de gebruikersnaam en wachtwoord velden in.');
