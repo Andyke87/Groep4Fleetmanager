@@ -78,6 +78,8 @@
     margin: 10px;
 }
 
+
+
 .button {
     width: 220px;
     height: 46px;
@@ -88,3 +90,18 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     margin: 10px; 
 }
+
+
+.button:hover {
+    
+    background-color: #0074d9; 
+    color: #ffffff; 
+  
+  }
+  .buttons:hover {
+    
+    background-color: #A7D5ED; 
+    color: #ffffff; 
+  
+  }
+

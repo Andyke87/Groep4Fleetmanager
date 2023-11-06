@@ -13,6 +13,7 @@
 }
 
 
+
 .containerButtons {
     display: flex;
     justify-content: flex-end; 
@@ -91,6 +92,7 @@ margin: 0px;
 }
 
 #selected{
+
     border-radius: 5px;
 border: 1px solid rgba(0, 0, 0, 0.60);
 background: rgba(221, 221, 221, 0.60);
@@ -128,3 +130,10 @@ td{
     border: 1px solid black;
     height: 5px;
 }
+
+.button:hover {
+    
+    background-color: #0074d9; 
+    color: #ffffff; 
+  
+  }

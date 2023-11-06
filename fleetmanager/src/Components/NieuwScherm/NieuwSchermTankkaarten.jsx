@@ -8,6 +8,7 @@ import HomeButton from '../Buttons/HomeButton';
 import VoertuigenButton from '../Buttons/VoertuigenButton';
 import TankkaartenButton from '../Buttons/TankkaartenButton';
 import BestuurdersButton from '../Buttons/BestuurdersButton';
+import FormulierTankkaarten from '../Formulieren/FormulierTankkaarten';
 
 
 export const NieuwSchermTankkaarten = () => {
@@ -23,7 +24,7 @@ export const NieuwSchermTankkaarten = () => {
         <div className='buttonsThirdScreen'>
         <VoertuigenButton />
       <TankkaartenButton  />
-      <BestuurdersButton  />
+      <BestuurdersButton   />
       </div>
       <table>
   <tr>
@@ -392,7 +393,7 @@ export const NieuwSchermTankkaarten = () => {
     <td>0</td>
   </tr>
 </table>
-
+<FormulierTankkaarten/>
 
       </div>
       

@@ -27,6 +27,7 @@ const NieuwSchermBestuurders = () => {
           </div>
        
 
+
           <table>
   <tr>
     <th>Id_Bestuurder</th>
@@ -757,6 +758,7 @@ const NieuwSchermBestuurders = () => {
     <td>C</td>
     </tr>
     </table>
+
 
 
 
