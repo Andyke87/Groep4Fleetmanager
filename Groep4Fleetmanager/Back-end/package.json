@@ -1,0 +1,10 @@
+{
+  "name": "Back-end",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "andy ",
+  "license": "MIT",
+  "scripts": {
+    "run": "dotnet run program.cs"
+  }
+}
