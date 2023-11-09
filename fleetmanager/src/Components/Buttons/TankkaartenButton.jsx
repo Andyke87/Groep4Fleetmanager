@@ -4,6 +4,7 @@ const handleTankkaarten = () => {
     window.location.href = '/NieuwSchermTankkaarten';
 }
 
+
 const TankkaartenButton = () => {
   return (
    <button  className='buttons' onClick={handleTankkaarten} >Tankkaarten</button>
