@@ -92,16 +92,5 @@
 }
 
 
-.button:hover {
-    
-    background-color: #0074d9; 
-    color: #ffffff; 
-cursor: pointer;
-  }
-  .buttons:hover {
-    
-    background-color: #A7D5ED; 
-    color: #ffffff; 
-   cursor : pointer;
-  }
+
 
