@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './Login.css';
+import BrightnessButton from '../Buttons/BrightnessButton';
+import SwitchButton from '../Buttons/SwitchButton';
 
 
 const Login = () => {
@@ -9,7 +11,7 @@ const Login = () => {
 
   const handleLogin = () => {
     if (gebruikersnaam && wachtwoord) {
-      setAction('Logging in...');
+      setAction('Logging in');
       window.location.href = '/Welkom';
     } else {
       alert('Vul in de gebruikersnaam en wachtwoord velden in.');
@@ -17,39 +19,40 @@ const Login = () => {
   };
 
   return (
-
-    <div className='containerBackground'>
-    <div className='containerLogin'>
-    
-      <div className='border'>
-      <div className='headerText'>
-        <div className='text'>Gebruikersnaam</div>
-      </div>
-          <input
-            className="inputGebruikersnaam"
-            type="text"
-            placeholder='Patrick'
-            value={gebruikersnaam}
-            onChange={(e) => setGebruikersnaam(e.target.value)}
-          />
+    <div className="main">
+      <SwitchButton/>
+      <div className='containerBackground'>
+      <div className='containerLogin'>
+        <div className='border'>
         <div className='headerText'>
-          <div className='text'>Wachtwoord</div>
+          <div className='text'>Gebruikersnaam</div>
         </div>
-          <input
-            className='inputWachtwoord'
-            type="password"
-            placeholder='Allphi123'
-            value={wachtwoord}
-            onChange={(e) => setWachtwoord(e.target.value)}
-          />
-      <div className="submit-container">
-        <button className="submit" onClick={handleLogin} >
-          {action}
-        </button>
+            <input
+              className="inputGebruikersnaam"
+              type="text"
+              placeholder='Patrick'
+              value={gebruikersnaam}
+              onChange={(e) => setGebruikersnaam(e.target.value)}
+            />
+          <div className='headerText'>
+            <div className='text'>Wachtwoord</div>
+          </div>
+            <input
+              className='inputWachtwoord'
+              type="password"
+              placeholder='Allphi123'
+              value={wachtwoord}
+              onChange={(e) => setWachtwoord(e.target.value)}
+            />
+        <div className="submit-container">
+          <button className="submit" onClick={handleLogin} >
+            {action}
+          </button>
+        </div>
+        </div>
       </div>
       </div>
-    </div>
-    </div>
+      </div>
   );
 };
 
