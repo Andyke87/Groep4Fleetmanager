@@ -11,9 +11,14 @@
     background-color: black;
 }
 
-.containerBackground{
+#light .containerBackground{
     background: url(../Assets/Achtergrond.jpg) center/cover no-repeat ;
     background-size:  759px 779px;
+}
+
+#dark .containerBackground {
+    background: url(../Assets/Achtergrond_zwart.png) center/cover no-repeat;
+    background-size: 759px 779px;
 }
 
 .containerLogin {
