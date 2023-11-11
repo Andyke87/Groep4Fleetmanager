@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace FleetManager.Models;
 
 public partial class Bestuurder
 {
+    [Key]
     public int IdBestuurder { get; set; }
 
     public string? Naam { get; set; }
@@ -17,7 +17,7 @@ public partial class Bestuurder
 
     public string? Stad { get; set; }
 
-    public string? Postcode { get; set; }
+    public int? Postcode { get; set; }
 
     public DateTime? Geboortedatum { get; set; }
 

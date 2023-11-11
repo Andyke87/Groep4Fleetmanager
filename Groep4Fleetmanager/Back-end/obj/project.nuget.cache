@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6DLExiAfZVb+26P0kfHDl47/BYad3lZ0IhtIDXmI8sMCaIhXu4LsrXHUaydzHZwTokAt8pPIzpvJ3Cbct5NEtQ==",
+  "dgSpecHash": "jfDs82Tvf2hiBMgEn4W7+QVmkv9AiLLPzFSiJO30X2FKPf+xXpx14yNnDtQIIMbh6wh5c8jMT7m0TOKDHam0tg==",
   "success": true,
   "projectFilePath": "C:\\Users\\andy\\OneDrive - Hogeschool Gent\\Bureaublad\\Groep4Fleetmanager\\Groep4Fleetmanager\\Back-end\\Back-end.csproj",
   "expectedPackageFiles": [
@@ -44,6 +44,7 @@
     "C:\\Users\\andy\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\andy\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\andy\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\andy\\.nuget\\packages\\swashbuckle.aspnetcore.annotations\\6.5.0\\swashbuckle.aspnetcore.annotations.6.5.0.nupkg.sha512",
     "C:\\Users\\andy\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\andy\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
     "C:\\Users\\andy\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
