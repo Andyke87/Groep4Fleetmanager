@@ -99,10 +99,6 @@ class FormulierBestuurders extends Component {
             <br /> <label>Geslacht</label><br />
             <input className="input" type="text" name="geslacht" value={this.state.geslacht} onChange={this.handleChange} />
           </div>
-
-          <div className="col">
-            <br /> <label></label>
-          </div>
         </div>
 
         <div className='containerButtonsNieuw'>

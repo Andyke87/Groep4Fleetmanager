@@ -18,7 +18,6 @@ const TableBestuurders = () => {
       <th>Voertuig_id</th>
       <th>Tankkaart_id</th>
       <th>Geslacht</th>
-      <th>Column1</th>
     </tr>
     <tr>
       <td>1</td>
@@ -35,7 +34,6 @@ const TableBestuurders = () => {
       <td>101</td>
       <td>201</td>
       <td>M</td>
-      <td></td>
     </tr>
     <tr>
       <td>2</td>
@@ -52,7 +50,6 @@ const TableBestuurders = () => {
       <td>102</td>
       <td>202</td>
       <td>V</td>
-      <td></td>
     </tr>
     <tr>
       <td>3</td>
@@ -69,7 +66,6 @@ const TableBestuurders = () => {
       <td>103</td>
       <td>203</td>
       <td>M</td>
-      <td></td>
     </tr>
     <tr>
       <td>4</td>
@@ -86,7 +82,6 @@ const TableBestuurders = () => {
       <td>104</td>
       <td>204</td>
       <td>M</td>
-      <td></td>
     </tr>
     <tr>
       <td>5</td>
@@ -103,7 +98,6 @@ const TableBestuurders = () => {
       <td>105</td>
       <td>205</td>
       <td>V</td>
-      <td></td>
     </tr>
     <tr>
       <td>6</td>
@@ -120,7 +114,6 @@ const TableBestuurders = () => {
       <td>106</td>
       <td>206</td>
       <td>M</td>
-      <td></td>
     </tr>
     <tr>
       <td>7</td>
@@ -137,7 +130,6 @@ const TableBestuurders = () => {
       <td>107</td>
       <td>207</td>
       <td>M</td>
-      <td></td>
     </tr>
     <tr>
       <td>8</td>
@@ -154,7 +146,6 @@ const TableBestuurders = () => {
       <td>108</td>
       <td>208</td>
       <td>V</td>
-      <td></td>
     </tr>
     <tr>
       <td>9</td>
@@ -171,7 +162,6 @@ const TableBestuurders = () => {
       <td>109</td>
       <td>209</td>
       <td>M</td>
-      <td></td>
     </tr>
     <tr>
       <td>10</td>
@@ -198,7 +188,6 @@ const TableBestuurders = () => {
       <td>110</td>
       <td>210</td>
       <td>V</td>
-      <td></td>
     </tr>
     <tr>
       <td>11</td>
@@ -215,7 +204,6 @@ const TableBestuurders = () => {
       <td>111</td>
       <td>211</td>
       <td>V</td>
-      <td></td>
     </tr>
     <tr>
       <td>12</td>
@@ -232,7 +220,6 @@ const TableBestuurders = () => {
       <td>112</td>
       <td>212</td>
       <td>M</td>
-      <td></td>
     </tr>
     <tr>
       <td>13</td>
@@ -249,7 +236,6 @@ const TableBestuurders = () => {
       <td>113</td>
       <td>213</td>
       <td>V</td>
-      <td></td>
     </tr>
     <tr>
       <td>14</td>
@@ -266,7 +252,6 @@ const TableBestuurders = () => {
       <td>114</td>
       <td>214</td>
       <td>V</td>
-      <td></td>
     </tr>
     <tr>
       <td>15</td>
@@ -283,7 +268,6 @@ const TableBestuurders = () => {
       <td>115</td>
       <td>215</td>
       <td>M</td>
-      <td></td>
     </tr>
     <tr>
       <td>16</td>
@@ -300,7 +284,6 @@ const TableBestuurders = () => {
       <td>116</td>
       <td>216</td>
       <td>V</td>
-      <td></td>
     </tr>
     <tr>
       <td>17</td>
@@ -317,7 +300,6 @@ const TableBestuurders = () => {
       <td>117</td>
       <td>217</td>
       <td>V</td>
-      <td></td>
     </tr>
     <tr>
       <td>18</td>
@@ -334,7 +316,6 @@ const TableBestuurders = () => {
       <td>118</td>
       <td>218</td>
       <td>M</td>
-      <td></td>
     </tr>
     <tr>
       <td>19</td>
@@ -351,7 +332,6 @@ const TableBestuurders = () => {
       <td>119</td>
       <td>219</td>
       <td>V</td>
-      <td></td>
     </tr>
     <tr>
       <td>20</td>
@@ -380,7 +360,6 @@ const TableBestuurders = () => {
       <td>120</td>
       <td>220</td>
       <td>M</td>
-      <td></td>
     </tr>
     <tr>
       <td>21</td>
@@ -397,7 +376,6 @@ const TableBestuurders = () => {
       <td>121</td>
       <td>221</td>
       <td>M</td>
-      <td></td>
     </tr>
     <tr>
       <td>22</td>
@@ -414,7 +392,6 @@ const TableBestuurders = () => {
       <td>122</td>
       <td>222</td>
       <td>F</td>
-      <td></td>
     </tr>
     <tr>
       <td>23</td>
@@ -431,7 +408,6 @@ const TableBestuurders = () => {
       <td>123</td>
       <td>223</td>
       <td>M</td>
-      <td></td>
     </tr>
     <tr>
       <td>24</td>
@@ -448,7 +424,6 @@ const TableBestuurders = () => {
       <td>124</td>
       <td>224</td>
       <td>F</td>
-      <td></td>
     </tr>
     <tr>
       <td>25</td>
@@ -465,7 +440,6 @@ const TableBestuurders = () => {
       <td>125</td>
       <td>225</td>
       <td>V</td>
-      <td></td>
     </tr>
     <tr>
       <td>26</td>
@@ -482,7 +456,6 @@ const TableBestuurders = () => {
       <td>126</td>
       <td>226</td>
       <td>V</td>
-      <td></td>
     </tr>
     <tr>
       <td>27</td>
@@ -499,7 +472,6 @@ const TableBestuurders = () => {
       <td>127</td>
       <td>227</td>
       <td>M</td>
-      <td></td>
     </tr>
     <tr>
       <td>28</td>
@@ -516,7 +488,6 @@ const TableBestuurders = () => {
       <td>128</td>
       <td>228</td>
       <td>M</td>
-      <td></td>
     </tr>
     <tr>
       <td>29</td>
@@ -533,7 +504,6 @@ const TableBestuurders = () => {
       <td>129</td>
       <td>229</td>
       <td>M</td>
-      <td></td>
     </tr>
     <tr>
       <td>30</td>
@@ -563,7 +533,6 @@ const TableBestuurders = () => {
       <td>130</td>
       <td>230</td>
       <td>M</td>
-      <td></td>
     </tr>
     <tr>
       <td>31</td>
@@ -580,7 +549,6 @@ const TableBestuurders = () => {
       <td>131</td>
       <td>231</td>
       <td>M</td>
-      <td></td>
     </tr>
     <tr>
       <td>32</td>
@@ -597,7 +565,6 @@ const TableBestuurders = () => {
       <td>132</td>
       <td>232</td>
       <td>V</td>
-      <td></td>
     </tr>
     <tr>
       <td>33</td>
@@ -614,7 +581,6 @@ const TableBestuurders = () => {
       <td>133</td>
       <td>233</td>
       <td>M</td>
-      <td></td>
     </tr>
     <tr>
       <td>34</td>
@@ -631,7 +597,6 @@ const TableBestuurders = () => {
       <td>134</td>
       <td>234</td>
       <td>V</td>
-      <td></td>
     </tr>
     <tr>
       <td>35</td>
@@ -648,7 +613,6 @@ const TableBestuurders = () => {
       <td>135</td>
       <td>235</td>
       <td>M</td>
-      <td></td>
     </tr>
     <tr>
       <td>36</td>
@@ -665,7 +629,6 @@ const TableBestuurders = () => {
       <td>136</td>
       <td>236</td>
       <td>M</td>
-      <td></td>
     </tr>
     <tr>
       <td>37</td>
@@ -682,7 +645,6 @@ const TableBestuurders = () => {
       <td>137</td>
       <td>237</td>
       <td>M</td>
-      <td></td>
     </tr>
     <tr>
       <td>38</td>
@@ -699,7 +661,6 @@ const TableBestuurders = () => {
       <td>138</td>
       <td>238</td>
       <td>F</td>
-      <td></td>
     </tr>
     <tr>
       <td>39</td>
@@ -716,7 +677,6 @@ const TableBestuurders = () => {
       <td>139</td>
       <td>239</td>
       <td>M</td>
-      <td></td>
     </tr>
     <tr>
       <td>40</td>
