@@ -5,14 +5,11 @@
     margin: auto;
     margin-top: 50px;
     width: 90%; 
-   
     flex-shrink: 0;
     background: url(../Assets/Achtergrond.jpg) center/cover no-repeat ;
     background-size:  759px 779px;
     padding-bottom: 30px;
 }
-
-
 
 .containerButtons {
     display: flex;
@@ -27,6 +24,7 @@
     color: #000;
     text-align: center;
     font-family: Inter;
+    
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
@@ -124,11 +122,13 @@ opacity: 100%;}
 th {
     border: 1px solid black;
     height: 5px;
+    width: 17%;
    
 }
 td{
     border: 1px solid black;
     height: 5px;
+    
 }
 
 .button:hover {
