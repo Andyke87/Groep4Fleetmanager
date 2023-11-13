@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import './Login.css';
 import BrightnessButton from '../Buttons/BrightnessButton';
 import SwitchButton from '../Buttons/SwitchButton';
+import Gebruikersnaam from './Gebruikersnaam';
+import Wachtwoord from './Wachtwoord';
+import SubmitContainer from './SubmitContainer';
 
 
 const Login = () => {
@@ -24,35 +27,13 @@ const Login = () => {
       <div className='containerBackground'>
       <div className='containerLogin'>
         <div className='border'>
-        <div className='headerText'>
-          <div className='text'>Gebruikersnaam</div>
-        </div>
-            <input
-              className="inputGebruikersnaam"
-              type="text"
-              placeholder='Patrick'
-              value={gebruikersnaam}
-              onChange={(e) => setGebruikersnaam(e.target.value)}
-            />
-          <div className='headerText'>
-            <div className='text'>Wachtwoord</div>
-          </div>
-            <input
-              className='inputWachtwoord'
-              type="password"
-              placeholder='Allphi123'
-              value={wachtwoord}
-              onChange={(e) => setWachtwoord(e.target.value)}
-            />
-        <div className="submit-container">
-          <button className="submit" onClick={handleLogin} >
-            {action}
-          </button>
-        </div>
+        <Gebruikersnaam/>
+        <Wachtwoord/>
+        <SubmitContainer/>
         </div>
       </div>
       </div>
-      </div>
+    </div>
   );
 };
 

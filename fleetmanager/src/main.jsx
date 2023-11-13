@@ -7,6 +7,7 @@ import { BrowserRouter, RouterProvider, createBrowserRouter } from 'react-router
 import NieuwSchermVoertuigen from './Components/NieuwScherm/NieuwSchermVoertuigen.jsx'
 import { NieuwSchermTankkaarten } from './Components/NieuwScherm/NieuwSchermTankkaarten.jsx'
 import NieuwSchermBestuurders from './Components/NieuwScherm/NieuwSchermBestuurders.jsx'
+import Relaties from './Components/Relaties/Relaties.jsx'
 
 const browserRouter = createBrowserRouter (
 
@@ -30,6 +31,10 @@ const browserRouter = createBrowserRouter (
     {
       path : '/NieuwSchermBestuurders', 
       element : <NieuwSchermBestuurders/>
+    },
+    {
+      path : '/Relaties',
+      element : <Relaties/>
     }
   ]
 )
