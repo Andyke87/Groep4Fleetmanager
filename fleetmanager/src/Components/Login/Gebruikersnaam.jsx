@@ -4,16 +4,17 @@ import PropTypes from 'prop-types';
 const Gebruikersnaam = ({ gebruikersnaam, setGebruikersnaam }) => {
   return (
     <div>
-      <div className='headerText' />
-      <div className='text'>Gebruikersnaam</div>
-      <div>
-        <input
-          className="inputGebruikersnaam"
-          type="text"
-          placeholder='Patrick'
-          value={gebruikersnaam}
-          onChange={(e) => setGebruikersnaam(e.target.value)}
-        />
+      <div className='headerTextGebruikersnaam'>
+        <div className='text'>Gebruikersnaam</div>
+          <div>
+            <input
+              className="inputGebruikersnaam"
+              type="text"
+              placeholder='Patrick'
+              value={gebruikersnaam}
+              onChange={(e) => setGebruikersnaam(e.target.value)}
+            />
+        </div>
       </div>
     </div>
   );

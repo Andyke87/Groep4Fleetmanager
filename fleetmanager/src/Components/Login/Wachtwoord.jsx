@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Wachtwoord = ({ wachtwoord, setWachtwoord }) => {
   return (
     <div>
-      <div className='headerText'>
+      <div className='headerTextWachtwoord'>
         <div className='text'>Wachtwoord</div>
         <div>
           <input
