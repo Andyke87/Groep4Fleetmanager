@@ -62,19 +62,10 @@ public class TankkaartController : ControllerBase
     public IActionResult Create([FromBody] Tankkaart _tankkaart)
     {
         var tankkaart = _DbContext.Tankkaarten.FirstOrDefault(t => t.IdTankkaart == _tankkaart.IdTankkaart);
-        if (tankkaart != null)
-        {
-            tankkaart.Kaartnummer = _tankkaart.Kaartnummer;
-            tankkaart.Geldigheidsdatum = _tankkaart.Geldigheidsdatum;
-            tankkaart.Pincode = _tankkaart.Pincode;
-            tankkaart.Brandstoffen = _tankkaart.Brandstoffen;
-            tankkaart.Geblokkeerd = _tankkaart.Geblokkeerd;
-        }
-        else
-        {
+
             _DbContext.Tankkaarten.Add(_tankkaart);
             _DbContext.SaveChanges();
-        }
+        
         return Ok(true);
     }
 }

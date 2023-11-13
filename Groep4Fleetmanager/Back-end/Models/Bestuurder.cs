@@ -1,8 +1,10 @@
-﻿namespace FleetManager.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace FleetManager.Models;
 
 public partial class Bestuurder
 {
-
+    [Key]
     public int IdBestuurder { get; set; }
 
     public string? Naam { get; set; }

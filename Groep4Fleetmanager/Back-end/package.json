@@ -5,7 +5,7 @@
   "author": "andy ",
   "license": "MIT",
   "scripts": {
-    "run": "dotnet run program.cs",
+    "run": "dotnet run Startup.cs",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",

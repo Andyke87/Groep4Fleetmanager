@@ -1,9 +1,11 @@
 ﻿using FleetManager.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace Connections.Models;
 
 public partial class Connectie
 {
+    [Key]
     public int Id { get; set; }
     public int? IdBestuurder { get; set; }
 

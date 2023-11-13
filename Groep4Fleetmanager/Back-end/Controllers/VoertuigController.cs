@@ -40,22 +40,10 @@ public class VoertuigController : ControllerBase
     public IActionResult Create([FromBody] Voertuig _voertuig)
     {
         var voertuig = _DbContext.Voertuigen.FirstOrDefault(t => t.IdVoertuig == _voertuig.IdVoertuig);
-        if (voertuig != null)
-        {
-            voertuig.Merk = _voertuig.Merk;
-            voertuig.Model = _voertuig.Model;
-            voertuig.Chassisnummer = _voertuig.Chassisnummer;
-            voertuig.Nummerplaat = _voertuig.Nummerplaat;
-            voertuig.Brandstoftype = _voertuig.Brandstoftype;
-            voertuig.TypeVoertuig = _voertuig.TypeVoertuig;
-            voertuig.Kleur = _voertuig.Kleur;
-            voertuig.AantalDeuren = _voertuig.AantalDeuren;
-        }
-        else
-        {
+
             _DbContext.Voertuigen.Add(_voertuig);
             _DbContext.SaveChanges();
-        }
+            
         return Ok(true);
     }
 }

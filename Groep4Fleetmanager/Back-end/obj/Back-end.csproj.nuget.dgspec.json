@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andy\\OneDrive - Hogeschool Gent\\Bureaublad\\Groep4Fleetmanager11\\Groep4Fleetmanager\\Groep4Fleetmanager\\Back-end\\Back-end.csproj": {}
+    "C:\\Users\\andy\\OneDrive - Hogeschool Gent\\Bureaublad\\Groep4Fleetmanager\\Groep4Fleetmanager\\Back-end\\Back-end.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andy\\OneDrive - Hogeschool Gent\\Bureaublad\\Groep4Fleetmanager11\\Groep4Fleetmanager\\Groep4Fleetmanager\\Back-end\\Back-end.csproj": {
+    "C:\\Users\\andy\\OneDrive - Hogeschool Gent\\Bureaublad\\Groep4Fleetmanager\\Groep4Fleetmanager\\Back-end\\Back-end.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andy\\OneDrive - Hogeschool Gent\\Bureaublad\\Groep4Fleetmanager11\\Groep4Fleetmanager\\Groep4Fleetmanager\\Back-end\\Back-end.csproj",
+        "projectUniqueName": "C:\\Users\\andy\\OneDrive - Hogeschool Gent\\Bureaublad\\Groep4Fleetmanager\\Groep4Fleetmanager\\Back-end\\Back-end.csproj",
         "projectName": "Back-end",
-        "projectPath": "C:\\Users\\andy\\OneDrive - Hogeschool Gent\\Bureaublad\\Groep4Fleetmanager11\\Groep4Fleetmanager\\Groep4Fleetmanager\\Back-end\\Back-end.csproj",
+        "projectPath": "C:\\Users\\andy\\OneDrive - Hogeschool Gent\\Bureaublad\\Groep4Fleetmanager\\Groep4Fleetmanager\\Back-end\\Back-end.csproj",
         "packagesPath": "C:\\Users\\andy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andy\\OneDrive - Hogeschool Gent\\Bureaublad\\Groep4Fleetmanager11\\Groep4Fleetmanager\\Groep4Fleetmanager\\Back-end\\obj\\",
+        "outputPath": "C:\\Users\\andy\\OneDrive - Hogeschool Gent\\Bureaublad\\Groep4Fleetmanager\\Groep4Fleetmanager\\Back-end\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

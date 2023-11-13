@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using Connections.Models;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace FleetManager.Models;
 
 public partial class Voertuig
 {
+    [Key]
     public int IdVoertuig { get; set; }
 
     public string? Merk { get; set; }

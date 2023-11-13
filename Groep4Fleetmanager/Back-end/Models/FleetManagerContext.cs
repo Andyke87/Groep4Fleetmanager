@@ -30,8 +30,9 @@ public partial class FleetManagerContext : DbContext
             entity.HasKey(e => e.IdBestuurder);
             entity.ToTable("Bestuurder", tb =>
                 {
-                    /*tb.HasTrigger("trg_CheckGeboorteDatum");
-                    tb.HasTrigger("trg_CheckPostcode");*/
+                    tb.HasTrigger("TG_Controleer_Bestuurder");
+                    tb.HasTrigger("TG_Controleer_Bestuurder_Leeftijd");
+                    tb.HasTrigger("TG_Controleer_Postcode");
                 });
             entity.Property(e => e.IdBestuurder).HasColumnName("IdBestuurder");
             entity.Property(e => e.Naam)
@@ -59,7 +60,7 @@ public partial class FleetManagerContext : DbContext
             entity.Property(e => e.CategorieRijbewijs)
                 .HasMaxLength(10)
                 .IsUnicode(false)
-                .HasColumnName("Categorie_rijbewijs");
+                .HasColumnName("CategorieRijbewijs");
             entity.Property(e => e.Login)
                 .HasMaxLength(20)
                 .IsUnicode(false);
@@ -69,35 +70,31 @@ public partial class FleetManagerContext : DbContext
         });
 
         modelBuilder.Entity<Connectie>(entity =>
-        {
-            entity.HasNoKey()
-                .ToTable("Connectie", tb =>
                 {
-                    /*tb.HasTrigger("controle_tankkaart_invoer");
-                    tb.HasTrigger("controle_voertuig_invoer");
-                    tb.HasTrigger("trg_PreventDeleteManager");*/
+                    entity.Property(e => e.Id).HasColumnName("Id");
+                    entity.Property(e => e.IdBestuurder).HasColumnName("IdBestuurder");
+                    entity.Property(e => e.IdTankkaart).HasColumnName("IdTankkaart");
+                    entity.Property(e => e.IdVoertuig).HasColumnName("IdVoertuig");
+
+                    entity.HasOne(d => d.IdBestuurderNavigation).WithMany()
+                        .HasForeignKey(d => d.IdBestuurder)
+                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .HasConstraintName("FK__Connectie__IdBes__1A9EF37A")
+                        .IsRequired();
+
+                    entity.HasOne(d => d.IdTankkaartNavigation).WithMany()
+                        .HasForeignKey(d => d.IdTankkaart)
+                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .HasConstraintName("FK__Connectie__IdTan__1B9317B3")
+                        .IsRequired();
+
+                    entity.HasOne(d => d.IdVoertuigNavigation).WithMany()
+                        .HasForeignKey(d => d.IdVoertuig)
+                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .HasConstraintName("FK__Connectie__IdVoe__1C873BEC")
+                        .IsRequired();
                 });
-            entity.Property(e => e.Id).HasColumnName("Id");
-            entity.Property(e => e.IdBestuurder).HasColumnName("IdBestuurder");
-            entity.Property(e => e.IdTankkaart).HasColumnName("IdTankkaart");
-            entity.Property(e => e.IdVoertuig).HasColumnName("IdVoertuig");
 
-            entity.HasOne(d => d.IdBestuurderNavigation).WithMany()
-                .HasForeignKey(d => d.IdBestuurder)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Manager_Bestuurder")
-                .IsRequired();
-
-            entity.HasOne(d => d.IdTankkaartNavigation).WithMany()
-                .HasForeignKey(d => d.IdTankkaart)
-                .HasConstraintName("FK_Connecties_Tankkaart")
-                .IsRequired();
-
-            entity.HasOne(d => d.IdVoertuigNavigation).WithMany()
-                .HasForeignKey(d => d.IdVoertuig)
-                .HasConstraintName("FK_Connecties_Voertuig")
-                .IsRequired();
-        });
 
         modelBuilder.Entity<Tankkaart>(entity =>
         {
@@ -105,8 +102,8 @@ public partial class FleetManagerContext : DbContext
 
             entity.ToTable("Tankkaart", tb =>
                 {
-                   /* tb.HasTrigger("trg_CheckGeldigheidsdatum");
-                    tb.HasTrigger("trg_UniekeKaartnummer");*/
+                    tb.HasTrigger("TG_Controleer_Geldigheidsdatum");
+                    tb.HasTrigger("TG_Controleer_Tankkaart");
                 });
 
             entity.Property(e => e.IdTankkaart).HasColumnName("IdTankkaart");
@@ -129,9 +126,8 @@ public partial class FleetManagerContext : DbContext
 
             entity.ToTable("Voertuig", tb =>
                 {
-                   /* tb.HasTrigger("trg_ControleDeuren");
-                    tb.HasTrigger("trg_UniekeChassisnummer");
-                    tb.HasTrigger("trg_UniekeNummerplaat");*/
+                    tb.HasTrigger("TG_Controleer_AantalDeuren");
+                    tb.HasTrigger("TG_Controleer_Chassisnummer");
                 });
 
             entity.Property(e => e.IdVoertuig).HasColumnName("IdVoertuig");

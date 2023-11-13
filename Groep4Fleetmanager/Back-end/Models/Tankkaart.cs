@@ -1,9 +1,10 @@
-﻿using Connections.Models;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace FleetManager.Models
 {
     public partial class Tankkaart
     {
+        [Key]
         public int IdTankkaart { get; set; }
 
         public string Kaartnummer { get; set; } = null!;

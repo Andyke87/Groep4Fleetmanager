@@ -40,25 +40,10 @@ public class BestuurderController : ControllerBase
     public IActionResult CreateDriver([FromBody] Bestuurder _bestuurder)
     {
         var bestuurder = this._DbContext.Bestuurders.FirstOrDefault(t => t.IdBestuurder == _bestuurder.IdBestuurder);
-        if (bestuurder != null)
-        {
-            bestuurder.Naam = _bestuurder.Naam;
-            bestuurder.Voornaam = _bestuurder.Voornaam;
-            bestuurder.Straat = _bestuurder.Straat;
-            bestuurder.Huisnummer = _bestuurder.Huisnummer;
-            bestuurder.Stad = _bestuurder.Stad;
-            bestuurder.Postcode = _bestuurder.Postcode;
-            bestuurder.Geboortedatum = _bestuurder.Geboortedatum;
-            bestuurder.Rijksregisternummer = _bestuurder.Rijksregisternummer;
-            bestuurder.CategorieRijbewijs = _bestuurder.CategorieRijbewijs;
-            bestuurder.Login = _bestuurder.Login;
-            bestuurder.Paswoord = _bestuurder.Paswoord;
-        }
-        else
-        {
+     
             this._DbContext.Bestuurders.Add(_bestuurder);
             this._DbContext.SaveChanges();
-        }
+        
         return Ok(true);
     }
 }

@@ -53,24 +53,7 @@ public class ConnectieController : ControllerBase
         // Controleer of er al een Connectie bestaat met de opgegeven Id
         var existingConnectie = _dbContext.Connecties.FirstOrDefault(c => c.Id == _connectie.Id);
 
-        if (existingConnectie != null)
-        {
-            // Als er al een Connectie bestaat met deze Id, geef een foutmelding terug
-            return BadRequest("Een Connectie met dezelfde Id bestaat al.");
-        }
-
-        // Maak een nieuwe Connectie aan op basis van de opgegeven Id's
-        var newConnectie = new Connectie
-        {
-            Id = _connectie.Id,
-            IdBestuurder = _connectie.IdBestuurder,
-            IdTankkaart = _connectie.IdTankkaart,
-            IdVoertuig = _connectie.IdVoertuig
-            // Voeg hier andere eigenschappen toe indien nodig
-        };
-
-        // Voeg de nieuwe Connectie toe aan de database
-        _dbContext.Connecties.Add(newConnectie);
+        _dbContext.Connecties.Add(_connectie);
         _dbContext.SaveChanges();
 
         return Ok(true);
