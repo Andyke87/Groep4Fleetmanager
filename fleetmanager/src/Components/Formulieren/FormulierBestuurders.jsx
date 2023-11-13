@@ -17,7 +17,7 @@ class FormulierBestuurders extends Component {
       controle: '',
       categorieRijbewijs: '',
       voertuigId: '',
-      geslacht: '',
+      
     };
   }
 
@@ -47,7 +47,6 @@ class FormulierBestuurders extends Component {
       categorieRijbewijs,
       voertuigId,
       tankkaartId,
-      geslacht,
     } = this.state;
 
     return (
@@ -195,21 +194,6 @@ class FormulierBestuurders extends Component {
               onChange={this.handleChange}
             />
           </div>
-
-          <div className="col">
-            <label htmlFor="geslacht">Geslacht</label>
-            <select
-              className="input"
-              name="geslacht"
-              value={geslacht}
-              onChange={this.handleChange}
-            >
-              <option value="">Selecteer geslacht</option>
-              <option value="man">Man</option>
-              <option value="vrouw">Vrouw</option>
-            </select>
-          </div>
-
         </div>
         <div className='containerButtonsNieuw'>
             <button className='buttonsNieuw' type="submit">Voeg toe</button>

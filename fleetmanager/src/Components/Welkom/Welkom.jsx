@@ -14,6 +14,9 @@ const handleVoertuigen = () => {
 const handleTankkaarten = () => {
   window.location.href = '/NieuwSchermTankkaarten';
 }
+const handleRelaties = () => {
+  window.location.href = '/Relaties';
+}
 
 
 const Welkom = () => {
@@ -29,7 +32,7 @@ const Welkom = () => {
           <button className='button' onClick={handleVoertuigen} >Voertuigen</button>
           <button className='button' onClick={handleTankkaarten}>Tankkaarten</button>
           <button className='button' onClick={handleBestuurders}>Bestuurders</button>
-          <button className='button'>Relaties</button>
+          <button className='button' onClick={handleRelaties}>Relaties</button>
         </div>
       </div>
     </div>
