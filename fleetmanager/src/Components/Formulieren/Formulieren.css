@@ -1,6 +1,7 @@
 /* CSS voor het formulier */
 .form-container {
   display: grid;
+  grid-cols-1 : md;
   grid-template-columns: repeat(7, 1fr);
   grid-gap: 10px;
   width: 50%
