@@ -14,20 +14,20 @@ import TableTankkaarten from '../Tables/TableTankkaarten';
 export const NieuwSchermTankkaarten = () => {
   return (
     <div className='containerNieuwScherm'> 
-    <div className='containerButtons'> 
-    <BrightnessButton/>
-    <HomeButton/>
-    <LogoutButton/>
-    </div>
-    <div className='thirdScreenContainer'>
-    <div className='buttonsThirdScreen'>
-    <VoertuigenButton />
-    <TankkaartenButton  />
-    <BestuurdersButton   />
-    </div>
-    <TableTankkaarten/>
-    <FormulierTankkaarten/>
-    </div>
+      <div className='containerButtons'> 
+        <BrightnessButton/>
+        <HomeButton/>
+        <LogoutButton/>
+      </div>
+      <div className='thirdScreenContainer'>
+        <div className='buttonsThirdScreen'>
+          <VoertuigenButton/>
+          <TankkaartenButton/>
+          <BestuurdersButton/>
+        </div>
+        <TableTankkaarten/>
+        <FormulierTankkaarten/>
+      </div>
     </div>
   )
 }

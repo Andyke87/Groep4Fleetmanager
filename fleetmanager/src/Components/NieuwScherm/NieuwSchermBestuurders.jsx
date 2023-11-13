@@ -18,7 +18,7 @@ const NieuwSchermBestuurders = () => {
           <BrightnessButton/>
           <HomeButton/>
           <LogoutButton/>
-         </div>
+        </div>
           <div className='thirdScreenContainer'>
             <div className='buttonsThirdScreen'>
             <VoertuigenButton/>

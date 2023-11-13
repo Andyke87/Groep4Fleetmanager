@@ -14,20 +14,20 @@ import FormulierenVoertuigen from '../Formulieren/FormulierVoertuigen';
 const NieuwSchermVoertuigen = () => {
   return (
     <div className='containerNieuwScherm'> 
-    <div className='containerButtons'> 
-    <BrightnessButton/>
-    <HomeButton/>
-    <LogoutButton/>
-    </div>
-    <div className='thirdScreenContainer'>
-    <div className='buttonsThirdScreen'>
-    <VoertuigenButton />
-    <TankkaartenButton  />
-    <BestuurdersButton  />
-    </div>
-    <TableVoertuigen/>
-    <FormulierenVoertuigen/>
-    </div>
+      <div className='containerButtons'> 
+        <BrightnessButton/>
+        <HomeButton/>
+        <LogoutButton/>
+      </div>
+      <div className='thirdScreenContainer'>
+        <div className='buttonsThirdScreen'>
+          <VoertuigenButton/>
+          <TankkaartenButton/>
+          <BestuurdersButton/>
+        </div>
+        <TableVoertuigen/>
+        <FormulierenVoertuigen/>
+      </div>
     </div>
   )
 }
