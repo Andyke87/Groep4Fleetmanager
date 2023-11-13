@@ -1,15 +1,21 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const SubmitContainer = () => {
+const SubmitContainer = ({ action, handleLogin }) => {
   return (
     <div>
-        <div className="submit-container">
-            <button className="submit" onClick={handleLogin} >
-              {action}
-            </button>
-        </div>
+      <div className="submit-container">
+        <button className="submit" onClick={handleLogin}>
+          {action}
+        </button>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default SubmitContainer
+SubmitContainer.propTypes = {
+  action: PropTypes.string.isRequired,
+  handleLogin: PropTypes.func.isRequired,
+};
+
+export default SubmitContainer;

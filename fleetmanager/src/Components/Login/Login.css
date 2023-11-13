@@ -54,19 +54,6 @@
     color: white;
 }
 
-.brightnessButton {
-    width: 35px;
-    height: 35px;
-    margin-right: 10px;
-    border-radius: 5px;
-    border: 1px solid #000;
-    background: #DDD;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    background: url(../Assets/brightness-and-contrast.png), lightgray 50% / cover no-repeat;
-    background-size: 35px;
-    cursor: pointer;
-}
-
 .border {
     width: 255px;
     height: 181px;
@@ -76,9 +63,7 @@
     background: #D9D9D9;
     display: flex;
     flex-direction: column;
-   margin: auto;
-   
-    
+    margin: auto;
 }
 
 .headerText {
@@ -102,9 +87,11 @@
     color: black;
     font-size: 14px;
     font-weight: bold;
+    margin-left: 10px;
 }
 
-.inputGebruikersnaam {
+/* Additional styles for Gebruikersnaam component */
+.inputGebruikersnaamGebruikersnaam {
     display: flex;
     align-items: center;
     margin-top: 1px;
@@ -119,7 +106,8 @@
     padding: 0;
 }
 
-.inputWachtwoord {
+/* Additional styles for Wachtwoord component */
+.inputWachtwoordWachtwoord {
     display: flex;
     align-items: center;
     margin-top: 1px;
@@ -134,7 +122,8 @@
     padding: 0;
 }
 
-.submit-container {
+/* Additional styles for SubmitContainer component */
+.submitContainer {
     display: flex;
     justify-content: center;
     margin: 12px auto;
