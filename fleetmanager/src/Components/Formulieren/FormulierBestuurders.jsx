@@ -14,6 +14,7 @@ class FormulierBestuurders extends Component {
       postcode: '',
       geboortedatum: '',
       rijksregisternummer: '',
+      
       controle: '',
       categorieRijbewijs: '',
       voertuigId: '',

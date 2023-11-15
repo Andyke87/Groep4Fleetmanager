@@ -12,14 +12,11 @@
     flex-shrink: 0;
     padding-bottom: 30px;
 }
-
-
 .containerButtons {
     display: flex;
     justify-content: flex-end; 
     margin-top: 10px; 
 }
-
 .logOutButton {
     width: 144px;
     height: 35px;
@@ -37,7 +34,6 @@
     margin-right: 10px; 
     cursor: pointer;
 }
-
 .brightnessButton {
     width: 35px;
     height: 35px;
@@ -56,14 +52,10 @@
     align-items: center;
     justify-content: center;
     margin: auto;
-   
-    
     height: 759px;
     flex-shrink: 0;
-   
     padding-bottom: 30px;
 }
-
 .nameAdress {
     width: 100%;
     height: 12px;
@@ -77,9 +69,6 @@
     line-height: normal;
     margin: 10px;
 }
-
-
-
 .button {
     width: 220px;
     height: 46px;
@@ -96,7 +85,6 @@
     color: #ffffff;
     cursor: pointer;
 }
-
 .buttons:hover {
 
     background-color: #A7D5ED;
