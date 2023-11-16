@@ -1,4 +1,10 @@
 /* CSS voor het formulier */
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
 .form-container {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
