@@ -1,5 +1,8 @@
+// Importeer de nodige modules.
 import axios from 'axios';
+import fs from 'fs';
 
+// Definieer de functies.
 function getSwagger() {
   return axios.get('http://localhost:5043/swagger/index.html');
 }
@@ -10,9 +13,6 @@ function parseSwaggerConfig(swaggerConfig) {
 }
 
 function saveSwaggerConfigToFile(swaggerConfig) {
-  const swaggerFile = `${process.env.PUBLIC_URL}/swagger.json`;
-  const fs = require('fs');
-
   fs.writeFileSync(swaggerFile, JSON.stringify(swaggerConfig, null, 2));
 }
 
