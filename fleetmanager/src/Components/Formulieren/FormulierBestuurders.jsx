@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import '../Formulieren/Formulieren.css';
+import ButtonOpslaan from '../Buttons/ButtonOpslaan';
+import ButtonAnnuleren from '../Buttons/ButtonAnnuleren';
 
 class FormulierBestuurders extends Component {
   constructor(props) {
@@ -197,8 +199,8 @@ class FormulierBestuurders extends Component {
           </div>
         </div>
         <div className='containerButtonsNieuw'>
-            <button className='buttonsNieuw' type="submit">Voeg toe</button>
-            <button className='buttonsNieuw' type="button">Annuleer</button>
+          <ButtonOpslaan/>
+          <ButtonAnnuleren/>
           </div>
       </form>
     );

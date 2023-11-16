@@ -10,6 +10,8 @@ import TextField from './TextField'
 import DropdownBestuurders from './DropdownBestuurders'
 import DropdownVoertuigen from './DropdownVoertuigen'
 import DropdownTankkaarten from './DropdownTankkaarten'
+import ButtonOpslaan from '../Buttons/ButtonOpslaan'
+import ButtonAnnuleren from '../Buttons/ButtonAnnuleren'
 
   const Relaties = () => {
     return (
@@ -25,21 +27,33 @@ import DropdownTankkaarten from './DropdownTankkaarten'
         <div className='gridItem'>
           <TankkaartenButton/>
           <DropdownTankkaarten/>
+          <p>Kaartnummer</p>
           <TextField/>
+          <p>GeldigheidsDatum</p>
           <TextField/>
         </div>
         <div className='gridItem'>
           <BestuurdersButton/>
           <DropdownBestuurders/>
+          <p>Voornaam</p>
           <TextField/>
+          <p>Achternaam</p>
           <TextField/>
         </div>
         <div className='gridItem'>
           <VoertuigenButton/>
+          
           <DropdownVoertuigen/>
+          <p>Mark</p>
           <TextField />
+          <p>Nummerplaat</p>
           <TextField />
         </div>
+
+      </div>
+      <div className='buttonsOnderaan'>
+      <ButtonOpslaan/>
+      <ButtonAnnuleren/>
       </div>
     </div>
   </div>
