@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using FleetManager.Models;
 using Microsoft.OpenApi.Models;
+using Connections.Models;
+using Back_end.Controllers;
 
 public class Startup
 {
@@ -17,7 +19,7 @@ public class Startup
             options.UseSqlServer(Configuration.GetConnectionString("Default")));
 
         services.AddControllers();
-
+        services.AddSingleton<ConnectieController>();
         services.AddSwaggerGen(c =>
         {
             c.SwaggerDoc("v1", new OpenApiInfo { Title = "Your API", Version = "v1" });
@@ -46,6 +48,11 @@ public class Startup
         app.UseEndpoints(endpoints =>
         {
             endpoints.MapControllers();
+            endpoints.MapControllerRoute(
+                name: "connectie",
+                pattern: "api/connecties",
+                defaults: new { controller = typeof(ConnectieApiGateway) }
+            );
         });
     }
 }
