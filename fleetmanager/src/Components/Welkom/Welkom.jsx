@@ -3,6 +3,7 @@ import './Welkom.css'
 import '../Login/Login.css'
 import LogoutButton from '../Buttons/LogoutButton';
 import BrightnessButton from '../Buttons/BrightnessButton';
+import MyComponent from '../AanmakenJsonFile/MyComponent';
 
 const handleBestuurders = () => {
   window.location.href = '/NieuwSchermBestuurders';
@@ -34,6 +35,7 @@ const Welkom = () => {
           <button className='button' onClick={handleBestuurders}>Bestuurders</button>
           <button className='button' onClick={handleRelaties}>Relaties</button>
         </div>
+        <MyComponent/>
       </div>
     </div>
   )
