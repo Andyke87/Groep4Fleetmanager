@@ -19,7 +19,7 @@ public class Startup
             options.UseSqlServer(Configuration.GetConnectionString("Default")));
 
         services.AddControllers();
-        services.AddSingleton<ConnectieController>();
+        services.AddScoped<ConnectieController>();
         services.AddSwaggerGen(c =>
         {
             c.SwaggerDoc("v1", new OpenApiInfo { Title = "Your API", Version = "v1" });

@@ -14,9 +14,10 @@ public class ConnectieController : ControllerBase
     {
         _dbContext = dBContext;
     }
-    public IActionResult GetConnectie(int id)
+    [HttpGet("ConnectieBijCode/{code}")]
+    public IActionResult GetConnectie(int code)
     {
-        var connectie = _dbContext.Connecties.FirstOrDefault(c => c.Id == id);
+        var connectie = _dbContext.Connecties.FirstOrDefault(c => c.Id == code);
 
         if (connectie == null)
         {
