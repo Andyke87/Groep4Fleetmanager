@@ -1604,6 +1604,16 @@
   "integrity" "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   "version" "15.8.1"
+=======
+<<<<<<< Updated upstream
+prop-types@^15.8.1:
+=======
+prop-types@^15.7.2, prop-types@^15.8.1:
+>>>>>>> Stashed changes
+  version "15.8.1"
+  resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
+  integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
+>>>>>>> andy-
   dependencies:
     "loose-envify" "^1.4.0"
     "object-assign" "^4.1.1"
