@@ -14,6 +14,17 @@ public class ConnectieController : ControllerBase
     {
         _dbContext = dBContext;
     }
+    public IActionResult GetConnectie(int id)
+    {
+        var connectie = _dbContext.Connecties.FirstOrDefault(c => c.Id == id);
+
+        if (connectie == null)
+        {
+            return NotFound();
+        }
+
+        return Ok(connectie);
+    }
 
     [HttpGet("AlleConnecties")]
     public IActionResult Get()
@@ -52,6 +63,12 @@ public class ConnectieController : ControllerBase
     {
         // Controleer of er al een Connectie bestaat met de opgegeven Id
         var existingConnectie = _dbContext.Connecties.FirstOrDefault(c => c.Id == _connectie.Id);
+
+        // Als de Connectie al bestaat, geef een foutmelding terug
+        if (existingConnectie != null)
+        {
+            return BadRequest("Er bestaat al een Connectie met deze Id.");
+        }
 
         _dbContext.Connecties.Add(_connectie);
         _dbContext.SaveChanges();
