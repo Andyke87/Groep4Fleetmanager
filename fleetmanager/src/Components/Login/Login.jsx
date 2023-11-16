@@ -5,6 +5,7 @@ import './Login.css';
 import Gebruikersnaam from './Gebruikersnaam';
 import Wachtwoord from './Wachtwoord';
 import SubmitContainer from './SubmitContainer';
+import BrightnessButton from '../Buttons/BrightnessButton';
 
 const Login = () => {
   const [action, setAction] = useState('Login');
@@ -24,6 +25,9 @@ const Login = () => {
     <div className="main">
       {/* <SwitchButton /> */}
       <div className='containerBackground'>
+        <div className='containerButtons'> 
+          <BrightnessButton/>
+        </div>
         <div className='containerLogin'>
           <div className='border'>
             <Gebruikersnaam
