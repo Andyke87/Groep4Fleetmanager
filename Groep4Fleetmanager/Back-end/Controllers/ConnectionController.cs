@@ -14,18 +14,6 @@ public class ConnectieController : ControllerBase
     {
         _dbContext = dBContext;
     }
-    [HttpGet("ConnectieBijCode/{code}")]
-    public IActionResult GetConnectie(int code)
-    {
-        var connectie = _dbContext.Connecties.FirstOrDefault(c => c.Id == code);
-
-        if (connectie == null)
-        {
-            return NotFound();
-        }
-
-        return Ok(connectie);
-    }
 
     [HttpGet("AlleConnecties")]
     public IActionResult Get()
