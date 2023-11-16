@@ -1,7 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Gebruikersnaam = ({ gebruikersnaam, setGebruikersnaam }) => {
 const Gebruikersnaam = ({ gebruikersnaam, setGebruikersnaam }) => {
   return (
     <div>

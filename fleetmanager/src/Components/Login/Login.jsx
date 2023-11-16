@@ -1,8 +1,6 @@
 // Login.js
-// Login.js
 import React, { useState } from 'react';
 import './Login.css';
-// import SwitchButton from '../Buttons/SwitchButton';
 // import SwitchButton from '../Buttons/SwitchButton';
 import Gebruikersnaam from './Gebruikersnaam';
 import Wachtwoord from './Wachtwoord';
@@ -25,21 +23,7 @@ const Login = () => {
   return (
     <div className="main">
       {/* <SwitchButton /> */}
-      {/* <SwitchButton /> */}
       <div className='containerBackground'>
-        <div className='containerLogin'>
-          <div className='border'>
-            <Gebruikersnaam
-              gebruikersnaam={gebruikersnaam}
-              setGebruikersnaam={setGebruikersnaam}
-            />
-            <Wachtwoord
-              wachtwoord={wachtwoord}
-              setWachtwoord={setWachtwoord}
-            />
-            <SubmitContainer action={action} handleLogin={handleLogin} />
-          </div>
-        </div>
         <div className='containerLogin'>
           <div className='border'>
             <Gebruikersnaam
