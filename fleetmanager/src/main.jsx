@@ -3,14 +3,15 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import Welkom from './Components/Welkom/Welkom.jsx'
 import './index.css'
-import { BrowserRouter, RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { CssBaseline } from "@mui/material";
+import {RouterProvider, createBrowserRouter } from 'react-router-dom'
 import NieuwSchermVoertuigen from './Components/NieuwScherm/NieuwSchermVoertuigen.jsx'
 import { NieuwSchermTankkaarten } from './Components/NieuwScherm/NieuwSchermTankkaarten.jsx'
 import NieuwSchermBestuurders from './Components/NieuwScherm/NieuwSchermBestuurders.jsx'
 import Relaties from './Components/Relaties/Relaties.jsx'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 const browserRouter = createBrowserRouter (
-
   [
     {
       path : '/',
@@ -37,13 +38,15 @@ const browserRouter = createBrowserRouter (
       element : <Relaties/>
     }
   ]
-)
-
+);
+const queryClient = new QueryClient()
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-   <RouterProvider router ={browserRouter}>
-
-   </RouterProvider>
-  </React.StrictMode>,
+    <CssBaseline>
+      <QueryClientProvider client={queryClient}> 
+        <RouterProvider router ={browserRouter}/>
+      </QueryClientProvider>
+    </CssBaseline>
+  </React.StrictMode>
 )

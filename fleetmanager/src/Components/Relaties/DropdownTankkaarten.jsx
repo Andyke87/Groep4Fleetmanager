@@ -1,13 +1,28 @@
-import React from 'react'
+/* eslint-disable no-unused-vars */
+import React from 'react';
+import { getGasCards } from '../../../API';
+import { useEffect, useState } from 'react';
 
 const DropdownTankkaarten = () => {
-  return (
-    <select className='dropDown'>
-    <option value="option1">Option 1</option>
-    <option value="option2">Option 2</option>
-    <option value="option3">Option 3</option>
-  </select>
-  )
-}
+const [tankCards, setTankCards] = useState([]);
 
-export default DropdownTankkaarten
+  useEffect(() => {
+    // Fetch tank cards from the backend API
+    getGasCards().then(response => {
+      const IdGasCards = response.data.map(tankCards => tankCards.IdGasCard);
+      setTankCards(IdGasCards);
+    });
+  }, []);
+
+  return (
+    <select className="dropDown">
+      {tankCards.map(IdGasCard => (
+        <option key={IdGasCard} value={IdGasCard}>
+          GasCard {IdGasCard}
+        </option>
+      ))}
+    </select>
+  );
+};
+
+export default DropdownTankkaarten;

@@ -1,28 +1,63 @@
-using Microsoft.EntityFrameworkCore;
 using FleetManager.Models;
+using Microsoft.EntityFrameworkCore;
 
-public class Program
+namespace Back_end
 {
-    public static void Main(string[] args)
+    public class Program
     {
-        var host = CreateHostBuilder(args).Build();
-
-        // Voer migraties uit bij het starten van de applicatie (optioneel)
-        using (var scope = host.Services.CreateScope())
+        public static void Main(string[] args)
         {
-            var services = scope.ServiceProvider;
-            var dbContext = services.GetRequiredService<FleetManagerContext>();
-            dbContext.Database.Migrate();
-        }
+            var builder = WebApplication.CreateBuilder(args);
 
-        host.Run();
-    }
+            builder.Services.AddControllers();
 
-    public static IHostBuilder CreateHostBuilder(string[] args) =>
-        Host.CreateDefaultBuilder(args)
-            .ConfigureWebHostDefaults(webBuilder =>
+            //builder.Services.AddSingleton<ICountryRepository, CountryRepository>();
+            builder.Services.AddSingleton<IApplicationBuilder, ApplicationBuilder>();
+
+            // Voor REACT client toegevoegd:
             {
-                webBuilder.UseStartup<Startup>();
+                Console.WriteLine("Cors active");
+                // Adding CORS Policy // Cors = Cross Origin Resource Sharing voor React client
+                builder.Services.AddCors(options =>
+                { // RateLimiting is voor de beveiliging van de API
+                    options.AddPolicy("AllowOrigin", builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                            .AllowAnyHeader() // .WithHeaders("accept", "content-type", "origin", "x-custom-header")
+                            .AllowAnyMethod() // .WithMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                            .SetPreflightMaxAge(TimeSpan.FromSeconds(3600));
+                    });
+                });
+            }
+            builder.Services.AddDbContext<FleetManagerContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
+            });
+            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen(c =>
+            {
+                // Helps fix api conflicts for Swagger - see HttpGet with "~/"
+                c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
             });
 
+            var app = builder.Build();
+
+            // Configure the HTTP request pipeline.
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI();
+            }
+
+            app.UseHttpsRedirection();
+            app.UseAuthorization();
+
+            app.MapControllers();
+
+            app.UseCors("AllowOrigin");
+
+            app.Run();
+        }
+    }
 }

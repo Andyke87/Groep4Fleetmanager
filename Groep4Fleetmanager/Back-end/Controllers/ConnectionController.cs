@@ -6,60 +6,61 @@ namespace Back_end.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class ConnectieController : ControllerBase
+public class ConnectionController : ControllerBase
 {
     private readonly FleetManagerContext _dbContext;
 
-    public ConnectieController(FleetManagerContext dBContext)
+    public ConnectionController(FleetManagerContext dBContext)
     {
         _dbContext = dBContext;
     }
 
-    [HttpGet("AlleConnecties")]
+    [HttpGet("AllConnections")]
     public IActionResult Get()
     {
-        var connecties = _dbContext.Connecties
-            .Include(c => c.IdBestuurderNavigation)
-            .Include(c => c.IdTankkaartNavigation)
-            .Include(c => c.IdVoertuigNavigation)
+        var connections = _dbContext.Connections
+            .Include(c => c.IdDriverNavigation)
+            .Include(c => c.IdGasCardNavigation)
+            .Include(c => c.IdVehicleNavigation)
             .ToList();
-        return Ok(connecties); ;
+        return Ok(connections); ;
     }
-    [HttpGet("ConnectieBijCode/{code}")]
+    [HttpGet("ConnectionByCode/{code}")]
     public IActionResult Get(int code)
     {
-        var connectie = _dbContext.Connecties
-            .Include(c => c.IdBestuurderNavigation)
-            .Include(c => c.IdTankkaartNavigation)
-            .Include(c => c.IdVoertuigNavigation)
+        var connection = _dbContext.Connections
+            .Include(c => c.IdDriverNavigation)
+            .Include(c => c.IdGasCardNavigation)
+            .Include(c => c.IdVehicleNavigation)
             .FirstOrDefault(c => c.Id == code);
-        return Ok(connectie);
+        return Ok(connection);
     }
-    [HttpDelete("Connectie/{code}")]
+    [HttpDelete("Connection/{code}")]
     public IActionResult Remove(int code)
     {
-        var connectie = _dbContext.Connecties.FirstOrDefault(c => c.Id == code);
-        if (connectie != null)
+        var connection = _dbContext.Connections.FirstOrDefault(c => c.Id == code);
+        if (connection != null)
         {
-            _dbContext.Remove(connectie);
+            _dbContext.Remove(connection);
             _dbContext.SaveChanges();
             return Ok(true);
         }
         return Ok(false);
     }
-    [HttpPost("Connectie")]
-    public IActionResult Create([FromBody] Connectie _connectie)
+    [HttpPost("Connection")]
+    public IActionResult Create([FromBody] Connection _connection)
     {
         // Controleer of er al een Connectie bestaat met de opgegeven Id
-        var existingConnectie = _dbContext.Connecties.FirstOrDefault(c => c.Id == _connectie.Id);
+        var existingConnection = _dbContext.Connections.FirstOrDefault(c => c.Id == _connection.Id);
 
         // Als de Connectie al bestaat, geef een foutmelding terug
-        if (existingConnectie != null)
+        if (existingConnection != null)
         {
-            return BadRequest("Er bestaat al een Connectie met deze Id.");
+            return BadRequest("A connection already exists with this Id.");
         }
+        Connection newConnection = new(_connection.IdDriver, _connection.IdGasCard, _connection.IdVehicle);
 
-        _dbContext.Connecties.Add(_connectie);
+        _dbContext.Connections.Add(newConnection);
         _dbContext.SaveChanges();
 
         return Ok(true);

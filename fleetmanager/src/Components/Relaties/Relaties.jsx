@@ -1,4 +1,5 @@
-import React from 'react'
+// eslint-disable-next-line no-unused-vars
+import React, { useEffect } from 'react'
 import BrightnessButton from '../Buttons/BrightnessButton'
 import LogoutButton from '../Buttons/LogoutButton'
 import HomeButton from '../Buttons/HomeButton'
@@ -12,10 +13,30 @@ import DropdownVoertuigen from './DropdownVoertuigen'
 import DropdownTankkaarten from './DropdownTankkaarten'
 import ButtonOpslaan from '../Buttons/ButtonOpslaan'
 import ButtonAnnuleren from '../Buttons/ButtonAnnuleren'
+import axios from 'axios'
 
-  const Relaties = () => {
-    return (
-      <div className='containerBackground'>
+
+const Relaties = () => {
+  const [gasCards, setGasCards] = React.useState([]);
+  const [drivers, setDrivers] = React.useState([]);
+  const [vehicles, setVehicles] = React.useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await axios.get('http://localhost:5043/Connection/AllConnections');
+        setGasCards(response.data.gasCards);
+        setDrivers(response.data.drivers);
+        setVehicles(response.data.vehicles);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    fetchData();
+  }, []);
+  
+return (
+<div className='containerBackground'>
   <div className='containerRelaties'> 
     <div className='containerButtons'> 
       <BrightnessButton/>
@@ -26,7 +47,7 @@ import ButtonAnnuleren from '../Buttons/ButtonAnnuleren'
       <div className='gridContainer'>
         <div className='gridItem'>
           <TankkaartenButton/>
-          <DropdownTankkaarten/>
+          <DropdownTankkaarten gasCards={gasCards}/>
           <p>Kaartnummer</p>
           <TextField/>
           <p>GeldigheidsDatum</p>
@@ -34,7 +55,7 @@ import ButtonAnnuleren from '../Buttons/ButtonAnnuleren'
         </div>
         <div className='gridItem'>
           <BestuurdersButton/>
-          <DropdownBestuurders/>
+          <DropdownBestuurders drivers={drivers}/>
           <p>Voornaam</p>
           <TextField/>
           <p>Achternaam</p>
@@ -43,7 +64,7 @@ import ButtonAnnuleren from '../Buttons/ButtonAnnuleren'
         <div className='gridItem'>
           <VoertuigenButton/>
           
-          <DropdownVoertuigen/>
+          <DropdownVoertuigen vehicles={vehicles}/>
           <p>Mark</p>
           <TextField />
           <p>Nummerplaat</p>
@@ -60,5 +81,5 @@ import ButtonAnnuleren from '../Buttons/ButtonAnnuleren'
 </div>
     )
   }
-  
+
   export default Relaties
