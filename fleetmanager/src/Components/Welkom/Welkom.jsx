@@ -1,5 +1,5 @@
 import React from 'react'
-import './Welkom.css';
+import './Welkom.css'
 import '../Login/Login.css'
 import LogoutButton from '../Buttons/LogoutButton';
 import BrightnessButton from '../Buttons/BrightnessButton';

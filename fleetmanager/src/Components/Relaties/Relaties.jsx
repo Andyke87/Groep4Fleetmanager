@@ -1,12 +1,63 @@
-  
-  import React from 'react'
-  
+import React from 'react'
+import BrightnessButton from '../Buttons/BrightnessButton'
+import LogoutButton from '../Buttons/LogoutButton'
+import HomeButton from '../Buttons/HomeButton'
+import './Relaties.css'
+import TankkaartenButton from '../Buttons/TankkaartenButton'
+import BestuurdersButton from '../Buttons/BestuurdersButton'
+import VoertuigenButton from '../Buttons/VoertuigenButton'
+import TextField from './TextField'
+import DropdownBestuurders from './DropdownBestuurders'
+import DropdownVoertuigen from './DropdownVoertuigen'
+import DropdownTankkaarten from './DropdownTankkaarten'
+import ButtonOpslaan from '../Buttons/ButtonOpslaan'
+import ButtonAnnuleren from '../Buttons/ButtonAnnuleren'
+
   const Relaties = () => {
     return (
-      <div> 
-        <h1>Relaties</h1>
-      
+      <div className='containerBackground'>
+  <div className='containerRelaties'> 
+    <div className='containerButtons'> 
+      <BrightnessButton/>
+      <HomeButton/>
+      <LogoutButton/>
+    </div>
+    <div className='containerRelatieScreen'>
+      <div className='gridContainer'>
+        <div className='gridItem'>
+          <TankkaartenButton/>
+          <DropdownTankkaarten/>
+          <p>Kaartnummer</p>
+          <TextField/>
+          <p>GeldigheidsDatum</p>
+          <TextField/>
+        </div>
+        <div className='gridItem'>
+          <BestuurdersButton/>
+          <DropdownBestuurders/>
+          <p>Voornaam</p>
+          <TextField/>
+          <p>Achternaam</p>
+          <TextField/>
+        </div>
+        <div className='gridItem'>
+          <VoertuigenButton/>
+          
+          <DropdownVoertuigen/>
+          <p>Mark</p>
+          <TextField />
+          <p>Nummerplaat</p>
+          <TextField />
+        </div>
+
       </div>
+      <div className='buttonsOnderaan'>
+      <ButtonOpslaan/>
+      <ButtonAnnuleren/>
+      </div>
+    </div>
+  </div>
+</div>
     )
   }
   
