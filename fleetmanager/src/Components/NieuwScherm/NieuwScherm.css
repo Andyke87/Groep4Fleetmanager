@@ -74,19 +74,19 @@
     line-height: normal;
     margin: 10px;
 }
-.buttons {
-    border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.60);
-    background: rgba(221, 221, 221, 0.60);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    margin: 0px;
-}
 #selected{
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.60);
     background: rgba(221, 221, 221, 0.60);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     opacity: 60%;
+}
+.buttons{
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.60);
+    background: rgba(221, 221, 221, 0.60);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 0px;
 }
 .buttons{
     width: 220px;
@@ -97,6 +97,12 @@
     background: #DDD;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     margin: 0px; 
+    cursor: pointer;
+}
+.buttons:hover{
+    background-color: #0074d9; 
+    color: #ffffff;
+    cursor: pointer;
 }
 table {
     width: auto;
@@ -116,7 +122,3 @@ td{
     border: 1px solid black;
     height: 5px;
 }
-.button:hover {
-    background-color: #0074d9; 
-    color: #ffffff;
-  }

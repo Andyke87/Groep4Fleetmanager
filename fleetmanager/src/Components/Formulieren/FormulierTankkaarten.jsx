@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import '../Formulieren/Formulieren.css';
 import ButtonOpslaan from '../Buttons/ButtonOpslaan';

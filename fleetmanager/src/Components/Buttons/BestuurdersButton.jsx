@@ -1,8 +1,8 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 
 const handleBestuurders = () => {
-    window.location.href = '/NieuwSchermBestuurders';
-    
+    window.location.href = '/NieuwSchermBestuurders';   
 }
 const BestuurdersButton = () => {
   return (
