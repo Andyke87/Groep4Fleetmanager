@@ -65,7 +65,7 @@ return (
           <VoertuigenButton/>
           
           <DropdownVoertuigen vehicles={vehicles}/>
-          <p>Mark</p>
+          <p>Merk</p>
           <TextField />
           <p>Nummerplaat</p>
           <TextField />
