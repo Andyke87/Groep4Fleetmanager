@@ -33,6 +33,7 @@ html {
     grid-row: 1;
     grid-column: 3;
     padding: 10px;
+    height: 50px;
 }
 
 .brightnessButton {

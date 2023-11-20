@@ -26,7 +26,7 @@ const Login = () => {
       {/* <SwitchButton /> */}
       <div className='containerBackground'>
         <div className='containerButtons'> 
-          <BrightnessButton/>
+          {/* <BrightnessButton/> */}
         </div>
         <div className='containerLogin'>
           <div className='border'>
