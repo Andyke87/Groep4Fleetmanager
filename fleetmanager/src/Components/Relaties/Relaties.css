@@ -54,4 +54,16 @@
     margin-top : 20px;
     text-align: center;
   }
- 
+ .buttons:hover {
+   background-color: #0074d9;
+   color: #ffffff;
+   cursor: pointer
+ }
+
+ .buttonsNieuw:hover{
+  background-color: #0074d9;
+    color: #ffffff;
+    cursor: pointer
+ }
+
+  
