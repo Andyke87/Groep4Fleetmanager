@@ -10,6 +10,7 @@ import TankkaartenButton from '../Buttons/TankkaartenButton';
 import BestuurdersButton from '../Buttons/BestuurdersButton';
 import FormulierTankkaarten from '../Formulieren/FormulierTankkaarten';
 import TableTankkaarten from '../Tables/TableTankkaarten';
+import ButtonRelaties from '../Buttons/ButtonRelaties';
 
 export const NieuwSchermTankkaarten = () => {
   return (
@@ -24,6 +25,7 @@ export const NieuwSchermTankkaarten = () => {
           <VoertuigenButton/>
           <TankkaartenButton/>
           <BestuurdersButton/>
+          <ButtonRelaties/>
         </div>
         <TableTankkaarten/>
         <FormulierTankkaarten/>
