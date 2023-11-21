@@ -8,6 +8,7 @@ import {RouterProvider, createBrowserRouter } from 'react-router-dom'
 import NieuwSchermVoertuigen from './Components/NieuwScherm/NieuwSchermVoertuigen.jsx'
 import { NieuwSchermTankkaarten } from './Components/NieuwScherm/NieuwSchermTankkaarten.jsx'
 import NieuwSchermBestuurders from './Components/NieuwScherm/NieuwSchermBestuurders.jsx'
+import NieuwSchermRelaties from './Components/NieuwScherm/NieuwSchermRelaties.jsx'
 import Relaties from './Components/Relaties/Relaties.jsx'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
@@ -32,6 +33,10 @@ const browserRouter = createBrowserRouter (
     {
       path : '/NieuwSchermBestuurders', 
       element : <NieuwSchermBestuurders/>
+    },
+    {
+      path : '/NieuwSchermRelaties',
+      element : <NieuwSchermRelaties/>
     },
     {
       path : '/Relaties',

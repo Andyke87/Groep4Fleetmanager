@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
@@ -16,18 +17,17 @@ const formatDate = (isoDate) => {
 
   return `${formattedDay}/${formattedMonth}/${year}`;
 };
-
-const DropdownTankkaarten = () => 
+// export om de functie in een ander bestand te kunnen gebruiken
+export const DropdownTankkaarten = ({selectedIdGasCard, setSelectedIdGasCard}) => 
 {
   const [tankCards, setTankCards] = useState([]);
-  const [selectedIdGasCard, setSelectedIdGasCard] = useState('');
   const [selectedCardNumber, setSelectedCardNumber] = useState('');
   const [selectedValidationDate, setSelectedValidationDate] = useState('');
 
   useEffect(() => {
     // Fetch tankCards from the backend API
     getGasCards().then(response => {
-      setTankCards(response.data);
+      setTankCards(response.data || []);
     });
   }, []);
 
@@ -47,11 +47,10 @@ const DropdownTankkaarten = () =>
     setSelectedValidationDate(formattedValidationDate);
 
   };
-
   return (
     <div>
       <select className="dropDown" onChange={handleTankCardChange}>
-        <option value="default">Select a gas card id</option>
+        <option value={selectedIdGasCard}>Select a gas card id</option>
           {tankCards.map((tankCard) => (
             <option key={tankCard.idGasCard} value={tankCard.idGasCard}>
               {tankCard.idGasCard}

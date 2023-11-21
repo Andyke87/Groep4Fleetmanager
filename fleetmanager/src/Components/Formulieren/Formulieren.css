@@ -9,7 +9,7 @@ html {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 10px;
-  width: 50%
+  width: 100%
 }
   
 .form-container .col {

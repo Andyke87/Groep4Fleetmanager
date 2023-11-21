@@ -17,7 +17,7 @@ const handleTankkaarten = () => {
   window.location.href = '/NieuwSchermTankkaarten';
 }
 const handleRelaties = () => {
-  window.location.href = '/Relaties';
+  window.location.href = '/NieuwSchermRelaties';
 }
 
 
