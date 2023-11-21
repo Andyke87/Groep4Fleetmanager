@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import './NieuwScherm.css'
 import '../Welkom/Welkom.css';
@@ -22,9 +23,9 @@ export const NieuwSchermTankkaarten = () => {
       </div>
       <div className='thirdScreenContainer'>
         <div className='buttonsThirdScreen'>
-          <VoertuigenButton/>
-          <TankkaartenButton/>
           <BestuurdersButton/>
+          <TankkaartenButton/>
+          <VoertuigenButton/>
           <ButtonRelaties/>
         </div>
         <TableTankkaarten/>

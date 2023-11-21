@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 
 const handleRelaties = () => {
-    window.location.href = '/Relaties';
+    window.location.href = '/NieuwSchermRelaties';
 }
 
 const ButtonRelaties = () => {

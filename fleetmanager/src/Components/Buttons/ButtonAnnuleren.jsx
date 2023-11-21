@@ -1,10 +1,14 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React from 'react';
 
-const ButtonAnnuleren = () => {
+const ButtonAnnuleren = ({ onClick }) => {
   return (
-    <button className='buttonsNieuw' type="button">Annuleer</button>
-  )
-}
+    <button className='buttonsNieuw' type="button" onClick={onClick}>
+      Annuleer
+    </button>
+  );
+};
 
-export default ButtonAnnuleren
+export default ButtonAnnuleren;
+
