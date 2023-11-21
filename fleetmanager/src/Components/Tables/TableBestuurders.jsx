@@ -5,19 +5,16 @@ const TableBestuurders = () => {
   return (
     <table>
       <tr>
-        <th>Id_Bestuurder</th>
-        <th>Naam</th>
-        <th>Voornaam</th>
-        <th>Straat</th>
-        <th>Huisnummer</th>
-        <th>Stad</th>
-        <th>Postcode</th>
-        <th>Geboortedatum</th>
-        <th>Rijksregisternummer</th>
-        <th>Controle</th>
-        <th>Categorie_rijbewijs</th>
-        <th>Voertuig_id</th>
-        <th>Tankkaart_id</th>
+        <th>Driver ID</th>
+        <th>Name</th>
+        <th>Firstname</th>
+        <th>Street</th>
+        <th>Number</th>
+        <th>City</th>
+        <th>ZipCode</th>
+        <th>Day Of Birth</th>
+        <th>Registry Number</th>
+        <th>Category License</th>
       </tr>
       <tr>
         <td>1</td>
@@ -29,10 +26,7 @@ const TableBestuurders = () => {
         <td>1000</td>
         <td>5/15/1990</td>
         <td>12345678901</td>
-        <td>ONWAAR</td>
         <td>B</td>
-        <td>101</td>
-        <td>201</td>
       </tr>
       <tr>
         <td>2</td>
@@ -44,10 +38,7 @@ const TableBestuurders = () => {
         <td>2000</td>
         <td>11/20/1988</td>
         <td>23456789012</td>
-        <td>ONWAAR</td>
         <td>B</td>
-        <td>102</td>
-        <td>202</td>
       </tr>
       <tr>
         <td>3</td>
@@ -59,10 +50,7 @@ const TableBestuurders = () => {
         <td>8000</td>
         <td>3/10/1995</td>
         <td>34567890123</td>
-        <td>ONWAAR</td>
         <td>A</td>
-        <td>103</td>
-        <td>203</td>
       </tr>
       <tr>
         <td>4</td>
@@ -74,10 +62,7 @@ const TableBestuurders = () => {
         <td>9000</td>
         <td>9/25/1992</td>
         <td>45678901234</td>
-        <td>ONWAAR</td>
         <td>C</td>
-        <td>104</td>
-        <td>204</td>
       </tr>
       <tr>
         <td>5</td>
@@ -89,10 +74,7 @@ const TableBestuurders = () => {
         <td>4000</td>
         <td>12/30/1987</td>
         <td>56789012345</td>
-        <td>ONWAAR</td>
         <td>A</td>
-        <td>105</td>
-        <td>205</td>
       </tr>
       <tr>
         <td>6</td>
@@ -104,10 +86,7 @@ const TableBestuurders = () => {
         <td>3000</td>
         <td>7/8/1991</td>
         <td>67890123456</td>
-        <td>ONWAAR</td>
         <td>B</td>
-        <td>106</td>
-        <td>206</td>
       </tr>
       <tr>
         <td>7</td>
@@ -119,10 +98,7 @@ const TableBestuurders = () => {
         <td>6000</td>
         <td>4/5/1993</td>
         <td>78901234567</td>
-        <td>ONWAAR</td>
         <td>C</td>
-        <td>107</td>
-        <td>207</td>
       </tr>
       <tr>
         <td>7</td>
@@ -134,10 +110,7 @@ const TableBestuurders = () => {
         <td>6000</td>
         <td>4/5/1993</td>
         <td>78901234567</td>
-        <td>ONWAAR</td>
         <td>C</td>
-        <td>107</td>
-        <td>207</td>
       </tr>
       <tr>
         <td>8</td>
@@ -149,10 +122,7 @@ const TableBestuurders = () => {
         <td>3000</td>
         <td>2/14/1994</td>
         <td>89012345678</td>
-        <td>ONWAAR</td>
         <td>B</td>
-        <td>108</td>
-        <td>208</td>
       </tr>
       <tr>
         <td>9</td>
@@ -164,10 +134,7 @@ const TableBestuurders = () => {
         <td>1000</td>
         <td>8/22/1997</td>
         <td>90123456789</td>
-        <td>ONWAAR</td>
         <td>A</td>
-        <td>109</td>
-        <td>209</td>
       </tr>
       <tr>
         <td>10</td>
@@ -179,10 +146,7 @@ const TableBestuurders = () => {
         <td>8000</td>
         <td>6/18/1996</td>
         <td>12309876543</td>
-        <td>ONWAAR</td>
         <td>C</td>
-        <td>110</td>
-        <td>210</td>
       </tr>
       <tr>
         <td>11</td>
@@ -194,10 +158,7 @@ const TableBestuurders = () => {
         <td>2000</td>
         <td>9/8/1998</td>
         <td>23456789087</td>
-        <td>ONWAAR</td>
         <td>B</td>
-        <td>111</td>
-        <td>211</td>
       </tr>
       <tr>
         <td>12</td>
@@ -209,10 +170,7 @@ const TableBestuurders = () => {
         <td>1000</td>
         <td>3/25/1993</td>
         <td>34567890123</td>
-        <td>ONWAAR</td>
         <td>A</td>
-        <td>112</td>
-        <td>212</td>
       </tr>
       <tr>
         <td>13</td>
@@ -224,10 +182,7 @@ const TableBestuurders = () => {
         <td>3000</td>
         <td>11/12/1997</td>
         <td>45678901234</td>
-        <td>ONWAAR</td>
         <td>B</td>
-        <td>113</td>
-        <td>213</td>
       </tr>
       <tr>
         <td>14</td>
@@ -239,10 +194,7 @@ const TableBestuurders = () => {
         <td>9000</td>
         <td>7/1/1995</td>
         <td>56789012345</td>
-        <td>ONWAAR</td>
         <td>C</td>
-        <td>114</td>
-        <td>214</td>
       </tr>
       <tr>
         <td>15</td>
@@ -254,10 +206,7 @@ const TableBestuurders = () => {
         <td>2000</td>
         <td>5/9/1992</td>
         <td>67890123456</td>
-        <td>ONWAAR</td>
         <td>A</td>
-        <td>115</td>
-        <td>215</td>
       </tr>
       <tr>
         <td>16</td>
@@ -269,10 +218,7 @@ const TableBestuurders = () => {
         <td>4000</td>
         <td>1/30/1998</td>
         <td>78901234567</td>
-        <td>ONWAAR</td>
         <td>B</td>
-        <td>116</td>
-        <td>216</td>
       </tr>
       <tr>
         <td>17</td>
@@ -284,10 +230,7 @@ const TableBestuurders = () => {
         <td>3000</td>
         <td>9/14/1993</td>
         <td>89012345678</td>
-        <td>ONWAAR</td>
         <td>C</td>
-        <td>117</td>
-        <td>217</td>
       </tr>
       <tr>
         <td>18</td>
@@ -299,10 +242,7 @@ const TableBestuurders = () => {
         <td>8000</td>
         <td>12/5/1991</td>
         <td>90123456789</td>
-        <td>ONWAAR</td>
         <td>A</td>
-        <td>118</td>
-        <td>218</td>
       </tr>
       <tr>
         <td>19</td>
@@ -314,10 +254,7 @@ const TableBestuurders = () => {
         <td>9000</td>
         <td>8/20/1994</td>
         <td>12309876543</td>
-        <td>ONWAAR</td>
         <td>B</td>
-        <td>119</td>
-        <td>219</td>
       </tr>
       <tr>
         <td>20</td>
@@ -329,10 +266,7 @@ const TableBestuurders = () => {
         <td>2000</td>
         <td>2/28/1990</td>
         <td>23456789087</td>
-        <td>ONWAAR</td>
         <td>C</td>
-        <td>120</td>
-        <td>220</td>
       </tr>
       <tr>
         <td>21</td>
@@ -344,10 +278,7 @@ const TableBestuurders = () => {
         <td>8000</td>
         <td>6/18/1996</td>
         <td>34567890123</td>
-        <td>ONWAAR</td>
         <td>A</td>
-        <td>121</td>
-        <td>221</td>
       </tr>
       <tr>
         <td>22</td>
@@ -359,10 +290,7 @@ const TableBestuurders = () => {
         <td>9000</td>
         <td>10/9/1990</td>
         <td>45678901234</td>
-        <td>ONWAAR</td>
         <td>B</td>
-        <td>122</td>
-        <td>222</td>
       </tr>
       <tr>
         <td>23</td>
@@ -374,10 +302,7 @@ const TableBestuurders = () => {
         <td>2000</td>
         <td>3/26/1995</td>
         <td>56789012345</td>
-        <td>ONWAAR</td>
         <td>C</td>
-        <td>123</td>
-        <td>223</td>
       </tr>
       <tr>
         <td>24</td>
@@ -389,10 +314,7 @@ const TableBestuurders = () => {
         <td>3000</td>
         <td>8/15/1992</td>
         <td>67890123456</td>
-        <td>ONWAAR</td>
         <td>A</td>
-        <td>124</td>
-        <td>224</td>
       </tr>
       <tr>
         <td>25</td>
@@ -404,10 +326,7 @@ const TableBestuurders = () => {
         <td>1000</td>
         <td>2/9/1993</td>
         <td>78901234567</td>
-        <td>ONWAAR</td>
         <td>B</td>
-        <td>125</td>
-        <td>225</td>
       </tr>
       <tr>
         <td>26</td>
@@ -419,10 +338,7 @@ const TableBestuurders = () => {
         <td>6000</td>
         <td>12/1/1991</td>
         <td>89012345678</td>
-        <td>ONWAAR</td>
         <td>C</td>
-        <td>126</td>
-        <td>226</td>
       </tr>
       <tr>
         <td>27</td>
@@ -434,10 +350,7 @@ const TableBestuurders = () => {
         <td>9000</td>
         <td>5/3/1994</td>
         <td>90123456789</td>
-        <td>ONWAAR</td>
         <td>A</td>
-        <td>127</td>
-        <td>227</td>
       </tr>
       <tr>
         <td>28</td>
@@ -449,10 +362,7 @@ const TableBestuurders = () => {
         <td>2000</td>
         <td>11/28/1990</td>
         <td>23456789087</td>
-        <td>ONWAAR</td>
         <td>B</td>
-        <td>128</td>
-        <td>228</td>
       </tr>
       <tr>
         <td>29</td>
@@ -464,10 +374,7 @@ const TableBestuurders = () => {
         <td>4000</td>
         <td>4/17/1996</td>
         <td>34567890123</td>
-        <td>ONWAAR</td>
         <td>C</td>
-        <td>129</td>
-        <td>229</td>
       </tr>
       <tr>
         <td>30</td>
@@ -479,10 +386,7 @@ const TableBestuurders = () => {
         <td>3000</td>
         <td>9/8/1992</td>
         <td>45678901234</td>
-        <td>ONWAAR</td>
         <td>A</td>
-        <td>130</td>
-        <td>230</td>
       </tr>
       <tr>
         <td>31</td>
@@ -494,10 +398,7 @@ const TableBestuurders = () => {
         <td>8000</td>
         <td>6/12/1995</td>
         <td>56789012345</td>
-        <td>ONWAAR</td>
         <td>B</td>
-        <td>131</td>
-        <td>231</td>
       </tr>
       <tr>
         <td>32</td>
@@ -509,10 +410,7 @@ const TableBestuurders = () => {
         <td>2000</td>
         <td>3/28/1993</td>
         <td>67890123456</td>
-        <td>ONWAAR</td>
         <td>A</td>
-        <td>132</td>
-        <td>232</td>
       </tr>
       <tr>
         <td>33</td>
@@ -524,10 +422,7 @@ const TableBestuurders = () => {
         <td>9000</td>
         <td>11/5/1989</td>
         <td>89012345678</td>
-        <td>ONWAAR</td>
         <td>C</td>
-        <td>133</td>
-        <td>233</td>
       </tr>
       <tr>
         <td>34</td>
@@ -539,10 +434,7 @@ const TableBestuurders = () => {
         <td>3000</td>
         <td>9/20/1992</td>
         <td>90123456789</td>
-        <td>ONWAAR</td>
         <td>A</td>
-        <td>134</td>
-        <td>234</td>
       </tr>
       <tr>
         <td>35</td>
@@ -554,10 +446,7 @@ const TableBestuurders = () => {
         <td>1000</td>
         <td>2/15/1991</td>
         <td>12345678901</td>
-        <td>ONWAAR</td>
         <td>B</td>
-        <td>135</td>
-        <td>235</td>
       </tr>
       <tr>
         <td>36</td>
@@ -569,10 +458,7 @@ const TableBestuurders = () => {
         <td>6000</td>
         <td>5/8/1994</td>
         <td>23456789012</td>
-        <td>ONWAAR</td>
         <td>C</td>
-        <td>136</td>
-        <td>236</td>
       </tr>
       <tr>
         <td>37</td>
@@ -584,10 +470,7 @@ const TableBestuurders = () => {
         <td>9000</td>
         <td>8/31/1997</td>
         <td>34567890123</td>
-        <td>ONWAAR</td>
         <td>A</td>
-        <td>137</td>
-        <td>237</td>
       </tr>
       <tr>
         <td>38</td>
@@ -599,10 +482,7 @@ const TableBestuurders = () => {
         <td>2000</td>
         <td>4/22/1990</td>
         <td>45678901234</td>
-        <td>ONWAAR</td>
         <td>B</td>
-        <td>138</td>
-        <td>238</td>
       </tr>
       <tr>
         <td>39</td>
@@ -614,10 +494,7 @@ const TableBestuurders = () => {
         <td>4000</td>
         <td>12/5/1993</td>
         <td>56789012345</td>
-        <td>ONWAAR</td>
         <td>C</td>
-        <td>139</td>
-        <td>239</td>
       </tr>
       <tr>
         <td>40</td>
@@ -629,10 +506,7 @@ const TableBestuurders = () => {
         <td>3000</td>
         <td>7/18/1991</td>
         <td>67890123456</td>
-        <td>ONWAAR</td>
         <td>A</td>
-        <td>140</td>
-        <td>240</td>
       </tr>
       </table>
   );

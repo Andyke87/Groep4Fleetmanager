@@ -8,19 +8,17 @@ class FormulierBestuurders extends Component {
     super(props);
     this.state = {
       idBestuurder: '',
-      naam: '',
-      voornaam: '',
-      straat: '',
-      huisnummer: '',
-      stad: '',
-      postcode: '',
-      geboortedatum: '',
-      rijksregisternummer: '',
-      
+      Name: '',
+      firstName: '',
+      street: '',
+      number: '',
+      city: '',
+      zipcode: '',
+      dayOfBirth: '',
+      registryNumber: '',
       controle: '',
-      categorieRijbewijs: '',
+      categoryLicense: '',
       voertuigId: '',
-      
     };
   }
 
@@ -37,163 +35,127 @@ class FormulierBestuurders extends Component {
 
   render() {
     const {
-      idBestuurder,
-      naam,
-      voornaam,
-      straat,
-      huisnummer,
-      stad,
-      postcode,
-      geboortedatum,
-      rijksregisternummer,
-      controle,
-      categorieRijbewijs,
-      voertuigId,
-      tankkaartId,
+      idDriver,
+      name,
+      firstName,
+      street,
+      number,
+      city,
+      zipcode,
+      dayOfBirth,
+      registryNumber,
+      categoryLicense,
     } = this.state;
 
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="form-container">
           <div className="col">
-            <label htmlFor="idBestuurder">Bestuurder ID</label>
+            <label htmlFor="idDriver">Driver ID</label>
             <input
               className="input"
               type="text"
-              name="idBestuurder"
-              value={idBestuurder}
+              name="idDriver"
+              value={idDriver}
               onChange={this.handleChange}
             />
           </div>
 
           <div className="col">
-            <label htmlFor="naam">Naam</label>
+            <label htmlFor="name">Name</label>
             <input
               className="input"
               type="text"
-              name="naam"
-              value={naam}
+              name="Name"
+              value={name}
               onChange={this.handleChange}
             />
           </div>
 
           <div className="col">
-            <label htmlFor="voornaam">Voornaam</label>
+            <label htmlFor="firstName">FirstName</label>
             <input
               className="input"
               type="text"
-              name="voornaam"
-              value={voornaam}
+              name="firstName"
+              value={firstName}
               onChange={this.handleChange}
             />
           </div>
 
           <div className="col">
-            <label htmlFor="straat">Straat</label>
+            <label htmlFor="street">Street</label>
             <input
               className="input"
               type="text"
-              name="straat"
-              value={straat}
+              name="street"
+              value={street}
               onChange={this.handleChange}
             />
           </div>
 
           <div className="col">
-            <label htmlFor="huisnummer">Huisnummer</label>
+            <label htmlFor="number">Number</label>
             <input
               className="input"
               type="text"
-              name="huisnummer"
-              value={huisnummer}
+              name="number"
+              value={number}
               onChange={this.handleChange}
             />
           </div>
 
           <div className="col">
-            <label htmlFor="stad">Stad</label>
+            <label htmlFor="city">City</label>
             <input
               className="input"
               type="text"
-              name="stad"
-              value={stad}
+              name="city"
+              value={city}
               onChange={this.handleChange}
             />
           </div>
 
           <div className="col">
-            <label htmlFor="postcode">Postcode</label>
+            <label htmlFor="zipcode">Zipcode</label>
             <input
               className="input"
               type="text"
-              name="postcode"
-              value={postcode}
+              name="zipcode"
+              value={zipcode}
               onChange={this.handleChange}
             />
           </div>
 
           <div className="col">
-            <label htmlFor="geboortedatum">Geboortedatum</label>
+            <label htmlFor="dayOfBirth">Day Of Birth</label>
             <input
               className="input"
               type="date"
-              name="geboortedatum"
-              value={geboortedatum}
+              name="dayOfBirth"
+              value={dayOfBirth}
               onChange={this.handleChange}
             />
           </div>
 
           <div className="col">
-            <label htmlFor="rijksregisternummer">Rijksregisternummer</label>
+            <label htmlFor="registryNumber">Registry Number</label>
             <input
               className="input"
               type="text"
-              name="rijksregisternummer"
-              value={rijksregisternummer}
+              name="registryNumber"
+              value={registryNumber}
               onChange={this.handleChange}
             />
           </div>
 
           <div className="col">
-            <label htmlFor="controle">Controle</label>
+            <label htmlFor="categoryLicense">Category License</label>
             <input
               className="input"
               type="text"
-              name="controle"
-              value={controle}
-              onChange={this.handleChange}
-            />
-          </div>
-
-          <div className="col">
-            <label htmlFor="categorieRijbewijs">Categorie rijbewijs</label>
-            <input
-              className="input"
-              type="text"
-              name="categorieRijbewijs"
-              value={categorieRijbewijs}
-              onChange={this.handleChange}
-            />
-          </div>
-
-          <div className="col">
-            <label htmlFor="voertuigId">Voertuig ID</label>
-            <input
-              className="input"
-              type="text"
-              name="voertuigId"
-              value={voertuigId}
-              onChange={this.handleChange}
-            />
-          </div>
-
-          <div className="col">
-            <label htmlFor="tankkaartId">Tankkaart ID</label>
-            <input
-              className="input"
-              type="text"
-              name="tankkaartId"
-              value={tankkaartId}
+              name="categoryLicense"
+              value={categoryLicense}
               onChange={this.handleChange}
             />
           </div>
