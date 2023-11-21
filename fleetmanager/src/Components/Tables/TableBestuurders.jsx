@@ -5,16 +5,16 @@ const TableBestuurders = () => {
   return (
     <table>
       <tr>
-        <th>Driver ID</th>
+        <th>IdDriver</th>
         <th>Name</th>
         <th>Firstname</th>
         <th>Street</th>
         <th>Number</th>
         <th>City</th>
         <th>ZipCode</th>
-        <th>Day Of Birth</th>
-        <th>Registry Number</th>
-        <th>Category License</th>
+        <th>DayOfBirth</th>
+        <th>RegistryNumber</th>
+        <th>CategoryLicense</th>
       </tr>
       <tr>
         <td>1</td>

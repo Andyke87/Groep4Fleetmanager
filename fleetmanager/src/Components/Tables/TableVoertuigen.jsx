@@ -4,16 +4,15 @@ const TableVoertuigen = () => {
   return (
     <table>
     <tr>
-      <th>Id_Voertuig</th>
-      <th>Merk</th>
+      <th>IdVehicle</th>
+      <th>Brand</th>
       <th>Model</th>
-      <th>Chassisnummer</th>
-      <th>Nummerplaat</th>
-      <th>Brandstoftype</th>
-      <th>Type_voertuig</th>
-      <th>Kleur</th>
-      <th>Aantal_deuren</th>
-      <th>Bestuurder_Id</th>
+      <th>ChassisNumber</th>
+      <th>LicensePlate</th>
+      <th>Fuel</th>
+      <th>VehicleType</th>
+      <th>Color</th>
+      <th>NumberOfDoors</th>
     </tr>
     <tr>
       <td>101</td>
@@ -25,7 +24,6 @@ const TableVoertuigen = () => {
       <td>Personenauto</td>
       <td>Zwart</td>
       <td>4</td>
-      <td>1</td>
     </tr>
     <tr>
       <td>102</td>
@@ -37,7 +35,6 @@ const TableVoertuigen = () => {
       <td>Personenauto</td>
       <td>Blauw</td>
       <td>4</td>
-      <td>2</td>
     </tr>
     <tr>
       <td>103</td>
@@ -49,7 +46,6 @@ const TableVoertuigen = () => {
       <td>Personenauto</td>
       <td>Rood</td>
       <td>4</td>
-      <td>3</td>
     </tr>
     <tr>
       <td>104</td>
@@ -60,7 +56,6 @@ const TableVoertuigen = () => {
       <td>Benzine</td>
       <td>Personenauto</td>
       <td>Grijs</td>
-      <td>4</td>
       <td>4</td>
     </tr>
     <tr>
@@ -73,7 +68,6 @@ const TableVoertuigen = () => {
       <td>Personenauto</td>
       <td>Zilver</td>
       <td>4</td>
-      <td>5</td>
     </tr>
     <tr>
       <td>106</td>
@@ -84,9 +78,7 @@ const TableVoertuigen = () => {
       <td>Benzine</td>
       <td>Personenauto</td>
       <td>Wit</td>
-      <td>4</td>
-      <td>6</td>
-    </tr>
+      <td>4</td>    </tr>
     <tr>
       <td>107</td>
       <td>Subaru</td>
@@ -97,7 +89,6 @@ const TableVoertuigen = () => {
       <td>Personenauto</td>
       <td>Zwart</td>
       <td>4</td>
-      <td>7</td>
     </tr>
     <tr>
       <td>108</td>
@@ -109,7 +100,6 @@ const TableVoertuigen = () => {
       <td>Personenauto</td>
       <td>Zwart</td>
       <td>4</td>
-      <td>8</td>
     </tr>
     <tr>
       <td>109</td>
@@ -121,7 +111,6 @@ const TableVoertuigen = () => {
       <td>Personenauto</td>
       <td>Blauw</td>
       <td>4</td>
-      <td>9</td>
     </tr>
     <tr>
       <td>110</td>
@@ -133,7 +122,6 @@ const TableVoertuigen = () => {
       <td>Personenauto</td>
       <td>Grijs</td>
       <td>4</td>
-      <td>10</td>
     </tr>
     <tr>
       <td>111</td>
@@ -145,7 +133,6 @@ const TableVoertuigen = () => {
       <td>Personenauto</td>
       <td>Wit</td>
       <td>4</td>
-      <td>11</td>
     </tr>
     <tr>
       <td>112</td>
@@ -157,7 +144,6 @@ const TableVoertuigen = () => {
       <td>Personenauto</td>
       <td>Zilver</td>
       <td>4</td>
-      <td>12</td>
     </tr>
     <tr>
       <td>113</td>
@@ -169,7 +155,6 @@ const TableVoertuigen = () => {
       <td>Personenauto</td>
       <td>Zwart</td>
       <td>4</td>
-      <td>13</td>
     </tr>
     <tr>
       <td>114</td>
@@ -181,7 +166,6 @@ const TableVoertuigen = () => {
       <td>Personenauto</td>
       <td>Rood</td>
       <td>4</td>
-      <td>14</td>
     </tr>
     <tr>
       <td>115</td>
@@ -193,7 +177,6 @@ const TableVoertuigen = () => {
       <td>Personenauto</td>
       <td>Grijs</td>
       <td>4</td>
-      <td>15</td>
     </tr>
     <tr>
       <td>116</td>
@@ -205,7 +188,6 @@ const TableVoertuigen = () => {
       <td>Personenauto</td>
       <td>Blauw</td>
       <td>4</td>
-      <td>16</td>
     </tr>
     <tr>
       <td>117</td>
@@ -217,7 +199,6 @@ const TableVoertuigen = () => {
       <td>Personenauto</td>
       <td>Wit</td>
       <td>4</td>
-      <td>17</td>
     </tr>
     <tr>
       <td>118</td>
@@ -229,7 +210,6 @@ const TableVoertuigen = () => {
       <td>Personenauto</td>
       <td>Zwart</td>
       <td>4</td>
-      <td>18</td>
     </tr>
     <tr>
       <td>119</td>
@@ -241,7 +221,6 @@ const TableVoertuigen = () => {
       <td>Personenauto</td>
       <td>Zwart</td>
       <td>4</td>
-      <td>19</td>
     </tr>
     <tr>
       <td>120</td>
@@ -253,7 +232,6 @@ const TableVoertuigen = () => {
       <td>Personenauto</td>
       <td>Grijs</td>
       <td>4</td>
-      <td>20</td>
     </tr>
     <tr>
       <td>121</td>
@@ -265,7 +243,6 @@ const TableVoertuigen = () => {
       <td>SUV</td>
       <td>Zilver</td>
       <td>4</td>
-      <td>21</td>
     </tr>
     <tr>
       <td>122</td>
@@ -277,7 +254,6 @@ const TableVoertuigen = () => {
       <td>SUV</td>
       <td>Rood</td>
       <td>4</td>
-      <td>22</td>
     </tr>
     <tr>
       <td>123</td>
@@ -289,7 +265,6 @@ const TableVoertuigen = () => {
       <td>SUV</td>
       <td>Grijs</td>
       <td>4</td>
-      <td>23</td>
     </tr>
     <tr>
       <td>124</td>
@@ -301,7 +276,6 @@ const TableVoertuigen = () => {
       <td>SUV</td>
       <td>Blauw</td>
       <td>4</td>
-      <td>24</td>
     </tr>
     <tr>
       <td>125</td>
@@ -313,7 +287,6 @@ const TableVoertuigen = () => {
       <td>SUV</td>
       <td>Zwart</td>
       <td>4</td>
-      <td>25</td>
     </tr>
     <tr>
       <td>126</td>
@@ -325,7 +298,6 @@ const TableVoertuigen = () => {
       <td>SUV</td>
       <td>Wit</td>
       <td>4</td>
-      <td>26</td>
     </tr>
     <tr>
       <td>127</td>
@@ -337,7 +309,6 @@ const TableVoertuigen = () => {
       <td>SUV</td>
       <td>Zwart</td>
       <td>4</td>
-      <td>27</td>
     </tr>
     <tr>
       <td>128</td>
@@ -349,7 +320,6 @@ const TableVoertuigen = () => {
       <td>SUV</td>
       <td>Rood</td>
       <td>4</td>
-      <td>28</td>
     </tr>
     <tr>
       <td>129</td>
@@ -361,7 +331,6 @@ const TableVoertuigen = () => {
       <td>SUV</td>
       <td>Zilver</td>
       <td>4</td>
-      <td>29</td>
     </tr>
     <tr>
       <td>130</td>
@@ -373,7 +342,6 @@ const TableVoertuigen = () => {
       <td>SUV</td>
       <td>Blauw</td>
       <td>4</td>
-      <td>30</td>
     </tr>
     <tr>
       <td>131</td>
@@ -385,7 +353,6 @@ const TableVoertuigen = () => {
       <td>SUV</td>
       <td>Grijs</td>
       <td>4</td>
-      <td>31</td>
     </tr>
     <tr>
       <td>132</td>
@@ -397,7 +364,6 @@ const TableVoertuigen = () => {
       <td>SUV</td>
       <td>Zwart</td>
       <td>4</td>
-      <td>32</td>
     </tr>
     <tr>
       <td>133</td>
@@ -409,7 +375,6 @@ const TableVoertuigen = () => {
       <td>SUV</td>
       <td>Rood</td>
       <td>4</td>
-      <td>33</td>
     </tr>
     <tr>
       <td>134</td>
@@ -421,7 +386,6 @@ const TableVoertuigen = () => {
       <td>SUV</td>
       <td>Blauw</td>
       <td>4</td>
-      <td>34</td>
     </tr>
     <tr>
       <td>135</td>
@@ -433,7 +397,6 @@ const TableVoertuigen = () => {
       <td>SUV</td>
       <td>Zilver</td>
       <td>4</td>
-      <td>35</td>
     </tr>
     <tr>
       <td>136</td>
@@ -445,7 +408,6 @@ const TableVoertuigen = () => {
       <td>SUV</td>
       <td>Wit</td>
       <td>4</td>
-      <td>36</td>
     </tr>
     <tr>
       <td>137</td>
@@ -457,7 +419,6 @@ const TableVoertuigen = () => {
       <td>SUV</td>
       <td>Rood</td>
       <td>4</td>
-      <td>37</td>
     </tr>
     <tr>
       <td>138</td>
@@ -469,7 +430,6 @@ const TableVoertuigen = () => {
       <td>SUV</td>
       <td>Zwart</td>
       <td>4</td>
-      <td>38</td>
     </tr>
     <tr>
       <td>139</td>
@@ -481,7 +441,6 @@ const TableVoertuigen = () => {
       <td>SUV</td>
       <td>Grijs</td>
       <td>4</td>
-      <td>39</td>
     </tr>
     <tr>
       <td>140</td>
@@ -493,7 +452,6 @@ const TableVoertuigen = () => {
       <td>SUV</td>
       <td>Blauw</td>
       <td>4</td>
-      <td>40</td>
     </tr>
         </table>
   )

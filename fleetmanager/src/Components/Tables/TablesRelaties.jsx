@@ -4,7 +4,6 @@ import { getConnections } from '../../../API'; // Vervang met het juiste pad naa
 
 const TablesRelaties = () => {
   const [connections, setConnections] = useState([]);
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -23,10 +22,10 @@ const TablesRelaties = () => {
       <table>
         <thead>
           <tr>
-            <th>Connection id</th>
-            <th>Driver id</th>
-            <th>Gascard id</th>
-            <th>Vehicle id</th>
+            <th style={{width : '400px'}}>Connection id</th>
+            <th >Driver id</th>
+            <th >Gascard id</th>
+            <th >Vehicle Id</th>
           </tr>
         </thead>
         <tbody>
@@ -37,7 +36,9 @@ const TablesRelaties = () => {
               <td>{connection.idGasCard}</td>
               <td>{connection.idVehicle}</td>
             </tr>
+            
           ))}
+          
         </tbody>
       </table>
     </div>

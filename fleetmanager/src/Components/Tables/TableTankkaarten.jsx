@@ -4,13 +4,12 @@ const TableTankkaarten = () => {
   return (
     <table>
   <tr>
-    <th>Id_Tankkaart</th>
-    <th>Kaartnummer</th>
-    <th>Geldigheidsdatum</th>
-    <th>Pincode</th>
-    <th>Brandstoffen</th>
-    <th>Bestuurder_Id</th>
-    <th>Geblokkeerd</th>
+    <th>IdGasCards</th>
+    <th>CardNumber</th>
+    <th>Validation Date</th>
+    <th>Pin</th>
+    <th>Fuel</th>
+    <th>Blocked</th>
   </tr>
   <tr>
     <td>201</td>
@@ -18,7 +17,6 @@ const TableTankkaarten = () => {
     <td>2025-12-31</td>
     <td>1234</td>
     <td>Diesel</td>
-    <td>1</td>
     <td>0</td>
   </tr>
   <tr>
@@ -27,7 +25,6 @@ const TableTankkaarten = () => {
     <td>2024-10-15</td>
     <td>5678</td>
     <td>Benzine</td>
-    <td>2</td>
     <td>0</td>
   </tr>
   <tr>
@@ -36,7 +33,6 @@ const TableTankkaarten = () => {
     <td>2023-08-20</td>
     <td>4321</td>
     <td>Diesel</td>
-    <td>3</td>
     <td>1</td>
   </tr>
   <tr>
@@ -45,7 +41,6 @@ const TableTankkaarten = () => {
     <td>2024-06-30</td>
     <td>7890</td>
     <td>Benzine</td>
-    <td>4</td>
     <td>0</td>
   </tr>
   <tr>
@@ -54,7 +49,6 @@ const TableTankkaarten = () => {
     <td>2024-03-15</td>
     <td>2345</td>
     <td>Diesel</td>
-    <td>5</td>
     <td>0</td>
   </tr>
   <tr>
@@ -63,7 +57,6 @@ const TableTankkaarten = () => {
     <td>2025-05-05</td>
     <td>6789</td>
     <td>Benzine</td>
-    <td>6</td>
     <td>0</td>
   </tr>
   <tr>
@@ -72,7 +65,6 @@ const TableTankkaarten = () => {
     <td>2023-07-10</td>
     <td>3456</td>
     <td>Diesel</td>
-    <td>7</td>
     <td>0</td>
   </tr>
   <tr>
@@ -81,7 +73,6 @@ const TableTankkaarten = () => {
     <td>2025-09-22</td>
     <td>4567</td>
     <td>Benzine</td>
-    <td>8</td>
     <td>0</td>
   </tr>
   <tr>
@@ -90,7 +81,6 @@ const TableTankkaarten = () => {
     <td>2024-04-12</td>
     <td>5678</td>
     <td>Diesel</td>
-    <td>9</td>
     <td>0</td>
   </tr>
   <tr>
@@ -99,7 +89,6 @@ const TableTankkaarten = () => {
     <td>2024-02-28</td>
     <td>7890</td>
     <td>Benzine</td>
-    <td>10</td>
     <td>0</td>
   </tr>
   <tr>
@@ -108,7 +97,6 @@ const TableTankkaarten = () => {
     <td>2025-11-30</td>
     <td>1234</td>
     <td>Diesel</td>
-    <td>11</td>
     <td>0</td>
   </tr>
   <tr>
@@ -117,7 +105,6 @@ const TableTankkaarten = () => {
     <td>2023-10-15</td>
     <td>5678</td>
     <td>Benzine</td>
-    <td>12</td>
     <td>0</td>
   </tr>
   <tr>
@@ -126,7 +113,6 @@ const TableTankkaarten = () => {
     <td>2024-08-20</td>
     <td>4321</td>
     <td>Diesel</td>
-    <td>13</td>
     <td>1</td>
   </tr>
   <tr>
@@ -135,7 +121,6 @@ const TableTankkaarten = () => {
     <td>2025-06-30</td>
     <td>7890</td>
     <td>Benzine</td>
-    <td>14</td>
     <td>0</td>
   </tr>
   <tr>
@@ -144,7 +129,6 @@ const TableTankkaarten = () => {
     <td>2024-03-15</td>
     <td>2345</td>
     <td>Diesel</td>
-    <td>15</td>
     <td>0</td>
   </tr>
   <tr>
@@ -153,7 +137,6 @@ const TableTankkaarten = () => {
     <td>2025-05-05</td>
     <td>6789</td>
     <td>Benzine</td>
-    <td>16</td>
     <td>0</td>
   </tr>
   <tr>
@@ -162,7 +145,6 @@ const TableTankkaarten = () => {
     <td>2023-07-10</td>
     <td>3456</td>
     <td>Diesel</td>
-    <td>17</td>
     <td>0</td>
   </tr>
   <tr>
@@ -171,7 +153,6 @@ const TableTankkaarten = () => {
     <td>2025-09-22</td>
     <td>4567</td>
     <td>Benzine</td>
-    <td>18</td>
     <td>0</td>
   </tr>
   <tr>
@@ -180,13 +161,15 @@ const TableTankkaarten = () => {
     <td>2024-04-12</td>
     <td>5678</td>
     <td>Diesel</td>
-    <td>19</td>
     <td>0</td>
   </tr>
   <tr>
     <td>220</td>
     <td>0011223344</td>
     <td>2024-02-28</td>
+    <td>5486</td>
+    <td>Diesel</td>
+    <td>0</td>
 </tr>
   <tr>
     <td>221</td>
@@ -194,7 +177,6 @@ const TableTankkaarten = () => {
     <td>2025-11-30</td>
     <td>1234</td>
     <td>Diesel</td>
-    <td>21</td>
     <td>0</td>
   </tr>
   <tr>
@@ -203,7 +185,6 @@ const TableTankkaarten = () => {
     <td>2023-10-15</td>
     <td>5678</td>
     <td>Benzine</td>
-    <td>22</td>
     <td>0</td>
   </tr>
   <tr>
@@ -212,7 +193,6 @@ const TableTankkaarten = () => {
     <td>2024-08-20</td>
     <td>4321</td>
     <td>Diesel</td>
-    <td>23</td>
     <td>1</td>
   </tr>
   <tr>
@@ -221,7 +201,6 @@ const TableTankkaarten = () => {
     <td>2025-06-30</td>
     <td>7890</td>
     <td>Benzine</td>
-    <td>24</td>
     <td>0</td>
   </tr>
   <tr>
@@ -230,7 +209,6 @@ const TableTankkaarten = () => {
     <td>2024-03-15</td>
     <td>2345</td>
     <td>Diesel</td>
-    <td>25</td>
     <td>0</td>
   </tr>
   <tr>
@@ -239,7 +217,6 @@ const TableTankkaarten = () => {
     <td>2025-05-05</td>
     <td>6789</td>
     <td>Benzine</td>
-    <td>26</td>
     <td>0</td>
   </tr>
   <tr>
@@ -248,7 +225,6 @@ const TableTankkaarten = () => {
     <td>2023-07-10</td>
     <td>3456</td>
     <td>Diesel</td>
-    <td>27</td>
     <td>0</td>
   </tr>
   <tr>
@@ -257,7 +233,6 @@ const TableTankkaarten = () => {
     <td>2025-09-22</td>
     <td>4567</td>
     <td>Benzine</td>
-    <td>28</td>
     <td>0</td>
   </tr>
   <tr>
@@ -266,7 +241,6 @@ const TableTankkaarten = () => {
     <td>2024-04-12</td>
     <td>5678</td>
     <td>Diesel</td>
-    <td>29</td>
     <td>0</td>
   </tr>
   <tr>
@@ -275,7 +249,6 @@ const TableTankkaarten = () => {
     <td>2024-02-28</td>
     <td>7890</td>
     <td>Benzine</td>
-    <td>30</td>
     <td>0</td>
   </tr>
   <tr>
@@ -284,7 +257,6 @@ const TableTankkaarten = () => {
     <td>2025-11-30</td>
     <td>1234</td>
     <td>Diesel</td>
-    <td>31</td>
     <td>0</td>
   </tr>
   <tr>
@@ -293,7 +265,6 @@ const TableTankkaarten = () => {
     <td>2023-10-15</td>
     <td>5678</td>
     <td>Benzine</td>
-    <td>32</td>
     <td>0</td>
   </tr>
   <tr>
@@ -302,7 +273,6 @@ const TableTankkaarten = () => {
     <td>2024-08-20</td>
     <td>4321</td>
     <td>Diesel</td>
-    <td>33</td>
     <td>1</td>
   </tr>
   <tr>
@@ -311,7 +281,6 @@ const TableTankkaarten = () => {
     <td>2025-06-30</td>
     <td>7890</td>
     <td>Benzine</td>
-    <td>34</td>
     <td>0</td>
   </tr>
   <tr>
@@ -320,7 +289,6 @@ const TableTankkaarten = () => {
     <td>2024-03-15</td>
     <td>2345</td>
     <td>Diesel</td>
-    <td>35</td>
     <td>0</td>
   </tr>
   <tr>
@@ -329,7 +297,6 @@ const TableTankkaarten = () => {
     <td>2025-05-05</td>
     <td>6789</td>
     <td>Benzine</td>
-    <td>36</td>
     <td>0</td>
   </tr>
   <tr>
@@ -338,7 +305,6 @@ const TableTankkaarten = () => {
     <td>2023-07-10</td>
     <td>3456</td>
     <td>Diesel</td>
-    <td>37</td>
     <td>0</td>
   </tr>
   <tr>
@@ -347,7 +313,6 @@ const TableTankkaarten = () => {
     <td>2025-09-22</td>
     <td>4567</td>
     <td>Benzine</td>
-    <td>38</td>
     <td>0</td>
   </tr>
   <tr>
@@ -356,7 +321,6 @@ const TableTankkaarten = () => {
     <td>2024-04-12</td>
     <td>5678</td>
     <td>Diesel</td>
-    <td>39</td>
     <td>0</td>
   </tr>
   <tr>
@@ -365,7 +329,6 @@ const TableTankkaarten = () => {
     <td>2024-02-28</td>
     <td>7890</td>
     <td>Benzine</td>
-    <td>40</td>
     <td>0</td>
   </tr>
     </table>

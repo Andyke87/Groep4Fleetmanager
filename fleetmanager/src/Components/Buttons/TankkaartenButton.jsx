@@ -7,7 +7,7 @@ const handleTankkaarten = () => {
 
 const TankkaartenButton = () => {
   return (
-   <button  className='buttons' onClick={handleTankkaarten} >Tankkaarten</button>
+   <button  className='buttons' onClick={handleTankkaarten} >Gas Cards</button>
   )
 }
 

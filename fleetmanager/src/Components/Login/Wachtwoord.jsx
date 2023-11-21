@@ -5,7 +5,7 @@ const Wachtwoord = ({ wachtwoord, setWachtwoord }) => {
   return (
     <div>
       <div className='headerTextWachtwoord'>
-        <div className='text'>Wachtwoord</div>
+        <div className='text'>Password</div>
         <div>
           <input
             className='inputWachtwoord'

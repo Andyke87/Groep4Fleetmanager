@@ -8,16 +8,15 @@ class FormulierenVoertuigen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      Id_Voertuig: '',
-      Merk: '',
-      Model: '',
-      Chassisnummer: '',
-      Nummerplaat: '',
-      Brandstoftype: '',
-      Type_voertuig: '',
-      Kleur: '',
-      Aantal_deuren: '',
-      Bestuurder_Id: '',
+      idVehicle: '',
+      brand: '',
+      model: '',
+      chassisNumber: '',
+      licensePlate: '',
+      fuel: '',
+      vehicleType: '',
+      color: '',
+      numberOfDoors: '',
     };
   }
 
@@ -34,15 +33,15 @@ class FormulierenVoertuigen extends Component {
 
   render() {
     const {
-      Id_Voertuig,
-      Merk,
-      Model,
-      Chassisnummer,
-      Nummerplaat,
-      Brandstoftype,
-      Type_voertuig,
-      Kleur,
-      Aantal_deuren,
+      idVehicle,
+      brand,
+      model,
+      chassisNumber,
+      licensePlate,
+      fuel,
+      vehicleType,
+      color,
+      numberOfDoors,
       Bestuurder_Id,
     } = this.state;
 
@@ -50,69 +49,69 @@ class FormulierenVoertuigen extends Component {
       <form onSubmit={this.handleSubmit}>
         <div className="form-container">
           <div className="col">
-            <label htmlFor="Id_Voertuig">Voertuig ID</label>
+            <label htmlFor="idVehicle">Voertuig ID</label>
             <input
               className="input"
               type="text"
-              name="Id_Voertuig"
-              value={Id_Voertuig}
+              name="idVehicle"
+              value={idVehicle}
               onChange={this.handleChange}
             />
           </div>
 
           <div className="col">
-            <label htmlFor="Merk">Merk</label>
+            <label htmlFor="brand">Brand</label>
             <input
               className="input"
               type="text"
-              name="Merk"
-              value={Merk}
+              name="brand"
+              value={brand}
               onChange={this.handleChange}
             />
           </div>
 
           <div className="col">
-            <label htmlFor="Model">Model</label>
+            <label htmlFor="model">Model</label>
             <input
               className="input"
               type="text"
-              name="Model"
-              value={Model}
+              name="model"
+              value={model}
               onChange={this.handleChange}
             />
           </div>
 
           <div className="col">
-            <label htmlFor="Chassisnummer">Chassisnummer</label>
+            <label htmlFor="chassisNumber">Chassis Number</label>
             <input
               className="input"
               type="text"
-              name="Chassisnummer"
-              value={Chassisnummer}
+              name="chassisNumber"
+              value={chassisNumber}
               onChange={this.handleChange}
             />
           </div>
 
           <div className="col">
-            <label htmlFor="Nummerplaat">Nummerplaat</label>
+            <label htmlFor="licensePlate">License Plate</label>
             <input
               className="input"
               type="text"
-              name="Nummerplaat"
-              value={Nummerplaat}
+              name="licensePlate"
+              value={licensePlate}
               onChange={this.handleChange}
             />
           </div>
 
           <div className="col">
-            <label htmlFor="Brandstoftype">Brandstoftype</label>
+            <label htmlFor="fuel">Fuel</label>
             <select
               className="input"
-              name="Brandstoftype"
-              value={Brandstoftype}
+              name="fuel"
+              value={fuel}
               onChange={this.handleChange}
             >
-              <option value="">Selecteer brandstoftype</option>
+              <option value="">Select fuel</option>
               <option value="Benzine">Benzine</option>
               <option value="Diesel">Diesel</option>
               <option value="LPG">LPG</option>
@@ -121,45 +120,34 @@ class FormulierenVoertuigen extends Component {
           </div>
 
           <div className="col">
-            <label htmlFor="Type_voertuig">Type voertuig</label>
+            <label htmlFor="vehicleType">Vehicle Type</label>
             <input
               className="input"
               type="text"
-              name="Type_voertuig"
-              value={Type_voertuig}
+              name="vehicleType"
+              value={vehicleType}
               onChange={this.handleChange}
             />
           </div>
 
           <div className="col">
-            <label htmlFor="Kleur">Kleur</label>
+            <label htmlFor="color">Color</label>
             <input
               className="input"
               type="text"
-              name="Kleur"
-              value={Kleur}
+              name="color"
+              value={color}
               onChange={this.handleChange}
             />
           </div>
 
           <div className="col">
-            <label htmlFor="Aantal_deuren">Aantal deuren</label>
+            <label htmlFor="numberOfDoors">Number Of Doors</label>
             <input
               className="input"
               type="text"
-              name="Aantal_deuren"
-              value={Aantal_deuren}
-              onChange={this.handleChange}
-            />
-          </div>
-
-          <div className="col">
-            <label htmlFor="Bestuurder_Id">Bestuurder ID</label>
-            <input
-              className="input"
-              type="text"
-              name="Bestuurder_Id"
-              value={Bestuurder_Id}
+              name="numberOfDoors"
+              value={numberOfDoors}
               onChange={this.handleChange}
             />
           </div>

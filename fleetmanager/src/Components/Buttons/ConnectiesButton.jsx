@@ -7,7 +7,7 @@ const handleConnecties = () => {
 
 const ConnectiesButton = () => {
   return (
-    <button  className='buttons'  onClick={handleConnecties} >Connecties</button>
+    <button  className='buttons'  onClick={handleConnecties} >Connections</button>
   )
 }
 

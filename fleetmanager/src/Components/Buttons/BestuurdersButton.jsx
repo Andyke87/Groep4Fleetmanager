@@ -6,7 +6,7 @@ const handleBestuurders = () => {
 }
 const BestuurdersButton = () => {
   return (
-    <button  className='buttons'  onClick={handleBestuurders} >Bestuurders</button>
+    <button  className='buttons'  onClick={handleBestuurders} >Drivers</button>
   )
 }
 

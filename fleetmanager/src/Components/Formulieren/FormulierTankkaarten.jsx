@@ -8,13 +8,12 @@ class FormulierTankkaarten extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      idTankkaart: '',
-      kaartnummer: '',
-      geldigheidsdatum: '',
-      pincode: '',
-      brandstoffen: '',
-      bestuurder_id: '',
-      geblokkeerd: '',
+      idGasCard: '',
+      cardNumber: '',
+      validationDate: '',
+      pin: '',
+      fuel: '',
+      blocked: '',
     };
   }
 
@@ -31,71 +30,70 @@ class FormulierTankkaarten extends Component {
 
   render() {
     const {
-      idTankkaart,
-      kaartnummer,
-      geldigheidsdatum,
-      pincode,
-      brandstoffen,
-      bestuurder_id,
-      geblokkeerd,
+      idGasCard,
+      cardNumber,
+      validationDate,
+      pin,
+      fuel,
+      blocked,
     } = this.state;
 
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="form-container">
           <div className="col">
-            <label htmlFor="idTankkaart">Tankkaart ID</label>
+            <label htmlFor="idGasCard">Id Gas Card</label>
             <input
               className="input"
               type="text"
-              name="idTankkaart"
-              value={idTankkaart}
+              name="idGasCard"
+              value={idGasCard}
               onChange={this.handleChange}
             />
           </div>
 
           <div className="col">
-            <label htmlFor="kaartnummer">Kaartnummer</label>
+            <label htmlFor="cardNumber">Card Number</label>
             <input
               className="input"
               type="text"
-              name="kaartnummer"
-              value={kaartnummer}
+              name="cardNumber"
+              value={cardNumber}
               onChange={this.handleChange}
             />
           </div>
 
           <div className="col">
-            <label htmlFor="geldigheidsdatum">Geldigheidsdatum</label>
+            <label htmlFor="validationDate">ValidationDate</label>
             <input
               className="input"
               type="date"
-              name="geldigheidsdatum"
-              value={geldigheidsdatum}
+              name="validationDate"
+              value={validationDate}
               onChange={this.handleChange}
             />
           </div>
 
           <div className="col">
-            <label htmlFor="pincode">Pincode</label>
+            <label htmlFor="pin">Pin</label>
             <input
               className="input"
               type="password"
-              name="pincode"
-              value={pincode}
+              name="pin"
+              value={pin}
               onChange={this.handleChange}
             />
           </div>
 
           <div className="col">
-            <label htmlFor="brandstoffen">Brandstoffen</label>
+            <label htmlFor="fuel">Fuel</label>
             <select
               className="input"
-              name="brandstoffen"
-              value={brandstoffen}
+              name="fuel"
+              value={fuel}
               onChange={this.handleChange}
             >
-              <option value="">Selecteer brandstof</option>
+              <option value="">Select fuel</option>
               <option value="Benzine">Benzine</option>
               <option value="Diesel">Diesel</option>
               <option value="LPG">LPG</option>
@@ -104,25 +102,12 @@ class FormulierTankkaarten extends Component {
           </div>
 
           <div className="col">
-            <label htmlFor="bestuurder_id">Bestuurder</label>
-            <select
-              className="input"
-              name="bestuurder_id"
-              value={bestuurder_id}
-              onChange={this.handleChange}
-            >
-              <option value="">Selecteer bestuurder</option>
-            
-              </select>
-          </div>
-
-          <div className="col">
-            <label htmlFor="geblokkeerd">Geblokkeerd</label>
+            <label htmlFor="blocked">Blocked</label>
             <input
               className="input"
               type="checkbox"
-              name="geblokkeerd"
-              checked={geblokkeerd}
+              name="blocked"
+              checked={blocked}
               onChange={this.handleChange}
             />
           </div>

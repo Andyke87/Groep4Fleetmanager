@@ -5,7 +5,7 @@ import React from 'react';
 const ButtonAnnuleren = ({ onClick }) => {
   return (
     <button className='buttonsNieuw' type="button" onClick={onClick}>
-      Annuleer
+      Cancel
     </button>
   );
 };

@@ -10,7 +10,7 @@ const ButtonOpslaan = ({onClick, disabled}) => {
      className='buttonsNieuw' type="button"
      onClick={onClick}
      disabled={disabled}
-     >Voeg toe</button>
+     >Add</button>
   )
 }
 

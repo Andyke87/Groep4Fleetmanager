@@ -5,7 +5,7 @@ const Gebruikersnaam = ({ gebruikersnaam, setGebruikersnaam }) => {
   return (
     <div>
       <div className='headerTextGebruikersnaam'>
-        <div className='text'>Gebruikersnaam</div>
+        <div className='text'>Username</div>
           <div>
             <input
               className="inputGebruikersnaam"

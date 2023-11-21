@@ -8,7 +8,7 @@ const handleVoertuigen = () => {
 
  const VoertuigenButton = () => {
   return (
-    <button className='buttons' onClick={handleVoertuigen}>Voertuigen</button>
+    <button className='buttons' onClick={handleVoertuigen}>Vehicles</button>
   )
 }
 export default VoertuigenButton
