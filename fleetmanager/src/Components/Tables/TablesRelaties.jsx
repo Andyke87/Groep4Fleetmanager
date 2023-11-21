@@ -19,7 +19,7 @@ const TablesRelaties = () => {
   }, []);
 
   return (
-    <div className="table-container" style={{ width: '90%', marginLeft:40 }}>
+    <div className="table-container">
       <table>
         <thead>
           <tr>
