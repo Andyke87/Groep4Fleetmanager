@@ -1,514 +1,61 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import { getDrivers } from '../../../API';
 
 const TableBestuurders = () => {
+  const [drivers, setDrivers] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await getDrivers();
+        setDrivers(response.data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+  // Functie om een datum in jouw gewenste formaat om te zetten
+  const formatDate = (dateString) => {
+    const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+    return new Date(dateString).toLocaleDateString('nl-NL', options);
+  };
   return (
     <table>
-      <tr>
-        <th>IdDriver</th>
-        <th>Name</th>
-        <th>Firstname</th>
-        <th>Street</th>
-        <th>Number</th>
-        <th>City</th>
-        <th>ZipCode</th>
-        <th>DayOfBirth</th>
-        <th>RegistryNumber</th>
-        <th>CategoryLicense</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Smith</td>
-        <td>John</td>
-        <td>Rue de la Paix</td>
-        <td>123</td>
-        <td>Brussel</td>
-        <td>1000</td>
-        <td>5/15/1990</td>
-        <td>12345678901</td>
-        <td>B</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Johnson</td>
-        <td>Alice</td>
-        <td>Avenue des Roses</td>
-        <td>456</td>
-        <td>Antwerpen</td>
-        <td>2000</td>
-        <td>11/20/1988</td>
-        <td>23456789012</td>
-        <td>B</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Doe</td>
-        <td>Robert</td>
-        <td>Chaussée de Charleroi</td>
-        <td>789</td>
-        <td>Brugge</td>
-        <td>8000</td>
-        <td>3/10/1995</td>
-        <td>34567890123</td>
-        <td>A</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>Wang</td>
-        <td>Li</td>
-        <td>Rue du Faubourg</td>
-        <td>101</td>
-        <td>Gent</td>
-        <td>9000</td>
-        <td>9/25/1992</td>
-        <td>45678901234</td>
-        <td>C</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>Müller</td>
-        <td>Sofia</td>
-        <td>Allée des Acacias</td>
-        <td>987</td>
-        <td>Luik</td>
-        <td>4000</td>
-        <td>12/30/1987</td>
-        <td>56789012345</td>
-        <td>A</td>
-      </tr>
-      <tr>
-        <td>6</td>
-        <td>García</td>
-        <td>Carlos</td>
-        <td>Boulevard Anspach</td>
-        <td>111</td>
-        <td>Leuven</td>
-        <td>3000</td>
-        <td>7/8/1991</td>
-        <td>67890123456</td>
-        <td>B</td>
-      </tr>
-      <tr>
-        <td>7</td>
-        <td>Kim</td>
-        <td>Ji-hoon</td>
-        <td>Place Sainte-Catherine</td>
-        <td>222</td>
-        <td>Charleroi</td>
-        <td>6000</td>
-        <td>4/5/1993</td>
-        <td>78901234567</td>
-        <td>C</td>
-      </tr>
-      <tr>
-        <td>7</td>
-        <td>Kim</td>
-        <td>Ji-hoon</td>
-        <td>Place Sainte-Catherine</td>
-        <td>222</td>
-        <td>Charleroi</td>
-        <td>6000</td>
-        <td>4/5/1993</td>
-        <td>78901234567</td>
-        <td>C</td>
-      </tr>
-      <tr>
-        <td>8</td>
-        <td>Lee</td>
-        <td>Soo-Min</td>
-        <td>Rue Royale</td>
-        <td>333</td>
-        <td>Leuven</td>
-        <td>3000</td>
-        <td>2/14/1994</td>
-        <td>89012345678</td>
-        <td>B</td>
-      </tr>
-      <tr>
-        <td>9</td>
-        <td>Martin</td>
-        <td>Lena</td>
-        <td>Avenue Louise</td>
-        <td>777</td>
-        <td>Brussel</td>
-        <td>1000</td>
-        <td>8/22/1997</td>
-        <td>90123456789</td>
-        <td>A</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>Chen</td>
-        <td>Wei</td>
-        <td>Keizerstraat</td>
-        <td>888</td>
-        <td>Brugge</td>
-        <td>8000</td>
-        <td>6/18/1996</td>
-        <td>12309876543</td>
-        <td>C</td>
-      </tr>
-      <tr>
-        <td>11</td>
-        <td>Abdullah</td>
-        <td>Fatima</td>
-        <td>Stationsstraat</td>
-        <td>555</td>
-        <td>Antwerpen</td>
-        <td>2000</td>
-        <td>9/8/1998</td>
-        <td>23456789087</td>
-        <td>B</td>
-      </tr>
-      <tr>
-        <td>12</td>
-        <td>Petrov</td>
-        <td>Anastasia</td>
-        <td>Prospect Mira</td>
-        <td>777</td>
-        <td>Brussel</td>
-        <td>1000</td>
-        <td>3/25/1993</td>
-        <td>34567890123</td>
-        <td>A</td>
-      </tr>
-      <tr>
-        <td>13</td>
-        <td>Rodriguez</td>
-        <td>Miguel</td>
-        <td>Calle de la Rosa</td>
-        <td>555</td>
-        <td>Leuven</td>
-        <td>3000</td>
-        <td>11/12/1997</td>
-        <td>45678901234</td>
-        <td>B</td>
-      </tr>
-      <tr>
-        <td>14</td>
-        <td>Abebe</td>
-        <td>Lalibela</td>
-        <td>Bole Road</td>
-        <td>888</td>
-        <td>Gent</td>
-        <td>9000</td>
-        <td>7/1/1995</td>
-        <td>56789012345</td>
-        <td>C</td>
-      </tr>
-      <tr>
-        <td>15</td>
-        <td>Choi</td>
-        <td>Min-Jae</td>
-        <td>Gangnam-daero</td>
-        <td>101</td>
-        <td>Antwerpen</td>
-        <td>2000</td>
-        <td>5/9/1992</td>
-        <td>67890123456</td>
-        <td>A</td>
-      </tr>
-      <tr>
-        <td>16</td>
-        <td>Almeida</td>
-        <td>Isabella</td>
-        <td>Rua da Boavista</td>
-        <td>987</td>
-        <td>Luik</td>
-        <td>4000</td>
-        <td>1/30/1998</td>
-        <td>78901234567</td>
-        <td>B</td>
-      </tr>
-      <tr>
-        <td>17</td>
-        <td>Kawamura</td>
-        <td>Akira</td>
-        <td>Shinjuku</td>
-        <td>111</td>
-        <td>Leuven</td>
-        <td>3000</td>
-        <td>9/14/1993</td>
-        <td>89012345678</td>
-        <td>C</td>
-      </tr>
-      <tr>
-        <td>18</td>
-        <td>Van der Berg</td>
-        <td>Liam</td>
-        <td>De Wijnberg</td>
-        <td>222</td>
-        <td>Brugge</td>
-        <td>8000</td>
-        <td>12/5/1991</td>
-        <td>90123456789</td>
-        <td>A</td>
-      </tr>
-      <tr>
-        <td>19</td>
-        <td>Santos</td>
-        <td>Isabel</td>
-        <td>Avenida da Liberdade</td>
-        <td>333</td>
-        <td>Gent</td>
-        <td>9000</td>
-        <td>8/20/1994</td>
-        <td>12309876543</td>
-        <td>B</td>
-      </tr>
-      <tr>
-        <td>20</td>
-        <td>Nguyen</td>
-        <td>Anh</td>
-        <td>Pho Hang Da</td>
-        <td>777</td>
-        <td>Antwerpen</td>
-        <td>2000</td>
-        <td>2/28/1990</td>
-        <td>23456789087</td>
-        <td>C</td>
-      </tr>
-      <tr>
-        <td>21</td>
-        <td>Kumar</td>
-        <td>Asha</td>
-        <td>Main Road</td>
-        <td>555</td>
-        <td>Brugge</td>
-        <td>8000</td>
-        <td>6/18/1996</td>
-        <td>34567890123</td>
-        <td>A</td>
-      </tr>
-      <tr>
-        <td>22</td>
-        <td>Silva</td>
-        <td>Rafael</td>
-        <td>Rua Augusta</td>
-        <td>888</td>
-        <td>Gent</td>
-        <td>9000</td>
-        <td>10/9/1990</td>
-        <td>45678901234</td>
-        <td>B</td>
-      </tr>
-      <tr>
-        <td>23</td>
-        <td>Wu</td>
-        <td>Xiu Ying</td>
-        <td>Beijing Lu</td>
-        <td>101</td>
-        <td>Antwerpen</td>
-        <td>2000</td>
-        <td>3/26/1995</td>
-        <td>56789012345</td>
-        <td>C</td>
-      </tr>
-      <tr>
-        <td>24</td>
-        <td>Abdulov</td>
-        <td>Natalia</td>
-        <td>Ulitsa Petrovka</td>
-        <td>987</td>
-        <td>Leuven</td>
-        <td>3000</td>
-        <td>8/15/1992</td>
-        <td>67890123456</td>
-        <td>A</td>
-      </tr>
-      <tr>
-        <td>25</td>
-        <td>Ferreira</td>
-        <td>Luis</td>
-        <td>Rua de Santa Catarina</td>
-        <td>111</td>
-        <td>Brussel</td>
-        <td>1000</td>
-        <td>2/9/1993</td>
-        <td>78901234567</td>
-        <td>B</td>
-      </tr>
-      <tr>
-        <td>26</td>
-        <td>Chung</td>
-        <td>Soo-Min</td>
-        <td>Myeong-dong</td>
-        <td>222</td>
-        <td>Charleroi</td>
-        <td>6000</td>
-        <td>12/1/1991</td>
-        <td>89012345678</td>
-        <td>C</td>
-      </tr>
-      <tr>
-        <td>27</td>
-        <td>Gomez</td>
-        <td>Maria</td>
-        <td>Calle Gran Via</td>
-        <td>333</td>
-        <td>Gent</td>
-        <td>9000</td>
-        <td>5/3/1994</td>
-        <td>90123456789</td>
-        <td>A</td>
-      </tr>
-      <tr>
-        <td>28</td>
-        <td>Nakamura</td>
-        <td>Haruto</td>
-        <td>Shibuya</td>
-        <td>777</td>
-        <td>Antwerpen</td>
-        <td>2000</td>
-        <td>11/28/1990</td>
-        <td>23456789087</td>
-        <td>B</td>
-      </tr>
-      <tr>
-        <td>29</td>
-        <td>Martins</td>
-        <td>Camila</td>
-        <td>Avenida Paulista</td>
-        <td>555</td>
-        <td>Luik</td>
-        <td>4000</td>
-        <td>4/17/1996</td>
-        <td>34567890123</td>
-        <td>C</td>
-      </tr>
-      <tr>
-        <td>30</td>
-        <td>Chen</td>
-        <td>Jing</td>
-        <td>Nanjing Road</td>
-        <td>888</td>
-        <td>Leuven</td>
-        <td>3000</td>
-        <td>9/8/1992</td>
-        <td>45678901234</td>
-        <td>A</td>
-      </tr>
-      <tr>
-        <td>31</td>
-        <td>Lopez</td>
-        <td>Miguel</td>
-        <td>Calle de Alcalá</td>
-        <td>101</td>
-        <td>Brugge</td>
-        <td>8000</td>
-        <td>6/12/1995</td>
-        <td>56789012345</td>
-        <td>B</td>
-      </tr>
-      <tr>
-        <td>32</td>
-        <td>Kim</td>
-        <td>Soo-Jin</td>
-        <td>Insadong-gil</td>
-        <td>555</td>
-        <td>Antwerpen</td>
-        <td>2000</td>
-        <td>3/28/1993</td>
-        <td>67890123456</td>
-        <td>A</td>
-      </tr>
-      <tr>
-        <td>33</td>
-        <td>Barbosa</td>
-        <td>Isabel</td>
-        <td>Rua de São Bento</td>
-        <td>888</td>
-        <td>Gent</td>
-        <td>9000</td>
-        <td>11/5/1989</td>
-        <td>89012345678</td>
-        <td>C</td>
-      </tr>
-      <tr>
-        <td>34</td>
-        <td>Ahmed</td>
-        <td>Fatima</td>
-        <td>Sheikh Zayed Road</td>
-        <td>101</td>
-        <td>Leuven</td>
-        <td>3000</td>
-        <td>9/20/1992</td>
-        <td>90123456789</td>
-        <td>A</td>
-      </tr>
-      <tr>
-        <td>35</td>
-        <td>Kato</td>
-        <td>Yuki</td>
-        <td>Ginza</td>
-        <td>987</td>
-        <td>Brussel</td>
-        <td>1000</td>
-        <td>2/15/1991</td>
-        <td>12345678901</td>
-        <td>B</td>
-      </tr>
-      <tr>
-        <td>36</td>
-        <td>Freitas</td>
-        <td>João</td>
-        <td>Avenida da Liberdade</td>
-        <td>222</td>
-        <td>Charleroi</td>
-        <td>6000</td>
-        <td>5/8/1994</td>
-        <td>23456789012</td>
-        <td>C</td>
-      </tr>
-      <tr>
-        <td>37</td>
-        <td>Han</td>
-        <td>Seo-yeon</td>
-        <td>Myeong-dong</td>
-        <td>333</td>
-        <td>Gent</td>
-        <td>9000</td>
-        <td>8/31/1997</td>
-        <td>34567890123</td>
-        <td>A</td>
-      </tr>
-      <tr>
-        <td>38</td>
-        <td>Silveira</td>
-        <td>Ricardo</td>
-        <td>Rua Augusta</td>
-        <td>777</td>
-        <td>Antwerpen</td>
-        <td>2000</td>
-        <td>4/22/1990</td>
-        <td>45678901234</td>
-        <td>B</td>
-      </tr>
-      <tr>
-        <td>39</td>
-        <td>Chen</td>
-        <td>Wei</td>
-        <td>Nanjing Road</td>
-        <td>555</td>
-        <td>Luik</td>
-        <td>4000</td>
-        <td>12/5/1993</td>
-        <td>56789012345</td>
-        <td>C</td>
-      </tr>
-      <tr>
-        <td>40</td>
-        <td>Azevedo</td>
-        <td>Beatriz</td>
-        <td>Rua de Santa Catarina</td>
-        <td>101</td>
-        <td>Leuven</td>
-        <td>3000</td>
-        <td>7/18/1991</td>
-        <td>67890123456</td>
-        <td>A</td>
-      </tr>
-      </table>
+      <thead>
+        <tr>
+          <th>IdDriver</th>
+          <th>Name</th>
+          <th>Insert</th>
+          <th>Firstname</th>
+          <th>Street</th>
+          <th>Number</th>
+          <th>City</th>
+          <th>ZipCode</th>
+          <th>DayOfBirth</th>
+          <th>RegistryNumber</th>
+          <th>CategoryLicense</th>
+        </tr>
+      </thead>
+      <tbody>
+        {drivers.map(driver => (
+        <tr key={driver.idDriver}>
+          <td>{driver.idDriver}</td>
+          <td>{driver.name}</td>
+          <td>{driver.insert}</td>
+          <td>{driver.firstName}</td>
+          <td>{driver.street}</td>
+          <td>{driver.number}</td>
+          <td>{driver.city}</td>
+          <td>{driver.zipcode}</td>
+          <td>{formatDate(driver.dayOfBirth)}</td>
+          <td>{driver.registryNumber}</td>
+          <td>{driver.categoryLicense}</td>
+        </tr>
+        ))}
+      </tbody>
+    </table>
   );
 };
 

@@ -10,13 +10,14 @@ public partial class FleetManagerContext : DbContext
         ChangeTracker.LazyLoadingEnabled = false;
     }
 
-    public virtual DbSet<Driver> Drivers { get; set; }
 
-    public virtual DbSet<Connection> Connections { get; set; }
+    public DbSet<Connection> Connections { get; set; }
 
-    public virtual DbSet<GasCard> GasCards { get; set; }
+    public DbSet<Driver> Drivers { get; set; }
 
-    public virtual DbSet<Vehicle> Vehicles { get; set; }
+    public DbSet<GasCard> GasCards { get; set; }
+
+    public DbSet<Vehicle> Vehicles { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -25,14 +26,19 @@ public partial class FleetManagerContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+
+        modelBuilder.Entity<Connection>()
+                .HasIndex(c => new { c.IdDriver, c.IdGasCard, c.IdVehicle })
+                .IsUnique();
+
         modelBuilder.Entity<Driver>(entity =>
         {
             entity.HasKey(e => e.IdDriver);
             entity.ToTable("Driver", tb =>
                 {
-                    tb.HasTrigger("TG_Controleer_Bestuurder");
-                    tb.HasTrigger("TG_Controleer_Bestuurder_Leeftijd");
-                    tb.HasTrigger("TG_Controleer_Postcode");
+                    tb.HasTrigger("TG_Check_Age_Driver");
+                    tb.HasTrigger("TG_Check_Driver");
+                    tb.HasTrigger("TG_Check_ZipCode");
                 });
             entity.Property(e => e.IdDriver).HasColumnName("IdDriver");
             entity.Property(e => e.Name)
@@ -107,8 +113,8 @@ public partial class FleetManagerContext : DbContext
             entity.HasKey(e => e.IdGasCard);
             entity.ToTable("GasCard", tb =>
                 {
-                    tb.HasTrigger("TG_Controleer_Geldigheidsdatum");
-                    tb.HasTrigger("TG_Controleer_Tankkaart");
+                    tb.HasTrigger("TG_Check_GasCard");
+                    tb.HasTrigger("TG_Check_ValidationDate");
                 });
 
             entity.Property(e => e.IdGasCard).HasColumnName("IdGasCard");
@@ -131,8 +137,8 @@ public partial class FleetManagerContext : DbContext
 
             entity.ToTable("Vehicle", tb =>
                 {
-                    tb.HasTrigger("TG_Controleer_AantalDeuren");
-                    tb.HasTrigger("TG_Controleer_Chassisnummer");
+                    tb.HasTrigger("TG_Check_ChassisNumber");
+                    tb.HasTrigger("TG_Check_NumberOfDoors");
                 });
 
             entity.Property(e => e.IdVehicle).HasColumnName("IdVehicle");

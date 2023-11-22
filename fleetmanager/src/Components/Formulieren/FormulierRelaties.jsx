@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 import '../Formulieren/Formulieren.css';
 import ButtonNieuweRelatie from '../Buttons/ButtonNieuweRelatie';
+import ButtonUpdateConnection from '../Buttons/ButtonUpdateConnection';
+import ButtonDeleteConnection from '../Buttons/ButtonDeleteConnection';
 
 class FormulierenRelaties extends Component {
   constructor(props) {
@@ -70,7 +72,7 @@ class FormulierenRelaties extends Component {
           </div>
 
           <div className="col">
-            <label htmlFor="IdVehicle">Chassisnummer</label>
+            <label htmlFor="IdVehicle">Vehicle id</label>
             <input
               className="input"
               type="text"
@@ -80,10 +82,17 @@ class FormulierenRelaties extends Component {
             />
           </div>
         </div>
-        <div className='containerButtonsNieuw'>
-            <ButtonNieuweRelatie>
-                Nieuwe relatie
-            </ButtonNieuweRelatie>
+        <div className='containerButtonsNew'>
+            <ButtonNieuweRelatie/>
+            <ButtonUpdateConnection
+            Id={Id} 
+            IdDriver={IdDriver}
+            IdGasCard={IdGasCard}
+            IdVehicle={IdVehicle}
+            />
+            <ButtonDeleteConnection 
+            Id={Id}
+            />
           </div>
       </form>
     );

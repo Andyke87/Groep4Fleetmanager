@@ -16,9 +16,7 @@ import TablesRelaties from '../Tables/TablesRelaties';
 
 const NieuwSchermRelaties = () => {
 
-
   return (
-
         <div className='containerNieuwScherm'> 
          <div className='containerButtons'> 
           <BrightnessButton/>

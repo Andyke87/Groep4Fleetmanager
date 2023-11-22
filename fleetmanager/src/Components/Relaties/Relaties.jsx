@@ -15,65 +15,59 @@ import { useMutation } from "@tanstack/react-query";
 import { postConnections } from '../../../API';
 import './Relaties.css';
 
-
-// Refresh de pagina
-const refreshPage = () => {
-  window.location.reload();
-};
-const showSuccessMessage = () => {
-  alert("De relaties zijn succesvol toegevoegd en de connectie zit in de databank!");
-};
-
 const Relaties = () => {
-
-  // Mutatie voor het posten van de relaties
   const mutation = useMutation({
     mutationKey: ["createTodo"],
     mutationFn: postConnections,
     onSuccess: (data) => {
       console.log("Succesvolle post", data);
+      showSuccessMessage();
+      refreshPage();
     },
     onError: (error) => {
       console.log("Er is een error", error);
+      showErrorMessage();
     },
   });
 
-  // State voor de dropdowns
   const [selectedIdDriver, setSelectedIdDriver] = useState(0);
   const [selectedIdGasCard, setSelectedIdGasCard] = useState(0);
   const [selectedIdVehicle, setSelectedIdVehicle] = useState(0);
 
-  // Functie om de relaties te posten
-  const handleSubmit = () => {
+  const showSuccessMessage = () => {
+    alert("The relationships have been successfully added and the connection is in the database!");
+  };
 
-    console.log("selectedIdDriver", selectedIdDriver);
-    console.log("selectedIdGasCard", selectedIdGasCard);
-    console.log("selectedIdVehicle", selectedIdVehicle);
+  const showErrorMessage = () => {
+    alert("One or more fields are empty or contains a value that is already used in the database");
+  };
 
-    // Controleer of alle velden zijn ingevuld
+  const refreshPage = () => {
+    window.location.reload();
+  };
+
+  const handleSubmit = async () => {
     if (!selectedIdDriver || !selectedIdGasCard || !selectedIdVehicle) {
-      throw new Error("Een of meer velden zijn leeg of bevatten ongeldige waarden");
+      throw new Error("One or more fields are empty or contain invalid values");
     }
-    // Maak het payload
+
     const payload = {
       idDriver: selectedIdDriver,
       idGasCard: selectedIdGasCard,
       idVehicle: selectedIdVehicle,
     };
 
-    // Voer de mutatie uit
-    mutation.mutate(payload);
-    // geeft een pop-up als de relaties succesvol zijn toegevoegd 
-    // en de result is opgeslagen in de database
-
-      showSuccessMessage();
-      refreshPage();
-    
+    try {
+      const response = await mutation.mutateAsync(payload);
+    } 
+    catch (error) {
+      console.error("Error during mutation:", error);
+    }
   };
-      // bij annuleren naar veld /NieuwSchermRelaties
-    const annulerenSubmit = () => {
-      window.location.href = '/NieuwSchermRelaties';
-    };
+
+  const cancelSubmit = () => {
+    window.location.href = '/NieuwSchermRelaties';
+  };
 
   return (
     <div className='containerBackground'>
@@ -110,7 +104,7 @@ const Relaties = () => {
               Opslaan
             </ButtonOpslaan>
             <ButtonAnnuleren 
-              onClick={annulerenSubmit}>
+              onClick={cancelSubmit}>
               Annuleren
             </ButtonAnnuleren>
           </div>

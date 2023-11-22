@@ -42,7 +42,6 @@ class FormulierenVoertuigen extends Component {
       vehicleType,
       color,
       numberOfDoors,
-      Bestuurder_Id,
     } = this.state;
 
     return (

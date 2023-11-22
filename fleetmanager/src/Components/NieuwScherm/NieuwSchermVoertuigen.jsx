@@ -13,7 +13,9 @@ import TableVoertuigen from '../Tables/TableVoertuigen';
 import FormulierenVoertuigen from '../Formulieren/FormulierVoertuigen';
 import ButtonRelaties from '../Buttons/ButtonRelaties';
 
+
 const NieuwSchermVoertuigen = () => {
+
   return (
     <div className='containerNieuwScherm'> 
       <div className='containerButtons'> 

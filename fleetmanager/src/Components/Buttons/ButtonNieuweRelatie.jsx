@@ -7,7 +7,7 @@ const handleRelaties = () => {
 
 const ButtonRelaties = () => {
   return (
-   <button  className='nieuweRelatieButton' onClick={handleRelaties} >New Relation</button>
+   <button  className='buttonConnections' onClick={handleRelaties} >New Relation</button>
   )
 }
 

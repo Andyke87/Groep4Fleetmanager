@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import '../Formulieren/Formulieren.css';
 import ButtonOpslaan from '../Buttons/ButtonOpslaan';
@@ -9,6 +10,7 @@ class FormulierBestuurders extends Component {
     this.state = {
       idBestuurder: '',
       Name: '',
+      Insert: '',
       firstName: '',
       street: '',
       number: '',
@@ -37,6 +39,7 @@ class FormulierBestuurders extends Component {
     const {
       idDriver,
       name,
+      insert,
       firstName,
       street,
       number,
@@ -68,6 +71,17 @@ class FormulierBestuurders extends Component {
               type="text"
               name="Name"
               value={name}
+              onChange={this.handleChange}
+            />
+          </div>
+
+          <div className="col">
+            <label htmlFor="insert">Insert</label>
+            <input
+              className="input"
+              type="text"
+              name="insert"
+              value={insert}
               onChange={this.handleChange}
             />
           </div>
