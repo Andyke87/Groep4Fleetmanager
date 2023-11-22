@@ -9,7 +9,7 @@ import NieuwSchermVoertuigen from './Components/NieuwScherm/NieuwSchermVoertuige
 import { NieuwSchermTankkaarten } from './Components/NieuwScherm/NieuwSchermTankkaarten.jsx'
 import NieuwSchermBestuurders from './Components/NieuwScherm/NieuwSchermBestuurders.jsx'
 import NieuwSchermRelaties from './Components/NieuwScherm/NieuwSchermRelaties.jsx'
-import Relaties from './Components/Relaties/Relaties.jsx'
+import Relation from './Components/Relaties/Relaties.jsx'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 const browserRouter = createBrowserRouter (
@@ -39,8 +39,8 @@ const browserRouter = createBrowserRouter (
       element : <NieuwSchermRelaties/>
     },
     {
-      path : '/Relaties',
-      element : <Relaties/>
+      path : '/Relation',
+      element : <Relation/>
     }
   ]
 );

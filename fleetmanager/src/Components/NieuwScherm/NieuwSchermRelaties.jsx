@@ -6,10 +6,10 @@ import '../Login/Login.css';
 import LogoutButton from '../Buttons/LogoutButton';
 import BrightnessButton from '../Buttons/BrightnessButton';
 import HomeButton from '../Buttons/HomeButton';
-import VoertuigenButton from '../Buttons/VoertuigenButton';
-import TankkaartenButton from '../Buttons/TankkaartenButton';
-import BestuurdersButton from '../Buttons/BestuurdersButton';
-import ButtonRelaties from '../Buttons/ButtonRelaties';
+import VoertuigenButton from '../Buttons/ButtonsNavigation/VoertuigenButton';
+import TankkaartenButton from '../Buttons/ButtonsNavigation/TankkaartenButton';
+import BestuurdersButton from '../Buttons/ButtonsNavigation/BestuurdersButton';
+import ButtonRelation from '../Buttons/ButtonsNavigation/ButtonRelations';
 import FormulierenRelaties from '../Formulieren/FormulierRelaties';
 import TablesRelaties from '../Tables/TablesRelaties';
 
@@ -28,7 +28,7 @@ const NieuwSchermRelaties = () => {
             <BestuurdersButton />
             <TankkaartenButton/>
             <VoertuigenButton/>
-            <ButtonRelaties/>
+            <ButtonRelation/>
            </div>
           <TablesRelaties/>
           <FormulierenRelaties/>

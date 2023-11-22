@@ -1,8 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import '../Formulieren/Formulieren.css';
-import ButtonOpslaan from '../Buttons/ButtonOpslaan';
-import ButtonAnnuleren from '../Buttons/ButtonAnnuleren';
+import ButtonAdd from '../Buttons/ButtonAdd';
+import ButtonDeleteDriver from '../Buttons/ButtonsDrivers/ButtonDeleteDriver';
+import ButtonUpdate from '../Buttons/ButtonUpdate';
 
 class FormulierBestuurders extends Component {
   constructor(props) {
@@ -175,8 +176,9 @@ class FormulierBestuurders extends Component {
           </div>
         </div>
         <div className='containerButtonsNieuw'>
-          <ButtonOpslaan/>
-          <ButtonAnnuleren/>
+          <ButtonAdd buttonText="Add"/>
+          <ButtonUpdate buttonText="Update"/>
+          <ButtonDeleteDriver Id={idDriver} buttonText="Delete"/>
           </div>
       </form>
     );

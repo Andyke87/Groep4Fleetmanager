@@ -3,14 +3,14 @@ import React, { useState } from 'react';
 import BrightnessButton from '../Buttons/BrightnessButton';
 import LogoutButton from '../Buttons/LogoutButton';
 import HomeButton from '../Buttons/HomeButton';
-import TankkaartenButton from '../Buttons/TankkaartenButton';
-import BestuurdersButton from '../Buttons/BestuurdersButton';
-import VoertuigenButton from '../Buttons/VoertuigenButton';
+import TankkaartenButton from '../Buttons/ButtonsNavigation/TankkaartenButton';
+import BestuurdersButton from '../Buttons/ButtonsNavigation/BestuurdersButton';
+import VoertuigenButton from '../Buttons/ButtonsNavigation/VoertuigenButton';
 import DropdownBestuurders from './DropdownBestuurders';
 import DropdownVoertuigen from './DropdownVoertuigen';
 import DropdownTankkaarten from './DropdownTankkaarten';
-import ButtonOpslaan from '../Buttons/ButtonOpslaan';
-import ButtonAnnuleren from '../Buttons/ButtonAnnuleren';
+import ButtonAdd from '../Buttons/ButtonAdd';
+import ButtonDelete from '../Buttons/ButtonDelete';
 import { useMutation } from "@tanstack/react-query";
 import { postConnections } from '../../../API';
 import './Relaties.css';
@@ -21,8 +21,6 @@ const Relaties = () => {
     mutationFn: postConnections,
     onSuccess: (data) => {
       console.log("Succesvolle post", data);
-      showSuccessMessage();
-      refreshPage();
     },
     onError: (error) => {
       console.log("Er is een error", error);
@@ -47,21 +45,32 @@ const Relaties = () => {
   };
 
   const handleSubmit = async () => {
-    if (!selectedIdDriver || !selectedIdGasCard || !selectedIdVehicle) {
-      throw new Error("One or more fields are empty or contain invalid values");
-    }
+    // Voeg een bevestigingsvenster toe
+    const confirmSave = window.confirm('Weet je zeker dat je wilt opslaan?');
 
-    const payload = {
-      idDriver: selectedIdDriver,
-      idGasCard: selectedIdGasCard,
-      idVehicle: selectedIdVehicle,
-    };
+    if (confirmSave) {
+      if (!selectedIdDriver || !selectedIdGasCard || !selectedIdVehicle) {
+        throw new Error("One or more fields are empty or contain invalid values");
+      }
 
-    try {
-      const response = await mutation.mutateAsync(payload);
-    } 
-    catch (error) {
-      console.error("Error during mutation:", error);
+      const payload = {
+        idDriver: selectedIdDriver,
+        idGasCard: selectedIdGasCard,
+        idVehicle: selectedIdVehicle,
+      };
+
+      try {
+        const response = await mutation.mutateAsync(payload);
+
+        // Als ik statuscode 200 krijg, dan laat ik een alert zien en refresh ik de pagina
+        if (response.status === 200) {
+          showSuccessMessage();
+          refreshPage();
+        }
+
+      } catch (error) {
+        console.error("Error during mutation:", error);
+      }
     }
   };
 
@@ -82,14 +91,14 @@ const Relaties = () => {
             <div className='gridItem'>
               <BestuurdersButton />
               <DropdownBestuurders
-              selectedId={selectedIdDriver}
-              setSelectedIdDriver={setSelectedIdDriver}/>
+                selectedId={selectedIdDriver}
+                setSelectedIdDriver={setSelectedIdDriver}/>
             </div>
             <div className='gridItem'>
               <TankkaartenButton />
               <DropdownTankkaarten
-              selectedIdGasCard={selectedIdGasCard}
-              setSelectedIdGasCard={setSelectedIdGasCard}/>
+                selectedIdGasCard={selectedIdGasCard}
+                setSelectedIdGasCard={setSelectedIdGasCard}/>
             </div>
             <div className='gridItem'>
               <VoertuigenButton />
@@ -99,14 +108,8 @@ const Relaties = () => {
             </div>
           </div>
           <div className='buttonsOnderaan'>
-            <ButtonOpslaan
-              onClick={handleSubmit}>
-              Opslaan
-            </ButtonOpslaan>
-            <ButtonAnnuleren 
-              onClick={cancelSubmit}>
-              Annuleren
-            </ButtonAnnuleren>
+            <ButtonAdd onClick={handleSubmit} buttonText="Add"/>
+            <ButtonDelete onClick={cancelSubmit} buttonText="Go back"/>
           </div>
         </div>
       </div>
