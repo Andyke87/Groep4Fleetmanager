@@ -20,20 +20,20 @@ const TableVoertuigen = () => {
     <table>
       <thead>
         <tr>
-          <th>IdVehicle</th>
-          <th>Brand</th>
-          <th>Model</th>
-          <th>ChassisNumber</th>
-          <th>LicensePlate</th>
-          <th>Fuel</th>
-          <th>VehicleType</th>
-          <th>Color</th>
-          <th>Doors</th>
+          <th className='c'>IdVehicle</th>
+          <th className='tdVehicle'>Brand</th>
+          <th className='tdVehicle'>Model</th>
+          <th className='tdVehicle'>ChassisNumber</th>
+          <th className='tdVehicle'>LicensePlate</th>
+          <th className='tdVehicle'>Fuel</th>
+          <th className='tdVehicle'>VehicleType</th>
+          <th className='tdVehicle'>Color</th>
+          <th className='tdVehicle'>Doors</th>
         </tr>
       </thead>
       <tbody>
         {vehicles.map(vehicle => (
-        <tr key={vehicle.idVehicle}>
+        <tr className='trData' key={vehicle.idVehicle}>
           <td>{vehicle.idVehicle}</td>
           <td>{vehicle.brand}</td>
           <td>{vehicle.model}</td>

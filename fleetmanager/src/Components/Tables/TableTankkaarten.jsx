@@ -29,12 +29,12 @@ const TableTankkaarten = () => {
   <table>
     <thead>
       <tr>
-        <th>IdGasCards</th>
-        <th>CardNumber</th>
-        <th>Validation Date</th>
-        <th>Pin</th>
-        <th>Fuel</th>
-        <th>Blocked</th>
+        <th className='tdGasCard'>IdGasCards</th>
+        <th className='tdGasCard'>CardNumber</th>
+        <th className='tdGasCard'>Validation Date</th>
+        <th className='tdGasCard'>Pin</th>
+        <th className='tdGasCard'>Fuel</th>
+        <th className='tdGasCard'>Blocked</th>
       </tr>
     </thead>
     <tbody>

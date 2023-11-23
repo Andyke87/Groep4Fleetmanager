@@ -22,20 +22,20 @@ const TableBestuurders = () => {
     return new Date(dateString).toLocaleDateString('nl-NL', options);
   };
   return (
-    <table>
+    <table >
       <thead>
-        <tr>
-          <th>IdDriver</th>
-          <th>Name</th>
-          <th>Insert</th>
-          <th>Firstname</th>
-          <th>Street</th>
-          <th>Number</th>
-          <th>City</th>
-          <th>ZipCode</th>
-          <th>DayOfBirth</th>
-          <th>RegistryNumber</th>
-          <th>CategoryLicense</th>
+        <tr >
+          <th className='thDriver'>IdDriver</th>
+          <th className='thDriver'>Name</th>
+          <th className='thDriver'>Insert</th>
+          <th className='thDriver'>Firstname</th>
+          <th className='thDriver'>Street</th>
+          <th className='thDriver'>Number</th>
+          <th className='thDriver'>City</th>
+          <th className='thDriver'>ZipCode</th>
+          <th className='thDriver'>DayOfBirth</th>
+          <th className='thDriver'>RegistryNumber</th>
+          <th className='thDriver'>CategoryLicense</th>
         </tr>
       </thead>
       <tbody>

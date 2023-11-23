@@ -32,10 +32,10 @@ const TablesRelaties = () => {
         <tbody>
           {connections.map(connection => (
             <tr key={connection.id}>
-              <td>{connection.id}</td>
-              <td>{connection.idDriver}</td>
-              <td>{connection.idGasCard}</td>
-              <td>{connection.idVehicle}</td>
+              <td className='tdRelation'>{connection.id}</td>
+              <td className='tdRelation'>{connection.idDriver}</td>
+              <td className='tdRelation'>{connection.idGasCard}</td>
+              <td className='tdRelation'>{connection.idVehicle}</td>
             </tr>
             
           ))}
