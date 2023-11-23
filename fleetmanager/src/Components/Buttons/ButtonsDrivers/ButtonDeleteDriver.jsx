@@ -16,6 +16,7 @@ const ButtonDeleteDriver = ({Id}) => {
     },
     onError: (error) => {
       console.log("Er is een error", error);
+      showFailMessage();
     },
   });
 
@@ -34,6 +35,10 @@ const ButtonDeleteDriver = ({Id}) => {
 
   const showSuccessMessage = () => {
     alert("Driver deleted successfully");
+  };
+
+  const showFailMessage = () => {
+    alert("Driver not deleted");
   };
 
   const refreshPage = () => {

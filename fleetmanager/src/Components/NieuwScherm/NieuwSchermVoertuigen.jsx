@@ -7,7 +7,7 @@ import LogoutButton from '../Buttons/LogoutButton';
 import BrightnessButton from '../Buttons/BrightnessButton';
 import HomeButton from '../Buttons/HomeButton';
 import VoertuigenButton from '../Buttons/ButtonsNavigation/VoertuigenButton';
-import TankkaartenButton from '../Buttons/ButtonsNavigation/ButtonRelations';
+import TankkaartenButton from '../Buttons/ButtonsNavigation/TankkaartenButton';
 import BestuurdersButton from '../Buttons/ButtonsNavigation/BestuurdersButton';
 import TableVoertuigen from '../Tables/TableVoertuigen';
 import FormulierenVoertuigen from '../Formulieren/FormulierVoertuigen';

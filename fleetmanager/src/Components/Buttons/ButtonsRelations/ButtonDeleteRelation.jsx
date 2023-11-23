@@ -16,6 +16,7 @@ const ButtonDeleteRelation = ({Id}) => {
     },
     onError: (error) => {
       console.log("Er is een error", error);
+      showFailMessage();
     },
   });
 
@@ -34,6 +35,10 @@ const ButtonDeleteRelation = ({Id}) => {
 
   const showSuccessMessage = () => {
     alert("Connection deleted successfully");
+  };
+
+  const showFailMessage = () => {
+    alert("Connection not deleted");
   };
 
   const refreshPage = () => {

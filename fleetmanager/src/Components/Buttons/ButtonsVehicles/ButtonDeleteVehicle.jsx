@@ -16,7 +16,7 @@ const mutation = useMutation({
     },
     onError: (error) => {
       console.log("Er is een error", error);
-    },
+      showFailMessage();    },
   });
 
   const handleDelete = async () => {
@@ -34,6 +34,10 @@ const mutation = useMutation({
 
   const showSuccessMessage = () => {
     alert("Vehicle deleted successfully");
+  };
+
+  const showFailMessage = () => {
+    alert("Connection not deleted");
   };
 
   const refreshPage = () => {

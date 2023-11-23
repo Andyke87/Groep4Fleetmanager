@@ -16,6 +16,7 @@ const mutation = useMutation({
     },
     onError: (error) => {
       console.log("Er is een error", error);
+      showFailMessage();
     },
   });
 
@@ -34,6 +35,10 @@ const mutation = useMutation({
 
   const showSuccessMessage = () => {
     alert("Gas card deleted successfully");
+  };
+
+  const showFailMessage = () => {
+    alert("Gas card not deleted");
   };
 
   const refreshPage = () => {
