@@ -7,6 +7,7 @@ const ButtonDelete = ({ onClick, buttonText }) => {
     <button 
       className='buttonsActions' 
       type="button" 
+      title='Back to relations page'
       onClick={onClick}>
         {buttonText}
     </button>

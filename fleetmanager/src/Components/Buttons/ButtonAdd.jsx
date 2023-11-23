@@ -10,6 +10,7 @@ const ButtonOpslaan = ({onClick, disabled, buttonText}) => {
      className='buttonsActions' type="button"
      onClick={onClick}
      disabled={disabled}
+     title='All dropdowns required'
       >{buttonText}</button>
   )
 }

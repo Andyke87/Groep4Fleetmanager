@@ -144,41 +144,27 @@ table {
 th {
     border: 1px solid black;
     background-color: #f2f2f2;
-    width: 27%;
     height: 10px;
+}
+thead{
+    position: sticky;
+}
+.thDriver {
+    width: 20vh;
+}
+.tdRelation{
+    width: 100vh;
+}
+.tdGasCard{
+    width: 80vh;
+}
+.tdVehicle {
+    width: 60vh;
 }
 td{
     border: 1px solid black;
-    
+    text-align: center;
+    overflow: visible; 
 }
-
-/*table {
-    width: 100%;
-    height: 320px;
-    border: 1px solid #000;
-    background: #DDD;
-    overflow-y: auto;
-    display: block;
-    opacity: 100%;
-    table-layout: auto; /* Of "auto" in plaats van "fixed" */
-    /*border-collapse: collapse; /* Om te voorkomen dat dubbele randen ontstaan */
-/*}
-
-th, td {
-    border: 1px solid black;
-    background-color: #f2f2f2;
-    padding: 8px; /* Voeg wat ruimte toe rond de inhoud */
-   /* text-align: center; /* Of "center" of "right", afhankelijk van je voorkeur */
-    /*min-width: 150px;
-    max-width: 200px; /* Stel een maximale breedte in om te voorkomen dat een enkele lange tekst de tabel te breed maakt */
-  /*  white-space: nowrap; /* Voorkom dat lange teksten worden afgebroken en op een nieuwe regel worden geplaatst */
- /*     overflow: hidden; /* Verberg de overflow om het er netjes uit te laten zien */
-  /*    text-overflow: ellipsis; /* Voeg een ellipsis toe (...) als de inhoud te lang is om weer te geven */
- /* }
-
-th {
-    font-weight: bold;
-}*/
-
 
 
