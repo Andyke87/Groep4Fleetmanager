@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import '../Formulieren/Formulieren.css';
-import ButtonNieuweRelatie from '../Buttons/ButtonNieuweRelatie';
-import ButtonUpdateConnection from '../Buttons/ButtonUpdateConnection';
-import ButtonDeleteConnection from '../Buttons/ButtonDeleteConnection';
+import ButtonNewRelation from '../Buttons/ButtonsRelations/ButtonNewRelation';
+import ButtonUpdateRelation from '../Buttons/ButtonsRelations/ButtonUpdateRelation';
+import ButtonDeleteRelation from '../Buttons/ButtonsRelations/ButtonDeleteRelation';
 
 class FormulierenRelaties extends Component {
   constructor(props) {
@@ -83,14 +83,14 @@ class FormulierenRelaties extends Component {
           </div>
         </div>
         <div className='containerButtonsNew'>
-            <ButtonNieuweRelatie/>
-            <ButtonUpdateConnection
+            <ButtonNewRelation/>
+            <ButtonUpdateRelation
             Id={Id} 
             IdDriver={IdDriver}
             IdGasCard={IdGasCard}
             IdVehicle={IdVehicle}
             />
-            <ButtonDeleteConnection 
+            <ButtonDeleteRelation 
             Id={Id}
             />
           </div>

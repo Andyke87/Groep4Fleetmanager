@@ -24,30 +24,35 @@ const ButtonUpdateConnection = ({ Id, IdDriver, IdGasCard, IdVehicle }) => {
   });
 
   const handleSubmit = async () => {
-    if (!IdDriver || !IdGasCard || !IdVehicle) {
-      throw new Error("One or more fields are empty or contain invalid values");
-    }
+    // Voeg een bevestigingsvenster toe
+    const confirmUpdate = window.confirm('Weet je zeker dat je wilt updaten?');
 
-    const setPayload = {
-      idDriver: IdDriver,
-      idGasCard: IdGasCard,
-      idVehicle: IdVehicle,
-    };
-
-    console.log("id:", Id);
-    console.log("payload:", setPayload);
-
-    try {
-      const response = await mutation.mutateAsync(setPayload);
-
-      // Als ik statuscode 200 krijg, dan laat ik een alert zien en refresh ik de pagina
-      if (response.status === 200) {
-        showSuccessMessage();
-        refreshPage();
+    if (confirmUpdate) {
+      if (!IdDriver || !IdGasCard || !IdVehicle) {
+        throw new Error("One or more fields are empty or contain invalid values");
       }
 
-    } catch (error) {
-      console.error("Error during mutation:", error);
+      const setPayload = {
+        idDriver: IdDriver,
+        idGasCard: IdGasCard,
+        idVehicle: IdVehicle,
+      };
+
+      console.log("id:", Id);
+      console.log("payload:", setPayload);
+
+      try {
+        const response = await mutation.mutateAsync(setPayload);
+
+        // Als ik statuscode 200 krijg, dan laat ik een alert zien en refresh ik de pagina
+        if (response.status === 200) {
+          showSuccessMessage();
+          refreshPage();
+        }
+
+      } catch (error) {
+        console.error("Error during mutation:", error);
+      }
     }
   };
 
@@ -64,7 +69,7 @@ const ButtonUpdateConnection = ({ Id, IdDriver, IdGasCard, IdVehicle }) => {
 
   return (
     <button
-      className='buttonConnections'
+      className='buttonsActions'
       type="button"
       onClick={handleSubmit}
       title='All fields required'

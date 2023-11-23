@@ -8,7 +8,8 @@ const TablesRelaties = () => {
     const fetchData = async () => {
       try {
         const response = await getConnections();
-        setConnections(response.data);
+        const sortedConnections = response.data.sort((a, b) => a.id - b.id);
+        setConnections(sortedConnections);
       } catch (error) {
         console.error('Error fetching data:', error);
       }

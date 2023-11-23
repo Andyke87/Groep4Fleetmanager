@@ -6,12 +6,12 @@ import '../Login/Login.css';
 import LogoutButton from '../Buttons/LogoutButton';
 import BrightnessButton from '../Buttons/BrightnessButton';
 import HomeButton from '../Buttons/HomeButton';
-import VoertuigenButton from '../Buttons/VoertuigenButton';
-import TankkaartenButton from '../Buttons/TankkaartenButton';
-import BestuurdersButton from '../Buttons/BestuurdersButton';
+import VoertuigenButton from '../Buttons/ButtonsNavigation/VoertuigenButton';
+import TankkaartenButton from '../Buttons/ButtonsNavigation/TankkaartenButton';
+import BestuurdersButton from '../Buttons/ButtonsNavigation/BestuurdersButton';
 import FormulierTankkaarten from '../Formulieren/FormulierTankkaarten';
 import TableTankkaarten from '../Tables/TableTankkaarten';
-import ButtonRelaties from '../Buttons/ButtonRelaties';
+import ButtonRelaties from '../Buttons/ButtonsNavigation/ButtonRelations';
 
 export const NieuwSchermTankkaarten = () => {
   return (

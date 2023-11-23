@@ -2,10 +2,9 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import { useMutation } from '@tanstack/react-query';
-import Axios from 'axios';
-import { deleteConnections } from '../../../API';
+import { deleteConnections } from '../../../../API';
 
-const ButtonDeleteConnection = ({Id}) => {
+const ButtonDeleteRelation = ({Id}) => {
 
   const mutation = useMutation({
     mutationKey: ["deleteConnection"],
@@ -17,19 +16,29 @@ const ButtonDeleteConnection = ({Id}) => {
     },
     onError: (error) => {
       console.log("Er is een error", error);
+      showFailMessage();
     },
   });
 
   const handleDelete = async () => {
-    try {
-      await mutation.mutateAsync(Id);
-    } catch (error) {
-      console.error("Error during mutation:", error);
+   // Voeg een bevestigingsvenster toe
+    const confirmDelete = window.confirm('Are you sure you want to delete?');
+
+    if (confirmDelete) {
+      try {
+        await mutation.mutateAsync(Id);
+      } catch (error) {
+        console.error('Error during mutation:', error);
+      }
     }
   };
 
   const showSuccessMessage = () => {
     alert("Connection deleted successfully");
+  };
+
+  const showFailMessage = () => {
+    alert("Connection not deleted");
   };
 
   const refreshPage = () => {
@@ -39,7 +48,7 @@ const ButtonDeleteConnection = ({Id}) => {
 
   return (
     <button
-      className='buttonConnections'
+      className='buttonsActions'
       type="button"
       onClick={handleDelete}
       title='Only Connection id required'
@@ -49,4 +58,4 @@ const ButtonDeleteConnection = ({Id}) => {
   )
 }
 
-export default ButtonDeleteConnection;
+export default ButtonDeleteRelation;

@@ -186,11 +186,22 @@ public class ConnectionController : ControllerBase
                 return BadRequest("No data received");
             }
 
-            var existingConnection = await _dbContext.Connections.FirstOrDefaultAsync(c => c.Id == _connection.Id);
-
-            if (existingConnection != null)
+            // Controleren op duplicaten voor IdDriver
+            if (_dbContext.Connections.Any(c => c.IdDriver == _connection.IdDriver))
             {
-                return BadRequest("A connection already exists with this Id.");
+                return Conflict("A connection with the same IdDriver already exists.");
+            }
+
+            // Controleren op duplicaten voor IdGasCard
+            if (_dbContext.Connections.Any(c => c.IdGasCard == _connection.IdGasCard))
+            {
+                return Conflict("A connection with the same IdGasCard already exists.");
+            }
+
+            // Controleren op duplicaten voor IdVehicle
+            if (_dbContext.Connections.Any(c => c.IdVehicle == _connection.IdVehicle))
+            {
+                return Conflict("A connection with the same IdVehicle already exists.");
             }
 
             Connection newConnection = new(_connection.IdDriver, _connection.IdGasCard, _connection.IdVehicle);
@@ -216,6 +227,4 @@ public class ConnectionController : ControllerBase
             }
         }
     }
-
-
 }

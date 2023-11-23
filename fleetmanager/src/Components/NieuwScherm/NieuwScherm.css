@@ -114,7 +114,7 @@ html {
     color: #ffffff;
     cursor: pointer;
 }
-.buttonConnections{
+.buttonsActions{
     width: 192px;
     height: 46px;
     flex-shrink: 0;
@@ -126,7 +126,7 @@ html {
     margin-right: 10px;
     cursor: pointer;
 }
-.buttonConnections:hover{
+.buttonsActions:hover{
     background-color: #0074d9; 
     color: #ffffff;
     cursor: pointer;

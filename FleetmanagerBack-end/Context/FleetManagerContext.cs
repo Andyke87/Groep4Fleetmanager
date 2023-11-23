@@ -11,13 +11,13 @@ public partial class FleetManagerContext : DbContext
     }
 
 
-    public DbSet<Connection> Connections { get; set; }
+    public virtual DbSet<Connection> Connections { get; set; }
 
-    public DbSet<Driver> Drivers { get; set; }
+    public virtual DbSet<Driver> Drivers { get; set; }
 
-    public DbSet<GasCard> GasCards { get; set; }
+    public virtual DbSet<GasCard> GasCards { get; set; }
 
-    public DbSet<Vehicle> Vehicles { get; set; }
+    public virtual DbSet<Vehicle> Vehicles { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -26,10 +26,6 @@ public partial class FleetManagerContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-
-        modelBuilder.Entity<Connection>()
-                .HasIndex(c => new { c.IdDriver, c.IdGasCard, c.IdVehicle })
-                .IsUnique();
 
         modelBuilder.Entity<Driver>(entity =>
         {
@@ -77,6 +73,9 @@ public partial class FleetManagerContext : DbContext
                 .IsUnicode(false);
         });
 
+        modelBuilder.Entity<Connection>()
+                .HasIndex(c => new { c.IdDriver, c.IdGasCard, c.IdVehicle })
+                .IsUnique();
         modelBuilder.Entity<Connection>(entity =>
         {
             entity.HasKey(e => e.Id);

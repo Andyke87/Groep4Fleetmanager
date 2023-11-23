@@ -1,8 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import '../Formulieren/Formulieren.css';
-import ButtonOpslaan from '../Buttons/ButtonOpslaan';
-import ButtonAnnuleren from '../Buttons/ButtonAnnuleren';
+import ButtonAdd from '../Buttons/ButtonAdd';
+import ButtonDeleteVehicle from '../Buttons/ButtonsVehicles/ButtonDeleteVehicle';
+import ButtonUpdate from '../Buttons/ButtonUpdate';
 
 class FormulierenVoertuigen extends Component {
   constructor(props) {
@@ -48,7 +49,7 @@ class FormulierenVoertuigen extends Component {
       <form onSubmit={this.handleSubmit}>
         <div className="form-container">
           <div className="col">
-            <label htmlFor="idVehicle">Voertuig ID</label>
+            <label htmlFor="idVehicle">Vehicle ID</label>
             <input
               className="input"
               type="text"
@@ -115,6 +116,7 @@ class FormulierenVoertuigen extends Component {
               <option value="Diesel">Diesel</option>
               <option value="LPG">LPG</option>
               <option value="CNG">CNG</option>
+              <option value="Elektrisch">Elektrisch</option>
             </select>
           </div>
 
@@ -152,8 +154,9 @@ class FormulierenVoertuigen extends Component {
           </div>
         </div>
         <div className='containerButtonsNieuw'>
-            <ButtonOpslaan/>
-            <ButtonAnnuleren/>
+            <ButtonAdd buttonText="Add"/>
+            <ButtonUpdate buttonText="Update"/>
+            <ButtonDeleteVehicle Id={idVehicle} buttonText="Delete"/>
           </div>
       </form>
     );
