@@ -12,6 +12,8 @@ import BestuurdersButton from '../Buttons/ButtonsNavigation/BestuurdersButton';
 import ButtonRelation from '../Buttons/ButtonsNavigation/ButtonRelations';
 import FormulierenRelaties from '../Formulieren/FormulierRelaties';
 import TablesRelaties from '../Tables/TablesRelaties';
+import Relaties from '../Relaties/Relaties';
+import ButtonNewRelation from '../Buttons/ButtonsRelations/ButtonNewRelation';
 
 
 const NieuwSchermRelaties = () => {
@@ -31,9 +33,12 @@ const NieuwSchermRelaties = () => {
             <ButtonRelation/>
            </div>
           <TablesRelaties/>
-          <FormulierenRelaties/>
-          </div>
-        </div>
+          <div>
+         <Relaties></Relaties>
+         </div>
+         </div>
+         </div>
+        
   )
 }
 
