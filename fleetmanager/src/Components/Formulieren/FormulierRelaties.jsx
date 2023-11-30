@@ -81,7 +81,7 @@ const FormulierenRelaties = () => {
               <th>Gascard id</th>
               <th>Gascard number</th>
               <th>Vehicle Id</th>
-              <th>Vehicle brand</th>
+              <th>Licensce plate</th>
             </tr>
           </thead>
           <tbody>
@@ -103,7 +103,7 @@ const FormulierenRelaties = () => {
                 </td>
                 <td className='tdRelation'>{connection.idVehicle}</td>
                 <td className='tdRelation'>
-                  {vehicles.find((vehicle) => vehicle.idVehicle === connection.idVehicle)?.brand || 'N/A'}
+                  {vehicles.find((vehicle) => vehicle.idVehicle === connection.idVehicle)?.licensePlate || 'N/A'}
                 </td>
               </tr>
             ))}
