@@ -28,7 +28,6 @@ export const NieuwSchermTankkaarten = () => {
           <VoertuigenButton/>
           <ButtonRelaties/>
         </div>
-        <TableTankkaarten/>
         <FormulierTankkaarten/>
       </div>
     </div>

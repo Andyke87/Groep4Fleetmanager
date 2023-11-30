@@ -52,7 +52,7 @@ const mutation = useMutation({
             onClick={handleDelete}
             title='Only Gas card id required'
             >
-            Delete
+            Delete gas card
         </button>
   )
 }

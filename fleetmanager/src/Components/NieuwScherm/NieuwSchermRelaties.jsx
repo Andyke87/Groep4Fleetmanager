@@ -11,7 +11,6 @@ import TankkaartenButton from '../Buttons/ButtonsNavigation/TankkaartenButton';
 import BestuurdersButton from '../Buttons/ButtonsNavigation/BestuurdersButton';
 import ButtonRelation from '../Buttons/ButtonsNavigation/ButtonRelations';
 import FormulierenRelaties from '../Formulieren/FormulierRelaties';
-import TablesRelaties from '../Tables/TablesRelaties';
 
 
 const NieuwSchermRelaties = () => {
@@ -30,7 +29,6 @@ const NieuwSchermRelaties = () => {
             <VoertuigenButton/>
             <ButtonRelation/>
            </div>
-          <TablesRelaties/>
           <FormulierenRelaties/>
           </div>
         </div>

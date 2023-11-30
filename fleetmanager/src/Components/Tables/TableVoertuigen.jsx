@@ -20,7 +20,7 @@ const TableVoertuigen = () => {
     <table>
       <thead>
         <tr>
-          <th className='c'>IdVehicle</th>
+          <th className='tdVehicle'>Id Vehicle</th>
           <th className='tdVehicle'>Brand</th>
           <th className='tdVehicle'>Model</th>
           <th className='tdVehicle'>ChassisNumber</th>

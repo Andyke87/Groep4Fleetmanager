@@ -3,16 +3,14 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { useMutation } from '@tanstack/react-query';
-import Axios from 'axios';
+import { updateConnections } from '../../../../API/index';
 
 const ButtonUpdateConnection = ({ Id, IdDriver, IdGasCard, IdVehicle }) => {
-
-  const url = `http://localhost:5043/Connection/Connection/${Id}`;
 
   const mutation = useMutation({
     mutationKey: ["updateConnection"],
     mutationFn: async (payload) => {
-      return await Axios.patch(url, payload);
+      return await updateConnections(Id, payload);
     },
     onSuccess: (data) => {
       console.log("Succesvolle update", data);
@@ -25,7 +23,7 @@ const ButtonUpdateConnection = ({ Id, IdDriver, IdGasCard, IdVehicle }) => {
 
   const handleSubmit = async () => {
     // Voeg een bevestigingsvenster toe
-    const confirmUpdate = window.confirm('Weet je zeker dat je wilt updaten?');
+    const confirmUpdate = window.confirm('Are you sure you want to update this relation?');
 
     if (confirmUpdate) {
       if (!IdDriver || !IdGasCard || !IdVehicle) {
@@ -37,7 +35,6 @@ const ButtonUpdateConnection = ({ Id, IdDriver, IdGasCard, IdVehicle }) => {
         idGasCard: IdGasCard,
         idVehicle: IdVehicle,
       };
-
       console.log("id:", Id);
       console.log("payload:", setPayload);
 
@@ -55,7 +52,6 @@ const ButtonUpdateConnection = ({ Id, IdDriver, IdGasCard, IdVehicle }) => {
       }
     }
   };
-
   const showSuccessMessage = () => {
     alert("Connection updated successfully");
   };
@@ -74,7 +70,7 @@ const ButtonUpdateConnection = ({ Id, IdDriver, IdGasCard, IdVehicle }) => {
       onClick={handleSubmit}
       title='All fields required'
     >
-      Update
+      Update relation
     </button>
   );
 };

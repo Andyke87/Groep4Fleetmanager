@@ -9,7 +9,6 @@ import HomeButton from '../Buttons/HomeButton';
 import VoertuigenButton from '../Buttons/ButtonsNavigation/VoertuigenButton';
 import TankkaartenButton from '../Buttons/ButtonsNavigation/TankkaartenButton';
 import BestuurdersButton from '../Buttons/ButtonsNavigation/BestuurdersButton';
-import TableBestuurders from '../Tables/TableBestuurders';
 import FormulierBestuurders from '../Formulieren/FormulierBestuurders';
 import ButtonRelaties from '../Buttons/ButtonsNavigation/ButtonRelations';
 
@@ -28,7 +27,6 @@ const NieuwSchermBestuurders = () => {
             <VoertuigenButton/>
             <ButtonRelaties/>
            </div>
-          <TableBestuurders/>
           <FormulierBestuurders/>
           </div>
         </div>

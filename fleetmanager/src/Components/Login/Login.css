@@ -20,7 +20,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(../Assets/Achtergrond.jpg) center/cover no-repeat;
+  /*  background: url(../Assets/Achtergrond.jpg) center/cover no-repeat;*/
     background-size: 759px 779px;
 }
 

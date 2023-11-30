@@ -53,7 +53,7 @@ const ButtonDeleteRelation = ({Id}) => {
       onClick={handleDelete}
       title='Only Connection id required'
     >
-      Delete
+      Delete relation
     </button>
   )
 }

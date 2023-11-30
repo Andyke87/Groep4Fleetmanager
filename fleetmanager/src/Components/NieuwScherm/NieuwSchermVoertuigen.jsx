@@ -30,7 +30,6 @@ const NieuwSchermVoertuigen = () => {
           <VoertuigenButton/>
           <ButtonRelaties/>
         </div>
-        <TableVoertuigen/>
         <FormulierenVoertuigen/>
       </div>
     </div>

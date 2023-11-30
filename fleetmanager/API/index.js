@@ -11,6 +11,9 @@ export const getConnectionsById = async (id) => {
 export const deleteConnections = async (id) => {
   return await axios.delete(`http://localhost:5043/Connection/Connection/${id}`);
 };
+export const updateConnections = async (id, put) => {
+  return await axios.patch(`http://localhost:5043/Connection/Connection/${id}`, put);
+};
 /* de todo parameter is een object met de properties: 
 IdBestuurder, IdTankkaart en IdVoertuig*/
 export const postConnections = async (post) => {
