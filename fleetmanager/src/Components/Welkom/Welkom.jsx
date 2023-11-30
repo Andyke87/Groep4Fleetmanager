@@ -30,9 +30,9 @@ const Welkom = () => {
        </div>
       <div className='containerWelkom'> 
           <h1 className='nameAdress'>Welkom Anke</h1>
-          <button className='button' onClick={handleVoertuigen} >Vehicles</button>
-          <button className='button' onClick={handleTankkaarten}>Gas Cards</button>
           <button className='button' onClick={handleBestuurders}>Drivers</button>
+          <button className='button' onClick={handleTankkaarten}>Gas Cards</button>
+          <button className='button' onClick={handleVoertuigen} >Vehicles</button>          
           <button className='button' onClick={handleRelaties}>Relations</button>
       </div>
     </div>
