@@ -173,14 +173,6 @@ public class DriverController : ControllerBase
                     driver.CategoryLicense = _driver.CategoryLicense;
                 else driver.CategoryLicense = driver.CategoryLicense;
 
-                if (_driver.Login != null)
-                    driver.Login = _driver.Login;
-                else driver.Login = driver.Login;
-
-                if (_driver.Password != null)
-                    driver.Password = _driver.Password;
-                else driver.Password = driver.Password;
-
                 await _dbContext.SaveChangesAsync();
 
                 return Ok("The connection was updated");

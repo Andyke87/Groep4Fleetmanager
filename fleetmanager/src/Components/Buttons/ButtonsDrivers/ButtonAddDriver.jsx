@@ -39,7 +39,6 @@ const ButtonAddDriver = ({Name, Insert, FirstName, Street, Number, City, ZipCode
         DayOfBirth = new Date(DayOfBirth);
         DayOfBirth = DayOfBirth.toISOString();
         DayOfBirth = DayOfBirth.slice(0, 10);
-        console.log("DayOfBirth:", DayOfBirth);
 
       const payload = {
         name: Name,
@@ -53,11 +52,11 @@ const ButtonAddDriver = ({Name, Insert, FirstName, Street, Number, City, ZipCode
         registryNumber: RegistryNumber,
         categoryLicense: CategoryLicense,
       };
-      console.log("payload:", payload);
+
 
       try {
         const response = await mutation.mutateAsync(payload);
-
+      console.log("payload:", payload);
         if (response.status === 200) {
         showSuccessMessage();
         refreshPage();
@@ -72,7 +71,7 @@ const ButtonAddDriver = ({Name, Insert, FirstName, Street, Number, City, ZipCode
       <button
         className='buttonsActions'
         type="button"
-    //    onClick={handleSubmit}
+        onClick={handleSubmit}
         title='Driver id forbidden'
       >Add driver</button>
   )

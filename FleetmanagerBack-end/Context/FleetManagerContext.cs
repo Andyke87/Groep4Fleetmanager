@@ -56,7 +56,6 @@ public partial class FleetManagerContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false);
             entity.Property(e => e.ZipCode)
-                .HasMaxLength(10)
                 .IsUnicode(false);
             entity.Property(e => e.DayOfBirth).HasColumnType("date");
             entity.Property(e => e.RegistryNumber)
@@ -64,12 +63,6 @@ public partial class FleetManagerContext : DbContext
                 .IsUnicode(false);
             entity.Property(e => e.CategoryLicense)
                 .HasMaxLength(10)
-                .IsUnicode(false);
-            entity.Property(e => e.Login)
-                .HasMaxLength(20)
-                .IsUnicode(false);
-            entity.Property(e => e.Password)
-                .HasMaxLength(20)
                 .IsUnicode(false);
         });
 
@@ -125,7 +118,7 @@ public partial class FleetManagerContext : DbContext
                 .HasMaxLength(6)
                 .IsUnicode(false);
             entity.Property(e => e.Fuel)
-                .HasMaxLength(50)
+                .HasMaxLength(25)
                 .IsUnicode(false);
             entity.Property(e => e.Blocked).HasDefaultValueSql("((0))");
         });

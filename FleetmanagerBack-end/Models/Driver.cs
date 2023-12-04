@@ -25,13 +25,11 @@ public partial class Driver
     public string? RegistryNumber { get; set; }
 
     public string? CategoryLicense { get; set; }
-    public string? Login { get; set; }
-    public string? Password { get; set; }
 
     public Driver()
     {
     }
-    public Driver(string name, string insert, string firstName, string street, string number, string city, int zipCode, DateTime dayOfBirth, string registryNumber, string categoryLicense, string login, string password)
+    public Driver(string name, string insert, string firstName, string street, string number, string city, int zipCode, DateTime dayOfBirth, string registryNumber, string categoryLicense)
     {
         Name = name;
         Insert = insert;
@@ -43,7 +41,5 @@ public partial class Driver
         DayOfBirth = dayOfBirth;
         RegistryNumber = registryNumber;
         CategoryLicense = categoryLicense;
-        Login = login;
-        Password = password;
     }
 }

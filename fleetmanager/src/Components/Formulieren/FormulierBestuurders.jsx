@@ -4,6 +4,7 @@ import '../Formulieren/Formulieren.css';
 import ButtonDeleteDriver from '../Buttons/ButtonsDrivers/ButtonDeleteDriver';
 import ButtonUpdateDriver from '../Buttons/ButtonsDrivers/ButtonUpdateDriver';
 import ButtonAddDriver from '../Buttons/ButtonsDrivers/ButtonAddDriver';
+import ButtonClearInput from '../Buttons/ButtonClearInput';
 import { getDrivers } from '../../../API/index';
 
 const FormulierBestuurders = () => {
@@ -54,7 +55,6 @@ const FormulierBestuurders = () => {
   };
 
   const handleSubmit = (event) => {
-    // Voeg hier eventueel logica toe om met het formulier te werken
     event.preventDefault();
     console.log('Formulier ingediend:', { idDriver, name, insert, firstName, street, number, city, zipCode, dayOfBirth, registryNumber, categoryLicense });
   };
@@ -84,17 +84,17 @@ const FormulierBestuurders = () => {
       <table >
         <thead>
           <tr >
-            <th className='thDriver'>IdDriver</th>
+            <th className='thDriver'>Driver Id</th>
             <th className='thDriver'>Name</th>
-            <th className='thDriver'>Insert</th>
-            <th className='thDriver'>Firstname</th>
+            <th className='thDriver'>Inserts</th>
+            <th className='thDriver'>First Name</th>
             <th className='thDriver'>Street</th>
             <th className='thDriver'>Number</th>
             <th className='thDriver'>City</th>
-            <th className='thDriver'>ZipCode</th>
-            <th className='thDriver'>DayOfBirth</th>
-            <th className='thDriver'>RegistryNumber</th>
-            <th className='thDriver'>CategoryLicense</th>
+            <th className='thDriver'>Zip Code</th>
+            <th className='thDriver'>Day Of Birth</th>
+            <th className='thDriver'>Registry Number</th>
+            <th className='thDriver'>Category License</th>
           </tr>
         </thead>
         <tbody>
@@ -117,7 +117,7 @@ const FormulierBestuurders = () => {
       </table>
       <div className="form-container">
         <div className="col">
-          <label htmlFor="idDriver">Driver ID</label>
+          <label htmlFor="idDriver">Driver Id</label>
           <input
             className="input"
             type="text"
@@ -131,17 +131,19 @@ const FormulierBestuurders = () => {
           <label htmlFor="name">Name</label>
           <input
             className="input"
+            placeholder='Max 50 characters'
             type="text"
-            name="Name"
+            name="name"
             value={name}
             onChange={handleChange}
           />
         </div>
 
         <div className="col">
-          <label htmlFor="insert">Insert</label>
+          <label htmlFor="insert">Inserts</label>
           <input
             className="input"
+            placeholder='Max 50 characters'
             type="text"
             name="insert"
             value={insert}
@@ -150,9 +152,10 @@ const FormulierBestuurders = () => {
         </div>
 
         <div className="col">
-          <label htmlFor="firstName">FirstName</label>
+          <label htmlFor="firstName">First Name</label>
           <input
             className="input"
+            placeholder='Max 50 characters'
             type="text"
             name="firstName"
             value={firstName}
@@ -164,6 +167,7 @@ const FormulierBestuurders = () => {
           <label htmlFor="street">Street</label>
           <input
             className="input"
+            placeholder='Max 50 characters'
             type="text"
             name="street"
             value={street}
@@ -175,6 +179,7 @@ const FormulierBestuurders = () => {
           <label htmlFor="number">Number</label>
           <input
             className="input"
+            placeholder='Max 10 characters'
             type="text"
             name="number"
             value={number}
@@ -186,6 +191,7 @@ const FormulierBestuurders = () => {
           <label htmlFor="city">City</label>
           <input
             className="input"
+            placeholder='Max 50 characters'
             type="text"
             name="city"
             value={city}
@@ -194,11 +200,12 @@ const FormulierBestuurders = () => {
         </div>
 
         <div className="col">
-          <label htmlFor="zipcode">Zipcode</label>
+          <label htmlFor="zipcode">Zip Code</label>
           <input
             className="input"
+            placeholder='Only numbers'
             type="text"
-            name="zipcode"
+            name="zipCode"
             value={zipCode}
             onChange={handleChange}
           />
@@ -219,6 +226,7 @@ const FormulierBestuurders = () => {
           <label htmlFor="registryNumber">Registry Number</label>
           <input
             className="input"
+            placeholder='Max 12 characters'
             type="text"
             name="registryNumber"
             value={registryNumber}
@@ -228,23 +236,57 @@ const FormulierBestuurders = () => {
 
         <div className="col">
           <label htmlFor="categoryLicense">Category License</label>
-          <input
+          <select
             className="input"
             type="text"
             name="categoryLicense"
             value={categoryLicense}
             onChange={handleChange}
-          />
+          >
+            <option value=""></option>
+            <option value="AM">AM</option>
+            <option value="A1">A1</option>
+            <option value="A2">A2</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="BE">BE</option>
+            <option value="C">C</option>
+            <option value="CE">CE</option>
+            <option value="D">D</option>
+            <option value="DE">DE</option>
+          </select>
         </div>
       </div>
       <div className='containerButtonsNieuw'>
         <ButtonAddDriver
-        
+          Name={name}
+          Insert={insert}
+          FirstName={firstName}
+          Street={street}
+          Number={number}
+          City={city}
+          ZipCode={zipCode}
+          DayOfBirth={dayOfBirth}
+          RegistryNumber={registryNumber}
+          CategoryLicense={categoryLicense}
         />
         <ButtonUpdateDriver
-        
+          IdDriver={idDriver}
+          Name={name}
+          Insert={insert}
+          FirstName={firstName}
+          Street={street}
+          Number={number}
+          City={city}
+          ZipCode={zipCode}
+          DayOfBirth={dayOfBirth}
+          RegistryNumber={registryNumber}
+          CategoryLicense={categoryLicense}
         />
         <ButtonDeleteDriver Id={idDriver} buttonText="Delete"/>
+        </div>
+        <div>
+          <ButtonClearInput/>
         </div>
     </form>
   );

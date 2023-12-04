@@ -145,26 +145,23 @@ th {
     border: 1px solid black;
     background-color: #f2f2f2;
     height: 10px;
-}
-thead{
     position: sticky;
 }
 .thDriver {
     width: 20vh;
 }
 .tdRelation{
-    width: 100vh;
+    width: 17%;
 }
 .tdGasCard{
     width: 80vh;
 }
 .tdVehicle {
-    width: 60vh;
+    width: 13%;
 }
 td{
     border: 1px solid black;
     text-align: center;
     overflow: visible; 
 }
-
 

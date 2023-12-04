@@ -15,11 +15,11 @@ namespace FleetManager.Models
 
         public string Fuel { get; set; } = null!;
 
-        public bool Blocked { get; set; }
+        public string Blocked { get; set; }
         public GasCard()
         {
         }
-        public GasCard(string cardNumber, DateTime validationDate, string pin, string fuel, bool blocked)
+        public GasCard(string cardNumber, DateTime validationDate, string pin, string fuel, string blocked)
         {
             CardNumber = cardNumber;
             ValidationDate = validationDate;

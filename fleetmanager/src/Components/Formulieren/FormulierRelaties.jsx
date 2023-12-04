@@ -1,9 +1,11 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import '../Formulieren/Formulieren.css';
 import ButtonNewRelation from '../Buttons/ButtonsRelations/ButtonAddRelation';
 import ButtonUpdateRelation from '../Buttons/ButtonsRelations/ButtonUpdateRelation';
 import ButtonDeleteRelation from '../Buttons/ButtonsRelations/ButtonDeleteRelation';
+import ButtonClearInput from '../Buttons/ButtonClearInput';
 import { getConnections, getDrivers, getGasCards, getVehicles } from '../../../API/index';
 
 const FormulierenRelaties = () => {
@@ -68,6 +70,12 @@ const FormulierenRelaties = () => {
     setIdGasCard(selectedRow.idGasCard);
     setIdVehicle(selectedRow.idVehicle);
   };
+
+  const formatDate = (dateString) => {
+    const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+    return new Date(dateString).toLocaleDateString('nl-NL', options);
+  };
+
   
   return (
     <form onSubmit={handleSubmit}>
@@ -75,35 +83,47 @@ const FormulierenRelaties = () => {
         <table>
           <thead>
             <tr>
-              <th style={{ width: '400px' }}>Relation id</th>
-              <th>Driver id</th>
-              <th>Driver name</th>
-              <th>Gascard id</th>
-              <th>Gascard number</th>
-              <th>Vehicle Id</th>
-              <th>Licensce plate</th>
+              <th style={{ width: '400px' }}>Relation Id</th>
+              <th>Driver Name</th>
+              <th>Gascard Number</th>
+              <th>Expiration Date</th>
+              <th>Licensce Plate</th>
+              <th>Brand</th>
             </tr>
           </thead>
           <tbody>
             {connections.map((connection) => (
               <tr key={connection.id} onClick={() => handleRowClick(connection)}>
                 <td className='tdRelation'>{connection.id}</td>
-                <td className='tdRelation'>{connection.idDriver}</td>
                 <td className='tdRelation'>
                   {drivers.find((driver) => driver.idDriver === connection.idDriver)?.firstName +
                     ' ' +
                     drivers.find((driver) => driver.idDriver === connection.idDriver)?.insert +
                     ' ' +
-                    drivers.find((driver) => driver.idDriver === connection.idDriver)?.name ||
+                    drivers.find((driver) => driver.idDriver === connection.idDriver)?.name +
+                    ` (id: ${drivers.find((driver) => driver.idDriver === connection.idDriver)?.idDriver})` 
+                    ||
                     'N/A'}
                 </td>
-                <td className='tdRelation'>{connection.idGasCard}</td>
+
                 <td className='tdRelation'>
-                  {gasCards.find((gasCard) => gasCard.idGasCard === connection.idGasCard)?.cardNumber|| 'N/A'}
+                  {gasCards.find((gasCard) => gasCard.idGasCard === connection.idGasCard)?.cardNumber +
+                    ` (id: ${gasCards.find((gasCard) => gasCard.idGasCard === connection.idGasCard)?.idGasCard})`
+                  || 'N/A'}
                 </td>
-                <td className='tdRelation'>{connection.idVehicle}</td>
+
+                <td>
+                  {formatDate(gasCards.find((gasCard) => gasCard.idGasCard === connection.idGasCard)?.validationDate) || 'N/A'}
+                </td>
+
                 <td className='tdRelation'>
-                  {vehicles.find((vehicle) => vehicle.idVehicle === connection.idVehicle)?.licensePlate || 'N/A'}
+                  {vehicles.find((vehicle) => vehicle.idVehicle === connection.idVehicle)?.licensePlate +
+                    ` (id: ${vehicles.find((vehicle) => vehicle.idVehicle === connection.idVehicle)?.idVehicle})`
+                  || 'N/A'}
+                </td>
+
+                <td className='tdRelation'>
+                  {vehicles.find((vehicle) => vehicle.idVehicle === connection.idVehicle)?.brand}
                 </td>
               </tr>
             ))}
@@ -112,7 +132,7 @@ const FormulierenRelaties = () => {
       </div>
       <div className="form-container">
         <div className="col">
-          <label htmlFor="Id">Relation id</label>
+          <label htmlFor="Id">Relation Id</label>
           <input
             className="input"
             type="text"
@@ -123,9 +143,10 @@ const FormulierenRelaties = () => {
         </div>
 
         <div className="col">
-          <label htmlFor="IdDriver">Driver id</label>
+          <label htmlFor="IdDriver">Driver Id</label>
           <input
             className="input"
+            placeholder='Only driver id allowed'
             type="text"
             name="IdDriver"
             value={IdDriver}
@@ -134,9 +155,10 @@ const FormulierenRelaties = () => {
         </div>
 
         <div className="col">
-          <label htmlFor="IdGasCard">Gas card id</label>
+          <label htmlFor="IdGasCard">Gas Card Id</label>
           <input
             className="input"
+            placeholder='Only gas card id allowed'
             type="text"
             name="IdGasCard"
             value={IdGasCard}
@@ -145,9 +167,10 @@ const FormulierenRelaties = () => {
         </div>
 
         <div className="col">
-          <label htmlFor="IdVehicle">Vehicle id</label>
+          <label htmlFor="IdVehicle">Vehicle Id</label>
           <input
             className="input"
+            placeholder='Only vehicle id allowed'
             type="text"
             name="IdVehicle"
             value={IdVehicle}
@@ -170,6 +193,9 @@ const FormulierenRelaties = () => {
         <ButtonDeleteRelation
           Id={Id}
         />
+      </div>
+      <div>
+        <ButtonClearInput/>
       </div>
     </form>
   );

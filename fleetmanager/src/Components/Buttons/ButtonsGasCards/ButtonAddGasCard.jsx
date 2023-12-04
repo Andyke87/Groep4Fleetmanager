@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React from 'react';
 import { useMutation } from "@tanstack/react-query";
 import { postGasCards } from '../../../../API/index';
 
@@ -18,6 +18,7 @@ const ButtonAddGasCard = ({CardNumber, ValidationDate, Pin, Fuel, Blocked}) => {
             showErrorMessage();
         },
     });
+    console.log("Addpayload:", CardNumber, ValidationDate, Pin, Fuel, Blocked);
     const showSuccessMessage = () => {
         alert("Gas card added successfully");
     };
@@ -32,21 +33,16 @@ const ButtonAddGasCard = ({CardNumber, ValidationDate, Pin, Fuel, Blocked}) => {
         const confirmSave = window.confirm('Are you sure you want to create this gas card?');
 
         if (confirmSave) {
-            if (!CardNumber || !ValidationDate || !Pin || !Fuel || !Blocked) {
-                throw new Error("One or more fields are empty or contain invalid values");
-            }
-
-            const payload = {
+            const setPayload = {
                 cardNumber: CardNumber,
                 validationDate: ValidationDate,
                 pin: Pin,
                 fuel: Fuel,
                 blocked: Blocked,
             };
-            console.log("payload:", payload);
-
+            console.log("set payload:", setPayload);
             try {
-                const response = await mutation.mutateAsync(payload);
+                const response = await mutation.mutateAsync(setPayload);
 
                 if (response.status === 200) {
                     showSuccessMessage();

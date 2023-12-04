@@ -10,7 +10,7 @@ const ButtonUpdateDriver = ({IdDriver, Name, Insert, FirstName, Street, Number, 
   const mutation = useMutation({
     mutationKey: ["updateDriver"],
     mutationFn: async (payload) => {
-      return await updateDrivers(Id, payload);
+      return await updateDrivers(IdDriver, payload);
     },
     onSuccess: (data) => {
       console.log("Succesvolle update", data);
@@ -25,45 +25,32 @@ const ButtonUpdateDriver = ({IdDriver, Name, Insert, FirstName, Street, Number, 
     const confirmUpdate = window.confirm('Are you sure you want to update this driver?');
 
     if (confirmUpdate) {
-      if (!IdDriver || !Name || !Insert || !FirstName || !Street || !Number || !City || !ZipCode || !DayOfBirth || !RegistryNumber || !CategoryLicense) {
-        throw new Error("One or more fields are empty or contain invalid values");
-      }
-      // de datum moet nog geconverteerd worden naar het juiste format Date
-      DayOfBirth = new Date(DayOfBirth);
-      DayOfBirth = DayOfBirth.toISOString();
-      DayOfBirth = DayOfBirth.slice(0, 10);
-      console.log("DayOfBirth:", DayOfBirth);
+        const setPayload = {
+          idDriver: IdDriver,
+          name: Name,
+          insert: Insert,
+          firstName: FirstName,
+          street: Street,
+          number: Number,
+          city: City,
+          zipCode: ZipCode,
+          dayOfBirth: DayOfBirth,
+          registryNumber: RegistryNumber,
+          categoryLicense: CategoryLicense,
+        };
+        try {
+          const response = await mutation.mutateAsync(setPayload);
 
-      const setPayload = {
-        idDriver: IdDriver,
-        name: Name,
-        insert: Insert,
-        firstName: FirstName,
-        street: Street,
-        number: Number,
-        city: City,
-        zipCode: ZipCode,
-        dayOfBirth: DayOfBirth,
-        registryNumber: RegistryNumber,
-        categoryLicense: CategoryLicense,
-      };
-      console.log("id:", Id);
-      console.log("payload:", setPayload);
+          if (response.status === 200) {
+            showSuccessMessage();
+            refreshPage();
+          }
 
-      try {
-        const response = await mutation.mutateAsync(setPayload);
-
-        // Als ik statuscode 200 krijg, dan laat ik een alert zien en refresh ik de pagina
-        if (response.status === 200) {
-          showSuccessMessage();
-          refreshPage();
+        } catch (error) {
+          console.error("Error during mutation:", error);
         }
-
-      } catch (error) {
-        console.error("Error during mutation:", error);
       }
-    }
-  };
+    };
   const showSuccessMessage = () => {
     alert("Driver updated successfully");
   };

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import '../Formulieren/Formulieren.css';
 import ButtonDeleteVehicle from '../Buttons/ButtonsVehicles/ButtonDeleteVehicle';
 import ButtonUpdateVehicle from '../Buttons/ButtonsVehicles/ButtonUpdateVehicle';
+import ButtonClearInput from '../Buttons/ButtonClearInput';
 import ButtonAddVehicle from '../Buttons/ButtonsVehicles/ButtonAddVehicle';
 import { getVehicles } from '../../../API/index';
 
@@ -51,7 +52,6 @@ const FormulierenVoertuigen = () => {
   };
 
   const handleSubmit = (event) => {
-    // Voeg hier eventueel logica toe om met het formulier te werken
     event.preventDefault();
     console.log('Formulier ingediend:', { IdVehicle, Brand, Model, ChassisNumber, LicensePlate, Fuel, VehicleType, Color, NumberOfDoors });
   };
@@ -74,13 +74,13 @@ const FormulierenVoertuigen = () => {
       <table>
         <thead>
           <tr>
-            <th className='tdVehiclec'>IdVehicle</th>
+            <th className='tdVehiclec'>Vehicle Id</th>
             <th className='tdVehicle'>Brand</th>
             <th className='tdVehicle'>Model</th>
-            <th className='tdVehicle'>ChassisNumber</th>
-            <th className='tdVehicle'>LicensePlate</th>
+            <th className='tdVehicle'>Chassis Number</th>
+            <th className='tdVehicle'>License Plate</th>
             <th className='tdVehicle'>Fuel</th>
-            <th className='tdVehicle'>VehicleType</th>
+            <th className='tdVehicle'>Vehicle Type</th>
             <th className='tdVehicle'>Color</th>
             <th className='tdVehicle'>Doors</th>
           </tr>
@@ -117,6 +117,7 @@ const FormulierenVoertuigen = () => {
           <label htmlFor="brand">Brand</label>
           <input
             className="input"
+            placeholder='Max 50 characters'
             type="text"
             name="brand"
             value={Brand}
@@ -128,6 +129,7 @@ const FormulierenVoertuigen = () => {
           <label htmlFor="model">Model</label>
           <input
             className="input"
+            placeholder='Max 50 characters'
             type="text"
             name="model"
             value={Model}
@@ -139,6 +141,7 @@ const FormulierenVoertuigen = () => {
           <label htmlFor="chassisNumber">Chassis Number</label>
           <input
             className="input"
+            placeholder='Max 50 characters'
             type="text"
             name="chassisNumber"
             value={ChassisNumber}
@@ -150,6 +153,7 @@ const FormulierenVoertuigen = () => {
           <label htmlFor="licensePlate">License Plate</label>
           <input
             className="input"
+            placeholder='Max 10 characters'
             type="text"
             name="licensePlate"
             value={LicensePlate}
@@ -161,6 +165,7 @@ const FormulierenVoertuigen = () => {
           <label htmlFor="fuel">Fuel</label>
           <input
             className="input"
+            placeholder='Max 25 characters'
             type="text"
             name="fuel"
             value={Fuel}
@@ -172,6 +177,7 @@ const FormulierenVoertuigen = () => {
           <label htmlFor="vehicleType">Vehicle Type</label>
           <input
             className="input"
+            placeholder='Max 25 characters'
             type="text"
             name="vehicleType"
             value={VehicleType}
@@ -183,6 +189,7 @@ const FormulierenVoertuigen = () => {
           <label htmlFor="color">Color</label>
           <input
             className="input"
+            placeholder='Max 25 characters'
             type="text"
             name="color"
             value={Color}
@@ -194,6 +201,7 @@ const FormulierenVoertuigen = () => {
           <label htmlFor="numberOfDoors">Number Of Doors</label>
           <input
             className="input"
+            placeholder='Only numbers'
             type="text"
             name="numberOfDoors"
             value={NumberOfDoors}
@@ -224,6 +232,9 @@ const FormulierenVoertuigen = () => {
           NumberOfDoors={NumberOfDoors}
         />
         <ButtonDeleteVehicle Id={IdVehicle} buttonText="Delete" />
+      </div>
+      <div>
+        <ButtonClearInput/>
       </div>
     </form>
   );

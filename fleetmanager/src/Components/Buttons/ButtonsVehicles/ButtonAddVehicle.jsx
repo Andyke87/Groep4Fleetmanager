@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React from 'react';
 import { useMutation } from "@tanstack/react-query";
 import { postVehicles } from '../../../../API/index';
 
-const ButtonAddVehicle = ({IdVehicle, Brand, Model, ChassisNumber, LicensePlate, Fuel, VehicleType, Color, NumberOfDoors}) => {
+const ButtonAddVehicle = ({Brand, Model, ChassisNumber, LicensePlate, Fuel, VehicleType, Color, NumberOfDoors}) => {
 
     const mutation = useMutation({
         mutationKey: ["createTodo"],

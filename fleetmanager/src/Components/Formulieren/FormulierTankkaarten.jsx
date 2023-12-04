@@ -4,6 +4,7 @@ import '../Formulieren/Formulieren.css';
 import ButtonUpdateGasCard from '../Buttons/ButtonsGasCards/ButtonUpdateGasCard';
 import ButtonDeleteGasCard from '../Buttons/ButtonsGasCards/ButtonDeleteGasCard';
 import ButtonAddGasCard from '../Buttons/ButtonsGasCards/ButtonAddGasCard';
+import ButtonClearInput from '../Buttons/ButtonClearInput';
 import { getGasCards } from '../../../API/index';
 
 const FormulierTankkaarten = () => {
@@ -64,18 +65,15 @@ const FormulierTankkaarten = () => {
     const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
     return new Date(dateString).toLocaleDateString('nl-NL', options);
   };
-    // Functie om de geblokkeerde status om te zetten naar true/false
-  const formatBlocked = (blocked) => {
-    return blocked === 1 ? 'True' : 'False';
-  };
+  
   return (
     <form onSubmit={handleSubmit}>
       <table>
         <thead>
           <tr>
-            <th className='tdGasCard'>IdGasCards</th>
-            <th className='tdGasCard'>CardNumber</th>
-            <th className='tdGasCard'>Validation Date</th>
+            <th className='tdGasCard'>Gas Card Id</th>
+            <th className='tdGasCard'>Card Number</th>
+            <th className='tdGasCard'>Expiration Date</th>
             <th className='tdGasCard'>Pin</th>
             <th className='tdGasCard'>Fuel</th>
             <th className='tdGasCard'>Blocked</th>
@@ -89,7 +87,7 @@ const FormulierTankkaarten = () => {
             <td>{formatDate(gasCard.validationDate)}</td>
             <td>{gasCard.pin}</td>
             <td>{gasCard.fuel}</td>
-            <td>{formatBlocked(gasCard.blocked)}</td>
+            <td>{gasCard.blocked}</td>
           </tr>
           ))}
         </tbody>
@@ -110,6 +108,7 @@ const FormulierTankkaarten = () => {
           <label htmlFor="cardNumber">Card Number</label>
           <input
             className="input"
+            placeholder='Max 12 characters'
             type="text"
             name="cardNumber"
             value={cardNumber}
@@ -118,7 +117,7 @@ const FormulierTankkaarten = () => {
         </div>
 
         <div className="col">
-          <label htmlFor="validationDate">ValidationDate</label>
+          <label htmlFor="validationDate">Expiration Date</label>
           <input
             className="input"
             type="date"
@@ -132,6 +131,7 @@ const FormulierTankkaarten = () => {
           <label htmlFor="pin">Pin</label>
           <input
             className="input"
+            placeholder='Max 6 characters'
             type="text"
             name="pin"
             value={pin}
@@ -141,34 +141,60 @@ const FormulierTankkaarten = () => {
 
         <div className="col">
           <label htmlFor="fuel">Fuel</label>
-          <input
+          <select
             className="input"
+            placeholder='Max 25 characters'
             type="text"
             name="fuel"
             value={fuel}
             onChange={handleChange}
-          />
+          >
+          <option value="Benzine">Benzine</option>                
+          <option value="CNG">CNG</option>
+          <option value="Diesel">Diesel</option>
+          <option value="Elektrisch">Elektrisch</option>
+          <option value="LPG">LPG</option>
+          <option value="Anders">Anders</option>
+
+          </select>
+
         </div>
 
         <div className="col">
           <label htmlFor="blocked">Blocked</label>
-          <input
+          <select
             className="input"
-            type="checkbox"
+            type="text"
             name="blocked"
+            value={blocked}
             onChange={handleChange}
-          />
+          >
+          <option value="True">True</option>
+          <option value="False">False</option>
+          </select>
         </div>
       </div>
       <div className='containerButtonsNieuw'>
           <ButtonAddGasCard
-          
+            CardNumber={cardNumber}
+            ValidationDate={validationDate}
+            Pin={pin}
+            Fuel={fuel}
+            Blocked={blocked}
           />
           <ButtonUpdateGasCard
-          
+            IdGasCard={idGasCard}
+            CardNumber={cardNumber}
+            ValidationDate={validationDate}
+            Pin={pin}
+            Fuel={fuel}
+            Blocked={blocked}
           />
           <ButtonDeleteGasCard Id={idGasCard} buttonText="Delete"/>
-        </div>
+      </div>
+      <div>
+        <ButtonClearInput/>
+      </div>      
     </form>
   );
 }
