@@ -9,7 +9,6 @@ import BrightnessButton from '../Buttons/BrightnessButton';
 const handleBestuurders = () => {
   window.location.href = '/NieuwSchermBestuurders';
 }
-
 const handleVoertuigen = () => {
   window.location.href = '/NieuwSchermVoertuigen';
 }
@@ -32,7 +31,7 @@ const Welkom = () => {
           <h1 className='nameAdress'>Welkom Anke</h1>
           <button className='button' onClick={handleBestuurders}>Drivers</button>
           <button className='button' onClick={handleTankkaarten}>Gas Cards</button>
-          <button className='button' onClick={handleVoertuigen} >Vehicles</button>          
+          <button className='button' onClick={handleVoertuigen} >Vehicles</button>
           <button className='button' onClick={handleRelaties}>Relations</button>
       </div>
     </div>

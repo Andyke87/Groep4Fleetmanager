@@ -87,11 +87,6 @@ namespace Back_end.Migrations
                         .IsUnicode(false)
                         .HasColumnType("varchar(50)");
 
-                    b.Property<string>("Login")
-                        .HasMaxLength(20)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(20)");
-
                     b.Property<string>("Name")
                         .HasMaxLength(50)
                         .IsUnicode(false)
@@ -101,11 +96,6 @@ namespace Back_end.Migrations
                         .HasMaxLength(10)
                         .IsUnicode(false)
                         .HasColumnType("varchar(10)");
-
-                    b.Property<string>("Password")
-                        .HasMaxLength(20)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(20)");
 
                     b.Property<string>("RegistryNumber")
                         .HasMaxLength(12)
@@ -118,7 +108,6 @@ namespace Back_end.Migrations
                         .HasColumnType("varchar(50)");
 
                     b.Property<int?>("ZipCode")
-                        .HasMaxLength(10)
                         .IsUnicode(false)
                         .HasColumnType("int");
 
@@ -143,10 +132,9 @@ namespace Back_end.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdGasCard"));
 
-                    b.Property<bool>("Blocked")
+                    b.Property<string>("Blocked")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValueSql("((0))");
+                        .HasColumnType("varchar(5)");
 
                     b.Property<string>("CardNumber")
                         .IsRequired()
@@ -156,9 +144,9 @@ namespace Back_end.Migrations
 
                     b.Property<string>("Fuel")
                         .IsRequired()
-                        .HasMaxLength(50)
+                        .HasMaxLength(25)
                         .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("varchar(25)");
 
                     b.Property<string>("Pin")
                         .HasMaxLength(6)
@@ -168,11 +156,11 @@ namespace Back_end.Migrations
                     b.Property<DateTime>("ValidationDate")
                         .HasColumnType("date");
 
+
                     b.HasKey("IdGasCard");
 
                     b.ToTable("GasCard", null, t =>
                         {
-                            t.HasTrigger("TG_Check_GasCard");
 
                             t.HasTrigger("TG_Check_ValidationDate");
                         });

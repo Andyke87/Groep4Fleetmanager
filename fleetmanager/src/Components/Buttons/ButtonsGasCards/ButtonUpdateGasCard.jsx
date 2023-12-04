@@ -20,15 +20,14 @@ const ButtonUpdateGasCard = ({IdGasCard, CardNumber, ValidationDate, Pin, Fuel, 
             showErrorMessage();
         },
     });
+    console.log("id:", IdGasCard);
+    console.log("payload:", CardNumber, ValidationDate, Pin, Fuel, Blocked);
 
     const handleSubmit = async () => {
         // Voeg een bevestigingsvenster toe
         const confirmUpdate = window.confirm('Are you sure you want to update this gas card?');
 
         if (confirmUpdate) {
-            if (!CardNumber || !ValidationDate || !Pin || !Fuel || !Blocked) {
-                throw new Error("One or more fields are empty or contain invalid values");
-            }
 
             const setPayload = {
                 cardNumber: CardNumber,
