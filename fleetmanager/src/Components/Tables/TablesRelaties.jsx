@@ -14,10 +14,9 @@ const TablesRelaties = () => {
         console.error('Error fetching data:', error);
       }
     };
-
     fetchData();
   }, []);
-
+  
   return (
     <div className="table-container">
       <table>
@@ -37,9 +36,7 @@ const TablesRelaties = () => {
               <td className='tdRelation'>{connection.idGasCard}</td>
               <td className='tdRelation'>{connection.idVehicle}</td>
             </tr>
-            
           ))}
-          
         </tbody>
       </table>
     </div>

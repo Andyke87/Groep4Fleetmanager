@@ -5,7 +5,6 @@ import '../Login/Login.css'
 import LogoutButton from '../Buttons/LogoutButton';
 import BrightnessButton from '../Buttons/BrightnessButton';
 
-
 const handleBestuurders = () => {
   window.location.href = '/NieuwSchermBestuurders';
 }
@@ -18,7 +17,6 @@ const handleTankkaarten = () => {
 const handleRelaties = () => {
   window.location.href = '/NieuwSchermRelaties';
 }
-
 
 const Welkom = () => {
   return (

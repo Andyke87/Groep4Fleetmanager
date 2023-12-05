@@ -1,8 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import './NieuwScherm.css'
-import '../Welkom/Welkom.css';
-import '../Login/Login.css';
 import LogoutButton from '../Buttons/LogoutButton';
 import BrightnessButton from '../Buttons/BrightnessButton';
 import HomeButton from '../Buttons/HomeButton';
@@ -32,5 +30,4 @@ const NieuwSchermBestuurders = () => {
         </div>
       )
     }
-
 export default NieuwSchermBestuurders

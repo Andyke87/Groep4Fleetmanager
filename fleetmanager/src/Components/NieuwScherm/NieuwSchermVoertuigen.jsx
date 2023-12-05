@@ -13,9 +13,7 @@ import TableVoertuigen from '../Tables/TableVoertuigen';
 import FormulierenVoertuigen from '../Formulieren/FormulierVoertuigen';
 import ButtonRelaties from '../Buttons/ButtonsNavigation/ButtonRelations';
 
-
 const NieuwSchermVoertuigen = () => {
-
   return (
     <div className='containerNieuwScherm'> 
       <div className='containerButtons'> 
@@ -35,5 +33,4 @@ const NieuwSchermVoertuigen = () => {
     </div>
   )
 }
-
 export default NieuwSchermVoertuigen

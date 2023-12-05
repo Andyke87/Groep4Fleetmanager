@@ -12,9 +12,7 @@ import BestuurdersButton from '../Buttons/ButtonsNavigation/BestuurdersButton';
 import ButtonRelation from '../Buttons/ButtonsNavigation/ButtonRelations';
 import FormulierenRelaties from '../Formulieren/FormulierRelaties';
 
-
 const NieuwSchermRelaties = () => {
-
   return (
         <div className='containerNieuwScherm'> 
          <div className='containerButtons'> 
@@ -34,5 +32,4 @@ const NieuwSchermRelaties = () => {
         </div>
   )
 }
-
 export default NieuwSchermRelaties

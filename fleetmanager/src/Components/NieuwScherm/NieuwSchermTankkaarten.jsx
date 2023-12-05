@@ -1,3 +1,4 @@
+
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import './NieuwScherm.css'
@@ -33,4 +34,4 @@ export const NieuwSchermTankkaarten = () => {
     </div>
   )
 }
-  
+export default NieuwSchermTankkaarten

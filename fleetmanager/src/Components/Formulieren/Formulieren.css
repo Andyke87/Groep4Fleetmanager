@@ -4,28 +4,23 @@ html {
   height: 100%;
   margin: 0;
 }
-
 .form-container {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 10px;
   width: 100%
 }
-  
 .form-container .col {
   grid-column: span 1;
 }
-  
 .form-container label {
   font-weight: bold;
   margin-bottom: 5px;
   margin-right: 80px;
 }
-  
 .form-container .row {
   margin-bottom: 10px;
 }
-  
 .input{
   width: 192px;
   height: 30px;
