@@ -17,12 +17,50 @@ namespace Back_end.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.13")
+                .HasAnnotation("ProductVersion", "8.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Connections.Models.Connection", b =>
+            modelBuilder.Entity("FleetManager.Models.Authentication", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("Id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Authentication", (string)null);
+                });
+
+            modelBuilder.Entity("FleetManager.Models.Connection", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -121,6 +159,8 @@ namespace Back_end.Migrations
 
                             t.HasTrigger("TG_Check_ZipCode");
                         });
+
+                    b.HasAnnotation("SqlServer:UseSqlOutputClause", false);
                 });
 
             modelBuilder.Entity("FleetManager.Models.GasCard", b =>
@@ -133,8 +173,10 @@ namespace Back_end.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdGasCard"));
 
                     b.Property<string>("Blocked")
+                        .IsRequired()
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("varchar(5)");
+                        .HasColumnType("nvarchar(max)")
+                        .HasDefaultValueSql("((0))");
 
                     b.Property<string>("CardNumber")
                         .IsRequired()
@@ -156,14 +198,16 @@ namespace Back_end.Migrations
                     b.Property<DateTime>("ValidationDate")
                         .HasColumnType("date");
 
-
                     b.HasKey("IdGasCard");
 
                     b.ToTable("GasCard", null, t =>
                         {
+                            t.HasTrigger("TG_Check_GasCard");
 
                             t.HasTrigger("TG_Check_ValidationDate");
                         });
+
+                    b.HasAnnotation("SqlServer:UseSqlOutputClause", false);
                 });
 
             modelBuilder.Entity("FleetManager.Models.Vehicle", b =>
@@ -206,7 +250,9 @@ namespace Back_end.Migrations
                         .HasColumnType("varchar(50)");
 
                     b.Property<int?>("NumberOfDoors")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(0);
 
                     b.Property<string>("VehicleType")
                         .HasMaxLength(25)
@@ -221,9 +267,11 @@ namespace Back_end.Migrations
 
                             t.HasTrigger("TG_Check_NumberOfDoors");
                         });
+
+                    b.HasAnnotation("SqlServer:UseSqlOutputClause", false);
                 });
 
-            modelBuilder.Entity("Connections.Models.Connection", b =>
+            modelBuilder.Entity("FleetManager.Models.Connection", b =>
                 {
                     b.HasOne("FleetManager.Models.Driver", "IdDriverNavigation")
                         .WithMany()
