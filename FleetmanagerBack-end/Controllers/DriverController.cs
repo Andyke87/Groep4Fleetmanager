@@ -137,9 +137,9 @@ public class DriverController : ControllerBase
                     driver.Name = _driver.Name;
                 else driver.Name = driver.Name;
 
-                if (_driver.Insert != null)
-                    driver.Insert = _driver.Insert;
-                else driver.Insert = driver.Insert;
+                if (_driver.Inserts != null)
+                    driver.Inserts = _driver.Inserts;
+                else driver.Inserts = driver.Inserts;
 
                 if (_driver.FirstName != null)
                     driver.FirstName = _driver.FirstName;

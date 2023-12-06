@@ -8,7 +8,7 @@ public partial class Driver
     public int IdDriver { get; set; }
 
     public string? Name { get; set; }
-    public string? Insert { get; set; }
+    public string? Inserts { get; set; }
 
     public string? FirstName { get; set; }
 
@@ -29,10 +29,10 @@ public partial class Driver
     public Driver()
     {
     }
-    public Driver(string name, string insert, string firstName, string street, string number, string city, int zipCode, DateTime dayOfBirth, string registryNumber, string categoryLicense)
+    public Driver(string name, string inserts, string firstName, string street, string number, string city, int zipCode, DateTime dayOfBirth, string registryNumber, string categoryLicense)
     {
         Name = name;
-        Insert = insert;
+        Inserts = inserts;
         FirstName = firstName;
         Street = street;
         Number = number;
