@@ -1,17 +1,18 @@
 ﻿using FleetManager.Models;
 using System.ComponentModel.DataAnnotations;
 
-namespace Connections.Models;
+namespace FleetManager.Models;
 
 public partial class Connection
 {
     [Key]
     public int Id { get; set; }
+    [Required]
     public int IdDriver { get; set; }
-
-    public int IdGasCard { get; set; }
-
-    public int IdVehicle { get; set; }
+    [Required]
+    public int IdGasCard {get; set;}
+    [Required]
+    public int IdVehicle {get; set;}
 
     public virtual Driver? IdDriverNavigation { get; set; }
 

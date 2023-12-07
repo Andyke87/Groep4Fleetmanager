@@ -6,19 +6,16 @@ namespace FleetManager.Models
     {
         [Key]
         public int IdGasCard { get; set; }
-
-        public string CardNumber { get; set; } = null!;
-
+        [Required]
+        public string CardNumber { get; set; }
+        [Required]
         public DateTime ValidationDate { get; set; }
 
         public string? Pin { get; set; }
-
-        public string Fuel { get; set; } = null!;
-
+        [Required]
+        public string Fuel { get; set; }
+        [Required]
         public string Blocked { get; set; }
-        public GasCard()
-        {
-        }
         public GasCard(string cardNumber, DateTime validationDate, string pin, string fuel, string blocked)
         {
             CardNumber = cardNumber;

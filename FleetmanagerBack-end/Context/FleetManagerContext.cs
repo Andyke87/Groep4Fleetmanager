@@ -1,5 +1,4 @@
-﻿using Connections.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace FleetManager.Models;
 public partial class FleetManagerContext : DbContext
@@ -18,6 +17,8 @@ public partial class FleetManagerContext : DbContext
     public virtual DbSet<GasCard> GasCards { get; set; }
 
     public virtual DbSet<Vehicle> Vehicles { get; set; }
+
+    public virtual DbSet<Authentication> Authentications { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -155,10 +156,31 @@ public partial class FleetManagerContext : DbContext
             entity.Property(e => e.Color)
                 .HasMaxLength(25)
                 .IsUnicode(false);
-            entity.Property(e => e.NumberOfDoors);
+            entity.Property(e => e.NumberOfDoors)
+                .HasDefaultValue(0);
+        });
+
+        modelBuilder.Entity<Authentication>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+            entity.ToTable("Authentication"); // Voeg de tabelnaam toe.
+            entity.Property(e => e.Id).HasColumnName("Id");
+            entity.Property(e => e.Name)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.FirstName)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.Email)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.Password)
+                .HasMaxLength(50)
+                .IsUnicode(false);
         });
 
         OnModelCreatingPartial(modelBuilder);
     }
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }
+
