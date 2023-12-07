@@ -2,7 +2,7 @@ public class DriverDTO
 {
     public int IdDriver { get; set; }
     public string? Name { get; set; }
-    public string? Insert { get; set; }
+    public string? Inserts { get; set; }
     public string? FirstName { get; set; }
     public string? Street { get; set; }
     public string? Number { get; set; }

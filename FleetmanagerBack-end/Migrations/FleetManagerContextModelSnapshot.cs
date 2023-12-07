@@ -120,7 +120,7 @@ namespace Back_end.Migrations
                         .IsUnicode(false)
                         .HasColumnType("varchar(50)");
 
-                    b.Property<string>("Insert")
+                    b.Property<string>("Inserts")
                         .HasMaxLength(50)
                         .IsUnicode(false)
                         .HasColumnType("varchar(50)");
@@ -176,7 +176,7 @@ namespace Back_end.Migrations
                         .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(max)")
-                        .HasDefaultValueSql("((0))");
+                        .HasDefaultValueSql("False");
 
                     b.Property<string>("CardNumber")
                         .IsRequired()

@@ -17,6 +17,8 @@ const FormulierTankkaarten = () => {
   const [fuel, setFuel] = useState('');
   const [blocked, setBlocked] = useState('');
 
+
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -45,7 +47,8 @@ const FormulierTankkaarten = () => {
   };
 
   const handleSubmit = (event) => {
-    // Voeg hier eventueel logica toe om met het formulier te werken
+    setBlocked(document.getElementById('blocked').value);
+
     event.preventDefault();
     console.log('Formulier ingediend:', { idGasCard, cardNumber, validationDate, pin, fuel, blocked });
   };
@@ -60,12 +63,12 @@ const FormulierTankkaarten = () => {
     setBlocked(selectedRow.blocked);
   };
 
-    // Functie om een datum in jouw gewenste formaat om te zetten
   const formatDate = (dateString) => {
     const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
     return new Date(dateString).toLocaleDateString('nl-NL', options);
   };
   
+  console.log("dit is de waarde: ",gasCards)
   return (
     <form onSubmit={handleSubmit}>
       <table>
@@ -80,15 +83,15 @@ const FormulierTankkaarten = () => {
           </tr>
         </thead>
         <tbody>
-          {gasCards.map(gasCard => (
-          <tr key={gasCard.idGasCards} onClick={() => handleRowClick(gasCard)}>
-            <td>{gasCard.idGasCard}</td>
-            <td>{gasCard.cardNumber}</td>
-            <td>{formatDate(gasCard.validationDate)}</td>
-            <td>{gasCard.pin}</td>
-            <td>{gasCard.fuel}</td>
-            <td>{gasCard.blocked}</td>
-          </tr>
+          {gasCards.map((gasCard) => (
+            <tr key={gasCard.idGasCard} onClick={() => handleRowClick(gasCard)}>
+              <td>{gasCard.idGasCard}</td>
+              <td>{gasCard.cardNumber}</td>
+              <td>{formatDate(gasCard.validationDate)}</td>
+              <td>{gasCard.pin}</td>
+              <td>{gasCard.fuel}</td>
+              <td>{gasCard.blocked}</td>
+            </tr>
           ))}
         </tbody>
       </table>

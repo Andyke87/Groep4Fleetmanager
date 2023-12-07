@@ -27,7 +27,7 @@ const TableBestuurders = () => {
         <tr >
           <th className='thDriver'>IdDriver</th>
           <th className='thDriver'>Name</th>
-          <th className='thDriver'>Insert</th>
+          <th className='thDriver'>Inserts</th>
           <th className='thDriver'>Firstname</th>
           <th className='thDriver'>Street</th>
           <th className='thDriver'>Number</th>
@@ -43,7 +43,7 @@ const TableBestuurders = () => {
         <tr key={driver.idDriver}>
           <td>{driver.idDriver}</td>
           <td>{driver.name}</td>
-          <td>{driver.insert}</td>
+          <td>{driver.inserts}</td>
           <td>{driver.firstName}</td>
           <td>{driver.street}</td>
           <td>{driver.number}</td>

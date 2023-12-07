@@ -11,17 +11,17 @@ namespace Back_end.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class AuthenticationController: ControllerBase
+public class AuthenticationController : ControllerBase
 {
     private readonly FleetManagerContext _dbContext;
     private readonly ILogger<AuthenticationController>? _logger;
     private readonly IConfiguration _configuration;
-    
+
     public AuthenticationController(FleetManagerContext dbContext, ILogger<AuthenticationController>? logger, IConfiguration configuration)
-    {  
-    _dbContext = dbContext; 
-    _logger = logger;
-    _configuration = configuration;
+    {
+        _dbContext = dbContext;
+        _logger = logger;
+        _configuration = configuration;
 
     }
     [HttpPost("CreateToken")]
@@ -35,7 +35,7 @@ public class AuthenticationController: ControllerBase
         try
         {
             // Validate user credentials against your database or other authentication method
-            if (user.Email == "test@test.com" && user.Password == "test")
+            if (user.Email == "andy-lauwers@hotmail.com" && user.Password == "Lauwers01")
             {
                 var issuer = _configuration["Jwt:Issuer"];
                 var audience = _configuration["Jwt:Audience"];

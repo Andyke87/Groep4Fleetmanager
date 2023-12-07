@@ -121,7 +121,7 @@ public partial class FleetManagerContext : DbContext
             entity.Property(e => e.Fuel)
                 .HasMaxLength(25)
                 .IsUnicode(false);
-            entity.Property(e => e.Blocked).HasDefaultValueSql("((0))");
+            entity.Property(e => e.Blocked).HasDefaultValueSql("False");
         });
 
         modelBuilder.Entity<Vehicle>(entity =>
