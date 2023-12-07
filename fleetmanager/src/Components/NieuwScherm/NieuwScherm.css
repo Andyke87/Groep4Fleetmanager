@@ -1,9 +1,7 @@
 body,
 html {
     height: 100%;
-   
     margin: 0;
-   
 }
 
 .containerNieuwScherm {
@@ -26,7 +24,6 @@ html {
     display: flex;
     justify-content: flex-end; 
     margin-top: 10px; 
-    
 }
 .logOutButton {
     width: 144px;
