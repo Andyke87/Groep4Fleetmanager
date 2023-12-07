@@ -34,6 +34,7 @@ public class GasCardController : ControllerBase
         {
             var gasCards = await _dbContext.GasCards.ToListAsync();
             var gasCardDTOs = _mapper.Map<List<GasCardDTO>>(gasCards);
+            _logger?.LogInformation("Returning all gas cards");
             return Ok(gasCardDTOs);
         }
         catch (Exception ex)
@@ -76,6 +77,7 @@ public class GasCardController : ControllerBase
             }
 
             var gasCardDTO = _mapper.Map<GasCardDTO>(gasCard);
+            _logger?.LogInformation("Returning gas card with id {id}", id);
             return Ok(gasCardDTO);
         }
         catch (Exception ex)
@@ -120,7 +122,7 @@ public class GasCardController : ControllerBase
             await _dbContext.SaveChangesAsync();
 
             var gasCardDTO = _mapper.Map<GasCardDTO>(gasCard);
-
+            _logger?.LogInformation("Gas card removed");
             return Ok(gasCardDTO);
         }
         catch (Exception ex)
@@ -163,7 +165,7 @@ public class GasCardController : ControllerBase
             _mapper.Map(_gasCardDTO, gasCard);
 
             await _dbContext.SaveChangesAsync();
-
+            _logger?.LogInformation("Gas card updated");
             return Ok("The gas card has been updated");
         }
         catch (Exception ex)
@@ -207,7 +209,7 @@ public class GasCardController : ControllerBase
 
             _dbContext.GasCards.Add(gasCard);
             await _dbContext.SaveChangesAsync();
-
+            _logger?.LogInformation("Gas card created");
             return Ok("The gas card has been created");
         }
         catch (Exception ex)

@@ -8,53 +8,11 @@ public partial class Connection
     [Key]
     public int Id { get; set; }
     [Required]
-    public int IdDriver { 
-        get{
-            return IdDriver;
-        } 
-        set{
-            if (value < 1)
-            {
-                throw new ArgumentException("IdDriver must be greater than 0");
-            }
-            else 
-            {
-                IdDriver = value;
-            }
-        } 
-    }
+    public int IdDriver { get; set; }
     [Required]
-    public int IdGasCard { 
-        get{
-            return IdGasCard;
-        } 
-        set{
-            if (value < 1)
-            {
-                throw new ArgumentException("IdGasCard must be greater than 0");
-            }
-            else 
-            {
-                IdGasCard = value;
-            }
-        } 
-    }
+    public int IdGasCard {get; set;}
     [Required]
-    public int IdVehicle { 
-        get{
-            return IdVehicle;
-        } 
-        set{
-            if (value < 1)
-            {
-                throw new ArgumentException("IdVehicle must be greater than 0");
-            }
-            else 
-            {
-                IdVehicle = value;
-            }
-        }
-    }
+    public int IdVehicle {get; set;}
 
     public virtual Driver? IdDriverNavigation { get; set; }
 

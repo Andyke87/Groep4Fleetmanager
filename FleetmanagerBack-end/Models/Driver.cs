@@ -17,7 +17,7 @@ public partial class Driver
     public string? RegistryNumber { get; set; }
     public string? CategoryLicense { get; set; }
 
-    // Parameterloze constructor vereist voor EF Core
+
     public Driver()
     {
     }

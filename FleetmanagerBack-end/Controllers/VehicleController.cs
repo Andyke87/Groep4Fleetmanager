@@ -33,7 +33,7 @@ public class VehicleController : ControllerBase
             var vehicles = await _dbContext.Vehicles.ToListAsync();
 
             var vehicleDTOs = _mapper.Map<IEnumerable<VehicleDTO>>(vehicles);
-
+            _logger?.LogInformation("Returning all vehicles");
             return Ok(vehicleDTOs);
         }
         catch (Exception ex)
@@ -76,7 +76,7 @@ public class VehicleController : ControllerBase
             }
 
             var vehicleDTOs = _mapper.Map<IEnumerable<VehicleDTO>>(vehicle);
-
+            _logger?.LogInformation("Returning vehicle with id {id}", id);
             return Ok(vehicleDTOs);
         }
         catch (Exception ex)
@@ -122,7 +122,7 @@ public class VehicleController : ControllerBase
             await _dbContext.SaveChangesAsync();
 
             var vehicleDTO = _mapper.Map<VehicleDTO>(vehicle);
-
+            _logger?.LogInformation("Vehicle with id {id} is removed", id);
             return Ok(vehicleDTO);
         }
         catch (Exception ex)
@@ -171,7 +171,7 @@ public class VehicleController : ControllerBase
                 vehicle.NumberOfDoors = _vehicleDTO.NumberOfDoors ?? vehicle.NumberOfDoors;
 
                 await _dbContext.SaveChangesAsync();
-
+                _logger?.LogInformation("Vehicle with id {id} is updated", id);
                 return Ok("The vehicle has been updated");
             }
 
@@ -225,7 +225,7 @@ public class VehicleController : ControllerBase
 
             _dbContext.Vehicles.Add(vehicle);
             await _dbContext.SaveChangesAsync();
-
+            _logger?.LogInformation("Vehicle with id {id} is created", _vehicleDTO.IdVehicle);
             return Ok("The vehicle was created");
         }
         catch (Exception ex)

@@ -34,12 +34,12 @@ public class AuthenticationController: ControllerBase
     {
         try
         {
-            // Valideer gebruikersreferenties tegen je database of andere authenticatiemethode
-            if (user.Email == "andy-lauwers@hotmail.com" && user.Password == "Lauwers01")
+            // Validate user credentials against your database or other authentication method
+            if (user.Email == "test@test.com" && user.Password == "test")
             {
                 var issuer = _configuration["Jwt:Issuer"];
                 var audience = _configuration["Jwt:Audience"];
-                var key = Encoding.ASCII.GetBytes(_configuration["Jwt:PrivateKey"]);
+                var key = Convert.FromBase64String(_configuration["Jwt:PrivateKey"]);
 
                 var tokenDescriptor = new SecurityTokenDescriptor
                 {
@@ -48,8 +48,6 @@ public class AuthenticationController: ControllerBase
                     new Claim("Id", Guid.NewGuid().ToString()),
                     new Claim(JwtRegisteredClaimNames.Name, user.Name),
                     new Claim(JwtRegisteredClaimNames.Email, user.Email),
-                    
-                    // Voeg andere claims toe zoals nodig
                 }),
                     Expires = DateTime.UtcNow.AddMinutes(5),
                     Issuer = issuer,
@@ -64,15 +62,26 @@ public class AuthenticationController: ControllerBase
                 return Ok(jwtToken);
             }
 
-            _logger?.LogWarning("Ongeldige aanmeldingspoging");
+            _logger?.LogWarning("Invalid login attempt");
             return Unauthorized();
         }
         catch (Exception ex)
         {
-            _logger?.LogError(ex.ToString());
-            return StatusCode(500, "Interne serverfout");
+            if (ex is DbUpdateException)
+            {
+                _logger?.LogError(ex, "Invalid request");
+                return StatusCode(400, "Invalid request");
+            }
+            if (ex is DbUpdateConcurrencyException)
+            {
+                _logger?.LogError(ex, "Service is currently unavailable. Please try again later.");
+                return StatusCode(503, "Service is currently unavailable. Please try again later.");
+            }
+            else
+            {
+                _logger?.LogError(ex, "Internal server error");
+                return StatusCode(500, "Internal server error");
+            }
         }
     }
-
-
 }

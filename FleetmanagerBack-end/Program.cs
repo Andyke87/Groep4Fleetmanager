@@ -84,7 +84,7 @@ namespace Back_end
 
             builder.Services.AddEndpointsApiExplorer();
 
-            builder.Services.AddSwaggerGen(/*c =>
+            builder.Services.AddSwaggerGen(c =>
                    {
                        c.SwaggerDoc("v1", new OpenApiInfo { Title = "TheTestService", Version = "v1" });
                        c.AddSecurityDefinition("bearerAuth", new OpenApiSecurityScheme
@@ -100,7 +100,7 @@ namespace Back_end
                        //////Add Operation Specific Authorization///////
                        c.OperationFilter<AuthOperationFilter>();
                        ////////////////////////////////////////////////
-                   }*/);
+                   });
 
             var app = builder.Build();
 

@@ -9,21 +9,7 @@ namespace FleetManager.Models
         [Required]
         public string CardNumber { get; set; }
         [Required]
-        public DateTime ValidationDate { 
-            get{
-                return ValidationDate;
-            } 
-            set{
-                if (value <= DateTime.Now.AddDays(14))
-                {
-                    throw new ArgumentException("Validation date must be at least 14 days from now");
-                }
-                else 
-                {
-                    ValidationDate = value;
-                }
-            }
-        }
+        public DateTime ValidationDate { get; set; }
 
         public string? Pin { get; set; }
         [Required]

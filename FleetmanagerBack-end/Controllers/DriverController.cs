@@ -32,7 +32,7 @@ public class DriverController : ControllerBase
         {
             var drivers = await _dbContext.Drivers.ToListAsync();
             var driverDTOs = _mapper.Map<IEnumerable<DriverDTO>>(drivers);
-
+            _logger?.LogInformation($"{drivers.Count} drivers where found");    
             return Ok(driverDTOs);
         }
         catch (Exception ex)
@@ -75,7 +75,7 @@ public class DriverController : ControllerBase
             }
 
             var driverDTO = _mapper.Map<DriverDTO>(driver);
-
+            _logger?.LogInformation($"Driver with id {id} was found");
             return Ok(driverDTO);
         }
         catch (Exception ex)
@@ -120,7 +120,7 @@ public class DriverController : ControllerBase
                 await _dbContext.SaveChangesAsync();
                 
             var driverDTO = _mapper.Map<DriverDTO>(driver);
-
+            _logger?.LogInformation($"Driver with id {id} was removed");
             return Ok(driverDTO);
 
         }
@@ -162,7 +162,7 @@ public class DriverController : ControllerBase
                 _mapper.Map(_driverDTO, driver);
 
                 await _dbContext.SaveChangesAsync();
-
+                _logger?.LogInformation($"Driver with id {id} was updated");
                 return Ok("The driver was updated");
             }
 
@@ -216,7 +216,7 @@ public class DriverController : ControllerBase
 
             _dbContext.Drivers.Add(driver);
             await _dbContext.SaveChangesAsync();
-
+            _logger?.LogInformation("The driver was created");
             return Ok("The driver was created");
         }
         catch (Exception ex)

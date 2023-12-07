@@ -39,7 +39,7 @@ public class ConnectionController : ControllerBase
 
             var connectionDTOs = _mapper.Map<IEnumerable<ConnectionDTO>>(connections);
 
-
+            _logger?.LogInformation("Returned all connections");
             return Ok(connectionDTOs);
         }
         catch (Exception ex)
@@ -85,6 +85,7 @@ public class ConnectionController : ControllerBase
             }
             var connectionDTO = _mapper.Map<ConnectionDTO>(connection);
 
+            _logger?.LogInformation("Returned connection with id: {id}", id);
             return Ok(connectionDTO);
         }
         catch (Exception ex)
@@ -123,7 +124,7 @@ public class ConnectionController : ControllerBase
             {
                 _dbContext.Remove(connection);
                 await _dbContext.SaveChangesAsync();
-
+                _logger?.LogInformation("Connection removed");
                 return Ok("The connection was removed");
             }
             _logger?.LogInformation("Connection not found");
@@ -166,7 +167,7 @@ public class ConnectionController : ControllerBase
                 _mapper.Map(_connectionDTO, connection);
 
                 await _dbContext.SaveChangesAsync();
-
+                _logger?.LogInformation("Connection updated");
                 return Ok("The connection was updated");
             }
             _logger?.LogInformation("Connection not found");
@@ -233,7 +234,7 @@ public class ConnectionController : ControllerBase
 
             _dbContext.Connections.Add(newConnection);
             await _dbContext.SaveChangesAsync();
-
+            _logger?.LogInformation("Connection created");
             return Ok("The connection was created");
         }
         catch (Exception ex)
