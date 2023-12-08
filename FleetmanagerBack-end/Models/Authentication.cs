@@ -16,12 +16,15 @@ public partial class Authentication
     [Required]
     [MinLength(6)]
     public string Password { get; set; }
+    [Required]
+    public string Role { get; set; }
 
-    public Authentication(string name, string firstName, string email, string password)
+    public Authentication(string name, string firstName, string email, string password, string role)
     {
         Name = name;
         FirstName = firstName;
         Email = email;
         Password = password;
+        Role = role;
     }
 }

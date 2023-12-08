@@ -5,7 +5,7 @@ import React from 'react';
 import { useMutation } from "@tanstack/react-query";
 import { postGasCards } from '../../../../API/index';
 
-const ButtonAddGasCard = ({CardNumber, ValidationDate, Pin, Fuel, Blocked}) => {
+const ButtonAddGasCard = ({CardNumber, ValidationDate, Pin, Fuel, BlockedCard}) => {
 
     const mutation = useMutation({
         mutationKey: ["createTodo"],
@@ -18,7 +18,7 @@ const ButtonAddGasCard = ({CardNumber, ValidationDate, Pin, Fuel, Blocked}) => {
             showErrorMessage();
         },
     });
-    console.log("Addpayload:", CardNumber, ValidationDate, Pin, Fuel, Blocked);
+    console.log("Addpayload:", CardNumber, ValidationDate, Pin, Fuel, BlockedCard);
     const showSuccessMessage = () => {
         alert("Gas card added successfully");
     };
@@ -38,7 +38,7 @@ const ButtonAddGasCard = ({CardNumber, ValidationDate, Pin, Fuel, Blocked}) => {
                 validationDate: ValidationDate,
                 pin: Pin,
                 fuel: Fuel,
-                blocked: Blocked,
+                blockedCard: BlockedCard,
             };
             console.log("set payload:", setPayload);
             try {

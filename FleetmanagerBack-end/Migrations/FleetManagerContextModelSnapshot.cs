@@ -55,6 +55,12 @@ namespace Back_end.Migrations
                         .IsUnicode(false)
                         .HasColumnType("varchar(50)");
 
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(5)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Authentication", (string)null);
@@ -172,11 +178,10 @@ namespace Back_end.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdGasCard"));
 
-                    b.Property<string>("Blocked")
+                    b.Property<string>("BlockedCard")
                         .IsRequired()
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("nvarchar(max)")
-                        .HasDefaultValueSql("False");
+                        .HasColumnType("varchar(5)");
 
                     b.Property<string>("CardNumber")
                         .IsRequired()

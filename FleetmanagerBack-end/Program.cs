@@ -115,6 +115,9 @@ namespace Back_end
                 });
             }
 
+            app.UseHttpsRedirection();
+            app.UseRouting();
+
             app.UseCors(builder =>
             {
                 builder.AllowAnyOrigin()
@@ -122,13 +125,10 @@ namespace Back_end
                        .AllowAnyMethod();
             });
 
-            app.UseHttpsRedirection();
-
             app.UseAuthentication();
             app.UseAuthorization();
 
-            app.UseRouting();
-            app.UseRateLimiter(); // RateLimiting is voor de beveiliging van de API
+            app.UseRateLimiter();
 
             app.MapControllers();
 

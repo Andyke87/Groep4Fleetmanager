@@ -5,5 +5,5 @@ public class GasCardDTO
     public DateTime? ValidationDate { get; set; }
     public string? Pin { get; set; }
     public string? Fuel { get; set; }
-    public bool? Blocked { get; set; }
+    public string? BlockedCard { get; set; }
 }

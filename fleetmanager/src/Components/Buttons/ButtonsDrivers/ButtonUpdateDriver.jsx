@@ -21,7 +21,6 @@ const ButtonUpdateDriver = ({IdDriver, Name, Inserts, FirstName, Street, Number,
     },
   });
   const handleSubmit = async () => {
-    // Voeg een bevestigingsvenster toe
     const confirmUpdate = window.confirm('Are you sure you want to update this driver?');
 
     if (confirmUpdate) {
