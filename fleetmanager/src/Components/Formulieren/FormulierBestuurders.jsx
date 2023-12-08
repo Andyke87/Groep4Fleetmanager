@@ -12,7 +12,7 @@ const FormulierBestuurders = () => {
   const [drivers, setDrivers] = useState([]);
   const [idDriver, setIdDriver] = useState('');
   const [name, setName] = useState('');
-  const [insert, setInsert] = useState('');
+  const [inserts, setInserts] = useState('');
   const [firstName, setFirstName] = useState('');
   const [street, setStreet] = useState('');
   const [number, setNumber] = useState('');
@@ -40,7 +40,7 @@ const FormulierBestuurders = () => {
     switch (name) {
       case 'idDriver': setIdDriver(value); break;
       case 'name': setName(value); break;
-      case 'insert': setInsert(value); break;
+      case 'inserts': setInserts(value); break;
       case 'firstName': setFirstName(value); break;
       case 'street': setStreet(value); break;
       case 'number': setNumber(value); break;
@@ -56,7 +56,7 @@ const FormulierBestuurders = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('Formulier ingediend:', { idDriver, name, insert, firstName, street, number, city, zipCode, dayOfBirth, registryNumber, categoryLicense });
+    console.log('Formulier ingediend:', { idDriver, name, inserts, firstName, street, number, city, zipCode, dayOfBirth, registryNumber, categoryLicense });
   };
 
   const formatDate = (dateString) => {
@@ -68,7 +68,7 @@ const FormulierBestuurders = () => {
     setSelectedRow(selectedRow);
     setIdDriver(selectedRow.idDriver);
     setName(selectedRow.name);
-    setInsert(selectedRow.insert);
+    setInserts(selectedRow.inserts);
     setFirstName(selectedRow.firstName);
     setStreet(selectedRow.street);
     setNumber(selectedRow.number);
@@ -102,7 +102,7 @@ const FormulierBestuurders = () => {
           <tr key={driver.idDriver}  onClick={() => handleRowClick(driver)}>
             <td>{driver.idDriver}</td>
             <td>{driver.name}</td>
-            <td>{driver.insert}</td>
+            <td>{driver.inserts}</td>
             <td>{driver.firstName}</td>
             <td>{driver.street}</td>
             <td>{driver.number}</td>
@@ -140,13 +140,13 @@ const FormulierBestuurders = () => {
         </div>
 
         <div className="col">
-          <label htmlFor="insert">Inserts</label>
+          <label htmlFor="inserts">Inserts</label>
           <input
             className="input"
             placeholder='Max 50 characters'
             type="text"
-            name="insert"
-            value={insert}
+            name="inserts"
+            value={inserts}
             onChange={handleChange}
           />
         </div>
@@ -260,7 +260,7 @@ const FormulierBestuurders = () => {
       <div className='containerButtonsNieuw'>
         <ButtonAddDriver
           Name={name}
-          Insert={insert}
+          Inserts={inserts}
           FirstName={firstName}
           Street={street}
           Number={number}
@@ -273,7 +273,7 @@ const FormulierBestuurders = () => {
         <ButtonUpdateDriver
           IdDriver={idDriver}
           Name={name}
-          Insert={insert}
+          Inserts={inserts}
           FirstName={firstName}
           Street={street}
           Number={number}

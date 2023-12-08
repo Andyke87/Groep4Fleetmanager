@@ -5,12 +5,12 @@ import React from 'react';
 import { useMutation } from '@tanstack/react-query';
 import { updateGasCards } from '../../../../API/index';
 
-const ButtonUpdateGasCard = ({IdGasCard, CardNumber, ValidationDate, Pin, Fuel, Blocked}) => {
+const ButtonUpdateGasCard = ({IdGasCard, CardNumber, ValidationDate, Pin, Fuel, BlockedCard}) => {
 
     const mutation = useMutation({
         mutationKey: ["updateGasCard"],
         mutationFn: async (payload) => {
-            return await updateGasCards(IdGasCard, payload);
+          return await updateGasCards(IdGasCard, payload);
         },
         onSuccess: (data) => {
             console.log("Succesvolle update", data);
@@ -20,21 +20,17 @@ const ButtonUpdateGasCard = ({IdGasCard, CardNumber, ValidationDate, Pin, Fuel, 
             showErrorMessage();
         },
     });
-    console.log("id:", IdGasCard);
-    console.log("payload:", CardNumber, ValidationDate, Pin, Fuel, Blocked);
-
     const handleSubmit = async () => {
-        // Voeg een bevestigingsvenster toe
         const confirmUpdate = window.confirm('Are you sure you want to update this gas card?');
 
         if (confirmUpdate) {
-
             const setPayload = {
+                idGasCard: IdGasCard,
                 cardNumber: CardNumber,
                 validationDate: ValidationDate,
                 pin: Pin,
                 fuel: Fuel,
-                blocked: Blocked,
+                blockedCard: BlockedCard,
             };
             console.log("id:", IdGasCard);
             console.log("payload:", setPayload);
@@ -42,13 +38,13 @@ const ButtonUpdateGasCard = ({IdGasCard, CardNumber, ValidationDate, Pin, Fuel, 
             try {
                 const response = await mutation.mutateAsync(setPayload);
 
-                // Als ik statuscode 200 krijg, dan laat ik een alert zien en refresh ik de pagina
                 if (response.status === 200) {
                     showSuccessMessage();
                     refreshPage();
                 }
-
-            } catch (error) {
+            } 
+            catch (error) 
+            {
                 console.error("Error during mutation:", error);
             }
         }

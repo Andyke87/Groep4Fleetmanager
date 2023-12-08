@@ -98,7 +98,7 @@ const FormulierenRelaties = () => {
                 <td className='tdRelation'>
                   {drivers.find((driver) => driver.idDriver === connection.idDriver)?.firstName +
                     ' ' +
-                    drivers.find((driver) => driver.idDriver === connection.idDriver)?.insert +
+                    drivers.find((driver) => driver.idDriver === connection.idDriver)?.inserts +
                     ' ' +
                     drivers.find((driver) => driver.idDriver === connection.idDriver)?.name +
                     ` (id: ${drivers.find((driver) => driver.idDriver === connection.idDriver)?.idDriver})` 

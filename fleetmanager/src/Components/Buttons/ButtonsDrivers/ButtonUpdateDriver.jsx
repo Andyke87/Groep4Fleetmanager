@@ -5,7 +5,7 @@ import React from 'react';
 import { useMutation } from '@tanstack/react-query';
 import { updateDrivers } from '../../../../API/index';
 
-const ButtonUpdateDriver = ({IdDriver, Name, Insert, FirstName, Street, Number, City, ZipCode, DayOfBirth, RegistryNumber, CategoryLicense}) => {
+const ButtonUpdateDriver = ({IdDriver, Name, Inserts, FirstName, Street, Number, City, ZipCode, DayOfBirth, RegistryNumber, CategoryLicense}) => {
 
   const mutation = useMutation({
     mutationKey: ["updateDriver"],
@@ -21,14 +21,13 @@ const ButtonUpdateDriver = ({IdDriver, Name, Insert, FirstName, Street, Number, 
     },
   });
   const handleSubmit = async () => {
-    // Voeg een bevestigingsvenster toe
     const confirmUpdate = window.confirm('Are you sure you want to update this driver?');
 
     if (confirmUpdate) {
         const setPayload = {
           idDriver: IdDriver,
           name: Name,
-          insert: Insert,
+          inserts: Inserts,
           firstName: FirstName,
           street: Street,
           number: Number,

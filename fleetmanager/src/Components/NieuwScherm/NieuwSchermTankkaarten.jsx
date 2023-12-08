@@ -10,7 +10,6 @@ import VoertuigenButton from '../Buttons/ButtonsNavigation/VoertuigenButton';
 import TankkaartenButton from '../Buttons/ButtonsNavigation/TankkaartenButton';
 import BestuurdersButton from '../Buttons/ButtonsNavigation/BestuurdersButton';
 import FormulierTankkaarten from '../Formulieren/FormulierTankkaarten';
-import TableTankkaarten from '../Tables/TableTankkaarten';
 import ButtonRelaties from '../Buttons/ButtonsNavigation/ButtonRelations';
 
 export const NieuwSchermTankkaarten = () => {

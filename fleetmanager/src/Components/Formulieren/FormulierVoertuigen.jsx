@@ -163,26 +163,44 @@ const FormulierenVoertuigen = () => {
 
         <div className="col">
           <label htmlFor="fuel">Fuel</label>
-          <input
+                    <select
             className="input"
             placeholder='Max 25 characters'
             type="text"
             name="fuel"
             value={Fuel}
             onChange={handleChange}
-          />
+          >
+          <option value="">Selecteer...</option>
+          <option value="Benzine">Benzine</option>                
+          <option value="CNG">CNG</option>
+          <option value="Diesel">Diesel</option>
+          <option value="Elektrisch">Elektrisch</option>
+          <option value="LPG">LPG</option>
+          <option value="Anders">Anders</option>
+          </select>
         </div>
 
         <div className="col">
           <label htmlFor="vehicleType">Vehicle Type</label>
-          <input
+          <select
             className="input"
             placeholder='Max 25 characters'
             type="text"
             name="vehicleType"
             value={VehicleType}
             onChange={handleChange}
-          />
+          >
+          <option value="">Selecteer...</option>
+          <option value="Bicycle">Bicycle</option>
+          <option value="Motorcycle">Motorcycle</option>
+          <option value="Hatchback">Hatchback</option>
+          <option value="Sedan">Sedan</option>
+          <option value="SUV">SUV</option>
+          <option value="Van">Van</option>
+          <option value="Truck">Truck</option>
+          <option value="Anders">Anders</option> 
+          </select>
         </div>
 
         <div className="col">

@@ -15,14 +15,18 @@ const FormulierTankkaarten = () => {
   const [validationDate, setValidationDate] = useState('');
   const [pin, setPin] = useState('');
   const [fuel, setFuel] = useState('');
-  const [blocked, setBlocked] = useState('');
+  const [blockedCard, setBlockedCard] = useState('');
+
+
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await getGasCards();
+        //console.log('API Response:', response.data);
         const sortedGasCards = response.data.sort((a, b) => a.id - b.id);
         setGasCards(sortedGasCards);
+        //console.log('Sorted gas cards:', sortedGasCards);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -38,34 +42,32 @@ const FormulierTankkaarten = () => {
       case 'validationDate': setValidationDate(value); break;
       case 'pin': setPin(value); break;
       case 'fuel': setFuel(value); break;
-      case 'blocked': setBlocked(value); break;
+      case 'blockedCard': setBlockedCard(value); break;
       default:
         break;
     }  
   };
-
   const handleSubmit = (event) => {
-    // Voeg hier eventueel logica toe om met het formulier te werken
     event.preventDefault();
-    console.log('Formulier ingediend:', { idGasCard, cardNumber, validationDate, pin, fuel, blocked });
   };
 
   const handleRowClick = (selectedRow) => {
+      console.log("Selected Row:", selectedRow);
     setSelectedRow(selectedRow);
     setIdGasCard(selectedRow.idGasCard);
     setCardNumber(selectedRow.cardNumber);
     setValidationDate(selectedRow.validationDate);
     setPin(selectedRow.pin);
     setFuel(selectedRow.fuel);
-    setBlocked(selectedRow.blocked);
+    setBlockedCard(selectedRow.blockedCard);
   };
 
-    // Functie om een datum in jouw gewenste formaat om te zetten
   const formatDate = (dateString) => {
     const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
     return new Date(dateString).toLocaleDateString('nl-NL', options);
   };
-  
+  //console.log('gascards:', gasCards);
+
   return (
     <form onSubmit={handleSubmit}>
       <table>
@@ -76,19 +78,19 @@ const FormulierTankkaarten = () => {
             <th className='tdGasCard'>Expiration Date</th>
             <th className='tdGasCard'>Pin</th>
             <th className='tdGasCard'>Fuel</th>
-            <th className='tdGasCard'>Blocked</th>
+            <th className='tdGasCard'>Card Blocked</th>
           </tr>
         </thead>
         <tbody>
-          {gasCards.map(gasCard => (
-          <tr key={gasCard.idGasCards} onClick={() => handleRowClick(gasCard)}>
-            <td>{gasCard.idGasCard}</td>
-            <td>{gasCard.cardNumber}</td>
-            <td>{formatDate(gasCard.validationDate)}</td>
-            <td>{gasCard.pin}</td>
-            <td>{gasCard.fuel}</td>
-            <td>{gasCard.blocked}</td>
-          </tr>
+          {gasCards.map((gasCard) => (
+            <tr key={gasCard.idGasCard} onClick={() => handleRowClick(gasCard)}>
+              <td>{gasCard.idGasCard}</td>
+              <td>{gasCard.cardNumber}</td>
+              <td>{formatDate(gasCard.validationDate)}</td>
+              <td>{gasCard.pin}</td>
+              <td>{gasCard.fuel}</td>
+              <td>{gasCard.blockedCard}</td>
+            </tr>
           ))}
         </tbody>
       </table>
@@ -103,7 +105,6 @@ const FormulierTankkaarten = () => {
             onChange={handleChange}
           />
         </div>
-
         <div className="col">
           <label htmlFor="cardNumber">Card Number</label>
           <input
@@ -115,7 +116,6 @@ const FormulierTankkaarten = () => {
             onChange={handleChange}
           />
         </div>
-
         <div className="col">
           <label htmlFor="validationDate">Expiration Date</label>
           <input
@@ -126,7 +126,6 @@ const FormulierTankkaarten = () => {
             onChange={handleChange}
           />
         </div>
-
         <div className="col">
           <label htmlFor="pin">Pin</label>
           <input
@@ -138,7 +137,6 @@ const FormulierTankkaarten = () => {
             onChange={handleChange}
           />
         </div>
-
         <div className="col">
           <label htmlFor="fuel">Fuel</label>
           <select
@@ -149,26 +147,25 @@ const FormulierTankkaarten = () => {
             value={fuel}
             onChange={handleChange}
           >
+          <option value="">Selecteer...</option>
           <option value="Benzine">Benzine</option>                
           <option value="CNG">CNG</option>
           <option value="Diesel">Diesel</option>
           <option value="Elektrisch">Elektrisch</option>
           <option value="LPG">LPG</option>
           <option value="Anders">Anders</option>
-
           </select>
-
         </div>
-
         <div className="col">
-          <label htmlFor="blocked">Blocked</label>
+          <label htmlFor="blockedCard">Card Blocked</label>
           <select
             className="input"
             type="text"
-            name="blocked"
-            value={blocked}
+            name="blockedCard"
+            value={blockedCard}
             onChange={handleChange}
           >
+          <option value="">Selecteer...</option>
           <option value="True">True</option>
           <option value="False">False</option>
           </select>
@@ -180,7 +177,7 @@ const FormulierTankkaarten = () => {
             ValidationDate={validationDate}
             Pin={pin}
             Fuel={fuel}
-            Blocked={blocked}
+            BlockedCard={blockedCard}
           />
           <ButtonUpdateGasCard
             IdGasCard={idGasCard}
@@ -188,7 +185,7 @@ const FormulierTankkaarten = () => {
             ValidationDate={validationDate}
             Pin={pin}
             Fuel={fuel}
-            Blocked={blocked}
+            BlockedCard={blockedCard}
           />
           <ButtonDeleteGasCard Id={idGasCard} buttonText="Delete"/>
       </div>

@@ -121,7 +121,7 @@ public partial class FleetManagerContext : DbContext
             entity.Property(e => e.Fuel)
                 .HasMaxLength(25)
                 .IsUnicode(false);
-            entity.Property(e => e.Blocked).HasDefaultValueSql("((0))");
+            entity.Property(e => e.BlockedCard);
         });
 
         modelBuilder.Entity<Vehicle>(entity =>
@@ -176,6 +176,9 @@ public partial class FleetManagerContext : DbContext
                 .IsUnicode(false);
             entity.Property(e => e.Password)
                 .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.Role)
+                .HasMaxLength(5)
                 .IsUnicode(false);
         });
 
