@@ -10,6 +10,7 @@ import { NieuwSchermTankkaarten } from './Components/NieuwScherm/NieuwSchermTank
 import NieuwSchermBestuurders from './Components/NieuwScherm/NieuwSchermBestuurders.jsx'
 import NieuwSchermRelaties from './Components/NieuwScherm/NieuwSchermRelaties.jsx'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import NieuwSchermGebruikers from './Components/NieuwScherm/NieuwSchermGebruikers.jsx'
 
 const browserRouter = createBrowserRouter (
   [
@@ -36,6 +37,10 @@ const browserRouter = createBrowserRouter (
     {
       path : '/NieuwSchermRelaties',
       element : <NieuwSchermRelaties/>
+    },
+    {
+      path: '/NieuwSchermGebruikers',
+      element : <NieuwSchermGebruikers/>
     }
   ]
 );

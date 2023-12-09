@@ -11,8 +11,6 @@ import TankkaartenButton from '../Buttons/ButtonsNavigation/TankkaartenButton';
 import BestuurdersButton from '../Buttons/ButtonsNavigation/BestuurdersButton';
 import FormulierBestuurders from '../Formulieren/FormulierBestuurders';
 import ButtonRelaties from '../Buttons/ButtonsNavigation/ButtonRelations';
-import { Button } from '@mui/material';
-import ButtonUsers from '../Buttons/ButtonsUsers/ButtonUsers';
 
 const NieuwSchermBestuurders = () => {
     return (
@@ -28,7 +26,6 @@ const NieuwSchermBestuurders = () => {
             <TankkaartenButton/>
             <VoertuigenButton/>
             <ButtonRelaties/>
-            <ButtonUsers/>
            </div>
           <FormulierBestuurders/>
           </div>

@@ -12,6 +12,7 @@ import BestuurdersButton from '../Buttons/ButtonsNavigation/BestuurdersButton';
 import TableVoertuigen from '../Tables/TableVoertuigen';
 import FormulierenVoertuigen from '../Formulieren/FormulierVoertuigen';
 import ButtonRelaties from '../Buttons/ButtonsNavigation/ButtonRelations';
+import ButtonUsers from '../Buttons/ButtonsUsers/ButtonUsers';
 
 
 const NieuwSchermVoertuigen = () => {
@@ -29,6 +30,7 @@ const NieuwSchermVoertuigen = () => {
           <TankkaartenButton/>
           <VoertuigenButton/>
           <ButtonRelaties/>
+          <ButtonUsers/>
         </div>
         <FormulierenVoertuigen/>
       </div>
