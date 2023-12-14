@@ -21,6 +21,26 @@ export const postConnections = async (post) => {
 };
 
 
+export const getUsers = async () => {
+  return await axios.get("http://localhost:5043/User/AllUsers");
+};
+export const getUsersById = async (id) => {
+  return await axios.get(`http://localhost:5043/User/UserById/${id}`);
+};
+export const deleteUsers = async (id) => {
+  return await axios.delete(`http://localhost:5043/User/User/${id}`);
+}
+export const updateUsers = async (id, put) => {
+  return await axios.patch(`http://localhost:5043/User/User/${id}`, put);
+};
+
+export const postUsers = async (post) => {
+  return await axios.post("http://localhost:5043/User/User", post);
+};
+
+
+
+
 export const getDrivers = async () => {
   return await axios.get("http://localhost:5043/Driver/AllDrivers");
 };
@@ -39,6 +59,7 @@ RegistryNumber, CategoryLicense, Login, Password*/
 export const postDrivers = async (post) => {
   return await axios.post("http://localhost:5043/Driver/Driver", post);
 };
+
 
 
 export const getGasCards = async () => {
