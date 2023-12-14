@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 import '../Formulieren/Formulieren.css';
 import ButtonDeleteVehicle from '../Buttons/ButtonsVehicles/ButtonDeleteVehicle';
@@ -8,7 +9,7 @@ import ButtonAddVehicle from '../Buttons/ButtonsVehicles/ButtonAddVehicle';
 import { getVehicles } from '../../../API/index';
 
 
-const FormulierenVoertuigen = () => {
+const FormulierenVoertuigen = ({searchTerm}) => {
   const [selectedRow, setSelectedRow] = useState(null);
   const [vehicles, setVehicles] = useState([]);
   const [IdVehicle, setIdVehicle] = useState('');
@@ -69,38 +70,49 @@ const FormulierenVoertuigen = () => {
     setNumberOfDoors(selectedRow.numberOfDoors);
   };
 
+  const filteredVehicles = vehicles.filter((vehicle) => {
+    if (searchTerm === '') {
+      return vehicle;
+    } else if (vehicle.licensePlate.toLowerCase().includes(searchTerm.toLowerCase())) {
+      return vehicle;
+    }
+    return null;
+  });
+
   return (
     <form onSubmit={handleSubmit}>
-      <table>
-        <thead>
-          <tr>
-            <th className='tdVehiclec'>Vehicle Id</th>
-            <th className='tdVehicle'>Brand</th>
-            <th className='tdVehicle'>Model</th>
-            <th className='tdVehicle'>Chassis Number</th>
-            <th className='tdVehicle'>License Plate</th>
-            <th className='tdVehicle'>Fuel</th>
-            <th className='tdVehicle'>Vehicle Type</th>
-            <th className='tdVehicle'>Color</th>
-            <th className='tdVehicle'>Doors</th>
-          </tr>
-        </thead>
-        <tbody>
-          {vehicles.map(vehicle => (
-            <tr className='trData' key={vehicle.idVehicle} onClick={() => handleRowClick(vehicle)}>
-              <td>{vehicle.idVehicle}</td>
-              <td>{vehicle.brand}</td>
-              <td>{vehicle.model}</td>
-              <td>{vehicle.chassisNumber}</td>
-              <td>{vehicle.licensePlate}</td>
-              <td>{vehicle.fuel}</td>
-              <td>{vehicle.vehicleType}</td>
-              <td>{vehicle.color}</td>
-              <td>{vehicle.numberOfDoors}</td>
+      <div className="table-container">
+        <table >
+          <thead>
+            <tr>
+              <th className='tdVehiclec'>Vehicle Id</th>
+              <th className='tdVehicle'>Brand</th>
+              <th className='tdVehicle'>Model</th>
+              <th className='tdVehicle'>Chassis Number</th>
+              <th className='tdVehicle'>License Plate</th>
+              <th className='tdVehicle'>Fuel</th>
+              <th className='tdVehicle'>Vehicle Type</th>
+              <th className='tdVehicle'>Color</th>
+              <th className='tdVehicle'>Doors</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {filteredVehicles.map(vehicle => (
+              <tr className='trData' key={vehicle.idVehicle} onClick={() => handleRowClick(vehicle)}>
+                <td>{vehicle.idVehicle}</td>
+                <td>{vehicle.brand}</td>
+                <td>{vehicle.model}</td>
+                <td>{vehicle.chassisNumber}</td>
+                <td>{vehicle.licensePlate}</td>
+                <td>{vehicle.fuel}</td>
+                <td>{vehicle.vehicleType}</td>
+                <td>{vehicle.color}</td>
+                <td>{vehicle.numberOfDoors}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
       <div className="form-container">
         <div className="col">
           <label htmlFor="idVehicle">Vehicle ID</label>

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import '../Formulieren/Formulieren.css';
@@ -7,7 +8,7 @@ import ButtonAddDriver from '../Buttons/ButtonsDrivers/ButtonAddDriver';
 import ButtonClearInput from '../Buttons/ButtonClearInput';
 import { getDrivers } from '../../../API/index';
 
-const FormulierBestuurders = () => {
+const FormulierBestuurders = ({searchTerm}) => {
   const [selectedRow, setSelectedRow] = useState(null);
   const [drivers, setDrivers] = useState([]);
   const [idDriver, setIdDriver] = useState('');
@@ -79,42 +80,53 @@ const FormulierBestuurders = () => {
     setCategoryLicense(selectedRow.categoryLicense);
   };
 
+  const filteredDrivers = drivers.filter((driver) => {
+    if (searchTerm === '') {
+      return driver;
+    } else if (driver.firstName.toLowerCase().includes(searchTerm.toLowerCase())) {
+      return driver;
+    }
+    return null;
+  });
+
   return (
     <form onSubmit={handleSubmit}>
-      <table >
-        <thead>
-          <tr >
-            <th className='thDriver'>Driver Id</th>
-            <th className='thDriver'>Name</th>
-            <th className='thDriver'>Inserts</th>
-            <th className='thDriver'>First Name</th>
-            <th className='thDriver'>Street</th>
-            <th className='thDriver'>Number</th>
-            <th className='thDriver'>City</th>
-            <th className='thDriver'>Zip Code</th>
-            <th className='thDriver'>Day Of Birth</th>
-            <th className='thDriver'>Registry Number</th>
-            <th className='thDriver'>Category License</th>
-          </tr>
-        </thead>
-        <tbody>
-          {drivers.map(driver => (
-          <tr key={driver.idDriver}  onClick={() => handleRowClick(driver)}>
-            <td>{driver.idDriver}</td>
-            <td>{driver.name}</td>
-            <td>{driver.inserts}</td>
-            <td>{driver.firstName}</td>
-            <td>{driver.street}</td>
-            <td>{driver.number}</td>
-            <td>{driver.city}</td>
-            <td>{driver.zipCode}</td>
-            <td>{formatDate(driver.dayOfBirth)}</td>
-            <td>{driver.registryNumber}</td>
-            <td>{driver.categoryLicense}</td>
-          </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="table-container">
+        <table >
+          <thead>
+            <tr >
+              <th className='thDriver'>Driver Id</th>
+              <th className='thDriver'>First Name</th>
+              <th className='thDriver'>Inserts</th>
+              <th className='thDriver'>Name</th>
+              <th className='thDriver'>Street</th>
+              <th className='thDriver'>Number</th>
+              <th className='thDriver'>City</th>
+              <th className='thDriver'>Zip Code</th>
+              <th className='thDriver'>Day Of Birth</th>
+              <th className='thDriver'>Registry Number</th>
+              <th className='thDriver'>Category License</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filteredDrivers.map(driver => (
+            <tr key={driver.idDriver}  onClick={() => handleRowClick(driver)}>
+              <td>{driver.idDriver}</td>
+              <td>{driver.firstName}</td>
+              <td>{driver.inserts}</td>
+              <td>{driver.name}</td>
+              <td>{driver.street}</td>
+              <td>{driver.number}</td>
+              <td>{driver.city}</td>
+              <td>{driver.zipCode}</td>
+              <td>{formatDate(driver.dayOfBirth)}</td>
+              <td>{driver.registryNumber}</td>
+              <td>{driver.categoryLicense}</td>
+            </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
       <div className="form-container">
         <div className="col">
           <label htmlFor="idDriver">Driver Id</label>
@@ -128,13 +140,13 @@ const FormulierBestuurders = () => {
         </div>
 
         <div className="col">
-          <label htmlFor="name">Name</label>
+          <label htmlFor="firstName">First Name</label>
           <input
             className="input"
             placeholder='Max 50 characters'
             type="text"
-            name="name"
-            value={name}
+            name="firstName"
+            value={firstName}
             onChange={handleChange}
           />
         </div>
@@ -152,13 +164,13 @@ const FormulierBestuurders = () => {
         </div>
 
         <div className="col">
-          <label htmlFor="firstName">First Name</label>
+          <label htmlFor="name">Name</label>
           <input
             className="input"
             placeholder='Max 50 characters'
             type="text"
-            name="firstName"
-            value={firstName}
+            name="name"
+            value={name}
             onChange={handleChange}
           />
         </div>

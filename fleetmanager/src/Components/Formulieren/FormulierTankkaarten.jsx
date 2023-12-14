@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import '../Formulieren/Formulieren.css';
@@ -7,7 +8,7 @@ import ButtonAddGasCard from '../Buttons/ButtonsGasCards/ButtonAddGasCard';
 import ButtonClearInput from '../Buttons/ButtonClearInput';
 import { getGasCards } from '../../../API/index';
 
-const FormulierTankkaarten = () => {
+const FormulierTankkaarten = ({searchTerm}) => {
   const [selectedRow, setSelectedRow] = useState(null);
   const [gasCards, setGasCards] = useState([]);
   const [idGasCard, setIdGasCard] = useState('');
@@ -66,34 +67,44 @@ const FormulierTankkaarten = () => {
     const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
     return new Date(dateString).toLocaleDateString('nl-NL', options);
   };
-  //console.log('gascards:', gasCards);
+
+  const filterGasCards = gasCards.filter((gasCard) => {
+    if (searchTerm === '') {
+      return gasCard;
+    } else if (gasCard.cardNumber.toLowerCase().includes(searchTerm.toLowerCase())) {
+      return gasCard;
+    }
+    return null;
+  });
 
   return (
     <form onSubmit={handleSubmit}>
-      <table>
-        <thead>
-          <tr>
-            <th className='tdGasCard'>Gas Card Id</th>
-            <th className='tdGasCard'>Card Number</th>
-            <th className='tdGasCard'>Expiration Date</th>
-            <th className='tdGasCard'>Pin</th>
-            <th className='tdGasCard'>Fuel</th>
-            <th className='tdGasCard'>Card Blocked</th>
-          </tr>
-        </thead>
-        <tbody>
-          {gasCards.map((gasCard) => (
-            <tr key={gasCard.idGasCard} onClick={() => handleRowClick(gasCard)}>
-              <td>{gasCard.idGasCard}</td>
-              <td>{gasCard.cardNumber}</td>
-              <td>{formatDate(gasCard.validationDate)}</td>
-              <td>{gasCard.pin}</td>
-              <td>{gasCard.fuel}</td>
-              <td>{gasCard.blockedCard}</td>
+      <div className="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th className='tdGasCard'>Gas Card Id</th>
+              <th className='tdGasCard'>Card Number</th>
+              <th className='tdGasCard'>Expiration Date</th>
+              <th className='tdGasCard'>Pin</th>
+              <th className='tdGasCard'>Fuel</th>
+              <th className='tdGasCard'>Card Blocked</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {filterGasCards.map((gasCard) => (
+              <tr key={gasCard.idGasCard} onClick={() => handleRowClick(gasCard)}>
+                <td>{gasCard.idGasCard}</td>
+                <td>{gasCard.cardNumber}</td>
+                <td>{formatDate(gasCard.validationDate)}</td>
+                <td>{gasCard.pin}</td>
+                <td>{gasCard.fuel}</td>
+                <td>{gasCard.blockedCard}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
       <div className="form-container">
         <div className="col">
           <label htmlFor="idGasCard">Gas Card Id</label>

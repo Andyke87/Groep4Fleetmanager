@@ -12,6 +12,8 @@ import NieuwSchermRelaties from './Components/NieuwScherm/NieuwSchermRelaties.js
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import NieuwSchermGebruikers from './Components/NieuwScherm/NieuwSchermGebruikers.jsx'
 
+const queryClient = new QueryClient();
+
 const browserRouter = createBrowserRouter (
   [
     {
@@ -19,23 +21,23 @@ const browserRouter = createBrowserRouter (
       element: <App/>
     },
     {
-      path : '/Welkom',
+      path : '/Welkom/:firstName',
       element: <Welkom/>,
     },
     {
-      path: '/NieuwSchermVoertuigen',
+      path: '/NieuwSchermVoertuigen/:firstName',
       element: <NieuwSchermVoertuigen/>,
     }, 
     {
-      path : '/NieuwSchermTankkaarten',
+      path : '/NieuwSchermTankkaarten/:firstName',
       element : <NieuwSchermTankkaarten/>
     },
     {
-      path : '/NieuwSchermBestuurders', 
+      path : '/NieuwSchermBestuurders/:firstName', 
       element : <NieuwSchermBestuurders/>
     },
     {
-      path : '/NieuwSchermRelaties',
+      path : '/NieuwSchermRelaties/:firstName',
       element : <NieuwSchermRelaties/>
     },
     {
@@ -44,7 +46,6 @@ const browserRouter = createBrowserRouter (
     }
   ]
 );
-const queryClient = new QueryClient()
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

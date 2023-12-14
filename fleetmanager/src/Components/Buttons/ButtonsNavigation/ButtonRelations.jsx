@@ -6,6 +6,12 @@ const handleRelaties = () => {
 }
 
 const ButtonRelaties = () => {
+
+  const voornaam = window.location.pathname.split('/').pop();
+
+  const handleRelaties = () => {
+    window.location.href = `/NieuwSchermRelaties/${voornaam}`;
+}
   return (
    <button  className='buttons' onClick={handleRelaties} >Relations</button>
   )

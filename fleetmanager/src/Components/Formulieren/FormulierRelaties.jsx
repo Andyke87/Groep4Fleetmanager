@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
@@ -8,7 +9,7 @@ import ButtonDeleteRelation from '../Buttons/ButtonsRelations/ButtonDeleteRelati
 import ButtonClearInput from '../Buttons/ButtonClearInput';
 import { getConnections, getDrivers, getGasCards, getVehicles } from '../../../API/index';
 
-const FormulierenRelaties = () => {
+const FormulierenRelaties = ({searchTerm}) => {
   const [selectedRow, setSelectedRow] = useState(null);
   const [connections, setConnections] = useState([]);
   const [drivers, setDrivers] = useState([]);
@@ -76,14 +77,21 @@ const FormulierenRelaties = () => {
     return new Date(dateString).toLocaleDateString('nl-NL', options);
   };
 
-  
+  const filteredConnections = connections.filter((connection) => {
+    if (searchTerm === '') {
+      return connection;
+    } else if (drivers.find ((driver) => driver.idDriver === connection.idDriver)?.firstName.toLowerCase().includes(searchTerm.toLowerCase())){
+      return connection;
+    }
+    return null;
+  });
   return (
     <form onSubmit={handleSubmit}>
       <div className="table-container">
         <table>
           <thead>
             <tr>
-              <th style={{ width: '400px' }}>Relation Id</th>
+              <th>Relation Id</th>
               <th>Driver Name</th>
               <th>Gascard Number</th>
               <th>Expiration Date</th>
@@ -92,7 +100,7 @@ const FormulierenRelaties = () => {
             </tr>
           </thead>
           <tbody>
-            {connections.map((connection) => (
+            {filteredConnections.map((connection) => (
               <tr key={connection.id} onClick={() => handleRowClick(connection)}>
                 <td className='tdRelation'>{connection.id}</td>
                 <td className='tdRelation'>

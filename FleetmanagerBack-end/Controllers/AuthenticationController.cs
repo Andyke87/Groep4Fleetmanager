@@ -18,7 +18,8 @@ public class AuthenticationController : ControllerBase
     private readonly ILogger<AuthenticationController>? _logger;
     private readonly IConfiguration _configuration;
     private readonly IMapper _mapper;
-    List<Authentication> users = new();
+
+    private List<User> users = new();
 
     public AuthenticationController(FleetManagerContext dbContext, ILogger<AuthenticationController>? logger, IConfiguration configuration, IMapper mapper)
     {
@@ -27,6 +28,7 @@ public class AuthenticationController : ControllerBase
         _configuration = configuration;
         _mapper = mapper;
     }
+
     [HttpPost("CreateToken")]
     [SwaggerResponse(StatusCodes.Status200OK, "Token created successfully", typeof(string))]
     [SwaggerResponse(StatusCodes.Status401Unauthorized, "Invalid login attempt")]
@@ -41,10 +43,9 @@ public class AuthenticationController : ControllerBase
             {
                 var issuer = _configuration["Jwt:Issuer"];
                 var audience = _configuration["Jwt:Audience"];
-                var key = Convert.FromBase64String(_configuration["Jwt:PrivateKey"]);
-
+                var privateKey = _configuration["Jwt:PrivateKey"];
+                var key = !string.IsNullOrEmpty(privateKey) ? Convert.FromBase64String(privateKey) : null;
                 _logger?.LogInformation("Aanmelding succesvol. E-mail: {Email}", user.Email);
-
                 var tokenDescriptor = new SecurityTokenDescriptor
                 {
                     Subject = new ClaimsIdentity(new[]
@@ -52,9 +53,10 @@ public class AuthenticationController : ControllerBase
                         new Claim("Id", Guid.NewGuid().ToString()),
                         new Claim(JwtRegisteredClaimNames.Name, user.Name),
                         new Claim(JwtRegisteredClaimNames.Email, user.Email),
-                        new Claim(ClaimTypes.Role, "Admin")
+                        new Claim(ClaimTypes.Role, user.Role),
+                        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
                     }),
-                    Expires = DateTime.UtcNow.AddMinutes(15),
+                    Expires = DateTime.UtcNow.AddMinutes(5),
                     Issuer = issuer,
                     Audience = audience,
                     SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha512Signature)
@@ -63,8 +65,9 @@ public class AuthenticationController : ControllerBase
                 var tokenHandler = new JwtSecurityTokenHandler();
                 var token = tokenHandler.CreateToken(tokenDescriptor);
                 var jwtToken = tokenHandler.WriteToken(token);
+                var stringToken = tokenHandler.WriteToken(token);
 
-                return Ok(jwtToken);
+                return Ok(stringToken);
             }
 
             _logger?.LogWarning("Ongeldige aanmeldpoging. E-mail: {Email}", user.Email);
@@ -91,7 +94,6 @@ public class AuthenticationController : ControllerBase
     }
 
     [HttpGet("AllUsers")]
-    [Authorize (Roles = "Admin")]
     [SwaggerResponse(StatusCodes.Status200OK, "All users", typeof(IEnumerable<AuthenticationDTO>))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
     [SwaggerResponse(StatusCodes.Status404NotFound, "No users found")]
@@ -101,26 +103,18 @@ public class AuthenticationController : ControllerBase
     {
         try
         {
-            if (!User.IsInRole("Admin"))
-            {
-                _logger?.LogWarning("Unauthorized access");
-                return Unauthorized();
-            }
-            else
-            {
-                _logger?.LogInformation("Authorized access");
-                var users = await _dbContext.Authentications.ToListAsync();
+            // Selecteer alle gebruikers
+            var users = await _dbContext.Authentications.ToListAsync();
 
-                if (users == null)
-                {
-                    _logger?.LogWarning("No users found");
-                    return NotFound("No users found");
-                }
-
-                var userDTOs = _mapper.Map<IEnumerable<AuthenticationDTO>>(users);
-                _logger?.LogInformation($"{users.Count} users where found");
-                return Ok(userDTOs);
+            if (users == null)
+            {
+                _logger?.LogWarning("No users found");
+                return NotFound("No users found");
             }
+
+            var userDTOs = _mapper.Map<IEnumerable<AuthenticationDTO>>(users);
+            _logger?.LogInformation($"{users.Count} users where found");
+            return Ok(userDTOs);
         }
         catch (Exception ex)
         {
@@ -129,6 +123,7 @@ public class AuthenticationController : ControllerBase
                 _logger?.LogError(ex, "Invalid request");
                 return StatusCode(400, "Invalid request");
             }
+
             if (ex is DbUpdateConcurrencyException)
             {
                 _logger?.LogError(ex, "Service is currently unavailable. Please try again later.");
@@ -142,8 +137,8 @@ public class AuthenticationController : ControllerBase
         }
     }
 
+
     [HttpGet("UserById/{id}")]
-    [Authorize (Roles = "Admin")]
     [SwaggerResponse(StatusCodes.Status200OK, "The user with given id", typeof(AuthenticationDTO))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
     [SwaggerResponse(StatusCodes.Status404NotFound, "User not found")]
@@ -163,15 +158,15 @@ public class AuthenticationController : ControllerBase
                 var user = await _dbContext.Authentications.FirstOrDefaultAsync(b => b.Id == id);
 
                 _logger?.LogInformation("Authorized access");
-            if (user == null)
-            {
-                _logger?.LogWarning("User not found");
-                return NotFound("User not found");
-            }
+                if (user == null)
+                {
+                    _logger?.LogWarning("User not found");
+                    return NotFound("User not found");
+                }
 
-            var userDTO = _mapper.Map<AuthenticationDTO>(user);
-            _logger?.LogInformation($"User with id {id} was found");
-            return Ok(userDTO);
+                var userDTO = _mapper.Map<AuthenticationDTO>(user);
+                _logger?.LogInformation($"User with id {id} was found");
+                return Ok(userDTO);
             }
         }
         catch (Exception ex)
@@ -194,8 +189,7 @@ public class AuthenticationController : ControllerBase
         }
     }
 
-    [HttpPost("CreateUser")]
-    [Authorize (Roles = "Admin")]
+    [HttpPost("User")]
     [SwaggerResponse(StatusCodes.Status201Created, "User created successfully", typeof(AuthenticationDTO))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
     [SwaggerResponse(StatusCodes.Status503ServiceUnavailable, "Service unavailable")]
@@ -203,7 +197,7 @@ public class AuthenticationController : ControllerBase
     {
         try
         {
-            var userEntity = _mapper.Map<Authentication>(user);
+            var userEntity = _mapper.Map<User>(user);
 
             userEntity.Role = user.Role;
 
@@ -234,8 +228,7 @@ public class AuthenticationController : ControllerBase
         }
     }
 
-    [HttpPatch("UpdateUser/{id}")]
-    [Authorize (Roles = "Admin")]
+    [HttpPatch("User/{id}")]
     [SwaggerResponse(StatusCodes.Status200OK, "User updated successfully", typeof(AuthenticationDTO))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
     [SwaggerResponse(StatusCodes.Status404NotFound, "User not found")]
@@ -280,8 +273,7 @@ public class AuthenticationController : ControllerBase
         }
     }
 
-    [HttpDelete("DeleteUser/{id}")]
-    [Authorize(Roles = "Admin")]
+    [HttpDelete("User/{id}")]
     [SwaggerResponse(StatusCodes.Status200OK, "User deleted successfully", typeof(bool))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
     [SwaggerResponse(StatusCodes.Status404NotFound, "User not found")]
