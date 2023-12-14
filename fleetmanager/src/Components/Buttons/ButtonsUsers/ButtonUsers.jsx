@@ -2,7 +2,7 @@
 import React from 'react'
 
 const handleUsers = () => {
-    window.location.href = '/NieuwSchermBestuurders';   
+    window.location.href = '/NieuwSchermGebruikers';   
 }
 const ButtonUsers = () => {
   return (

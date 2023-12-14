@@ -11,8 +11,10 @@ import TankkaartenButton from '../Buttons/ButtonsNavigation/TankkaartenButton';
 import BestuurdersButton from '../Buttons/ButtonsNavigation/BestuurdersButton';
 import FormulierBestuurders from '../Formulieren/FormulierBestuurders';
 import ButtonRelaties from '../Buttons/ButtonsNavigation/ButtonRelations';
+import FormulierGebruikers from '../Formulieren/FormulierGebruikers';
+import ButtonUsers from '../Buttons/ButtonsUsers/ButtonUsers';
 
-const NieuwSchermBestuurders = () => {
+const NieuwSchermGebruiekrs = () => {
     return (
         <div className='containerNieuwScherm'> 
          <div className='containerButtons'> 
@@ -26,11 +28,12 @@ const NieuwSchermBestuurders = () => {
             <TankkaartenButton/>
             <VoertuigenButton/>
             <ButtonRelaties/>
+            <ButtonUsers/>
            </div>
-          <FormulierBestuurders/>
+          <FormulierGebruikers/>
           </div>
         </div>
       )
     }
 
-export default NieuwSchermBestuurders
+export default NieuwSchermGebruiekrs

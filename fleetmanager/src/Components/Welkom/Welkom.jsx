@@ -4,6 +4,7 @@ import './Welkom.css'
 import '../Login/Login.css'
 import LogoutButton from '../Buttons/LogoutButton';
 import BrightnessButton from '../Buttons/BrightnessButton';
+import ButtonUsers from '../Buttons/ButtonsUsers/ButtonUsers';
 
 const handleBestuurders = () => {
   window.location.href = '/NieuwSchermBestuurders';
@@ -16,6 +17,9 @@ const handleTankkaarten = () => {
 }
 const handleRelaties = () => {
   window.location.href = '/NieuwSchermRelaties';
+}
+const handleUsers = () => {
+  window.location.href = '/NieuwSchermGebruikers';   
 }
 
 const Welkom = () => {
@@ -31,6 +35,7 @@ const Welkom = () => {
           <button className='button' onClick={handleTankkaarten}>Gas Cards</button>
           <button className='button' onClick={handleVoertuigen}>Vehicles</button>          
           <button className='button' onClick={handleRelaties}>Relations</button>
+          <button className='button' onClick={handleUsers}>Users</button>
       </div>
     </div>
   )
