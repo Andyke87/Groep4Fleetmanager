@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, {useState} from 'react'
 import './NieuwScherm.css'
 import '../Welkom/Welkom.css';
 import '../Login/Login.css';
@@ -14,13 +14,26 @@ import FormulierenRelaties from '../Formulieren/FormulierRelaties';
 
 
 const NieuwSchermRelaties = () => {
+  const [searchTerm, setSearchTerm] = useState("");
 
+  const handleInputChange = (event) => {
+    const { target: { value } } = event;
+    setSearchTerm(value);
+  };
   return (
         <div className='containerNieuwScherm'> 
          <div className='containerButtons'> 
+          <input 
+            type="text" 
+            className='searchfield'
+            placeholder='Search on first name'
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
           <BrightnessButton/>
           <HomeButton/>
           <LogoutButton/>
+
         </div>
           <div className='thirdScreenContainer'>
             <div className='buttonsThirdScreen'>
@@ -29,7 +42,7 @@ const NieuwSchermRelaties = () => {
             <VoertuigenButton/>
             <ButtonRelation/>
            </div>
-          <FormulierenRelaties/>
+          <FormulierenRelaties searchTerm={searchTerm}/>
           </div>
         </div>
   )

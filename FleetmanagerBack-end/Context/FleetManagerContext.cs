@@ -18,7 +18,7 @@ public partial class FleetManagerContext : DbContext
 
     public virtual DbSet<Vehicle> Vehicles { get; set; }
 
-    public virtual DbSet<Authentication> Authentications { get; set; }
+    public virtual DbSet<User> Authentications { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -160,7 +160,7 @@ public partial class FleetManagerContext : DbContext
                 .HasDefaultValue(0);
         });
 
-        modelBuilder.Entity<Authentication>(entity =>
+        modelBuilder.Entity<User>(entity =>
         {
             entity.HasKey(e => e.Id);
             entity.ToTable("Authentication"); // Voeg de tabelnaam toe.

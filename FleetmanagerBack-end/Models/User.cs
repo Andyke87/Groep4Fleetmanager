@@ -1,8 +1,9 @@
 using System.ComponentModel.DataAnnotations;
+using FleetManager.interfaces;
 
 namespace FleetManager.Models;
 
-public partial class Authentication
+public partial class User : IUserCredentials
 {
     [Key]
     public int Id { get; set; }
@@ -19,7 +20,7 @@ public partial class Authentication
     [Required]
     public string Role { get; set; }
 
-    public Authentication(string name, string firstName, string email, string password, string role)
+    public User(string name, string firstName, string email, string password, string role)
     {
         Name = name;
         FirstName = firstName;

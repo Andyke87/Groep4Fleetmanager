@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, {useState} from 'react'
 import './NieuwScherm.css'
 import '../Welkom/Welkom.css';
 import '../Login/Login.css';
@@ -13,9 +13,22 @@ import FormulierTankkaarten from '../Formulieren/FormulierTankkaarten';
 import ButtonRelaties from '../Buttons/ButtonsNavigation/ButtonRelations';
 
 export const NieuwSchermTankkaarten = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  
+  const handleInputChange = (event) => {
+    const { target: { value } } = event;
+    setSearchTerm(value);
+  };
   return (
     <div className='containerNieuwScherm'> 
-      <div className='containerButtons'> 
+      <div className='containerButtons'>
+        <input 
+          type="text" 
+          className='searchfield'
+          placeholder='Search on card number'
+          value={searchTerm}
+          onChange={handleInputChange}
+        />
         <BrightnessButton/>
         <HomeButton/>
         <LogoutButton/>
@@ -27,7 +40,7 @@ export const NieuwSchermTankkaarten = () => {
           <VoertuigenButton/>
           <ButtonRelaties/>
         </div>
-        <FormulierTankkaarten/>
+        <FormulierTankkaarten searchTerm={searchTerm}/>
       </div>
     </div>
   )

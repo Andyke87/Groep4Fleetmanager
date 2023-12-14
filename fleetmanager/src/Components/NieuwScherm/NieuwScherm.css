@@ -1,9 +1,7 @@
 body,
 html {
     height: 100%;
-   
     margin: 0;
-   
 }
 
 .containerNieuwScherm {
@@ -69,7 +67,6 @@ html {
 .thirdScreenContainer{
     height: 759px;
     flex-shrink: 0;
-    padding-bottom: 0px;
 }
 .nameAdress {
     width: 100%;
@@ -131,37 +128,31 @@ html {
     color: #ffffff;
     cursor: pointer;
 }
-table {
-    width: 100%;
-    height: 320px;
-    border: 1px solid #000;
-    background: #DDD;
+.buttonsThirdScreen{
+    margin-top: 5%;
+}
+.table-container {
     overflow-y: auto;
-    display: block;
-    opacity: 100%;
-    table-layout: fixed;
+    height: 300px;
+    background-color: #ddddddb0;
 }
-th {
-    border: 1px solid black;
-    background-color: #f2f2f2;
-    height: 10px;
+.table-container thead th {
     position: sticky;
+    top: 0px;
 }
-.thDriver {
-    width: 20vh;
+table {
+    border-collapse: separate;
+    width: 100%;
 }
-.tdRelation{
-    width: 17%;
-}
-.tdGasCard{
-    width: 80vh;
-}
-.tdVehicle {
-    width: 13%;
+th{
+    padding: 8px 16px;
+    border: 1px solid black;
+    background-color: #DDD;
 }
 td{
     border: 1px solid black;
     text-align: center;
-    overflow: visible; 
+    overflow: hidden; 
 }
+
 

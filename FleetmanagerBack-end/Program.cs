@@ -3,12 +3,45 @@ using System.Threading.RateLimiting;
 using FleetManager.Models;
 using FleetManager.Profiles;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace Back_end
 {
+    public class NewAuthOperationFilter : IOperationFilter
+    {
+        public void Apply(OpenApiOperation operation, OperationFilterContext context)
+        {
+
+            var authAttributes = context.MethodInfo
+              .GetCustomAttributes(true)
+              .OfType<AuthorizeAttribute>()
+              .Distinct();
+
+            if (authAttributes.Any())
+            {
+
+                operation.Responses.TryAdd("401", new OpenApiResponse { Description = "Unauthorized" });
+                operation.Responses.TryAdd("403", new OpenApiResponse { Description = "Forbidden" });
+
+                var jwtbearerScheme = new OpenApiSecurityScheme
+                {
+                    Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "bearerAuth" }
+                };
+
+                operation.Security = new List<OpenApiSecurityRequirement>
+                {
+                    new OpenApiSecurityRequirement
+                    {
+                        [ jwtbearerScheme ] = new string [] { }
+                    }
+                };
+            }
+        }
+    }
     public class Program
     {
         public static void Main(string[] args)
@@ -83,7 +116,6 @@ namespace Back_end
             builder.Services.AddAutoMapper(typeof(MappingConfig));
 
             builder.Services.AddEndpointsApiExplorer();
-
             builder.Services.AddSwaggerGen(c =>
                    {
                        c.SwaggerDoc("v1", new OpenApiInfo { Title = "TheTestService", Version = "v1" });
@@ -109,13 +141,10 @@ namespace Back_end
             {
                 app.Logger.LogDebug("In Development environment");
                 app.UseSwagger();
-                app.UseSwaggerUI(c =>
-                {
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Your API V1");
-                });
+                app.UseSwaggerUI();
             }
 
-            app.UseHttpsRedirection();
+           // app.UseHttpsRedirection();
             app.UseRouting();
 
             app.UseCors(builder =>
@@ -125,8 +154,8 @@ namespace Back_end
                        .AllowAnyMethod();
             });
 
-            app.UseAuthentication();
-            app.UseAuthorization();
+            app.UseAuthentication(); // For JWT
+            app.UseAuthorization(); // For JWT
 
             app.UseRateLimiter();
 
