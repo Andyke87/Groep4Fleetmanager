@@ -11,6 +11,7 @@ import TankkaartenButton from '../Buttons/ButtonsNavigation/TankkaartenButton';
 import BestuurdersButton from '../Buttons/ButtonsNavigation/BestuurdersButton';
 import FormulierBestuurders from '../Formulieren/FormulierBestuurders';
 import ButtonRelaties from '../Buttons/ButtonsNavigation/ButtonRelations';
+import ButtonGebruikers from '../Buttons/ButtonsNavigation/ButtonUsers';
 
 const NieuwSchermBestuurders = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -40,7 +41,8 @@ const NieuwSchermBestuurders = () => {
             <TankkaartenButton/>
             <VoertuigenButton/>
             <ButtonRelaties/>
-           </div>
+            <ButtonGebruikers/>           
+          </div>
           <FormulierBestuurders searchTerm={searchTerm}/>
           </div>
         </div>

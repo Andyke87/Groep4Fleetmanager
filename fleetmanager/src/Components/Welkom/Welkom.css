@@ -10,7 +10,7 @@ html {
     background-size: 759px 779px;
     grid-row: 1 / span 3;
 }
-.containerButtons {
+.containerButtons, .containerButtonsWelkom {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -18,6 +18,10 @@ html {
     grid-row: 1;
     grid-column: 3;
     padding: 10px;
+}
+.containerButtonsWelkom {
+    margin-top: 58px;
+    margin-right: 96px;
 }
 
 .logOutButton,

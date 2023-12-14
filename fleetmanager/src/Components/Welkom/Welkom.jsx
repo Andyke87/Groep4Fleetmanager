@@ -24,14 +24,14 @@ const handleRelaties = () => {
 };
 
 const handleUsers = () => {
-  window.location.href = `/NieuwSchermUsers/${voornaam}`;
+  window.location.href = `/NieuwSchermGebruikers/${voornaam}`;
 };
 
   const voornaam = window.location.pathname.split('/').pop();
 
   return (
     <div className='containerBackground'>
-      <div className='containerButtons'>
+      <div className='containerButtonsWelkom'>
         <BrightnessButton />
         <LogoutButton />
       </div>
