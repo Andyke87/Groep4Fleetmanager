@@ -9,9 +9,9 @@ import HomeButton from '../Buttons/HomeButton';
 import VoertuigenButton from '../Buttons/ButtonsNavigation/VoertuigenButton';
 import TankkaartenButton from '../Buttons/ButtonsNavigation/TankkaartenButton';
 import BestuurdersButton from '../Buttons/ButtonsNavigation/BestuurdersButton';
+import ButtonGebruikers from '../Buttons/ButtonsNavigation/ButtonUsers';
 import FormulierTankkaarten from '../Formulieren/FormulierTankkaarten';
 import ButtonRelaties from '../Buttons/ButtonsNavigation/ButtonRelations';
-import ButtonUsers from '../Buttons/ButtonsUsers/ButtonUsers';
 
 export const NieuwSchermTankkaarten = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -40,7 +40,7 @@ export const NieuwSchermTankkaarten = () => {
           <TankkaartenButton/>
           <VoertuigenButton/>
           <ButtonRelaties/>
-          <ButtonUsers/>
+          <ButtonGebruikers/>
         </div>
         <FormulierTankkaarten searchTerm={searchTerm}/>
       </div>

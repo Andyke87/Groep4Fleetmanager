@@ -12,8 +12,7 @@ import BestuurdersButton from '../Buttons/ButtonsNavigation/BestuurdersButton';
 import TableVoertuigen from '../Tables/TableVoertuigen';
 import FormulierenVoertuigen from '../Formulieren/FormulierVoertuigen';
 import ButtonRelaties from '../Buttons/ButtonsNavigation/ButtonRelations';
-import ButtonUsers from '../Buttons/ButtonsUsers/ButtonUsers';
-
+import ButtonGebruikers from '../Buttons/ButtonsNavigation/ButtonUsers';
 
 const NieuwSchermVoertuigen = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -42,7 +41,7 @@ const NieuwSchermVoertuigen = () => {
           <TankkaartenButton/>
           <VoertuigenButton/>
           <ButtonRelaties/>
-          <ButtonUsers/>
+          <ButtonGebruikers/>
         </div>
         <FormulierenVoertuigen searchTerm={searchTerm}/>
       </div>

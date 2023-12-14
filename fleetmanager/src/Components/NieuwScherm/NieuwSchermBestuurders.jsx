@@ -11,8 +11,7 @@ import TankkaartenButton from '../Buttons/ButtonsNavigation/TankkaartenButton';
 import BestuurdersButton from '../Buttons/ButtonsNavigation/BestuurdersButton';
 import FormulierBestuurders from '../Formulieren/FormulierBestuurders';
 import ButtonRelaties from '../Buttons/ButtonsNavigation/ButtonRelations';
-import { Button } from '@mui/material';
-import ButtonUsers from '../Buttons/ButtonsUsers/ButtonUsers';
+import ButtonGebruikers from '../Buttons/ButtonsNavigation/ButtonUsers';
 
 const NieuwSchermBestuurders = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -42,8 +41,8 @@ const NieuwSchermBestuurders = () => {
             <TankkaartenButton/>
             <VoertuigenButton/>
             <ButtonRelaties/>
-            <ButtonUsers/>
-           </div>
+            <ButtonGebruikers/>           
+          </div>
           <FormulierBestuurders searchTerm={searchTerm}/>
           </div>
         </div>

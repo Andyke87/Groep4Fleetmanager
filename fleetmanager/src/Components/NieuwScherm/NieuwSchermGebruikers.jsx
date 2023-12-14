@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, { useState} from 'react'
 import './NieuwScherm.css'
 import '../Welkom/Welkom.css';
 import '../Login/Login.css';
@@ -9,15 +9,26 @@ import HomeButton from '../Buttons/HomeButton';
 import VoertuigenButton from '../Buttons/ButtonsNavigation/VoertuigenButton';
 import TankkaartenButton from '../Buttons/ButtonsNavigation/TankkaartenButton';
 import BestuurdersButton from '../Buttons/ButtonsNavigation/BestuurdersButton';
-import FormulierBestuurders from '../Formulieren/FormulierBestuurders';
 import ButtonRelaties from '../Buttons/ButtonsNavigation/ButtonRelations';
 import FormulierGebruikers from '../Formulieren/FormulierGebruikers';
-import ButtonUsers from '../Buttons/ButtonsUsers/ButtonUsers';
+import ButtonGebruikers from '../Buttons/ButtonsNavigation/ButtonUsers';
 
-const NieuwSchermGebruiekrs = () => {
+const NieuwSchermGebruikers = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const handleInputChange = (event) => {
+    const { target: { value } } = event;
+    setSearchTerm(value);
+  };
     return (
         <div className='containerNieuwScherm'> 
          <div className='containerButtons'> 
+          <input 
+            type="text" 
+            className='searchfield'
+            placeholder='Search on first name'
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />         
           <BrightnessButton/>
           <HomeButton/>
           <LogoutButton/>
@@ -28,7 +39,7 @@ const NieuwSchermGebruiekrs = () => {
             <TankkaartenButton/>
             <VoertuigenButton/>
             <ButtonRelaties/>
-            <ButtonUsers/>
+            <ButtonGebruikers/>
            </div>
           <FormulierGebruikers/>
           </div>
@@ -36,4 +47,4 @@ const NieuwSchermGebruiekrs = () => {
       )
     }
 
-export default NieuwSchermGebruiekrs
+export default NieuwSchermGebruikers

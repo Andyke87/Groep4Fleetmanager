@@ -1,9 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import '../Formulieren/Formulieren.css';
-import ButtonDeleteDriver from '../Buttons/ButtonsDrivers/ButtonDeleteDriver';
-import ButtonUpdateDriver from '../Buttons/ButtonsDrivers/ButtonUpdateDriver';
-import ButtonAddDriver from '../Buttons/ButtonsDrivers/ButtonAddDriver';
 import ButtonClearInput from '../Buttons/ButtonClearInput';
 import { getUsers } from '../../../API/index';
 import ButtonAddUser from '../Buttons/ButtonsUsers/ButtonAddUser';
@@ -12,7 +9,7 @@ import ButtonDeleteUser from '../Buttons/ButtonsUsers/ButtonDeleteUser';
 
 const FormulierGebruikers = () => {
 
-  const [idUser, setIdUser] = useState('');
+  const [id, setIdUser] = useState('');
   const [name, setName] = useState('');
   const [firstName, setFirstName] = useState('');
   const [email, setEmail] = useState('');
@@ -37,7 +34,7 @@ const FormulierGebruikers = () => {
   const handleChange = (event) => {
     const { name, value } = event.target;
     switch (name) {
-        case 'idUser': setIdUser(value); break;
+        case 'id': setIdUser(value); break;
         case 'name': setName(value); break;
         case 'firstName': setFirstName(value); break;
         case 'email': setEmail(value); break;
@@ -50,7 +47,7 @@ const FormulierGebruikers = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-   console.log('Formulier ingediend:', { idUser, name, firstName, email, password, role });
+   console.log('Formulier ingediend:', { id, name, firstName, email, password, role });
     };
 
 
@@ -65,42 +62,43 @@ const FormulierGebruikers = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <table >
-        <thead>
-          <tr >
-            <th>Id</th>
-            <th>Name</th>
-            <th>First Name</th>
-            <th>Email</th>
-            <th>Password</th>
-            <th>Role</th>
-            </tr>
-        </thead>
-        <tbody>
-          {users.map(user => (
-          <tr key={user.idUser}  onClick={() => handleRowClick(user)}>
-            <td>{user.idUser}</td>
-            <td>{user.name}</td>
-            <td>{user.firstName}</td>
-            <td>{user.email}</td>
-            <td>{user.password}</td>
-            <td>{user.role}</td>
-          </tr>))}
-        </tbody>
-      </table>
+      <div className="table-container">
+        <table >
+          <thead>
+            <tr >
+              <th>Id</th>
+              <th>Name</th>
+              <th>First Name</th>
+              <th>Email</th>
+              <th>Password</th>
+              <th>Role</th>
+              </tr>
+          </thead>
+          <tbody>
+            {users.map(user => (
+            <tr key={user.id}  onClick={() => handleRowClick(user)}>
+              <td>{user.id}</td>
+              <td>{user.name}</td>
+              <td>{user.firstName}</td>
+              <td>{user.email}</td>
+              <td>{user.password}</td>
+              <td>{user.role}</td>
+            </tr>))}
+          </tbody>
+        </table>
+      </div>
       <div className="form-container">
         <div className="col">
-            <label htmlFor="idUser">Id</label>
+            <label htmlFor="id">Id</label>
             <input
                 className="input"
                 placeholder='Only numbers'
                 type="text"
-                name="idUser"
-                value={idUser}
+                name="id"
+                value={id}
                 onChange={handleChange}
             />
         </div>
-
         <div className="col">
           <label htmlFor="name">Name</label>
             <input
@@ -112,7 +110,6 @@ const FormulierGebruikers = () => {
                 onChange={handleChange}
             />
         </div>
-
         <div className="col">
           <label htmlFor="firstName">First Name</label>
             <input
@@ -124,7 +121,6 @@ const FormulierGebruikers = () => {
                 onChange={handleChange}
             />
         </div>
-
         <div className="col">
           <label htmlFor="email">Email</label>
             <input
@@ -136,7 +132,6 @@ const FormulierGebruikers = () => {
                 onChange={handleChange}
             />
         </div>
-
         <div className="col">
           <label htmlFor="password">Password</label>
             <input
@@ -148,7 +143,6 @@ const FormulierGebruikers = () => {
                 onChange={handleChange}
             />
         </div>
-
         <div className="col">
           <label htmlFor="role">Role</label>
             <input
@@ -160,28 +154,25 @@ const FormulierGebruikers = () => {
                 onChange={handleChange}
             />
         </div>
-        
+      </div>     
       <div className='containerButtonsNieuw'>
         <ButtonAddUser
-            IdUser={idUser}
             Name={name}
             FirstName={firstName}
             Email={email}
             Password={password}
             Role={role}
         />
-
         <ButtonUpdateUser
-            IdUser={idUser}
+            IdUser={id}
             Name={name}
             FirstName={firstName}
             Email={email}
             Password={password}
             Role={role}
         />
-
         <ButtonDeleteUser
-            IdUser={idUser}
+            IdUser={id}
             Name={name}
             FirstName={firstName}
             Email={email}
@@ -190,7 +181,7 @@ const FormulierGebruikers = () => {
         />
 
         
-        </div>
+
         </div>
         <div>
           <ButtonClearInput/>

@@ -9,9 +9,9 @@ import HomeButton from '../Buttons/HomeButton';
 import VoertuigenButton from '../Buttons/ButtonsNavigation/VoertuigenButton';
 import TankkaartenButton from '../Buttons/ButtonsNavigation/TankkaartenButton';
 import BestuurdersButton from '../Buttons/ButtonsNavigation/BestuurdersButton';
+import ButtonGebruikers from '../Buttons/ButtonsNavigation/ButtonUsers';
 import ButtonRelation from '../Buttons/ButtonsNavigation/ButtonRelations';
 import FormulierenRelaties from '../Formulieren/FormulierRelaties';
-import ButtonUsers from '../Buttons/ButtonsUsers/ButtonUsers';
 
 
 const NieuwSchermRelaties = () => {
@@ -34,7 +34,6 @@ const NieuwSchermRelaties = () => {
           <BrightnessButton/>
           <HomeButton/>
           <LogoutButton/>
-
         </div>
           <div className='thirdScreenContainer'>
             <div className='buttonsThirdScreen'>
@@ -42,8 +41,8 @@ const NieuwSchermRelaties = () => {
             <TankkaartenButton/>
             <VoertuigenButton/>
             <ButtonRelation/>
-            <ButtonUsers/>
-           </div>
+            <ButtonGebruikers/>           
+          </div>
           <FormulierenRelaties searchTerm={searchTerm}/>
           </div>
         </div>
