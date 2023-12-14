@@ -22,6 +22,11 @@ const handleTankkaarten = () => {
 const handleRelaties = () => {
   window.location.href = `/NieuwSchermRelaties/${voornaam}`;
 };
+
+const handleUsers = () => {
+  window.location.href = `/NieuwSchermUsers/${voornaam}`;
+};
+
   const voornaam = window.location.pathname.split('/').pop();
 
   return (
@@ -43,6 +48,9 @@ const handleRelaties = () => {
         </button>
         <button className='button' onClick={handleRelaties}>
           Relations
+        </button>
+        <button className='button' onClick={handleUsers}>
+          Users
         </button>
       </div>
     </div>
