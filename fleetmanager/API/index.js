@@ -104,20 +104,20 @@ Email, Password */
 export const createToken = async (post) => {
   return await axios.post("http://localhost:5043/Authentication/CreateToken", post);
 }
-export const getUsers = async () => {
-  return await axios.get("http://localhost:5043/Authentication/AllUsers");
-}
-export const getUsersById = async (id) => {
-  return await axios.get(`http://localhost:5043/Authentication/UserById/${id}`);
-}
-export const deleteUsers = async (id) => {
-  return await axios.delete(`http://localhost:5043/Authentication/User/${id}`);
-}
-export const updateUsers = async (id, put) => {
-  return await axios.patch(`http://localhost:5043/Authentication/User/${id}`, put);
-}
-/* de todo parameter is een object met de properties:
-Name, FirstName, Email, Password, Role*/
-export const postUsers = async (post) => {
-  return await axios.post("http://localhost:5043/Authentication/User", post);
-}
+// export const getUsers = async () => {
+//   return await axios.get("http://localhost:5043/Authentication/AllUsers");
+// }
+// export const getUsersById = async (id) => {
+//   return await axios.get(`http://localhost:5043/Authentication/UserById/${id}`);
+// }
+// export const deleteUsers = async (id) => {
+//   return await axios.delete(`http://localhost:5043/Authentication/User/${id}`);
+// }
+// export const updateUsers = async (id, put) => {
+//   return await axios.patch(`http://localhost:5043/Authentication/User/${id}`, put);
+// }
+// /* de todo parameter is een object met de properties:
+// Name, FirstName, Email, Password, Role*/
+// export const postUsers = async (post) => {
+//   return await axios.post("http://localhost:5043/Authentication/User", post);
+// }
