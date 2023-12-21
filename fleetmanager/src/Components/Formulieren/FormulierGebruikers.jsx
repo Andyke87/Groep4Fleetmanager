@@ -77,7 +77,7 @@ const FormulierGebruikers = () => {
           <tbody>
             {users.map(user => (
             <tr key={user.id}  onClick={() => handleRowClick(user)}>
-              <td>{user.id}</td>
+              <td>{user.id}</td>  
               <td>{user.name}</td>
               <td>{user.firstName}</td>
               <td>{user.email}</td>

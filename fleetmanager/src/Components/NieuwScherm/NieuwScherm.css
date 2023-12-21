@@ -153,5 +153,7 @@ td{
     text-align: center;
     overflow: hidden; 
 }
-
+.searchfield{
+    min-height: 35px;
+}
 
