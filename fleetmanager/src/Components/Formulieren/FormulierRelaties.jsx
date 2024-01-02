@@ -8,17 +8,18 @@ import ButtonUpdateRelation from '../Buttons/ButtonsRelations/ButtonUpdateRelati
 import ButtonDeleteRelation from '../Buttons/ButtonsRelations/ButtonDeleteRelation';
 import ButtonClearInput from '../Buttons/ButtonClearInput';
 import { getConnections, getDrivers, getGasCards, getVehicles } from '../../../API/index';
+import Select from 'react-select';
 
-const FormulierenRelaties = ({searchTerm}) => {
+const FormulierenRelaties = ({ searchTerm }) => {
   const [selectedRow, setSelectedRow] = useState(null);
   const [connections, setConnections] = useState([]);
   const [drivers, setDrivers] = useState([]);
   const [gasCards, setGasCards] = useState([]);
   const [vehicles, setVehicles] = useState([]);
   const [Id, setId] = useState('');
-  const [IdDriver, setIdDriver] = useState('');
-  const [IdGasCard, setIdGasCard] = useState('');
-  const [IdVehicle, setIdVehicle] = useState('');
+  const [selectedDriver, setSelectedDriver] = useState(null);
+  const [selectedGasCard, setSelectedGasCard] = useState(null);
+  const [selectedVehicle, setSelectedVehicle] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,15 +28,15 @@ const FormulierenRelaties = ({searchTerm}) => {
         const sortedConnections = response.data.sort((a, b) => a.id - b.id);
         setConnections(sortedConnections);
 
-        const responseDrivers = await getDrivers(IdDriver);
+        const responseDrivers = await getDrivers();
         const sortedDrivers = responseDrivers.data.sort((a, b) => a.id - b.id);
         setDrivers(sortedDrivers);
 
-        const responseGasCards = await getGasCards(IdGasCard);
+        const responseGasCards = await getGasCards();
         const sortedGasCards = responseGasCards.data.sort((a, b) => a.id - b.id);
         setGasCards(sortedGasCards);
 
-        const responseVehicles = await getVehicles(IdVehicle);
+        const responseVehicles = await getVehicles();
         const sortedVehicles = responseVehicles.data.sort((a, b) => a.id - b.id);
         setVehicles(sortedVehicles);
       } catch (error) {
@@ -50,27 +51,29 @@ const FormulierenRelaties = ({searchTerm}) => {
     const { name, value } = event.target;
     switch (name) {
       case 'Id': setId(value); break;
-      case 'IdDriver': setIdDriver(value); break;
-      case 'IdGasCard': setIdGasCard(value); break;
-      case 'IdVehicle': setIdVehicle(value); break;
-      default:
-        break;
+      default: break;
     }
   };
 
   const handleSubmit = (event) => {
-    // Voeg hier eventueel logica toe om met het formulier te werken
     event.preventDefault();
-    console.log('Formulier ingediend:', { Id, IdDriver, IdGasCard, IdVehicle });
+    console.log('Formulier ingediend:', { Id, selectedDriver, selectedGasCard, selectedVehicle });
   };
 
   const handleRowClick = (selectedRow) => {
-    setSelectedRow(selectedRow);
-    setId(selectedRow.id);
-    setIdDriver(selectedRow.idDriver);
-    setIdGasCard(selectedRow.idGasCard);
-    setIdVehicle(selectedRow.idVehicle);
-  };
+  setSelectedRow(selectedRow);
+  setId(selectedRow.id);
+
+  const driver = drivers.find((driver) => driver.idDriver === selectedRow.idDriver);
+  setSelectedDriver({ value: selectedRow.idDriver, label: driver ? `(${driver.idDriver}) - ${driver.firstName} ${driver.inserts} ${driver.name}` : 'N/A' });
+
+  const gasCard = gasCards.find((gasCard) => gasCard.idGasCard === selectedRow.idGasCard);
+  setSelectedGasCard({ value: selectedRow.idGasCard, label: gasCard ? `(${gasCard.idGasCard}) - ${gasCard.cardNumber}` : 'N/A' });
+
+  const vehicle = vehicles.find((vehicle) => vehicle.idVehicle === selectedRow.idVehicle);
+  setSelectedVehicle({ value: selectedRow.idVehicle, label: vehicle ? `(${vehicle.idVehicle}) - ${vehicle.licensePlate}` : 'N/A' });
+};
+
 
   const formatDate = (dateString) => {
     const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
@@ -80,11 +83,31 @@ const FormulierenRelaties = ({searchTerm}) => {
   const filteredConnections = connections.filter((connection) => {
     if (searchTerm === '') {
       return connection;
-    } else if (drivers.find ((driver) => driver.idDriver === connection.idDriver)?.firstName.toLowerCase().includes(searchTerm.toLowerCase())){
+    } else if (
+      drivers.find((driver) => driver.idDriver === connection.idDriver)?.firstName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      gasCards.find((gasCard) => gasCard.idGasCard === connection.idGasCard)?.cardNumber.includes(searchTerm) ||
+      vehicles.find((vehicle) => vehicle.idVehicle === connection.idVehicle)?.licensePlate.includes(searchTerm)
+    ) {
       return connection;
     }
     return null;
   });
+
+  const driverOptions = drivers.map((driver) => ({
+    value: driver.idDriver,
+    label: `(${driver.idDriver}) - ${driver.firstName} ${driver.inserts} ${driver.name}`,
+  }));
+
+  const gasCardOptions = gasCards.map((gasCard) => ({
+    value: gasCard.idGasCard,
+    label: `(${gasCard.idGasCard}) - ${gasCard.cardNumber}`,
+  }));
+
+  const vehicleOptions = vehicles.map((vehicle) => ({
+    value: vehicle.idVehicle,
+    label: `(${vehicle.idVehicle}) - ${vehicle.licensePlate}`,
+  }));
+
   return (
     <form onSubmit={handleSubmit}>
       <div className="table-container">
@@ -109,8 +132,7 @@ const FormulierenRelaties = ({searchTerm}) => {
                     drivers.find((driver) => driver.idDriver === connection.idDriver)?.inserts +
                     ' ' +
                     drivers.find((driver) => driver.idDriver === connection.idDriver)?.name +
-                    ` (id: ${drivers.find((driver) => driver.idDriver === connection.idDriver)?.idDriver})` 
-                    ||
+                    ` (id: ${drivers.find((driver) => driver.idDriver === connection.idDriver)?.idDriver})` ||
                     'N/A'}
                 </td>
 
@@ -152,61 +174,59 @@ const FormulierenRelaties = ({searchTerm}) => {
 
         <div className="col">
           <label htmlFor="IdDriver">Driver Id</label>
-          <input
-            className="input"
-            placeholder='Only driver id allowed'
-            type="text"
+          <Select
+            className="fieldConnections"
             name="IdDriver"
-            value={IdDriver}
-            onChange={handleChange}
+            value={selectedDriver}
+            options={driverOptions}
+            onChange={(selectedOption) => setSelectedDriver(selectedOption)}
           />
         </div>
 
         <div className="col">
           <label htmlFor="IdGasCard">Gas Card Id</label>
-          <input
-            className="input"
-            placeholder='Only gas card id allowed'
-            type="text"
+          <Select
+            className="fieldConnections"
             name="IdGasCard"
-            value={IdGasCard}
-            onChange={handleChange}
+            value={selectedGasCard}
+            options={gasCardOptions}
+            onChange={(selectedOption) => setSelectedGasCard(selectedOption)}
           />
         </div>
 
         <div className="col">
           <label htmlFor="IdVehicle">Vehicle Id</label>
-          <input
-            className="input"
-            placeholder='Only vehicle id allowed'
-            type="text"
+          <Select
+            className="fieldConnections"
             name="IdVehicle"
-            value={IdVehicle}
-            onChange={handleChange}
+            value={selectedVehicle}
+            options={vehicleOptions}
+            onChange={(selectedOption) => setSelectedVehicle(selectedOption)}
           />
         </div>
       </div>
+
       <div className='containerButtonsNew'>
         <ButtonNewRelation
-        IdDriver = {IdDriver}
-        IdGasCard = {IdGasCard}
-        IdVehicle = {IdVehicle}
+          IdDriver={selectedDriver ? selectedDriver.value : ''}
+          IdGasCard={selectedGasCard ? selectedGasCard.value : ''}
+          IdVehicle={selectedVehicle ? selectedVehicle.value : ''}
         />
         <ButtonUpdateRelation
           Id={Id}
-          IdDriver={IdDriver}
-          IdGasCard={IdGasCard}
-          IdVehicle={IdVehicle}
+          IdDriver={selectedDriver ? selectedDriver.value : ''}
+          IdGasCard={selectedGasCard ? selectedGasCard.value : ''}
+          IdVehicle={selectedVehicle ? selectedVehicle.value : ''}
         />
         <ButtonDeleteRelation
           Id={Id}
         />
       </div>
       <div>
-        <ButtonClearInput/>
+        <ButtonClearInput />
       </div>
     </form>
   );
-}
+};
 
 export default FormulierenRelaties;

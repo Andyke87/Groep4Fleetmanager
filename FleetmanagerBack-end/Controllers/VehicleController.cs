@@ -158,14 +158,14 @@ public class VehicleController : ControllerBase
             if (vehicle != null)
             {// ?? staat voor null-coalescing operator en betekent: 
             // als de waarde links van de operator null is, geef dan de waarde rechts van de operator terug
-                vehicle.Brand = _vehicleDTO.Brand ?? vehicle.Brand; 
+                vehicle.Brand = _vehicleDTO.Brand; 
                 vehicle.Model = _vehicleDTO.Model ?? vehicle.Model;
                 vehicle.ChassisNumber = _vehicleDTO.ChassisNumber ?? vehicle.ChassisNumber;
                 vehicle.LicensePlate = _vehicleDTO.LicensePlate ?? vehicle.LicensePlate;
                 vehicle.Fuel = _vehicleDTO.Fuel ?? vehicle.Fuel;
                 vehicle.VehicleType = _vehicleDTO.VehicleType ?? vehicle.VehicleType;
                 vehicle.Color = _vehicleDTO.Color ?? vehicle.Color;
-                vehicle.NumberOfDoors = _vehicleDTO.NumberOfDoors ?? vehicle.NumberOfDoors;
+                vehicle.NumberOfDoors = _vehicleDTO.NumberOfDoors;
 
                 await _dbContext.SaveChangesAsync();
                 _logger?.LogInformation("Vehicle with id {id} is updated", id);

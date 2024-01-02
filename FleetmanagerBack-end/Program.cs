@@ -1,55 +1,36 @@
 using System.Text;
-using System.Threading.RateLimiting;
-using FleetManager.Models;
-using FleetManager.Profiles;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.EntityFrameworkCore;
+using FleetManager.Models;
+using FleetManager.Profiles;
+using Microsoft.AspNetCore.Authorization;
+using System.Threading.RateLimiting;
+using Microsoft.Data.SqlClient;
+using Microsoft.AspNetCore.Server.Kestrel.Https;
+using System.Security.Cryptography.X509Certificates;
+using Microsoft.AspNetCore.HttpOverrides;
 
 namespace Back_end
 {
-    public class NewAuthOperationFilter : IOperationFilter
-    {
-        public void Apply(OpenApiOperation operation, OperationFilterContext context)
-        {
 
-            var authAttributes = context.MethodInfo
-              .GetCustomAttributes(true)
-              .OfType<AuthorizeAttribute>()
-              .Distinct();
 
-            if (authAttributes.Any())
-            {
-
-                operation.Responses.TryAdd("401", new OpenApiResponse { Description = "Unauthorized" });
-                operation.Responses.TryAdd("403", new OpenApiResponse { Description = "Forbidden" });
-
-                var jwtbearerScheme = new OpenApiSecurityScheme
-                {
-                    Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "bearerAuth" }
-                };
-
-                operation.Security = new List<OpenApiSecurityRequirement>
-                {
-                    new OpenApiSecurityRequirement
-                    {
-                        [ jwtbearerScheme ] = new string [] { }
-                    }
-                };
-            }
-        }
-    }
     public class Program
     {
         public static void Main(string[] args)
         {
-            var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
-
             var builder = WebApplication.CreateBuilder(args);
 
+            // Voeg SqlConnection toe aan de DI-container
+            builder.Services.AddScoped<SqlConnection>(provider =>
+            {
+                return new SqlConnection(builder.Configuration.GetConnectionString("Default"));
+            });
+
+            // Voeg RateLimiter toe aan de DI-container
             builder.Services.AddRateLimiter(options =>
             {
                 options.GlobalLimiter = PartitionedRateLimiter.Create<HttpContext, string>(httpContext =>
@@ -64,27 +45,32 @@ namespace Back_end
                         }));
             });
 
-            // Voor REACT client toegevoegd: Cors = Cross Origin Resource Sharing
+            var httpsConnectionAdapterOptions = new HttpsConnectionAdapterOptions
             {
-                Console.WriteLine("Cors active");
-                // Adding CORS Policy // Cors = Cross Origin Resource Sharing voor React client
-                builder.Services.AddCors(options =>
-                {
-                    options.AddPolicy("AllowedHosts", builder =>
-                    {
-                        builder.AllowAnyOrigin()
-                            .AllowAnyHeader() // .WithHeaders("accept", "content-type", "origin", "x-custom-header")
-                            .AllowAnyMethod() // .WithMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                            .SetPreflightMaxAge(TimeSpan.FromSeconds(3600));
-                    });
-                });
-            }
+                SslProtocols = System.Security.Authentication.SslProtocols.Tls12,
+                ClientCertificateMode = ClientCertificateMode.AllowCertificate,
+                ServerCertificate = new X509Certificate2("./certificate.pfx", "password")
 
-            // For JWT:
-            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme) // default scheme
-                .AddJwtBearer(
-                authenticationScheme: JwtBearerDefaults.AuthenticationScheme, // Bearer
-                configureOptions: options =>
+            };
+            builder.WebHost.ConfigureKestrel(kestrelOptions =>
+                kestrelOptions.ConfigureEndpointDefaults(listenOptions =>
+            listenOptions.UseHttps(httpsConnectionAdapterOptions)));
+
+            // CORS-configuratie voor React-client
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowedHosts", builder =>
+                {
+                    builder.AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .SetPreflightMaxAge(TimeSpan.FromSeconds(3600));
+                });
+            });
+
+            // JWT-configuratie
+            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
                 {
                     options.IncludeErrorDetails = true;
                     options.TokenValidationParameters = new TokenValidationParameters
@@ -100,41 +86,51 @@ namespace Back_end
                     };
                 });
 
+            // Voeg autorisatie toe aan de DI-container
             builder.Services.AddAuthorization();
 
+            // Voeg de controllers toe aan de DI-container
             builder.Services.AddControllers();
-
             builder.Services.AddSingleton<IApplicationBuilder, ApplicationBuilder>();
 
+            // Voeg DatabaseContext toe aan de DI-container
             builder.Services.AddDbContext<FleetManagerContext>(options =>
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("Default"))
-                .EnableSensitiveDataLogging()
-                .LogTo(Console.WriteLine, LogLevel.Information);
+                    .EnableSensitiveDataLogging()
+                    .LogTo(Console.WriteLine, LogLevel.Information);
             });
-            
+
+            // Registreer SqlServerHealthCheck en voeg het toe aan de HealthChecks
+            builder.Services.AddHealthChecks().AddCheck<SqlServerHealthCheck>("sql");
+
             builder.Services.AddAutoMapper(typeof(MappingConfig));
 
-            builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(c =>
-                   {
-                       c.SwaggerDoc("v1", new OpenApiInfo { Title = "TheTestService", Version = "v1" });
-                       c.AddSecurityDefinition("bearerAuth", new OpenApiSecurityScheme
-                       {
-                           Name = "Authorization",
-                           Type = SecuritySchemeType.Http,
-                           Scheme = "bearer",
-                           BearerFormat = "JWT",
-                           In = ParameterLocation.Header,
-                           Description = "JWT Authorization header using the Bearer scheme.",
-                       });
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "TheTestService", Version = "v1" });
+                c.AddSecurityDefinition("bearerAuth", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "bearer",
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Description = "JWT Authorization header using the Bearer scheme.",
+                });
 
-                       //////Add Operation Specific Authorization///////
-                       c.OperationFilter<AuthOperationFilter>();
-                       ////////////////////////////////////////////////
-                   });
+                c.OperationFilter<AuthOperationFilter>();
+            });
 
             var app = builder.Build();
+
+            app.UseHttpsRedirection();
+
+            // Voer de HealthCheck-resultaten uit
+            var timer = new Timer(state =>
+            {
+                LogHealthCheckResults(app);
+            }, null, TimeSpan.Zero, TimeSpan.FromSeconds(5));
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -143,8 +139,9 @@ namespace Back_end
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+            
+            app.UseHttpsRedirection();
 
-           // app.UseHttpsRedirection();
             app.UseRouting();
 
             app.UseCors(builder =>
@@ -154,14 +151,84 @@ namespace Back_end
                        .AllowAnyMethod();
             });
 
-            app.UseAuthentication(); // For JWT
-            app.UseAuthorization(); // For JWT
+            app.UseAuthentication();
+            app.UseAuthorization();
 
-            app.UseRateLimiter();
+            app.UseForwardedHeaders(new ForwardedHeadersOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+            });
 
             app.MapControllers();
 
             app.Run();
+        }
+        public class NewAuthOperationFilter : IOperationFilter
+        {
+            public void Apply(OpenApiOperation operation, OperationFilterContext context)
+            {
+                var authAttributes = context.MethodInfo
+                  .GetCustomAttributes(true)
+                  .OfType<AuthorizeAttribute>()
+                  .Distinct();
+
+                if (authAttributes.Any())
+                {
+                    operation.Responses.TryAdd("401", new OpenApiResponse { Description = "Unauthorized" });
+                    operation.Responses.TryAdd("403", new OpenApiResponse { Description = "Forbidden" });
+
+                    var jwtbearerScheme = new OpenApiSecurityScheme
+                    {
+                        Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "bearerAuth" }
+                    };
+
+                    operation.Security = new List<OpenApiSecurityRequirement>
+                {
+                    new OpenApiSecurityRequirement
+                    {
+                        [ jwtbearerScheme ] = new string [] { }
+                    }
+                };
+                }
+            }
+        }
+
+        public class SqlServerHealthCheck : IHealthCheck
+        {
+            private readonly SqlConnection _connection;
+
+            public string Name => "sql";
+
+            public SqlServerHealthCheck(SqlConnection connection)
+            {
+                _connection = connection;
+            }
+
+            public async Task<HealthCheckResult> CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken = default)
+            {
+                try
+                {
+                    await _connection.OpenAsync(cancellationToken);
+                }
+                catch (SqlException)
+                {
+                    return HealthCheckResult.Unhealthy();
+                }
+
+                return HealthCheckResult.Healthy();
+            }
+        }
+
+        private static void LogHealthCheckResults(IHost app)
+        {
+            // Voer de HealthCheck uit en log de resultaten
+            var healthCheckService = app.Services.GetRequiredService<HealthCheckService>();
+            var results = healthCheckService.CheckHealthAsync().GetAwaiter().GetResult();
+
+            foreach (var result in results.Entries)
+            {
+                app.Services.GetRequiredService<ILogger<Program>>().LogInformation($"{result.Key}: DB is {result.Value.Status}");
+            }
         }
     }
 }
