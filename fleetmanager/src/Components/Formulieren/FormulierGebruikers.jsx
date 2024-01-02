@@ -1,4 +1,6 @@
 /* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+
 import React, { useState, useEffect } from 'react';
 import '../Formulieren/Formulieren.css';
 import ButtonClearInput from '../Buttons/ButtonClearInput';
@@ -7,7 +9,7 @@ import ButtonAddUser from '../Buttons/ButtonsUsers/ButtonAddUser';
 import ButtonUpdateUser from '../Buttons/ButtonsUsers/ButtonUpdateUser';
 import ButtonDeleteUser from '../Buttons/ButtonsUsers/ButtonDeleteUser';
 
-const FormulierGebruikers = () => {
+const FormulierGebruikers = ({searchTerm}) => {
 
   const [id, setIdUser] = useState('');
   const [name, setName] = useState('');
@@ -60,6 +62,17 @@ const FormulierGebruikers = () => {
     setRole(selectedRow.role);
   };
 
+  const filteredUsers = users.filter((user) => {
+    console.log('searchterm', searchTerm);
+    if (searchTerm === '') {
+      return user;
+    }
+    if (user.firstName.toLowerCase().includes(searchTerm.toLowerCase())) {
+      return user;
+    }
+    return null;
+  });
+
   return (
     <form onSubmit={handleSubmit}>
       <div className="table-container">
@@ -75,7 +88,7 @@ const FormulierGebruikers = () => {
               </tr>
           </thead>
           <tbody>
-            {users.map(user => (
+            {filteredUsers.map(user => (
             <tr key={user.id}  onClick={() => handleRowClick(user)}>
               <td>{user.id}</td>
               <td>{user.name}</td>

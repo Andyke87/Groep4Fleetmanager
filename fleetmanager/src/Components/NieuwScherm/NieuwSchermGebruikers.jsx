@@ -15,6 +15,8 @@ import ButtonGebruikers from '../Buttons/ButtonsNavigation/ButtonUsers';
 
 const NieuwSchermGebruikers = () => {
   const [searchTerm, setSearchTerm] = useState("");
+
+
   const handleInputChange = (event) => {
     const { target: { value } } = event;
     setSearchTerm(value);
@@ -27,7 +29,7 @@ const NieuwSchermGebruikers = () => {
             className='searchfield'
             placeholder='Search on first name'
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            onChange={handleInputChange}
           />         
           <BrightnessButton/>
           <HomeButton/>
@@ -41,7 +43,7 @@ const NieuwSchermGebruikers = () => {
             <ButtonRelaties/>
             <ButtonGebruikers/>
            </div>
-          <FormulierGebruikers/>
+          <FormulierGebruikers searchTerm={searchTerm}/>
           </div>
         </div>
       )
