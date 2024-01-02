@@ -6,7 +6,7 @@ import { useMutation } from "@tanstack/react-query";
 import { postUsers } from '../../../../API/index';
 
 
-const ButtonAddUser = ({Id, Name, FirstName, Email, Password, Role }) => {
+const ButtonAddUser = ({/*Id,*/ Name, FirstName, Email, Password, Role }) => {
 
   const mutation = useMutation({
     mutationKey: ["createTodo"],
@@ -33,24 +33,24 @@ const ButtonAddUser = ({Id, Name, FirstName, Email, Password, Role }) => {
     const confirmSave = window.confirm('Are you sure you want to create this user?');
 
     if (confirmSave) {
-      if (!Id || !Name || !FirstName || !Email || !Password || !Role) {
+      if (/*!Id || */ !Name || !FirstName || !Email || !Password || !Role) {
         throw new Error("One or more fields are empty or contain invalid values");
       }
       
       const payload = {
-        idUser: Id,
+        //id: Id,
         name: Name,
         firstName: FirstName,
         email: Email,
         password: Password,
         role: Role,
       };
-
+      console.log("payload:", payload);
 
       try {
         const response = await mutation.mutateAsync(payload);
       console.log("payload:", payload);
-        if (response.status === 200) {
+        if (response.status === 201) {
         showSuccessMessage();
         refreshPage();
       }

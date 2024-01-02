@@ -5,12 +5,12 @@ import React from 'react';
 import { useMutation } from '@tanstack/react-query';
 import { updateUsers } from '../../../../API/index';
 
-const ButtonUpdateUser = ({IdUser, Name, FirstName, Email, Password, Role}) => {
+const ButtonUpdateUser = ({Id, Name, FirstName, Email, Password, Role}) => {
 
   const mutation = useMutation({
     mutationKey: ["updateUser"],
     mutationFn: async (payload) => {
-      return await updateUsers(IdUser, payload);
+      return await updateUsers(Id, payload);
     },
     onSuccess: (data) => {
       console.log("Succesvolle update", data);
@@ -26,7 +26,7 @@ const ButtonUpdateUser = ({IdUser, Name, FirstName, Email, Password, Role}) => {
 
     if (confirmUpdate) {
         const setPayload = {
-            idUser: IdUser,
+            id: Id,
             name: Name,
             firstName: FirstName,
             email: Email,

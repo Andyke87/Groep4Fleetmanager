@@ -27,6 +27,7 @@ const ButtonDeleteUser = ({Id}) => {
     if (confirmDelete) {
       try {
         await mutation.mutateAsync(Id);
+        console.log(Id);
       } catch (error) {
         console.error('Error during mutation:', error);
       }

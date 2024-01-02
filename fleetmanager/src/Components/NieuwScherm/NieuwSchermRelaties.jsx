@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
-import React, {useState} from 'react'
-import './NieuwScherm.css'
+import React, { useState, useEffect } from 'react';
+import './NieuwScherm.css';
 import '../Welkom/Welkom.css';
 import '../Login/Login.css';
 import LogoutButton from '../Buttons/LogoutButton';
@@ -13,40 +13,53 @@ import ButtonGebruikers from '../Buttons/ButtonsNavigation/ButtonUsers';
 import ButtonRelation from '../Buttons/ButtonsNavigation/ButtonRelations';
 import FormulierenRelaties from '../Formulieren/FormulierRelaties';
 
-
 const NieuwSchermRelaties = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [rol, setRol] = useState("");
+
+  useEffect(() => {
+    // Haal de gebruikersrol op uit localStorage
+    const authenticatedUser = JSON.parse(localStorage.getItem('authenticatedUser'));
+
+    if (authenticatedUser) {
+      setRol(authenticatedUser.role);
+    } else {
+      // Redirect naar de inlogpagina als er geen ingelogde gebruiker is
+      window.location.href = '/';
+    }
+  }, []);
 
   const handleInputChange = (event) => {
     const { target: { value } } = event;
     setSearchTerm(value);
   };
+
   return (
-        <div className='containerNieuwScherm'> 
-         <div className='containerButtons'> 
-          <input 
-            type="text" 
-            className='searchfield'
-            placeholder='Search on first name'
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          <BrightnessButton/>
-          <HomeButton/>
-          <LogoutButton/>
+    <div className='containerNieuwScherm'> 
+      <div className='containerButtons'> 
+        <input 
+          type="text" 
+          className='searchfield'
+          placeholder='Search on first name'
+          value={searchTerm}
+          onChange={handleInputChange}
+        />
+        <BrightnessButton/>
+        <HomeButton/>
+        <LogoutButton/>
+      </div>
+      <div className='thirdScreenContainer'>
+        <div className='buttonsThirdScreen'>
+          <BestuurdersButton />
+          <TankkaartenButton/>
+          <VoertuigenButton/>
+          <ButtonRelation/>
+          {rol === 'Admin' && <ButtonGebruikers/>}
         </div>
-          <div className='thirdScreenContainer'>
-            <div className='buttonsThirdScreen'>
-            <BestuurdersButton />
-            <TankkaartenButton/>
-            <VoertuigenButton/>
-            <ButtonRelation/>
-            <ButtonGebruikers/>           
-          </div>
-          <FormulierenRelaties searchTerm={searchTerm}/>
-          </div>
-        </div>
-  )
+        <FormulierenRelaties searchTerm={searchTerm}/>
+      </div>
+    </div>
+  );
 }
 
-export default NieuwSchermRelaties
+export default NieuwSchermRelaties;

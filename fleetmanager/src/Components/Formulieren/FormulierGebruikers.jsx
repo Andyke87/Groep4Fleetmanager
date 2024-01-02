@@ -52,7 +52,7 @@ const FormulierGebruikers = () => {
 
 
   const handleRowClick = (selectedRow) => {
-    setIdUser(selectedRow.idUser);
+    setIdUser(selectedRow.id);
     setName(selectedRow.name);
     setFirstName(selectedRow.firstName);
     setEmail(selectedRow.email);
@@ -164,7 +164,7 @@ const FormulierGebruikers = () => {
             Role={role}
         />
         <ButtonUpdateUser
-            IdUser={id}
+            Id={id}
             Name={name}
             FirstName={firstName}
             Email={email}
@@ -172,16 +172,8 @@ const FormulierGebruikers = () => {
             Role={role}
         />
         <ButtonDeleteUser
-            IdUser={id}
-            Name={name}
-            FirstName={firstName}
-            Email={email}
-            Password={password}
-            Role={role}
+            Id={id}
         />
-
-        
-
         </div>
         <div>
           <ButtonClearInput/>
