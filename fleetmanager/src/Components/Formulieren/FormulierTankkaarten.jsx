@@ -158,13 +158,13 @@ const FormulierTankkaarten = ({searchTerm}) => {
             value={fuel}
             onChange={handleChange}
           >
-          <option value="">Selecteer...</option>
+          <option value="">Select...</option>
           <option value="Benzine">Benzine</option>                
           <option value="CNG">CNG</option>
           <option value="Diesel">Diesel</option>
           <option value="Elektrisch">Elektrisch</option>
           <option value="LPG">LPG</option>
-          <option value="Anders">Anders</option>
+          <option value="Anders">Other</option>
           </select>
         </div>
         <div className="col">
@@ -176,7 +176,7 @@ const FormulierTankkaarten = ({searchTerm}) => {
             value={blockedCard}
             onChange={handleChange}
           >
-          <option value="">Selecteer...</option>
+          <option value="">Select...</option>
           <option value="True">True</option>
           <option value="False">False</option>
           </select>
