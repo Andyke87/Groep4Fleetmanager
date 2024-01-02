@@ -10,7 +10,7 @@ namespace Back_end.Controllers;
 [Route("[controller]")]
 public class ConnectionController : ControllerBase
 {
-    private readonly FleetManagerContext _dbContext;
+    private readonly FleetManagerContext _dbContext; // Context voor de database connectie (zie Models/FleetManagerContext.cs)
     private readonly ILogger<ConnectionController>? _logger;
     private readonly IMapper _mapper;
 

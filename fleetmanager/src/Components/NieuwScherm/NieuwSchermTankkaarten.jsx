@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
-import React, {useState} from 'react'
-import './NieuwScherm.css'
+import React, { useState, useEffect } from 'react';
+import './NieuwScherm.css';
 import '../Welkom/Welkom.css';
 import '../Login/Login.css';
 import LogoutButton from '../Buttons/LogoutButton';
@@ -15,11 +15,25 @@ import ButtonRelaties from '../Buttons/ButtonsNavigation/ButtonRelations';
 
 export const NieuwSchermTankkaarten = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  
+  const [rol, setRol] = useState("");
+
+  useEffect(() => {
+    // Haal de gebruikersrol op uit localStorage
+    const authenticatedUser = JSON.parse(localStorage.getItem('authenticatedUser'));
+
+    if (authenticatedUser) {
+      setRol(authenticatedUser.role);
+    } else {
+      // Redirect naar de inlogpagina als er geen ingelogde gebruiker is
+      window.location.href = '/';
+    }
+  }, []);
+
   const handleInputChange = (event) => {
     const { target: { value } } = event;
     setSearchTerm(value);
   };
+
   return (
     <div className='containerNieuwScherm'> 
       <div className='containerButtons'>
@@ -40,11 +54,12 @@ export const NieuwSchermTankkaarten = () => {
           <TankkaartenButton/>
           <VoertuigenButton/>
           <ButtonRelaties/>
-          <ButtonGebruikers/>
+          {rol === 'Admin' && <ButtonGebruikers/>}
         </div>
         <FormulierTankkaarten searchTerm={searchTerm}/>
       </div>
     </div>
-  )
+  );
 }
+
   

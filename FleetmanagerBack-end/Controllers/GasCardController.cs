@@ -25,7 +25,6 @@ public class GasCardController : ControllerBase
     [Produces("application/json")]
     [SwaggerResponse(StatusCodes.Status200OK, "The list of all gas cards", typeof(IEnumerable<GasCard>))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
-    [SwaggerResponse(StatusCodes.Status409Conflict, "Conflict in data")]
     [SwaggerResponse(StatusCodes.Status500InternalServerError, "Internal server error")]
     [SwaggerResponse(StatusCodes.Status503ServiceUnavailable, "Service unavailable")]
     public async Task<IActionResult> Get()
@@ -61,7 +60,6 @@ public class GasCardController : ControllerBase
     [Produces("application/json")]
     [SwaggerResponse(StatusCodes.Status200OK, "The gas card with the specified id", typeof(GasCard))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
-    [SwaggerResponse(StatusCodes.Status409Conflict, "Conflict in data")]
     [SwaggerResponse(StatusCodes.Status500InternalServerError, "Internal server error")]
     [SwaggerResponse(StatusCodes.Status503ServiceUnavailable, "Service unavailable")]
     public async Task<IActionResult> GetByCode(int id)
@@ -99,11 +97,11 @@ public class GasCardController : ControllerBase
             }
         }
     }
+
     [HttpDelete("GasCard/{id}")]
     [Produces("application/json")]
     [SwaggerResponse(StatusCodes.Status200OK, "The gas card has been removed", typeof(bool))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
-    [SwaggerResponse(StatusCodes.Status409Conflict, "Conflict in data")]
     [SwaggerResponse(StatusCodes.Status500InternalServerError, "Internal server error")]
     [SwaggerResponse(StatusCodes.Status503ServiceUnavailable, "Service unavailable")]
     public async Task<IActionResult> Remove(int id)
@@ -146,8 +144,6 @@ public class GasCardController : ControllerBase
     [Consumes("application/json")]
     [SwaggerResponse(StatusCodes.Status200OK, "The gas card has been updated", typeof(bool))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
-    [SwaggerResponse(StatusCodes.Status404NotFound, "Gas card not found")]
-    [SwaggerResponse(StatusCodes.Status409Conflict, "Conflict in data")]
     [SwaggerResponse(StatusCodes.Status500InternalServerError, "Internal server error")]
     [SwaggerResponse(StatusCodes.Status503ServiceUnavailable, "Service unavailable")]
     public async Task<IActionResult> Update(int id, [FromBody] GasCardDTO _gasCardDTO)
@@ -192,7 +188,6 @@ public class GasCardController : ControllerBase
     [Consumes("application/json")]
     [SwaggerResponse(StatusCodes.Status201Created, "The gas card has been created", typeof(bool))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
-    [SwaggerResponse(StatusCodes.Status409Conflict, "Conflict in data")]
     [SwaggerResponse(StatusCodes.Status500InternalServerError, "Internal server error")]
     [SwaggerResponse(StatusCodes.Status503ServiceUnavailable, "Service unavailable")]
     public async Task<IActionResult> Create([FromBody] GasCardDTO _gasCardDTO)
@@ -231,5 +226,4 @@ public class GasCardController : ControllerBase
             }
         }
     }
-
 }

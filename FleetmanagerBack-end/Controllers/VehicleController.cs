@@ -60,7 +60,6 @@ public class VehicleController : ControllerBase
     [Produces("application/json")]
     [SwaggerResponse(StatusCodes.Status200OK, "The vehicle with the given id", typeof(Vehicle))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
-    [SwaggerResponse(StatusCodes.Status404NotFound, "Vehicle not found")]
     [SwaggerResponse(StatusCodes.Status500InternalServerError, "Internal server error")]
     [SwaggerResponse(StatusCodes.Status503ServiceUnavailable, "Service unavailable")]
     public async Task<IActionResult> GetByCode(int id)
@@ -103,7 +102,6 @@ public class VehicleController : ControllerBase
     [Produces("application/json")]
     [SwaggerResponse(StatusCodes.Status200OK, "The vehicle is removed", typeof(bool))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
-    [SwaggerResponse(StatusCodes.Status404NotFound, "Vehicle not found")]
     [SwaggerResponse(StatusCodes.Status500InternalServerError, "Internal server error")]
     [SwaggerResponse(StatusCodes.Status503ServiceUnavailable, "Service unavailable")]
     public async Task<IActionResult> Remove(int id)
@@ -149,7 +147,6 @@ public class VehicleController : ControllerBase
     [Consumes("application/json")]
     [SwaggerResponse(StatusCodes.Status200OK, "The vehicle has been updated", typeof(bool))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
-    [SwaggerResponse(StatusCodes.Status404NotFound, "Vehicle not found")]
     [SwaggerResponse(StatusCodes.Status500InternalServerError, "Internal server error")]
     [SwaggerResponse(StatusCodes.Status503ServiceUnavailable, "Service unavailable")]
     public async Task<IActionResult> Update(int id, [FromBody] VehicleDTO _vehicleDTO)
@@ -202,7 +199,6 @@ public class VehicleController : ControllerBase
     [Consumes("application/json")]
     [SwaggerResponse(StatusCodes.Status201Created, "The vehicle was created", typeof(bool))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
-    [SwaggerResponse(StatusCodes.Status409Conflict, "Conflict in data")]
     [SwaggerResponse(StatusCodes.Status500InternalServerError, "Internal server error")]
     [SwaggerResponse(StatusCodes.Status503ServiceUnavailable, "Service unavailable")]
     public async Task<IActionResult> Create([FromBody] VehicleDTO _vehicleDTO)

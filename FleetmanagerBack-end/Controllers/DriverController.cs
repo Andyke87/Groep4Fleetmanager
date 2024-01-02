@@ -59,7 +59,6 @@ public class DriverController : ControllerBase
     [Produces("application/json")]
     [SwaggerResponse(StatusCodes.Status200OK, "The driver with given id", typeof(Driver))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
-    [SwaggerResponse(StatusCodes.Status404NotFound, "Driver not found")]
     [SwaggerResponse(StatusCodes.Status500InternalServerError, "Internal server error")]
     [SwaggerResponse(StatusCodes.Status503ServiceUnavailable, "Service unavailable")]
     public async Task<IActionResult> GetByCode(int id)
@@ -102,7 +101,6 @@ public class DriverController : ControllerBase
     [Produces("application/json")]
     [SwaggerResponse(StatusCodes.Status200OK, "The driver is removed", typeof(bool))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
-    [SwaggerResponse(StatusCodes.Status404NotFound, "Driver not found")]
     [SwaggerResponse(StatusCodes.Status500InternalServerError, "Internal server error")]
     [SwaggerResponse(StatusCodes.Status503ServiceUnavailable, "Service unavailable")]
     public async Task<IActionResult> Remove(int id)
@@ -148,7 +146,6 @@ public class DriverController : ControllerBase
     [Consumes("application/json")]
     [SwaggerResponse(StatusCodes.Status200OK, "The driver is updated", typeof(bool))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
-    [SwaggerResponse(StatusCodes.Status404NotFound, "Driver not found")]
     [SwaggerResponse(StatusCodes.Status500InternalServerError, "Internal server error")]
     [SwaggerResponse(StatusCodes.Status503ServiceUnavailable, "Service unavailable")]
     public async Task<IActionResult> Update(int id, [FromBody] DriverDTO _driverDTO)
@@ -193,7 +190,6 @@ public class DriverController : ControllerBase
     [Consumes("application/json")]
     [SwaggerResponse(StatusCodes.Status201Created, "The driver was created", typeof(bool))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
-    [SwaggerResponse(StatusCodes.Status404NotFound, "Driver not found")]
     [SwaggerResponse(StatusCodes.Status500InternalServerError, "Internal server error")]
     [SwaggerResponse(StatusCodes.Status503ServiceUnavailable, "Service unavailable")]
     public async Task<IActionResult> Create([FromBody] DriverDTO _driverDTO)

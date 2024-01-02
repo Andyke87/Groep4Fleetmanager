@@ -148,11 +148,14 @@ public class AuthenticationController : ControllerBase
     {
         try
         {
+            // nog aanpassen voor admin en user
+            ////////////////////////////////////////////////////////////////
             if (!User.IsInRole("Admin"))
             {
                 _logger?.LogWarning("Unauthorized access");
                 return Unauthorized();
             }
+            ////////////////////////////////////////////////////////////////
             else
             {
                 var user = await _dbContext.Authentications.FirstOrDefaultAsync(b => b.Id == id);
