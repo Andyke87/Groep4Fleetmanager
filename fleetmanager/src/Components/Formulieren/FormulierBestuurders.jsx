@@ -255,7 +255,7 @@ const FormulierBestuurders = ({searchTerm}) => {
             value={categoryLicense}
             onChange={handleChange}
           >
-            <option value=""></option>
+            <option value="">Select...</option>
             <option value="AM">AM</option>
             <option value="A1">A1</option>
             <option value="A2">A2</option>

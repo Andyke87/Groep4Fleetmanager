@@ -158,14 +158,16 @@ const FormulierGebruikers = ({searchTerm}) => {
         </div>
         <div className="col">
           <label htmlFor="role">Role</label>
-            <input
-                className="input"
-                placeholder='Max 50 characters'
-                type="text"
-                name="role"
-                value={role}
-                onChange={handleChange}
-            />
+          <select
+            className="input"
+            name="role"
+            value={role}
+            onChange={handleChange}
+          >
+            <option value="">Select...</option>
+            <option value="Admin">Admin</option>
+            <option value="User">User</option>
+          </select>
         </div>
       </div>     
       <div className='containerButtonsNieuw'>
