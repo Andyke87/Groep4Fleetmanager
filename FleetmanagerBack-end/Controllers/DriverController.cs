@@ -204,7 +204,7 @@ public class DriverController : ControllerBase
 
             var driver = _mapper.Map<Driver>(_driverDTO);
 
-            if (_dbContext.Drivers.Any(d => d.IdDriver == driver.IdDriver))
+            if (_dbContext.Drivers.Any(d => d.IdDriver == _driverDTO.IdDriver))
             {
                 _logger?.LogWarning("The driver id already exists");
                 return BadRequest("The driver id already exists");

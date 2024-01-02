@@ -60,10 +60,10 @@ public partial class FleetManagerContext : DbContext
                 .IsUnicode(false);
             entity.Property(e => e.DayOfBirth).HasColumnType("date");
             entity.Property(e => e.RegistryNumber)
-                .HasMaxLength(12)
+                .HasMaxLength(11)
                 .IsUnicode(false);
             entity.Property(e => e.CategoryLicense)
-                .HasMaxLength(10)
+                .HasMaxLength(5)
                 .IsUnicode(false);
         });
 

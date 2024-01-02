@@ -11,7 +11,7 @@ namespace FleetManager.Profiles
             CreateMap<GasCard, GasCardDTO>().ReverseMap();
             CreateMap<Vehicle, VehicleDTO>().ReverseMap();
             CreateMap<Connection, ConnectionDTO>().ReverseMap();
-            CreateMap<User, AuthenticationDTO>().ReverseMap();
+            CreateMap<User, UserDto>().ReverseMap();
         }
     }
 }

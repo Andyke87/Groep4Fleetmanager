@@ -1,7 +1,16 @@
+using System.ComponentModel.DataAnnotations;
+
 public class ConnectionDTO
 {
+    [Key]
     public int Id { get; set; }
-    public int? IdDriver { get; set; }
-    public int? IdGasCard { get; set; }
-    public int? IdVehicle { get; set; }
+
+    [Required]
+    public required int IdDriver { get; set; }
+
+    [Required]
+    public required int IdGasCard { get; set; }
+
+    [Required]
+    public required int IdVehicle { get; set; }
 }

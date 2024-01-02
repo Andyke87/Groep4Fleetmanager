@@ -34,7 +34,7 @@ public class AuthenticationController : ControllerBase
     [SwaggerResponse(StatusCodes.Status401Unauthorized, "Invalid login attempt")]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
     [SwaggerResponse(StatusCodes.Status503ServiceUnavailable, "Service unavailable")]
-    public async Task<IActionResult> CreateToken([FromBody] AuthenticationDTO user)
+    public async Task<IActionResult> CreateToken([FromBody] UserDto user)
     {
         users = await _dbContext.Authentications.ToListAsync();
         try
@@ -94,7 +94,7 @@ public class AuthenticationController : ControllerBase
     }
 
     [HttpGet("AllUsers")]
-    [SwaggerResponse(StatusCodes.Status200OK, "All users", typeof(IEnumerable<AuthenticationDTO>))]
+    [SwaggerResponse(StatusCodes.Status200OK, "All users", typeof(IEnumerable<UserDto>))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
     [SwaggerResponse(StatusCodes.Status404NotFound, "No users found")]
     [SwaggerResponse(StatusCodes.Status500InternalServerError, "Internal server error")]
@@ -112,7 +112,7 @@ public class AuthenticationController : ControllerBase
                 return NotFound("No users found");
             }
 
-            var userDTOs = _mapper.Map<IEnumerable<AuthenticationDTO>>(users);
+            var userDTOs = _mapper.Map<IEnumerable<UserDto>>(users);
             _logger?.LogInformation($"{users.Count} users where found");
             return Ok(userDTOs);
         }
@@ -139,7 +139,7 @@ public class AuthenticationController : ControllerBase
 
 
     [HttpGet("UserById/{id}")]
-    [SwaggerResponse(StatusCodes.Status200OK, "The user with given id", typeof(AuthenticationDTO))]
+    [SwaggerResponse(StatusCodes.Status200OK, "The user with given id", typeof(UserDto))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
     [SwaggerResponse(StatusCodes.Status404NotFound, "User not found")]
     [SwaggerResponse(StatusCodes.Status500InternalServerError, "Internal server error")]
@@ -167,7 +167,7 @@ public class AuthenticationController : ControllerBase
                     return NotFound("User not found");
                 }
 
-                var userDTO = _mapper.Map<AuthenticationDTO>(user);
+                var userDTO = _mapper.Map<UserDto>(user);
                 _logger?.LogInformation($"User with id {id} was found");
                 return Ok(userDTO);
             }
@@ -193,10 +193,10 @@ public class AuthenticationController : ControllerBase
     }
 
     [HttpPost("User")]
-    [SwaggerResponse(StatusCodes.Status201Created, "User created successfully", typeof(AuthenticationDTO))]
+    [SwaggerResponse(StatusCodes.Status201Created, "User created successfully", typeof(UserDto))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
     [SwaggerResponse(StatusCodes.Status503ServiceUnavailable, "Service unavailable")]
-    public async Task<IActionResult> Create([FromBody] AuthenticationDTO user)
+    public async Task<IActionResult> Create([FromBody] UserDto user)
     {
         try
         {
@@ -207,7 +207,7 @@ public class AuthenticationController : ControllerBase
             await _dbContext.Authentications.AddAsync(userEntity);
             await _dbContext.SaveChangesAsync();
 
-            var userDTO = _mapper.Map<AuthenticationDTO>(userEntity);
+            var userDTO = _mapper.Map<UserDto>(userEntity);
             _logger?.LogInformation($"User with id {user.Id} was created");
             return CreatedAtAction(nameof(GetByCode), new { id = user.Id }, userDTO);
         }
@@ -232,11 +232,11 @@ public class AuthenticationController : ControllerBase
     }
 
     [HttpPatch("User/{id}")]
-    [SwaggerResponse(StatusCodes.Status200OK, "User updated successfully", typeof(AuthenticationDTO))]
+    [SwaggerResponse(StatusCodes.Status200OK, "User updated successfully", typeof(UserDto))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
     [SwaggerResponse(StatusCodes.Status404NotFound, "User not found")]
     [SwaggerResponse(StatusCodes.Status503ServiceUnavailable, "Service unavailable")]
-    public async Task<IActionResult> Update(int id, [FromBody] AuthenticationDTO user)
+    public async Task<IActionResult> Update(int id, [FromBody] UserDto user)
     {
         try
         {
@@ -252,7 +252,7 @@ public class AuthenticationController : ControllerBase
 
             await _dbContext.SaveChangesAsync();
 
-            var userDTO = _mapper.Map<AuthenticationDTO>(userEntity);
+            var userDTO = _mapper.Map<UserDto>(userEntity);
             _logger?.LogInformation($"User with id {id} was updated");
             return Ok(userDTO);
         }
@@ -296,7 +296,7 @@ public class AuthenticationController : ControllerBase
             _dbContext.Authentications.Remove(user);
             await _dbContext.SaveChangesAsync();
 
-            var userDTO = _mapper.Map<AuthenticationDTO>(user);
+            var userDTO = _mapper.Map<UserDto>(user);
             _logger?.LogInformation($"User with id {id} was removed");
             return Ok(userDTO);
 
