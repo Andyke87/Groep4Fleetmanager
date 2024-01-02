@@ -1,1 +1,0 @@
-IF EXISTS (SELECT * FROM sys.objects WHERE name like 'TG_')

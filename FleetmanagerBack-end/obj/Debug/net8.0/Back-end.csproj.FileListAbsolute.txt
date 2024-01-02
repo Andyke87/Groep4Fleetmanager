@@ -144,3 +144,4 @@ C:\Users\andy\OneDrive - Hogeschool Gent\Bureaublad\Groep4Fleetmanager\Fleetmana
 C:\Users\andy\OneDrive - Hogeschool Gent\Bureaublad\Groep4Fleetmanager\FleetmanagerBack-end\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\andy\OneDrive - Hogeschool Gent\Bureaublad\Groep4Fleetmanager\FleetmanagerBack-end\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\andy\OneDrive - Hogeschool Gent\Bureaublad\Groep4Fleetmanager\FleetmanagerBack-end\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\andy\OneDrive - Hogeschool Gent\Bureaublad\Groep4Fleetmanager\FleetmanagerBack-end\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore.dll

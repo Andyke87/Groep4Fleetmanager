@@ -5,13 +5,11 @@ import { createContext } from 'react';
 export const ThemeContext = createContext(null);
 
 function App() {
-
-
   return (
     <ThemeContext.Provider>
-      <Login/>
+      <Login />
     </ThemeContext.Provider>
-  )
+  );
 }
 
 export default App;
