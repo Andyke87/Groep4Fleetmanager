@@ -51,7 +51,7 @@ export const NieuwSchermTankkaarten = () => {
       <div className='thirdScreenContainer'>
         <div className='buttonsThirdScreen'>
           <BestuurdersButton/>
-          <TankkaartenButton/>
+          {/*<TankkaartenButton/>*/}
           <VoertuigenButton/>
           <ButtonRelaties/>
           {rol === 'Admin' && <ButtonGebruikers/>}

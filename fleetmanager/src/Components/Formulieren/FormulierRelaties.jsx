@@ -95,17 +95,17 @@ const FormulierenRelaties = ({ searchTerm }) => {
 
   const driverOptions = drivers.map((driver) => ({
     value: driver.idDriver,
-    label: `(${driver.idDriver}) - ${driver.firstName} ${driver.inserts} ${driver.name}`,
+    label: `${driver.firstName} ${driver.inserts} ${driver.name} - (id: ${driver.idDriver})`,
   }));
 
   const gasCardOptions = gasCards.map((gasCard) => ({
     value: gasCard.idGasCard,
-    label: `(${gasCard.idGasCard}) - ${gasCard.cardNumber}`,
+    label: `${gasCard.cardNumber} - (id: ${gasCard.idGasCard})`,
   }));
 
   const vehicleOptions = vehicles.map((vehicle) => ({
     value: vehicle.idVehicle,
-    label: `(${vehicle.idVehicle}) - ${vehicle.licensePlate}`,
+    label: `${vehicle.licensePlate} - (id: ${vehicle.idVehicle})`,
   }));
 
   return (
@@ -180,6 +180,13 @@ const FormulierenRelaties = ({ searchTerm }) => {
             value={selectedDriver}
             options={driverOptions}
             onChange={(selectedOption) => setSelectedDriver(selectedOption)}
+            styles={{
+              control: (provided, state) => ({
+                ...provided,
+                backgroundColor: '#D9D9D9',
+                boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)'
+              }),
+            }}
           />
         </div>
 
@@ -191,6 +198,13 @@ const FormulierenRelaties = ({ searchTerm }) => {
             value={selectedGasCard}
             options={gasCardOptions}
             onChange={(selectedOption) => setSelectedGasCard(selectedOption)}
+            styles={{
+              control: (provided, state) => ({
+                ...provided,
+                backgroundColor: '#D9D9D9',
+                boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)'
+              }),
+            }}
           />
         </div>
 
@@ -202,6 +216,13 @@ const FormulierenRelaties = ({ searchTerm }) => {
             value={selectedVehicle}
             options={vehicleOptions}
             onChange={(selectedOption) => setSelectedVehicle(selectedOption)}
+            styles={{
+              control: (provided, state) => ({
+                ...provided,
+                backgroundColor: '#D9D9D9',
+                boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)'
+              }),
+            }}
           />
         </div>
       </div>

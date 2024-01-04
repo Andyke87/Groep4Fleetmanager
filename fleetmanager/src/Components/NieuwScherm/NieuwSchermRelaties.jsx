@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
-import './NieuwScherm.css';
+//import './NieuwScherm.css';
 import '../Welkom/Welkom.css';
 import '../Login/Login.css';
 import LogoutButton from '../Buttons/LogoutButton';
@@ -24,7 +24,6 @@ const NieuwSchermRelaties = () => {
     if (authenticatedUser) {
       setRol(authenticatedUser.role);
     } else {
-      // Redirect naar de inlogpagina als er geen ingelogde gebruiker is
       window.location.href = '/';
     }
   }, []);
@@ -53,7 +52,7 @@ const NieuwSchermRelaties = () => {
           <BestuurdersButton />
           <TankkaartenButton/>
           <VoertuigenButton/>
-          <ButtonRelation/>
+          {/*<ButtonRelation/>*/}
           {rol === 'Admin' && <ButtonGebruikers/>}
         </div>
         <FormulierenRelaties searchTerm={searchTerm}/>

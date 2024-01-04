@@ -6,7 +6,6 @@ using System.Security.Claims;
 using Swashbuckle.AspNetCore.Annotations;
 using FleetManager.Models;
 using AutoMapper;
-using Microsoft.AspNetCore.Authorization;
 
 namespace Back_end.Controllers;
 
@@ -29,49 +28,60 @@ public class AuthenticationController : ControllerBase
         _mapper = mapper;
     }
 
-    [HttpPost("CreateToken")]
-    [SwaggerResponse(StatusCodes.Status200OK, "Token created successfully", typeof(string))]
-    [SwaggerResponse(StatusCodes.Status401Unauthorized, "Invalid login attempt")]
+    [HttpPost("Login")]
+    [SwaggerResponse(StatusCodes.Status200OK, "User logged in successfully", typeof(UserDto))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
+    [SwaggerResponse(StatusCodes.Status500InternalServerError, "Internal server error")]
     [SwaggerResponse(StatusCodes.Status503ServiceUnavailable, "Service unavailable")]
-    public async Task<IActionResult> CreateToken([FromBody] UserDto user)
+    public async Task<IActionResult> Login([FromBody] UserDto user)
     {
-        users = await _dbContext.Authentications.ToListAsync();
         try
         {
-            if (users.Any(u => u.Email == user.Email && u.Password == user.Password))
+            var existingUser = await _dbContext.Authentications.FirstOrDefaultAsync(u => u.Email == user.Email);
+
+            if (existingUser != null)
             {
-                var issuer = _configuration["Jwt:Issuer"];
-                var audience = _configuration["Jwt:Audience"];
-                var privateKey = _configuration["Jwt:PrivateKey"];
-                var key = !string.IsNullOrEmpty(privateKey) ? Convert.FromBase64String(privateKey) : null;
-                _logger?.LogInformation("Aanmelding succesvol. E-mail: {Email}", user.Email);
-                var tokenDescriptor = new SecurityTokenDescriptor
+                var isPasswordValid = BCrypt.Net.BCrypt.Verify(user.Password, existingUser.Password);
+
+                _logger?.LogInformation($"User with email {user.Email} was logged in");
+                _logger?.LogInformation($"User wit password {user.Password} was logged in");
+                _logger?.LogInformation($"password in database {existingUser.Password} was logged in");
+                _logger?.LogInformation($"isPasswordValid {isPasswordValid} was logged in");
+
+
+                if (isPasswordValid)
                 {
-                    Subject = new ClaimsIdentity(new[]
+                    var issuer = _configuration["Jwt:Issuer"];
+                    var audience = _configuration["Jwt:Audience"];
+                    var privateKey = _configuration["Jwt:PrivateKey"];
+                    var key = !string.IsNullOrEmpty(privateKey) ? Convert.FromBase64String(privateKey) : null;
+
+                    var tokenDescriptor = new SecurityTokenDescriptor
                     {
-                        new Claim("Id", Guid.NewGuid().ToString()),
-                        new Claim(JwtRegisteredClaimNames.Name, user.Name),
-                        new Claim(JwtRegisteredClaimNames.Email, user.Email),
-                        new Claim(ClaimTypes.Role, user.Role),
+                        Subject = new ClaimsIdentity(new[]
+                        {
+                        new Claim("Id", existingUser.Id.ToString()),
+                        new Claim(JwtRegisteredClaimNames.Name, existingUser.Name),
+                        new Claim(JwtRegisteredClaimNames.Email, existingUser.Email),
+                        new Claim(ClaimTypes.Role, existingUser.Role),
                         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
                     }),
-                    Expires = DateTime.UtcNow.AddMinutes(5),
-                    Issuer = issuer,
-                    Audience = audience,
-                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha512Signature)
-                };
+                        Expires = DateTime.UtcNow.AddMinutes(5),
+                        Issuer = issuer,
+                        Audience = audience,
+                        SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha512Signature)
+                    };
 
-                var tokenHandler = new JwtSecurityTokenHandler();
-                var token = tokenHandler.CreateToken(tokenDescriptor);
-                var jwtToken = tokenHandler.WriteToken(token);
-                var stringToken = tokenHandler.WriteToken(token);
+                    var tokenHandler = new JwtSecurityTokenHandler();
+                    var token = tokenHandler.CreateToken(tokenDescriptor);
+                    var jwtToken = tokenHandler.WriteToken(token);
 
-                return Ok(stringToken);
+                    return Ok(jwtToken);
+                }
             }
 
-            _logger?.LogWarning("Ongeldige aanmeldpoging. E-mail: {Email}", user.Email);
-            return Unauthorized();
+            _logger?.LogWarning("Invalid login attempt. Email: {Email}", user.Email);
+            return Unauthorized("Invalid login attempt");
         }
         catch (Exception ex)
         {
@@ -92,6 +102,7 @@ public class AuthenticationController : ControllerBase
             }
         }
     }
+
 
     [HttpGet("AllUsers")]
     [SwaggerResponse(StatusCodes.Status200OK, "All users", typeof(IEnumerable<UserDto>))]
@@ -196,20 +207,32 @@ public class AuthenticationController : ControllerBase
     [SwaggerResponse(StatusCodes.Status201Created, "User created successfully", typeof(UserDto))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid request")]
     [SwaggerResponse(StatusCodes.Status503ServiceUnavailable, "Service unavailable")]
-    public async Task<IActionResult> Create([FromBody] UserDto user)
+    public async Task<IActionResult> Create([FromBody] UserDto userDto)
     {
         try
         {
-            var userEntity = _mapper.Map<User>(user);
+            // Maak een nieuwe User-entity aan
+            var userEntity = _mapper.Map<User>(userDto);
+            userEntity.Name = userDto.Name;
+            userEntity.Email = userDto.Email;
 
-            userEntity.Role = user.Role;
+            // Versleutel het wachtwoord met bcrypt
+            var saltRounds = 15;
+            var hashedPassword = BCrypt.Net.BCrypt.HashPassword(userDto.Password, saltRounds);
 
+
+            userEntity.Password = hashedPassword;
+            userEntity.Role = userDto.Role;
+
+            // Voeg de gebruiker toe aan de database
             await _dbContext.Authentications.AddAsync(userEntity);
             await _dbContext.SaveChangesAsync();
 
-            var userDTO = _mapper.Map<UserDto>(userEntity);
-            _logger?.LogInformation($"User with id {user.Id} was created");
-            return CreatedAtAction(nameof(GetByCode), new { id = user.Id }, userDTO);
+            // Map de gebruiker terug naar een DTO voor de response
+            var createdUserDto = _mapper.Map<UserDto>(userEntity);
+
+            _logger?.LogInformation($"User with id {createdUserDto.Id} was created");
+            return CreatedAtAction(nameof(GetByCode), new { id = createdUserDto.Id }, createdUserDto);
         }
         catch (Exception ex)
         {
@@ -241,20 +264,27 @@ public class AuthenticationController : ControllerBase
         try
         {
             var userEntity = await _dbContext.Authentications.FirstOrDefaultAsync(b => b.Id == id);
-
+            // het password moet nog gehashed worden
             if (userEntity == null)
             {
                 _logger?.LogWarning("User not found");
                 return NotFound("User not found");
             }
 
-            _mapper.Map(user, userEntity);
+            userEntity.Name = user.Name;
+            userEntity.FirstName = user.FirstName;
+            userEntity.Email = user.Email;
+            var saltRounds = 15;
+            var hashedPassword = BCrypt.Net.BCrypt.HashPassword(user.Password, saltRounds);
+            userEntity.Password = hashedPassword;
+            userEntity.Role = user.Role;
 
             await _dbContext.SaveChangesAsync();
 
             var userDTO = _mapper.Map<UserDto>(userEntity);
             _logger?.LogInformation($"User with id {id} was updated");
             return Ok(userDTO);
+
         }
         catch (Exception ex)
         {

@@ -50,7 +50,7 @@ const NieuwSchermBestuurders = () => {
       </div>
       <div className='thirdScreenContainer'>
         <div className='buttonsThirdScreen'>
-          <BestuurdersButton/>
+          {/*<BestuurdersButton/>*/}
           <TankkaartenButton/>
           <VoertuigenButton/>
           <ButtonRelaties/>

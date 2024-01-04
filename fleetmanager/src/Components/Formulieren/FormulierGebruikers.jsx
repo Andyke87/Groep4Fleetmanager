@@ -63,7 +63,6 @@ const FormulierGebruikers = ({searchTerm}) => {
   };
 
   const filteredUsers = users.filter((user) => {
-    console.log('searchterm', searchTerm);
     if (searchTerm === '') {
       return user;
     }
@@ -79,9 +78,9 @@ const FormulierGebruikers = ({searchTerm}) => {
         <table >
           <thead>
             <tr >
-              <th>Id</th>
-              <th>Name</th>
+              <th>User Id</th>
               <th>First Name</th>
+              <th>Name</th>              
               <th>Email</th>
               <th>Password</th>
               <th>Role</th>
@@ -91,8 +90,8 @@ const FormulierGebruikers = ({searchTerm}) => {
             {filteredUsers.map(user => (
             <tr key={user.id}  onClick={() => handleRowClick(user)}>
               <td>{user.id}</td>
-              <td>{user.name}</td>
               <td>{user.firstName}</td>
+              <td>{user.name}</td>
               <td>{user.email}</td>
               <td>{user.password}</td>
               <td>{user.role}</td>
@@ -102,24 +101,13 @@ const FormulierGebruikers = ({searchTerm}) => {
       </div>
       <div className="form-container">
         <div className="col">
-            <label htmlFor="id">Id</label>
+            <label htmlFor="id">User Id</label>
             <input
                 className="input"
                 placeholder='Only numbers'
                 type="text"
                 name="id"
                 value={id}
-                onChange={handleChange}
-            />
-        </div>
-        <div className="col">
-          <label htmlFor="name">Name</label>
-            <input
-                className="input"
-                placeholder='Max 50 characters'
-                type="text"
-                name="name"
-                value={name}
                 onChange={handleChange}
             />
         </div>
@@ -131,6 +119,17 @@ const FormulierGebruikers = ({searchTerm}) => {
                 type="text"
                 name="firstName"
                 value={firstName}
+                onChange={handleChange}
+            />
+        </div>
+        <div className="col">
+          <label htmlFor="name">Name</label>
+            <input
+                className="input"
+                placeholder='Max 50 characters'
+                type="text"
+                name="name"
+                value={name}
                 onChange={handleChange}
             />
         </div>
