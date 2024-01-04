@@ -4,11 +4,9 @@ public class UserDto
     [Key]
     public int Id { get; set; }
 
-    [Required]
-    public required string Name { get; set; }
+    public string? Name { get; set; }
 
-    [Required]
-    public required string FirstName { get; set; }
+    public string? FirstName { get; set; }
 
     [Required]
     [EmailAddress]
@@ -18,7 +16,6 @@ public class UserDto
     [MinLength(6)]
     public required string Password { get; set; }
     
-    [Required]
-    public required string Role { get; set; }
+    public string? Role { get; set; }
 
 }

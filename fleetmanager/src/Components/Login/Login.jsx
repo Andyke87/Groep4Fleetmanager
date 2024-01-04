@@ -1,52 +1,61 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './Login.css';
+import SubmitContainer from './SubmitContainer';
 import Email from './Email';
 import Wachtwoord from './Wachtwoord';
-import SubmitContainer from './SubmitContainer';
 import BrightnessButton from '../Buttons/BrightnessButton';
-import { getUsers } from '../../../API/index';
+import { loginUser, getUsers } from '../../../API/index';
+import { useMutation } from '@tanstack/react-query';
 
 const Login = () => {
   const [action, setAction] = useState('Login');
   const [email, setEmail] = useState('');
-  const [wachtwoord, setWachtwoord] = useState('');
+  const [password, setPassword] = useState('');
 
-  useEffect(() => {
-    const fetchData = async () => {
+  const mutation = useMutation({
+    mutationKey: ['loginUser'],
+    mutationFn: loginUser,
+    onSuccess: async (data) => {
+      console.log('Succesvolle post', data);
+
       try {
-        const response = await getUsers();
+        // Haal alle gebruikersgegevens op
+        const allUsers = await getUsers();
+        
+        // Filter de ingelogde gebruiker op basis van e-mail
+        const loggedInUser = allUsers.data.find(user => user.email === email);
+         
+        setAction('Logging in'); // Verander de tekst van de button
+        localStorage.setItem('authenticatedUser', JSON.stringify(loggedInUser));
+        window.location.href = `/Welkom/${loggedInUser.firstName}`;
+        
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error('Error while getting user details:', error);
       }
-    };
-    fetchData();
-  }, []);
+    },
+    onError: (error) => {
+      console.log('Er is een error', error);
+      showErrorMessage();
+    },
+  });
+
+  const showErrorMessage = () => {
+    alert('Invalid email or password');
+  };
 
   const handleLogin = async () => {
-    if (email && wachtwoord) {
-      try {
-        const response = await getUsers();
-        const users = response.data;
+    const setPayload = {
+      email: email,
+      password: password,
+    };
 
-        const authenticatedUser = users.find(
-          user =>
-            user.email === email && user.password === wachtwoord
-        );
+    console.log('set payload:', setPayload);
 
-        if (authenticatedUser) {
-          setAction('Logging in');
-          window.location.href = `/Welkom/${authenticatedUser.firstName}`;
-          localStorage.setItem('authenticatedUser', JSON.stringify(authenticatedUser));
-        } else {
-          alert('Ongeldige e-mail of wachtwoord.');
-        }
-      } catch (error) {
-        console.error('Fout bij het ophalen van gebruikers:', error);
-        alert('Er is een fout opgetreden bij het inloggen.');
-      }
-    } else {
-      alert('Vul de e-mail- en wachtwoordvelden in.');
+    try {
+      await mutation.mutateAsync(setPayload);
+    } catch (error) {
+      console.error('Error while posting data:', error);
     }
   };
 
@@ -63,8 +72,8 @@ const Login = () => {
               setEmail={setEmail}
             />
             <Wachtwoord
-              wachtwoord={wachtwoord}
-              setWachtwoord={setWachtwoord}
+              wachtwoord={password}
+              setWachtwoord={setPassword}
             />
             <SubmitContainer action={action} handleLogin={handleLogin} />
           </div>

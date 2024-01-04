@@ -80,8 +80,8 @@ export const postVehicles = async (post) => {
 
 /* de todo parameter is een object met de properties:
 Email, Password */  
-export const createToken = async (post) => {
-  return await axios.post("https://localhost:5043/Authentication/CreateToken", post);
+export const loginUser = async (post) => {
+  return await axios.post("https://localhost:5043/Authentication/Login", post);
 }
 export const getUsers = async () => {
   return await axios.get("https://localhost:5043/Authentication/AllUsers");

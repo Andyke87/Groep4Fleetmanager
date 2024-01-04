@@ -22,7 +22,7 @@ public partial class FleetManagerContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-
+        optionsBuilder.EnableSensitiveDataLogging(false);
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -163,7 +163,7 @@ public partial class FleetManagerContext : DbContext
         modelBuilder.Entity<User>(entity =>
         {
             entity.HasKey(e => e.Id);
-            entity.ToTable("Authentication"); // Voeg de tabelnaam toe.
+            entity.ToTable("Authentication"); 
             entity.Property(e => e.Id).HasColumnName("Id");
             entity.Property(e => e.Name)
                 .HasMaxLength(50)
@@ -175,7 +175,6 @@ public partial class FleetManagerContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false);
             entity.Property(e => e.Password)
-                .HasMaxLength(50)
                 .IsUnicode(false);
             entity.Property(e => e.Role)
                 .HasMaxLength(5)

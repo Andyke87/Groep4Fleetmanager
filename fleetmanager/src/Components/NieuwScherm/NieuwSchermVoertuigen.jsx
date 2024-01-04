@@ -52,7 +52,7 @@ const NieuwSchermVoertuigen = () => {
         <div className='buttonsThirdScreen'>
           <BestuurdersButton/>
           <TankkaartenButton/>
-          <VoertuigenButton/>
+          {/*<VoertuigenButton/>*/}
           <ButtonRelaties/>
           {rol === 'Admin' && <ButtonGebruikers/>}
         </div>

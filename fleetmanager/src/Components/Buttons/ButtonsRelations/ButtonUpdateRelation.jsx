@@ -26,11 +26,12 @@ const ButtonUpdateConnection = ({ Id, IdDriver, IdGasCard, IdVehicle }) => {
     const confirmUpdate = window.confirm('Are you sure you want to update this relation?');
 
     if (confirmUpdate) {
-      if (!IdDriver || !IdGasCard || !IdVehicle) {
-        throw new Error("One or more fields are empty or contain invalid values");
+      if (!Id || !IdDriver || !IdGasCard || !IdVehicle) {
+        throw new Error("One or more fields are empty values");
       }
 
       const setPayload = {
+        id : Id,
         idDriver: IdDriver,
         idGasCard: IdGasCard,
         idVehicle: IdVehicle,
@@ -41,7 +42,6 @@ const ButtonUpdateConnection = ({ Id, IdDriver, IdGasCard, IdVehicle }) => {
       try {
         const response = await mutation.mutateAsync(setPayload);
 
-        // Als ik statuscode 200 krijg, dan laat ik een alert zien en refresh ik de pagina
         if (response.status === 200) {
           showSuccessMessage();
           refreshPage();

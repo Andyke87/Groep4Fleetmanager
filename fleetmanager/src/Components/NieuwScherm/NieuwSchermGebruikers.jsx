@@ -41,7 +41,7 @@ const NieuwSchermGebruikers = () => {
             <TankkaartenButton/>
             <VoertuigenButton/>
             <ButtonRelaties/>
-            <ButtonGebruikers/>
+            {/*<ButtonGebruikers/>*/}
            </div>
           <FormulierGebruikers searchTerm={searchTerm}/>
           </div>
