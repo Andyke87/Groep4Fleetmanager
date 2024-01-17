@@ -1,0 +1,667 @@
+Timestamp: 16/01/2024 23:01:51
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:02:21
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:02:26 
+ 	 User was logged in
+Timestamp: 16/01/2024 23:02:26 
+ 	  5 users where found
+Timestamp: 16/01/2024 23:02:51
+ 	 40 drivers were found
+Timestamp: 16/01/2024 23:02:51
+ 	 40 drivers were found
+Timestamp: 16/01/2024 23:02:51
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:02:55 
+ 	 35 gas cards where found
+Timestamp: 16/01/2024 23:02:55 
+ 	 35 gas cards where found
+Timestamp: 16/01/2024 23:02:57 
+ 	 40 vehicles where found
+Timestamp: 16/01/2024 23:02:57 
+ 	 40 vehicles where found
+Timestamp: 16/01/2024 23:03:01 
+ 	  33 connections where found
+Timestamp: 16/01/2024 23:03:01
+ 	 40 drivers were found
+Timestamp: 16/01/2024 23:03:01 
+ 	  33 connections where found
+Timestamp: 16/01/2024 23:03:01 
+ 	 35 gas cards where found
+Timestamp: 16/01/2024 23:03:01
+ 	 40 drivers were found
+Timestamp: 16/01/2024 23:03:01 
+ 	 40 vehicles where found
+Timestamp: 16/01/2024 23:03:01 
+ 	 35 gas cards where found
+Timestamp: 16/01/2024 23:03:01 
+ 	 40 vehicles where found
+Timestamp: 16/01/2024 23:03:06 
+ 	  5 users where found
+Timestamp: 16/01/2024 23:03:06 
+ 	  5 users where found
+Timestamp: 16/01/2024 23:03:21
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:03:51
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:04:21
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:04:29 
+ 	  33 connections where found
+Timestamp: 16/01/2024 23:04:39
+ 	 40 drivers were found
+Timestamp: 16/01/2024 23:04:51
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:05:21
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:05:51
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:06:21
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:06:21
+ 	 40 drivers were found
+Timestamp: 16/01/2024 23:06:21
+ 	 40 drivers were found
+Timestamp: 16/01/2024 23:06:51
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:07:21
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:07:51
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:08:21
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:08:51
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:09:21
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:09:51
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:10:21
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:10:46
+ 	 40 drivers were found
+Timestamp: 16/01/2024 23:10:46
+ 	 40 drivers were found
+Timestamp: 16/01/2024 23:10:51
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:10:58
+ 	 40 drivers were found
+Timestamp: 16/01/2024 23:10:58
+ 	 40 drivers were found
+Timestamp: 16/01/2024 23:11:21
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:11:23
+ 	 40 drivers were found
+Timestamp: 16/01/2024 23:11:23
+ 	 40 drivers were found
+Timestamp: 16/01/2024 23:11:26
+ 	 40 drivers were found
+Timestamp: 16/01/2024 23:11:26
+ 	 40 drivers were found
+Timestamp: 16/01/2024 23:11:31 
+ 	 35 gas cards where found
+Timestamp: 16/01/2024 23:11:31 
+ 	 35 gas cards where found
+Timestamp: 16/01/2024 23:11:51
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:12:21
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:12:51
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:12:54 
+ 	 35 gas cards where found
+Timestamp: 16/01/2024 23:12:54 
+ 	 35 gas cards where found
+Timestamp: 16/01/2024 23:13:04
+ 	 40 drivers were found
+Timestamp: 16/01/2024 23:13:04
+ 	 40 drivers were found
+Timestamp: 16/01/2024 23:13:18
+ 	 40 drivers were found
+Timestamp: 16/01/2024 23:13:21
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:13:31 
+ 	  33 connections where found
+Timestamp: 16/01/2024 23:13:51
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:14:21
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:51:14
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:51:44
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:52:14
+	 sql: DB is Healthy
+
+Timestamp: 16/01/2024 23:52:44
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 0:07:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 0:07:31
+ 	 40 drivers were found
+Timestamp: 17/01/2024 0:07:31
+ 	 40 drivers were found
+Timestamp: 17/01/2024 0:07:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 0:14:06
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 0:14:11 
+ 	 35 gas cards where found
+Timestamp: 17/01/2024 0:14:11 
+ 	 35 gas cards where found
+Timestamp: 17/01/2024 0:14:12 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 0:14:12 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 0:17:07
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:08:35
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:09:04
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:09:34
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:09:36
+ 	 40 drivers were found
+Timestamp: 17/01/2024 9:10:04
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:10:20
+ 	 Driver not found
+Timestamp: 17/01/2024 9:10:34
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:11:04
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:11:34
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:12:04
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:12:15 
+ 	 User was logged in
+Timestamp: 17/01/2024 9:12:15 
+ 	  5 users where found
+Timestamp: 17/01/2024 9:12:21
+ 	 40 drivers were found
+Timestamp: 17/01/2024 9:12:21
+ 	 40 drivers were found
+Timestamp: 17/01/2024 9:12:28
+ 	 Driver with id 2 was updated
+Timestamp: 17/01/2024 9:12:33
+ 	 40 drivers were found
+Timestamp: 17/01/2024 9:12:33
+ 	 40 drivers were found
+Timestamp: 17/01/2024 9:12:34
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:13:04
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:13:34
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:13:57
+ 	 Internal server error
+Timestamp: 17/01/2024 9:14:04
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:14:34
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:15:04
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:15:10
+ 	 Internal server error
+Timestamp: 17/01/2024 9:15:20
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:15:47
+ 	 Internal server error
+Timestamp: 17/01/2024 9:15:49
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:16:19
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:16:43
+ 	 Internal server error
+Timestamp: 17/01/2024 9:16:49
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:17:19
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:17:45
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:18:14
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:18:15
+ 	 Driver with id 4 was found
+Timestamp: 17/01/2024 9:18:37
+ 	 Internal server error 
+ The property 'Driver.IdDriver' is part of a key and so cannot be modified or marked as modified. To change the principal of an existing entity with an identifying foreign key, first delete the dependent and invoke 'SaveChanges', and then associate the dependent with the new principal.
+Timestamp: 17/01/2024 9:18:44
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:19:14
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:19:44
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:20:14
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:20:44
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:21:14
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:21:44
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:22:14
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:22:44
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:23:14
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:23:44
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:24:14
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:24:44
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:25:14
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:25:44
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:26:14
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:26:44
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:27:14
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:27:44
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:28:14
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:28:44
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:29:09
+ 	 Internal server error 
+ The property 'Driver.IdDriver' is part of a key and so cannot be modified or marked as modified. To change the principal of an existing entity with an identifying foreign key, first delete the dependent and invoke 'SaveChanges', and then associate the dependent with the new principal.
+Timestamp: 17/01/2024 9:29:14
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:29:34
+ 	 Driver not found
+Timestamp: 17/01/2024 9:29:44
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:30:14
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:30:30
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:30:45
+ 	 Driver with id 55 was found
+Timestamp: 17/01/2024 9:31:00
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:31:02
+ 	 Driver with id 555 was found
+Timestamp: 17/01/2024 9:31:30
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:32:00
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:32:05
+ 	 Driver with id 555 was found
+Timestamp: 17/01/2024 9:32:30
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:33:00
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:33:30
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:34:00
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:34:30
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:34:30
+ 	 Driver with id 555 was found
+Timestamp: 17/01/2024 9:34:52
+ 	 Driver with id 555 was found
+Timestamp: 17/01/2024 9:35:00
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:35:30
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:35:51
+ 	 Driver with id 555 was found
+Timestamp: 17/01/2024 9:36:00
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:36:27
+ 	 Driver with id 555 was found
+Timestamp: 17/01/2024 9:36:30
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:36:50
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:37:03 
+ 	  Connection not found
+Timestamp: 17/01/2024 9:37:20
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:37:49
+ 	 Driver not found
+Timestamp: 17/01/2024 9:37:50
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:38:20
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:38:27
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:38:37
+ 	 Driver not found
+Timestamp: 17/01/2024 9:38:57
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:39:27
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:39:54
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:40:06
+ 	 Driver not found
+Timestamp: 17/01/2024 9:40:24
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:40:54
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:41:24
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:41:54
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:47:15
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:47:23
+ 	 40 drivers were found
+Timestamp: 17/01/2024 9:47:23
+ 	 40 drivers were found
+Timestamp: 17/01/2024 9:47:29 
+ 	  33 connections where found
+Timestamp: 17/01/2024 9:47:29
+ 	 40 drivers were found
+Timestamp: 17/01/2024 9:47:29 
+ 	  33 connections where found
+Timestamp: 17/01/2024 9:47:29 
+ 	 35 gas cards where found
+Timestamp: 17/01/2024 9:47:29
+ 	 40 drivers were found
+Timestamp: 17/01/2024 9:47:29 
+ 	 35 gas cards where found
+Timestamp: 17/01/2024 9:47:29 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 9:47:30 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 9:47:45
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:47:55 
+ 	  A connection with the same IdVehicle already exists.
+Timestamp: 17/01/2024 9:48:15
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:48:17 
+ 	  Connection created
+Timestamp: 17/01/2024 9:48:18 
+ 	  34 connections where found
+Timestamp: 17/01/2024 9:48:18 
+ 	  34 connections where found
+Timestamp: 17/01/2024 9:48:18
+ 	 40 drivers were found
+Timestamp: 17/01/2024 9:48:18 
+ 	 35 gas cards where found
+Timestamp: 17/01/2024 9:48:18
+ 	 Internal server error 
+ 	 The process cannot access the file 'C:\Users\andy\OneDrive - Hogeschool Gent\Bureaublad\Groep4Fleetmanager\FleetmanagerBack-end\log.txt' because it is being used by another process.
+Timestamp: 17/01/2024 9:48:18 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 9:48:45
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:49:14 
+ 	  Connection removed
+Timestamp: 17/01/2024 9:49:15
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:49:19 
+ 	  33 connections where found
+Timestamp: 17/01/2024 9:49:19 
+ 	  33 connections where found
+Timestamp: 17/01/2024 9:49:19
+ 	 40 drivers were found
+Timestamp: 17/01/2024 9:49:19
+ 	 40 drivers were found
+Timestamp: 17/01/2024 9:49:19 
+ 	 35 gas cards where found
+Timestamp: 17/01/2024 9:49:19 
+ 	 35 gas cards where found
+Timestamp: 17/01/2024 9:49:19 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 9:49:19 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 9:49:45
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:49:50 
+ 	  5 users where found
+Timestamp: 17/01/2024 9:49:50 
+ 	  5 users where found
+Timestamp: 17/01/2024 9:49:52 
+ 	  33 connections where found
+Timestamp: 17/01/2024 9:49:52 
+ 	  33 connections where found
+Timestamp: 17/01/2024 9:49:52
+ 	 40 drivers were found
+Timestamp: 17/01/2024 9:49:52
+ 	 40 drivers were found
+Timestamp: 17/01/2024 9:49:52 
+ 	 35 gas cards where found
+Timestamp: 17/01/2024 9:49:52 
+ 	 35 gas cards where found
+Timestamp: 17/01/2024 9:49:52 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 9:49:52 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 9:49:59 
+ 	  Connection removed
+Timestamp: 17/01/2024 9:50:15
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:50:15 
+ 	  32 connections where found
+Timestamp: 17/01/2024 9:50:15 
+ 	  32 connections where found
+Timestamp: 17/01/2024 9:50:15
+ 	 40 drivers were found
+Timestamp: 17/01/2024 9:50:15
+ 	 40 drivers were found
+Timestamp: 17/01/2024 9:50:15 
+ 	 35 gas cards where found
+Timestamp: 17/01/2024 9:50:15 
+ 	 35 gas cards where found
+Timestamp: 17/01/2024 9:50:15 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 9:50:15 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 9:50:28 
+ 	  Connection created
+Timestamp: 17/01/2024 9:50:34 
+ 	  33 connections where found
+Timestamp: 17/01/2024 9:50:34 
+ 	  33 connections where found
+Timestamp: 17/01/2024 9:50:34
+ 	 40 drivers were found
+Timestamp: 17/01/2024 9:50:34
+ 	 40 drivers were found
+Timestamp: 17/01/2024 9:50:34 
+ 	 35 gas cards where found
+Timestamp: 17/01/2024 9:50:34 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 9:50:34 
+ 	  Internal server error 
+ 	 The process cannot access the file 'C:\Users\andy\OneDrive - Hogeschool Gent\Bureaublad\Groep4Fleetmanager\FleetmanagerBack-end\log.txt' because it is being used by another process.
+Timestamp: 17/01/2024 9:50:45
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:50:45 
+ 	  33 connections where found
+Timestamp: 17/01/2024 9:50:45 
+ 	  33 connections where found
+Timestamp: 17/01/2024 9:50:45
+ 	 40 drivers were found
+Timestamp: 17/01/2024 9:50:45
+ 	 40 drivers were found
+Timestamp: 17/01/2024 9:50:45 
+ 	 35 gas cards where found
+Timestamp: 17/01/2024 9:50:45 
+ 	 35 gas cards where found
+Timestamp: 17/01/2024 9:50:45 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 9:50:45 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 9:51:15
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:51:45
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:51:46
+ 	 40 drivers were found
+Timestamp: 17/01/2024 9:51:46
+ 	 40 drivers were found
+Timestamp: 17/01/2024 9:51:50 
+ 	 35 gas cards where found
+Timestamp: 17/01/2024 9:51:50 
+ 	 35 gas cards where found
+Timestamp: 17/01/2024 9:52:15
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:52:38 
+ 	 Gas card created
+Timestamp: 17/01/2024 9:52:40 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 9:52:40 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 9:52:45
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:53:15
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:53:45
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:54:15
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:54:45
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:55:15
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:55:45
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:56:15
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:56:45
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:57:15
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:57:45
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 9:58:15
+	 sql: DB is Healthy
+
