@@ -12,7 +12,7 @@ const Email = ({ email, setEmail }) => {
               className="inputEmail"
               type="text"
               placeholder='xxx@allphi.com'
-              value={email}
+              value={email.trim()}
               onChange={(e) => setEmail(e.target.value)}
             />
         </div>

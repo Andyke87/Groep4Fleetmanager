@@ -17,10 +17,6 @@ public partial class Vehicle
     public string Color { get; set; }
     public int NumberOfDoors { get; set; }
 
-    // Parameterloze constructor vereist voor EF Core
-    public Vehicle()
-    {
-    }
 
     // Constructor met parameters
     public Vehicle(string brand, string model, string chassisNumber, string licensePlate, string fuel, string vehicleType, string color, int numberOfDoors)

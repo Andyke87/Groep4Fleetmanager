@@ -19,18 +19,17 @@ public class DriverDTO
 
     public string? City { get; set; }
 
-    [MinLength(4), MaxLength(8)]
     public int? ZipCode { get; set; }
 
     [Required]
     [DataType(DataType.Date)]
-    
     public DateTime DayOfBirth { get; set; }
 
     [Required]
     [MinLength(11), MaxLength(11)]
     public required string RegistryNumber { get; set; }
 
+    [Required]
     [MaxLength(5)]
     public required string CategoryLicense { get; set; }
 }

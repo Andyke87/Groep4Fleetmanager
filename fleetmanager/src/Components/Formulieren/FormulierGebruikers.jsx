@@ -140,7 +140,7 @@ const FormulierGebruikers = ({searchTerm}) => {
                 placeholder='Max 50 characters'
                 type="text"
                 name="email"
-                value={email}
+                value={email.trim()}
                 onChange={handleChange}
             />
         </div>
@@ -151,7 +151,7 @@ const FormulierGebruikers = ({searchTerm}) => {
                 placeholder='Max 50 characters'
                 type="text"
                 name="password"
-                value={password}
+                value={password.trim()}
                 onChange={handleChange}
             />
         </div>

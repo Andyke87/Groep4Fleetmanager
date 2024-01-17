@@ -1,27 +1,31 @@
-using System.Text;
-using Microsoft.Extensions.Diagnostics.HealthChecks;
-using Microsoft.OpenApi.Models;
-using Swashbuckle.AspNetCore.SwaggerGen;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.EntityFrameworkCore;
 using FleetManager.Models;
 using FleetManager.Profiles;
 using Microsoft.AspNetCore.Authorization;
-using System.Threading.RateLimiting;
-using Microsoft.Data.SqlClient;
-using Microsoft.AspNetCore.Server.Kestrel.Https;
-using System.Security.Cryptography.X509Certificates;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.AspNetCore.Server.Kestrel.Https;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.SwaggerGen;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.RateLimiting;
 
 namespace Back_end
 {
-
-
     public class Program
     {
         public static void Main(string[] args)
         {
+            // maak een tekst document aan met de naam log.txt
+            if (!File.Exists("log.txt"))
+            {
+                File.Create("log.txt");
+            }
+            
             var builder = WebApplication.CreateBuilder(args);
 
             // Voeg SqlConnection toe aan de DI-container
@@ -104,6 +108,7 @@ namespace Back_end
             // Registreer SqlServerHealthCheck en voeg het toe aan de HealthChecks
             builder.Services.AddHealthChecks().AddCheck<SqlServerHealthCheck>("sql");
 
+            // Voeg AutoMapper toe aan de DI-container
             builder.Services.AddAutoMapper(typeof(MappingConfig));
 
             builder.Services.AddSwaggerGen(c =>
@@ -121,16 +126,41 @@ namespace Back_end
 
                 c.OperationFilter<AuthOperationFilter>();
             });
-
+        
             var app = builder.Build();
 
             app.UseHttpsRedirection();
 
             // Voer de HealthCheck-resultaten uit
+            string logFilePath = "log.txt";
+            if (!File.Exists(logFilePath))
+            {
+                using (File.Create(logFilePath)) { } 
+            }
+
             var timer = new Timer(state =>
             {
                 LogHealthCheckResults(app);
-            }, null, TimeSpan.Zero, TimeSpan.FromSeconds(5));
+
+                // Voer de HealthCheck uit en log de resultaten
+                var healthCheckService = app.Services.GetRequiredService<HealthCheckService>();
+                var results = healthCheckService.CheckHealthAsync().GetAwaiter().GetResult();
+
+                // Log de resultaten in het tekst document
+                using (StreamWriter sw = File.AppendText(logFilePath))
+                {
+                    sw.WriteLine($"Timestamp: {DateTime.Now}");
+
+                    foreach (var result in results.Entries)
+                    {
+                        sw.WriteLine($"\t {result.Key}: DB is {result.Value.Status}");
+                    }
+
+                    sw.WriteLine();
+                }
+
+            }, null, TimeSpan.Zero, TimeSpan.FromSeconds(30));
+
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -158,11 +188,12 @@ namespace Back_end
             {
                 ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
             });
-
+            
             app.MapControllers();
 
             app.Run();
         }
+
         public class NewAuthOperationFilter : IOperationFilter
         {
             public void Apply(OpenApiOperation operation, OperationFilterContext context)
@@ -227,7 +258,7 @@ namespace Back_end
 
             foreach (var result in results.Entries)
             {
-                app.Services.GetRequiredService<ILogger<Program>>().LogInformation($"{result.Key}: DB is {result.Value.Status}");
+                app.Services.GetRequiredService<ILogger<Program>>().LogInformation($"Timestamp: {DateTime.Now} \n {result.Key}: DB is {result.Value.Status}");
             }
         }
     }
