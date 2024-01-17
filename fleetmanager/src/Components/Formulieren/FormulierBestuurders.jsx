@@ -13,7 +13,6 @@ const FormulierBestuurders = ({searchTerm}) => {
   const [drivers, setDrivers] = useState([]);
   const [idDriver, setIdDriver] = useState('');
   const [name, setName] = useState('');
-  const [inserts, setInserts] = useState('');
   const [firstName, setFirstName] = useState('');
   const [street, setStreet] = useState('');
   const [number, setNumber] = useState('');
@@ -41,7 +40,6 @@ const FormulierBestuurders = ({searchTerm}) => {
     switch (name) {
       case 'idDriver': setIdDriver(value); break;
       case 'name': setName(value); break;
-      case 'inserts': setInserts(value); break;
       case 'firstName': setFirstName(value); break;
       case 'street': setStreet(value); break;
       case 'number': setNumber(value); break;
@@ -57,7 +55,7 @@ const FormulierBestuurders = ({searchTerm}) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('Formulier ingediend:', { idDriver, name, inserts, firstName, street, number, city, zipCode, dayOfBirth, registryNumber, categoryLicense });
+    console.log('Formulier ingediend:', { idDriver, name, firstName, street, number, city, zipCode, dayOfBirth, registryNumber, categoryLicense });
   };
 
   const formatDate = (dateString) => {
@@ -69,7 +67,6 @@ const FormulierBestuurders = ({searchTerm}) => {
     setSelectedRow(selectedRow);
     setIdDriver(selectedRow.idDriver);
     setName(selectedRow.name);
-    setInserts(selectedRow.inserts);
     setFirstName(selectedRow.firstName);
     setStreet(selectedRow.street);
     setNumber(selectedRow.number);
@@ -97,7 +94,6 @@ const FormulierBestuurders = ({searchTerm}) => {
             <tr >
               <th className='thDriver'>Driver Id</th>
               <th className='thDriver'>First Name</th>
-              <th className='thDriver'>Inserts</th>
               <th className='thDriver'>Name</th>
               <th className='thDriver'>Street</th>
               <th className='thDriver'>Number</th>
@@ -113,7 +109,6 @@ const FormulierBestuurders = ({searchTerm}) => {
             <tr key={driver.idDriver}  onClick={() => handleRowClick(driver)}>
               <td>{driver.idDriver}</td>
               <td>{driver.firstName}</td>
-              <td>{driver.inserts}</td>
               <td>{driver.name}</td>
               <td>{driver.street}</td>
               <td>{driver.number}</td>
@@ -147,18 +142,6 @@ const FormulierBestuurders = ({searchTerm}) => {
             type="text"
             name="firstName"
             value={firstName}
-            onChange={handleChange}
-          />
-        </div>
-
-        <div className="col">
-          <label htmlFor="inserts">Inserts</label>
-          <input
-            className="input"
-            placeholder='Max 50 characters'
-            type="text"
-            name="inserts"
-            value={inserts}
             onChange={handleChange}
           />
         </div>
@@ -272,7 +255,6 @@ const FormulierBestuurders = ({searchTerm}) => {
       <div className='containerButtonsNieuw'>
         <ButtonAddDriver
           Name={name}
-          Inserts={inserts}
           FirstName={firstName}
           Street={street}
           Number={number}
@@ -285,7 +267,6 @@ const FormulierBestuurders = ({searchTerm}) => {
         <ButtonUpdateDriver
           IdDriver={idDriver}
           Name={name}
-          Inserts={inserts}
           FirstName={firstName}
           Street={street}
           Number={number}

@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import { useMutation } from "@tanstack/react-query";
 import { postDrivers } from '../../../../API/index';
 
-const ButtonAddDriver = ({Name, Inserts, FirstName, Street, Number, City, ZipCode, DayOfBirth, RegistryNumber, CategoryLicense}) => {
+const ButtonAddDriver = ({Name, FirstName, Street, Number, City, ZipCode, DayOfBirth, RegistryNumber, CategoryLicense}) => {
 
   const mutation = useMutation({
     mutationKey: ["createTodo"],
@@ -32,7 +32,7 @@ const ButtonAddDriver = ({Name, Inserts, FirstName, Street, Number, City, ZipCod
     const confirmSave = window.confirm('Are you sure you want to create this driver?');
 
     if (confirmSave) {
-      if (!Name || !Inserts || !FirstName || !Street || !Number || !City || !ZipCode || !DayOfBirth || !RegistryNumber || !CategoryLicense) {
+      if (!Name || !FirstName || !Street || !Number || !City || !ZipCode || !DayOfBirth || !RegistryNumber || !CategoryLicense) {
         throw new Error("One or more fields are empty or contain invalid values");
       }
         // de datum moet nog geconverteerd worden naar het juiste format Date
@@ -42,7 +42,6 @@ const ButtonAddDriver = ({Name, Inserts, FirstName, Street, Number, City, ZipCod
 
       const payload = {
         name: Name,
-        inserts: Inserts,
         firstName: FirstName,
         street: Street,
         number: Number,

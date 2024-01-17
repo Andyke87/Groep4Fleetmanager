@@ -8,8 +8,6 @@ public class DriverDTO
     [Required]
     public required string Name { get; set; }
 
-    public string? Inserts { get; set; }
-
     [Required]
     public required string FirstName { get; set; }
 

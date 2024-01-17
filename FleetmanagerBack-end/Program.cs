@@ -43,7 +43,7 @@ namespace Back_end
                         factory: partition => new FixedWindowRateLimiterOptions
                         {
                             AutoReplenishment = true,
-                            PermitLimit = 1000,
+                            PermitLimit = 10,
                             QueueLimit = 0,
                             Window = TimeSpan.FromMinutes(1)
                         }));
