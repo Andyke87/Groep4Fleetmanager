@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using FleetManager.Models;
 using Swashbuckle.AspNetCore.Annotations;
 using AutoMapper;
+using FleetManager.Logging;
 
 namespace Back_end.Controllers;
 
@@ -10,7 +11,7 @@ namespace Back_end.Controllers;
 [Route("[controller]")]
 public class ConnectionController : ControllerBase
 {
-    private readonly FleetManagerContext _dbContext; // Context voor de database connectie (zie Models/FleetManagerContext.cs)
+    private readonly FleetManagerContext _dbContext; 
     private readonly ILogger<ConnectionController>? _logger;
     private readonly IMapper _mapper;
 
@@ -38,8 +39,9 @@ public class ConnectionController : ControllerBase
                 .ToListAsync();
 
             var connectionDTOs = _mapper.Map<IEnumerable<ConnectionDTO>>(connections);
-
-            _logger?.LogInformation("Returned all connections");
+            
+            _logger?.LogInformation($"{connections.Count} connections where found");
+            Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  {connections.Count} connections where found");
             return Ok(connectionDTOs);
         }
         catch (Exception ex)
@@ -47,17 +49,20 @@ public class ConnectionController : ControllerBase
             if (ex is DbUpdateException)
             {
                 _logger?.LogError(ex, "Invalid request");
-                return StatusCode(400, "Invalid request");
+                Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  Invalid request \n \t {ex.Message}");
+                return StatusCode(400, ex.Message);
             }
             if (ex is DbUpdateConcurrencyException)
             {
                 _logger?.LogError(ex, "Service is currently unavailable. Please try again later.");
-                return StatusCode(503, "Service is currently unavailable. Please try again later.");
+                Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  Service is currently unavailable. Please try again later \n \t {ex.Message}");
+                return StatusCode(503, ex.Message);
             }
             else
             {
                 _logger?.LogError(ex, "Internal server error");
-                return StatusCode(500, "Internal server error");
+                Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  Internal server error \n \t {ex.Message}");
+                return StatusCode(500, ex.Message);
             }
         }
     }
@@ -81,11 +86,13 @@ public class ConnectionController : ControllerBase
             if (connection == null)
             {
                 _logger?.LogInformation("Connection not found");
+                Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  Connection not found");
                 return NotFound("Connection not found");
             }
             var connectionDTO = _mapper.Map<ConnectionDTO>(connection);
-
             _logger?.LogInformation("Returned connection with id: {id}", id);
+
+            Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  Returned connection with id: {id}");
             return Ok(connectionDTO);
         }
         catch (Exception ex)
@@ -93,17 +100,20 @@ public class ConnectionController : ControllerBase
             if (ex is DbUpdateException)
             {
                 _logger?.LogError(ex, "Invalid request");
-                return StatusCode(400, "Invalid request");
+                Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  Invalid request \n \t {ex.Message}");
+                return StatusCode(400, ex.Message);
             }
             if (ex is DbUpdateConcurrencyException)
             {
                 _logger?.LogError(ex, "Service is currently unavailable. Please try again later.");
-                return StatusCode(503, "Service is currently unavailable. Please try again later.");
+                Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  Service is currently unavailable. Please try again later \n \t {ex.Message}");
+                return StatusCode(503, ex.Message);
             }
             else
             {
                 _logger?.LogError(ex, "Internal server error");
-                return StatusCode(500, "Internal server error");
+                Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  Internal server error \n \t {ex.Message}");
+                return StatusCode(500, ex.Message);
             }
         }
     }
@@ -124,10 +134,13 @@ public class ConnectionController : ControllerBase
             {
                 _dbContext.Remove(connection);
                 await _dbContext.SaveChangesAsync();
+
                 _logger?.LogInformation("Connection removed");
-                return Ok("The connection was removed");
+                Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  Connection removed");
+                return Ok(connection);
             }
             _logger?.LogInformation("Connection not found");
+            Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  Connection not found");
             return NotFound("Connection not found");
         }
         catch (Exception ex)
@@ -135,17 +148,20 @@ public class ConnectionController : ControllerBase
             if (ex is DbUpdateException)
             {
                 _logger?.LogError(ex, "Invalid request");
-                return StatusCode(400, "Invalid request");
+                Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  Invalid request \n \t {ex.Message}");
+                return StatusCode(400, ex.Message);
             }
             if (ex is DbUpdateConcurrencyException)
             {
                 _logger?.LogError(ex, "Service is currently unavailable. Please try again later.");
-                return StatusCode(503, "Service is currently unavailable. Please try again later.");
+                Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  Service is currently unavailable. Please try again later \n \t {ex.Message}");
+                return StatusCode(503, ex.Message);
             }
             else
             {
                 _logger?.LogError(ex, "Internal server error");
-                return StatusCode(500, "Internal server error");
+                Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  Internal server error \n \t {ex.Message}");
+                return StatusCode(500, ex.Message);
             }
         }
     }
@@ -167,10 +183,13 @@ public class ConnectionController : ControllerBase
                 _mapper.Map(_connectionDTO, connection);
 
                 await _dbContext.SaveChangesAsync();
+                
                 _logger?.LogInformation("Connection updated");
-                return Ok("The connection was updated");
+                Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  Connection updated");
+                return Ok(connection);
             }
             _logger?.LogInformation("Connection not found");
+            Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  Connection not found");
             return NotFound("Connection not found");
         }
         catch (Exception ex)
@@ -178,17 +197,20 @@ public class ConnectionController : ControllerBase
             if (ex is DbUpdateException)
             {
                 _logger?.LogError(ex, "Invalid request");
-                return StatusCode(400, "Invalid request");
+                Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  Invalid request \n \t {ex.Message}");
+                return StatusCode(400, ex.Message);
             }
             if (ex is DbUpdateConcurrencyException)
             {
                 _logger?.LogError(ex, "Service is currently unavailable. Please try again later.");
-                return StatusCode(503, "Service is currently unavailable. Please try again later.");
+                Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  Service is currently unavailable. Please try again later \n \t {ex.Message}");
+                return StatusCode(503, ex.Message);
             }
             else
             {
                 _logger?.LogError(ex, "Internal server error");
-                return StatusCode(500, "Internal server error");
+                Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  Internal server error \n \t {ex.Message}");
+                return StatusCode(500, ex.Message);
             }
         }
     }
@@ -206,6 +228,7 @@ public class ConnectionController : ControllerBase
             if (_connectionDTO == null)
             {
                 _logger?.LogInformation("No data received");
+                Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  No data received");
                 return BadRequest("No data received");
             }
 
@@ -213,6 +236,7 @@ public class ConnectionController : ControllerBase
             if (_dbContext.Connections.Any(c => c.IdDriver == _connectionDTO.IdDriver))
             {
                 _logger?.LogInformation("A connection with the same IdDriver already exists.");
+                Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  A connection with the same IdDriver already exists.");
                 return Conflict("A connection with the same IdDriver already exists.");
             }
 
@@ -220,6 +244,7 @@ public class ConnectionController : ControllerBase
             if (_dbContext.Connections.Any(c => c.IdGasCard == _connectionDTO.IdGasCard))
             {
                 _logger?.LogInformation("A connection with the same IdGasCard already exists.");
+                Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  A connection with the same IdGasCard already exists.");
                 return Conflict("A connection with the same IdGasCard already exists.");
             }
 
@@ -227,6 +252,7 @@ public class ConnectionController : ControllerBase
             if (_dbContext.Connections.Any(c => c.IdVehicle == _connectionDTO.IdVehicle))
             {
                 _logger?.LogInformation("A connection with the same IdVehicle already exists.");
+                Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  A connection with the same IdVehicle already exists.");
                 return Conflict("A connection with the same IdVehicle already exists.");
             }
 
@@ -234,25 +260,30 @@ public class ConnectionController : ControllerBase
 
             _dbContext.Connections.Add(newConnection);
             await _dbContext.SaveChangesAsync();
+
             _logger?.LogInformation("Connection created");
-            return Ok("The connection was created");
+            Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  Connection created");
+            return Ok(newConnection);
         }
         catch (Exception ex)
         {
             if (ex is DbUpdateException)
             {
                 _logger?.LogError(ex, "Invalid request");
-                return StatusCode(400, "Invalid request");
+                Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  Invalid request \n \t {ex.Message}");
+                return StatusCode(400, ex.Message);
             }
             if (ex is DbUpdateConcurrencyException)
             {
                 _logger?.LogError(ex, "Service is currently unavailable. Please try again later.");
-                return StatusCode(503, "Service is currently unavailable. Please try again later.");
+                Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  Service is currently unavailable. Please try again later \n \t {ex.Message}");
+                return StatusCode(503, ex.Message);
             }
             else
             {
                 _logger?.LogError(ex, "Internal server error");
-                return StatusCode(500, "Internal server error");
+                Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t  Internal server error \n \t {ex.Message}");
+                return StatusCode(500, ex.Message);
             }
         }
     }

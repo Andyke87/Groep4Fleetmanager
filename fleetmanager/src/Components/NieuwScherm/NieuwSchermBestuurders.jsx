@@ -24,7 +24,6 @@ const NieuwSchermBestuurders = () => {
     if (authenticatedUser) {
       setRol(authenticatedUser.role);
     } else {
-      // Redirect naar de inlogpagina als er geen ingelogde gebruiker is
       window.location.href = '/';
     }
   }, []);
@@ -50,7 +49,6 @@ const NieuwSchermBestuurders = () => {
       </div>
       <div className='thirdScreenContainer'>
         <div className='buttonsThirdScreen'>
-          {/*<BestuurdersButton/>*/}
           <TankkaartenButton/>
           <VoertuigenButton/>
           <ButtonRelaties/>

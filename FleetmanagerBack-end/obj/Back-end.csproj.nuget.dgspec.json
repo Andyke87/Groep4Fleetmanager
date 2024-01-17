@@ -87,9 +87,13 @@
             },
             "Microsoft.Extensions.Diagnostics.HealthChecks": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.0.1, )"
             },
             "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Logging": {
               "target": "Package",
               "version": "[8.0.0, )"
             },
@@ -104,6 +108,10 @@
             "Swashbuckle.AspNetCore.Annotations": {
               "target": "Package",
               "version": "[6.5.0, )"
+            },
+            "System.IO.FileSystem.Primitives": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             }
           },
           "imports": [

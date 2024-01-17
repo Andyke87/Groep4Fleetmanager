@@ -5,7 +5,7 @@ import React from 'react';
 import { useMutation } from '@tanstack/react-query';
 import { updateDrivers } from '../../../../API/index';
 
-const ButtonUpdateDriver = ({IdDriver, Name, Inserts, FirstName, Street, Number, City, ZipCode, DayOfBirth, RegistryNumber, CategoryLicense}) => {
+const ButtonUpdateDriver = ({IdDriver, Name, FirstName, Street, Number, City, ZipCode, DayOfBirth, RegistryNumber, CategoryLicense}) => {
 
   const mutation = useMutation({
     mutationKey: ["updateDriver"],
@@ -27,7 +27,6 @@ const ButtonUpdateDriver = ({IdDriver, Name, Inserts, FirstName, Street, Number,
         const setPayload = {
           idDriver: IdDriver,
           name: Name,
-          inserts: Inserts,
           firstName: FirstName,
           street: Street,
           number: Number,

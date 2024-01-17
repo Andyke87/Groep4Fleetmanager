@@ -34,7 +34,6 @@ namespace Back_end.Migrations
                     IdDriver = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "varchar(50)", unicode: false, maxLength: 50, nullable: true),
-                    Inserts = table.Column<string>(type: "varchar(50)", unicode: false, maxLength: 50, nullable: true),
                     FirstName = table.Column<string>(type: "varchar(50)", unicode: false, maxLength: 50, nullable: true),
                     Street = table.Column<string>(type: "varchar(50)", unicode: false, maxLength: 50, nullable: true),
                     Number = table.Column<string>(type: "varchar(10)", unicode: false, maxLength: 10, nullable: true),

@@ -665,16 +665,878 @@ Timestamp: 17/01/2024 9:57:45
 Timestamp: 17/01/2024 9:58:15
 	 sql: DB is Healthy
 
-Timestamp: 17/01/2024 11:45:55
- 	 40 drivers were found
-Timestamp: 17/01/2024 11:45:55
- 	 40 drivers were found
-Timestamp: 17/01/2024 11:46:05
+Timestamp: 17/01/2024 10:06:24
 	 sql: DB is Healthy
 
-Timestamp: 17/01/2024 11:46:35
+Timestamp: 17/01/2024 10:06:54
 	 sql: DB is Healthy
 
-Timestamp: 17/01/2024 11:47:05
+Timestamp: 17/01/2024 10:07:24
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:07:54
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:07:55
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:07:55
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:07:57 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:07:57 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:08:05 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:08:05 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:08:06 
+ 	  33 connections where found
+Timestamp: 17/01/2024 10:08:06
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:08:06 
+ 	  33 connections where found
+Timestamp: 17/01/2024 10:08:06 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:08:06 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:08:06
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:08:06 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:08:06 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:08:06 
+ 	  5 users where found
+Timestamp: 17/01/2024 10:08:06 
+ 	  5 users where found
+Timestamp: 17/01/2024 10:08:24
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:08:54
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:09:24
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:09:56
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:09:59
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:09:59
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:00 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:10:00 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:10:01 
+ 	  33 connections where found
+Timestamp: 17/01/2024 10:10:01
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:01 
+ 	  33 connections where found
+Timestamp: 17/01/2024 10:10:01
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:01 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:01 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:01 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:10:01 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:10:02 
+ 	  5 users where found
+Timestamp: 17/01/2024 10:10:02 
+ 	  5 users where found
+Timestamp: 17/01/2024 10:10:03
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:03
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:05 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:10:05 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:10:05 
+ 	  33 connections where found
+Timestamp: 17/01/2024 10:10:05 
+ 	  33 connections where found
+Timestamp: 17/01/2024 10:10:05
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:05 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:05
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:05 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:05 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:10:05 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:10:06 
+ 	  5 users where found
+Timestamp: 17/01/2024 10:10:06 
+ 	  5 users where found
+Timestamp: 17/01/2024 10:10:07
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:07
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:08 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:10:08 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:10:09 
+ 	  33 connections where found
+Timestamp: 17/01/2024 10:10:09 
+ 	  33 connections where found
+Timestamp: 17/01/2024 10:10:09
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:09
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:09 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:09 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:09 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:10:09 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:10:09 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:09 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:10
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:10
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:11 
+ 	  33 connections where found
+Timestamp: 17/01/2024 10:10:11 
+ 	  33 connections where found
+Timestamp: 17/01/2024 10:10:11
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:11
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:11 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:11 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:11 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:10:11 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:10:11 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:11 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:12
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:12
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:12 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:10:12 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:10:13 
+ 	  33 connections where found
+Timestamp: 17/01/2024 10:10:13 
+ 	  33 connections where found
+Timestamp: 17/01/2024 10:10:13
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:13
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:13 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:13 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:13 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:10:13 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:10:13 
+ 	  5 users where found
+Timestamp: 17/01/2024 10:10:13 
+ 	  5 users where found
+Timestamp: 17/01/2024 10:10:14
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:14
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:23 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:23 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:23
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:23
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:23 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:23 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:23
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:23
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:24 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:24 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:24
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:24
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:24 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:24 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:24
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:24
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:25 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:25 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:25
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:25
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:25 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:25 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:25
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:25
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:10:26 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:26 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:26
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:26
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:26 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:26 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:27
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:27
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:27 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:27 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:27
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:27
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:28 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:28 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:28
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:28
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:28 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:28 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:29
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:29
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:29 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:29 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:30
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:30
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:30 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:30 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:31
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:31
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:31 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:31 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:31
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:31
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:31 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:31 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:32
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:32
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:32 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:32 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:32
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:32
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:35 
+ 	  33 connections where found
+Timestamp: 17/01/2024 10:10:35 
+ 	  33 connections where found
+Timestamp: 17/01/2024 10:10:35
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:35
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:35 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:35 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:10:35 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:10:35 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:10:36 
+ 	  5 users where found
+Timestamp: 17/01/2024 10:10:36 
+ 	  5 users where found
+Timestamp: 17/01/2024 10:10:36
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:36
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:10:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:11:14
+ 	 Driver with id 36 was updated
+Timestamp: 17/01/2024 10:11:15
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:11:15
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:11:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:11:27
+ 	 Driver with id 36 was updated
+Timestamp: 17/01/2024 10:11:28
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:11:28
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:11:43
+ 	 Driver with id 12 was updated
+Timestamp: 17/01/2024 10:11:44
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:11:44
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:11:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:12:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:12:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:13:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:13:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:14:16 
+ 	  5 users where found
+Timestamp: 17/01/2024 10:14:16 
+ 	  5 users where found
+Timestamp: 17/01/2024 10:14:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:14:46
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:14:46
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:14:53
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:14:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:15:05
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:15:17
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:15:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:15:40
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:15:43
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:15:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:16:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:16:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:17:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:17:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:18:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:18:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:19:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:19:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:20:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:20:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:21:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:21:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:22:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:22:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:23:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:23:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:23:57
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:24:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:24:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:25:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:25:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:26:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:26:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:27:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:27:42
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:27:42
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:27:48
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:27:51
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:27:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:27:58 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:27:58 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:27:58 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:27:59 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:27:59
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:27:59
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:28:02 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:28:02 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:28:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:28:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:29:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:29:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:30:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:30:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:31:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:31:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:32:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:32:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:33:08
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:33:08
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:33:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:33:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:34:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:34:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:35:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:35:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:36:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:36:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:37:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:37:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:38:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:38:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:39:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:39:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:40:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:40:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:41:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:41:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:42:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:42:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:43:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:43:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:44:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:44:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:45:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:45:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:46:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:46:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:47:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:47:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:48:16 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:48:16 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:48:18 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:48:18 
+ 	 40 vehicles where found
+Timestamp: 17/01/2024 10:48:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:48:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:49:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:49:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:50:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:50:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:51:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:51:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:52:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:52:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:53:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:53:55
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:54:10 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:54:11 
+ 	 36 gas cards where found
+Timestamp: 17/01/2024 10:54:11
+ 	 Internal server error 
+ 	 Invalid column name 'Inserts'.
+Timestamp: 17/01/2024 10:54:11
+ 	 Internal server error 
+ 	 Invalid column name 'Inserts'.
+Timestamp: 17/01/2024 10:54:25
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:54:46
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:54:50
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:54:50
+ 	 40 drivers were found
+Timestamp: 17/01/2024 10:55:16
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:55:46
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:56:16
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:56:46
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:57:16
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:57:46
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:58:16
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:58:46
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:59:16
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 10:59:46
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:00:16
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:00:46
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:01:16
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:01:46
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:02:16
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:02:46
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:03:16
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:03:46
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:04:16
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:04:46
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:05:16
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:05:46
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:06:16
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:06:46
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:07:16
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:07:46
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:08:16
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:08:46
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:09:16
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:09:46
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:10:16
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:10:46
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:11:16
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:11:46
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:12:16
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:12:46
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:13:16
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:13:46
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:14:16
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:14:46
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:15:16
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:15:46
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:16:16
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:16:46
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:17:16
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:17:46
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:41:13
+ 	 40 drivers were found
+Timestamp: 17/01/2024 11:41:13
+ 	 40 drivers were found
+Timestamp: 17/01/2024 11:41:35
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:42:05
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:42:35
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:43:05
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:43:35
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:44:05
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:44:35
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:45:05
+	 sql: DB is Healthy
+
+Timestamp: 17/01/2024 11:45:35
 	 sql: DB is Healthy
 

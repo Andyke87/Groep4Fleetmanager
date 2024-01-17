@@ -123,11 +123,6 @@ namespace Back_end.Migrations
                         .IsUnicode(false)
                         .HasColumnType("varchar(50)");
 
-                    b.Property<string>("Inserts")
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
-
                     b.Property<string>("Name")
                         .HasMaxLength(50)
                         .IsUnicode(false)

@@ -12,7 +12,7 @@ const Wachtwoord = ({ wachtwoord, setWachtwoord }) => {
             className='inputWachtwoord'
             type="password"
             placeholder='Allphi123'
-            value={wachtwoord}
+            value={wachtwoord.trim()}
             onChange={(e) => setWachtwoord(e.target.value)}
           />
         </div>

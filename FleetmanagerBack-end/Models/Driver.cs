@@ -7,7 +7,6 @@ public partial class Driver
     public int IdDriver { get; set; }
 
     public string? Name { get; set; }
-    public string? Inserts { get; set; }
     public string? FirstName { get; set; }
     public string? Street { get; set; }
     public string? Number { get; set; }
@@ -23,10 +22,9 @@ public partial class Driver
     }
 
     // Constructor met parameters
-    public Driver(string name, string inserts, string firstName, string street, string number, string city, int zipCode, DateTime dayOfBirth, string registryNumber, string categoryLicense)
+    public Driver(string name, string firstName, string street, string number, string city, int zipCode, DateTime dayOfBirth, string registryNumber, string categoryLicense)
     {
         Name = name;
-        Inserts = inserts;
         FirstName = firstName;
         Street = street;
         Number = number;

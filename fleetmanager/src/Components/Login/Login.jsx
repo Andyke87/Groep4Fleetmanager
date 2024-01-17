@@ -26,7 +26,7 @@ const Login = () => {
         // Filter de ingelogde gebruiker op basis van e-mail
         const loggedInUser = allUsers.data.find(user => user.email === email);
          
-        setAction('Logging in'); // Verander de tekst van de button
+        setAction('Logging in');
         localStorage.setItem('authenticatedUser', JSON.stringify(loggedInUser));
         window.location.href = `/Welkom/${loggedInUser.firstName}`;
         

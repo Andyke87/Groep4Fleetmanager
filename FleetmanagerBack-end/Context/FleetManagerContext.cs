@@ -41,9 +41,6 @@ public partial class FleetManagerContext : DbContext
             entity.Property(e => e.Name)
                 .HasMaxLength(50)
                 .IsUnicode(false);
-            entity.Property(e => e.Inserts)
-                .HasMaxLength(50)
-                .IsUnicode(false);
             entity.Property(e => e.FirstName)
                 .HasMaxLength(50)
                 .IsUnicode(false);
