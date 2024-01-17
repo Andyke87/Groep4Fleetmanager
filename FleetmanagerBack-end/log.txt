@@ -665,3 +665,10 @@ Timestamp: 17/01/2024 9:57:45
 Timestamp: 17/01/2024 9:58:15
 	 sql: DB is Healthy
 
+Timestamp: 17/01/2024 11:45:55
+ 	 40 drivers were found
+Timestamp: 17/01/2024 11:45:55
+ 	 40 drivers were found
+Timestamp: 17/01/2024 11:46:05
+	 sql: DB is Healthy
+
