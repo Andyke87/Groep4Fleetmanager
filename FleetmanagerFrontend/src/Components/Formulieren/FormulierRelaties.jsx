@@ -65,7 +65,7 @@ const FormulierenRelaties = ({ searchTerm }) => {
   setId(selectedRow.id);
 
   const driver = drivers.find((driver) => driver.idDriver === selectedRow.idDriver);
-  setSelectedDriver({ value: selectedRow.idDriver, label: driver ? `(${driver.idDriver}) - ${driver.firstName} ${driver.inserts} ${driver.name}` : 'N/A' });
+  setSelectedDriver({ value: selectedRow.idDriver, label: driver ? `(${driver.idDriver}) - ${driver.firstName} ${driver.name}` : 'N/A' });
 
   const gasCard = gasCards.find((gasCard) => gasCard.idGasCard === selectedRow.idGasCard);
   setSelectedGasCard({ value: selectedRow.idGasCard, label: gasCard ? `(${gasCard.idGasCard}) - ${gasCard.cardNumber}` : 'N/A' });
@@ -95,7 +95,7 @@ const FormulierenRelaties = ({ searchTerm }) => {
 
   const driverOptions = drivers.map((driver) => ({
     value: driver.idDriver,
-    label: `${driver.firstName} ${driver.inserts} ${driver.name} - (id: ${driver.idDriver})`,
+    label: `${driver.firstName} ${driver.name} - (id: ${driver.idDriver})`,
   }));
 
   const gasCardOptions = gasCards.map((gasCard) => ({
@@ -114,7 +114,7 @@ const FormulierenRelaties = ({ searchTerm }) => {
         <table>
           <thead>
             <tr>
-              <th>Relation Id</th>
+              <th className='id'>Relation Id</th>
               <th>Driver Name</th>
               <th>Gascard Number</th>
               <th>Expiration Date</th>
@@ -124,12 +124,11 @@ const FormulierenRelaties = ({ searchTerm }) => {
           </thead>
           <tbody>
             {filteredConnections.map((connection) => (
-              <tr key={connection.id} onClick={() => handleRowClick(connection)}>
+              <tr key={connection.id} onClick={() => handleRowClick(connection)}
+                className={selectedRow && selectedRow.id === connection.id ? 'selected-row' : ''}>
                 <td className='tdRelation'>{connection.id}</td>
                 <td className='tdRelation'>
                   {drivers.find((driver) => driver.idDriver === connection.idDriver)?.firstName +
-                    ' ' +
-                    drivers.find((driver) => driver.idDriver === connection.idDriver)?.inserts +
                     ' ' +
                     drivers.find((driver) => driver.idDriver === connection.idDriver)?.name +
                     ` (id: ${drivers.find((driver) => driver.idDriver === connection.idDriver)?.idDriver})` ||

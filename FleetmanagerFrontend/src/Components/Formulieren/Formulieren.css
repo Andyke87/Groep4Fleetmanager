@@ -57,6 +57,10 @@ html {
   text-align: start;
 }
 
+.selected-row {
+  background-color: #0074d9; 
+}
+
 @media (min-width: 0px) {
   /* Extra small devices (phones) */
   .form-container {
@@ -64,6 +68,7 @@ html {
     width: 40vh;
   }
 }
+
 @media (min-width: 576px) {
   /* Extra small devices (phones) */
   .form-container {

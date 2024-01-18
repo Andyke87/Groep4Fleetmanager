@@ -2040,3 +2040,1020 @@ Timestamp: 18/01/2024 2:55:36
  	  5 users where found
 Timestamp: 18/01/2024 2:55:36 
  	  5 users where found
+Timestamp: 18/01/2024 9:59:56 
+ 	  33 connections where found
+Timestamp: 18/01/2024 9:59:56 
+ 	  33 connections where found
+Timestamp: 18/01/2024 9:59:56
+ 	 40 drivers were found
+Timestamp: 18/01/2024 9:59:56
+ 	 40 drivers were found
+Timestamp: 18/01/2024 9:59:56 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 9:59:56 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 9:59:56 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 9:59:56 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:00:10 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:00:10
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:00:10 
+ 	  Internal server error 
+ 	 The process cannot access the file 'C:\Users\andy\OneDrive - Hogeschool Gent\Bureaublad\Groep4Fleetmanager\FleetmanagerBackend\log.txt' because it is being used by another process.
+Timestamp: 18/01/2024 10:00:10 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:00:10 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:00:45 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:00:45 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:00:45
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:00:45
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:00:45 
+ 	  Internal server error 
+ 	 The process cannot access the file 'C:\Users\andy\OneDrive - Hogeschool Gent\Bureaublad\Groep4Fleetmanager\FleetmanagerBackend\log.txt' because it is being used by another process.
+Timestamp: 18/01/2024 10:00:45 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:00:45 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:01:12 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:01:12 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:01:12
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:01:12
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:01:12 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:01:12 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:01:12 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:01:12 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:01:43
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:01:43
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:01:45 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:01:45 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:01:45
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:01:45
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:01:45 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:01:45 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:01:45 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:01:45 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:01:48 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:01:48 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:01:48
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:01:48
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:01:48 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:01:48 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:01:48 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:01:48 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:01:49 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:01:49 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:01:49
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:01:49
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:01:49 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:01:49 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:01:49 
+ 	  Internal server error 
+ 	 The process cannot access the file 'C:\Users\andy\OneDrive - Hogeschool Gent\Bureaublad\Groep4Fleetmanager\FleetmanagerBackend\log.txt' because it is being used by another process.
+Timestamp: 18/01/2024 10:02:50 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:02:50 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:02:50
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:02:50
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:02:50 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:02:50 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:02:50 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:02:50 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:03:00
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:03:00
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:03:02 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:03:02 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:03:03 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:03:03 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:03:03
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:03:03
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:03:03 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:03:03 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:03:03 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:03:03 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:05:54 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:05:54 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:05:54
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:05:54
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:05:54 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:05:54 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:05:54 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:05:54 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:06:01
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:06:01
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:10:17
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:10:17
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:11:09 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:11:09 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:11:09
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:11:09
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:11:09 
+ 	  Internal server error 
+ 	 The process cannot access the file 'C:\Users\andy\OneDrive - Hogeschool Gent\Bureaublad\Groep4Fleetmanager\FleetmanagerBackend\log.txt' because it is being used by another process.
+Timestamp: 18/01/2024 10:11:09 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:11:09 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:11:29 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:11:29
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:11:29 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:11:29 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:11:38 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:11:38
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:11:38 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:11:38 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:11:58 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:11:58 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:11:58
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:11:58
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:11:58 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:11:58 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:11:58 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:11:58 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:12:02 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:12:02
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:12:02 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:12:02 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:12:04 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:12:04
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:12:04 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:12:04 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:12:07 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:12:07
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:12:07 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:12:07 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:12:15 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:12:15
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:12:15 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:12:15 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:12:16 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:12:16
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:12:16 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:12:16 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:12:19
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:12:19
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:12:49 
+ 	  5 users where found
+Timestamp: 18/01/2024 10:12:49 
+ 	  5 users where found
+Timestamp: 18/01/2024 10:14:47 
+ 	  5 users where found
+Timestamp: 18/01/2024 10:14:47 
+ 	  5 users where found
+Timestamp: 18/01/2024 10:17:14 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:17:14 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:18:24 
+ 	  5 users where found
+Timestamp: 18/01/2024 10:18:24 
+ 	  5 users where found
+Timestamp: 18/01/2024 10:18:26 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:18:26 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:18:27
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:18:27
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:18:29 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:18:29 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:18:31 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:18:31 
+ 	  33 connections where found
+Timestamp: 18/01/2024 10:18:31
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:18:31 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:18:31
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:18:31 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:18:31 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:18:31 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:18:33 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:18:33 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:22:02 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:24:01 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:24:02 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:24:19 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:24:19 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:30:20 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:30:23 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:30:24 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:32:39 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:33:08 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:33:35 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:33:35 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:33:46 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:33:53 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:33:57 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:33:58 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:36:18 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:40:08 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:40:16 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:40:20 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:40:20 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:40:21 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:40:21 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:41:27 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:41:27 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:42:01 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:42:47 
+ 	  5 users where found
+Timestamp: 18/01/2024 10:42:47 
+ 	  5 users where found
+Timestamp: 18/01/2024 10:42:49 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:42:49 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 10:42:55
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:42:55
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:43:22
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:43:34
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:43:35
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:43:41 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:43:41 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:43:47
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:43:47
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:44:52
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:44:52
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:44:58
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:45:14
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:45:14
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:45:18
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:45:27
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:45:34
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:45:38
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:45:38
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:46:15 
+ 	  5 users where found
+Timestamp: 18/01/2024 10:46:15 
+ 	  5 users where found
+Timestamp: 18/01/2024 10:47:28 
+ 	 User with id 13 was updated
+Timestamp: 18/01/2024 10:47:30 
+ 	  5 users where found
+Timestamp: 18/01/2024 10:47:30 
+ 	  5 users where found
+Timestamp: 18/01/2024 10:48:41 
+ 	  5 users where found
+Timestamp: 18/01/2024 10:48:42 
+ 	  5 users where found
+Timestamp: 18/01/2024 10:48:47 
+ 	  5 users where found
+Timestamp: 18/01/2024 10:49:06 
+ 	  5 users where found
+Timestamp: 18/01/2024 10:49:08 
+ 	  5 users where found
+Timestamp: 18/01/2024 10:49:10 
+ 	  5 users where found
+Timestamp: 18/01/2024 10:49:15 
+ 	  5 users where found
+Timestamp: 18/01/2024 10:49:21 
+ 	  5 users where found
+Timestamp: 18/01/2024 10:49:26 
+ 	  5 users where found
+Timestamp: 18/01/2024 10:49:32 
+ 	  5 users where found
+Timestamp: 18/01/2024 10:49:35 
+ 	  5 users where found
+Timestamp: 18/01/2024 10:50:44 
+ 	 User was logged in
+Timestamp: 18/01/2024 10:50:44 
+ 	  5 users where found
+Timestamp: 18/01/2024 10:50:53
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:50:53
+ 	 40 drivers were found
+Timestamp: 18/01/2024 10:55:36 
+ 	 User was logged in
+Timestamp: 18/01/2024 10:55:36 
+ 	  5 users where found
+Timestamp: 18/01/2024 10:55:39 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:55:39 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:56:07 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:56:07 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:57:21 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 10:57:21 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:01:21 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:01:21 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:01:47 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:01:52 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:02:04 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:02:21 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:03:36 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:03:36 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:03:48 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:03:48 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:03:51 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:03:51 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:04:12 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:04:12 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:04:15 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:04:26 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:04:29 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:04:31 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:04:34 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:04:47 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:04:50 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:05:36 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:05:39 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:06:57 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:06:59 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:07:14 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:07:18 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:07:45 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:07:48 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:07:58 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:08:00 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:08:06 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:08:07 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:08:11 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:08:17 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:08:17 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:08:23 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:08:23 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:10:26 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:10:26 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:10:28 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:10:41 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:10:43 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:10:45 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:10:48 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:10:56 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:11:00 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:11:02 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:11:20 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:11:21 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:11:52 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:11:58 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:12:01 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:12:08 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:12:10 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:12:14 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:12:27 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:12:27 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:12:58 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:13:03 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:13:10 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:13:13 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:13:28 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:13:31 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:14:06 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:14:15 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:14:24 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:14:28 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:14:36 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:14:40 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:14:47 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:15:07 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:15:22
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:15:22
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:17:03 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:17:03 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:17:18 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:17:27 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:17:50 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:18:30 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:18:35 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:18:44 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:18:46 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:18:53 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:19:00 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:19:04 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:19:08 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:20:21
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:20:21
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:20:23 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:20:23 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:20:23 
+ 	  33 connections where found
+Timestamp: 18/01/2024 11:20:23 
+ 	  33 connections where found
+Timestamp: 18/01/2024 11:20:23
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:20:23
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:20:23 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:20:23 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:20:23 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:20:23 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:20:24 
+ 	  5 users where found
+Timestamp: 18/01/2024 11:20:24 
+ 	  5 users where found
+Timestamp: 18/01/2024 11:20:26 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:20:26 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:21:34 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:21:34 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:21:38 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:21:42 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:21:50 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:21:51 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:21:58 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:22:03 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:22:07 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:22:11 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:22:15 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:22:20 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:22:24 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:22:34 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:22:34 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:23:22
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:23:22
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:23:37
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:23:40 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:23:40 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:23:41 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:23:41 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:23:42 
+ 	  33 connections where found
+Timestamp: 18/01/2024 11:23:42 
+ 	  33 connections where found
+Timestamp: 18/01/2024 11:23:42
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:23:42
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:23:42 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:23:42 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:23:42 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:23:42 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:23:43 
+ 	  5 users where found
+Timestamp: 18/01/2024 11:23:43 
+ 	  5 users where found
+Timestamp: 18/01/2024 11:23:44
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:23:44
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:23:50
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:23:52
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:23:54
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:24:01
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:24:06
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:24:09
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:24:11
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:24:13
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:24:16
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:24:18
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:24:37
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:24:51 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:24:51 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:25:43
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:25:43
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:25:45 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:25:45 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:25:47 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:25:47 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:25:48 
+ 	  33 connections where found
+Timestamp: 18/01/2024 11:25:48 
+ 	  33 connections where found
+Timestamp: 18/01/2024 11:25:48
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:25:48
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:25:48 
+ 	  Internal server error 
+ 	 The process cannot access the file 'C:\Users\andy\OneDrive - Hogeschool Gent\Bureaublad\Groep4Fleetmanager\FleetmanagerBackend\log.txt' because it is being used by another process.
+Timestamp: 18/01/2024 11:25:48 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:25:48 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:25:49 
+ 	  5 users where found
+Timestamp: 18/01/2024 11:25:49 
+ 	  5 users where found
+Timestamp: 18/01/2024 11:25:53
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:25:53
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:26:36 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:26:36 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:26:46
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:26:46
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:26:47 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:26:47 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:26:48 
+ 	  33 connections where found
+Timestamp: 18/01/2024 11:26:48 
+ 	  33 connections where found
+Timestamp: 18/01/2024 11:26:48
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:26:48
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:26:48 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:26:48 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:26:48 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:26:48 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:26:50 
+ 	  5 users where found
+Timestamp: 18/01/2024 11:26:50 
+ 	  5 users where found
+Timestamp: 18/01/2024 11:26:54
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:26:54
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:26:55 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:26:55 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:27:00 
+ 	  33 connections where found
+Timestamp: 18/01/2024 11:27:00 
+ 	  33 connections where found
+Timestamp: 18/01/2024 11:27:00
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:27:00
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:27:00 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:27:01 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:27:01 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:27:01 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:27:05 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:27:05 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:30:39 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:30:39 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:31:45 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:31:45 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:32:32 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:32:33 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 11:32:38 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:32:38 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:32:39
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:32:39
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:33:23
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:33:39
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:52:09
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:52:09
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:55:52 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:55:52 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:56:31 
+ 	 Gas card created
+Timestamp: 18/01/2024 11:56:32 
+ 	 37 gas cards where found
+Timestamp: 18/01/2024 11:56:32 
+ 	 37 gas cards where found
+Timestamp: 18/01/2024 11:56:55 
+ 	 Gas card updated
+Timestamp: 18/01/2024 11:56:56 
+ 	 37 gas cards where found
+Timestamp: 18/01/2024 11:56:56 
+ 	 37 gas cards where found
+Timestamp: 18/01/2024 11:57:01 
+ 	 Gas card removed
+Timestamp: 18/01/2024 11:57:04 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:57:04 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 11:57:05
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:57:05
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:59:10
+ 	 40 drivers were found
+Timestamp: 18/01/2024 11:59:10
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:00:15
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:00:16
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:00:19
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:01:15
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:01:23
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:01:23
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:01:59
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:01:59
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:03:08 
+ 	 User was logged in
+Timestamp: 18/01/2024 12:03:08 
+ 	  5 users where found
+Timestamp: 18/01/2024 12:03:16
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:03:16
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:03:57
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:03:57
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:04:09
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:04:11
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:04:16
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:05:18
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:05:20
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:05:38
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:05:38
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:06:11
+ 	 The driver was created
+Timestamp: 18/01/2024 12:06:12
+ 	 41 drivers were found
+Timestamp: 18/01/2024 12:06:12
+ 	 41 drivers were found
+Timestamp: 18/01/2024 12:06:29
+ 	 Driver with id 41 was updated
+Timestamp: 18/01/2024 12:06:30
+ 	 41 drivers were found
+Timestamp: 18/01/2024 12:06:30
+ 	 41 drivers were found
+Timestamp: 18/01/2024 12:06:39
+ 	 Driver with id 41 was removed
+Timestamp: 18/01/2024 12:06:40
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:06:40
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:06:41 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 12:06:41 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 12:07:23 
+ 	 Vehicle with id 0 is created
+Timestamp: 18/01/2024 12:07:25 
+ 	 41 vehicles where found
+Timestamp: 18/01/2024 12:07:25 
+ 	 41 vehicles where found
+Timestamp: 18/01/2024 12:08:34 
+ 	 Vehicle with id 41 is updated
+Timestamp: 18/01/2024 12:08:36 
+ 	 41 vehicles where found
+Timestamp: 18/01/2024 12:08:36 
+ 	 41 vehicles where found
+Timestamp: 18/01/2024 12:09:44 
+ 	 Vehicle with id 41 is updated
+Timestamp: 18/01/2024 12:09:46 
+ 	 41 vehicles where found
+Timestamp: 18/01/2024 12:09:46 
+ 	 41 vehicles where found
+Timestamp: 18/01/2024 12:20:46 
+ 	 41 vehicles where found
+Timestamp: 18/01/2024 12:20:46 
+ 	 41 vehicles where found
+Timestamp: 18/01/2024 12:22:32
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:22:32
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:22:58
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:22:58
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:23:36
+ 	 40 drivers were found
+Timestamp: 18/01/2024 12:23:36
+ 	 40 drivers were found

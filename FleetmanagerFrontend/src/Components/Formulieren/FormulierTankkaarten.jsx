@@ -17,7 +17,7 @@ const FormulierTankkaarten = ({searchTerm}) => {
   const [pin, setPin] = useState('');
   const [fuel, setFuel] = useState('');
   const [blockedCard, setBlockedCard] = useState('');
-
+  const [editingDate, setEditingDate] = useState(false);
 
 
   useEffect(() => {
@@ -63,6 +63,10 @@ const FormulierTankkaarten = ({searchTerm}) => {
     setBlockedCard(selectedRow.blockedCard);
   };
 
+  const handleDateClick = () => {
+    setEditingDate(true);
+  };
+
   const formatDate = (dateString) => {
     const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
     return new Date(dateString).toLocaleDateString('nl-NL', options);
@@ -83,17 +87,18 @@ const FormulierTankkaarten = ({searchTerm}) => {
         <table>
           <thead>
             <tr>
-              <th className='tdGasCard'>Gas Card Id</th>
-              <th className='tdGasCard'>Card Number</th>
-              <th className='tdGasCard'>Expiration Date</th>
-              <th className='tdGasCard'>Pin</th>
-              <th className='tdGasCard'>Fuel</th>
-              <th className='tdGasCard'>Card Blocked</th>
+              <th className='id'>Gas Card Id</th>
+              <th>Card Number</th>
+              <th>Expiration Date</th>
+              <th>Pin</th>
+              <th>Fuel</th>
+              <th>Blocked</th>
             </tr>
           </thead>
           <tbody>
             {filterGasCards.map((gasCard) => (
-              <tr key={gasCard.idGasCard} onClick={() => handleRowClick(gasCard)}>
+              <tr key={gasCard.idGasCard} onClick={() => handleRowClick(gasCard)}
+                className={selectedRow && selectedRow.idGasCard === gasCard.idGasCard ? 'selected-row' : ''}>
                 <td>{gasCard.idGasCard}</td>
                 <td>{gasCard.cardNumber}</td>
                 <td>{formatDate(gasCard.validationDate)}</td>
@@ -129,13 +134,23 @@ const FormulierTankkaarten = ({searchTerm}) => {
         </div>
         <div className="col">
           <label htmlFor="validationDate">Expiration Date</label>
-          <input
-            className="input"
-            type="date"
-            name="validationDate"
-            value={validationDate}
-            onChange={handleChange}
-          />
+          {selectedRow ? (
+            <input
+              className="input"
+              type={editingDate ? "date" : "text"}
+              name="validationDate"
+              value={formatDate(validationDate)}
+              onChange={handleChange}
+            />
+          ) : (
+            <input
+              className="input"
+              type="date"
+              name="validationDate"
+              value={validationDate}
+              onChange={handleChange}
+            />
+          )}
         </div>
         <div className="col">
           <label htmlFor="pin">Pin</label>
@@ -168,7 +183,7 @@ const FormulierTankkaarten = ({searchTerm}) => {
           </select>
         </div>
         <div className="col">
-          <label htmlFor="blockedCard">Card Blocked</label>
+          <label htmlFor="blockedCard">Blocked</label>
           <select
             className="input"
             type="text"
