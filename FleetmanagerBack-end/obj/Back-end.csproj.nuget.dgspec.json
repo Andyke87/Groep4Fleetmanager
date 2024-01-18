@@ -97,6 +97,10 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.70, )"
+            },
             "NetDevPack.Security.PasswordHasher.Bcrypt": {
               "target": "Package",
               "version": "[7.0.1, )"
@@ -112,6 +116,10 @@
             "System.IO.FileSystem.Primitives": {
               "target": "Package",
               "version": "[4.3.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.6.6, )"
             }
           },
           "imports": [

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dpZZFikerCpiiY+hd+rncO7IEnGayIsWjmhm+f647cU2qjGsw2/XWjG90Qi5DGvxK1M/9XkJU9WJaX0C9qmk0g==",
+  "dgSpecHash": "pX4kcxIm3UloBwFatB03JcZsU6K7XmtvgFrppUCffjCBoAv/m7oGsV1TJx7HLLEv+qXMcjUVw+Bma8KNhesSrw==",
   "success": true,
   "projectFilePath": "C:\\Users\\andy\\OneDrive - Hogeschool Gent\\Bureaublad\\Groep4Fleetmanager\\TestProjectFleetManager\\TestProjectFleetManager.csproj",
   "expectedPackageFiles": [
@@ -10,7 +10,7 @@
     "C:\\Users\\andy\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\andy\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\andy\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
-    "C:\\Users\\andy\\.nuget\\packages\\castle.core\\5.0.0\\castle.core.5.0.0.nupkg.sha512",
+    "C:\\Users\\andy\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\andy\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\andy\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.0\\microsoft.aspnetcore.authentication.jwtbearer.8.0.0.nupkg.sha512",
     "C:\\Users\\andy\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.0\\microsoft.aspnetcore.cryptography.internal.7.0.0.nupkg.sha512",
@@ -79,7 +79,7 @@
     "C:\\Users\\andy\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.6.0\\microsoft.testplatform.objectmodel.17.6.0.nupkg.sha512",
     "C:\\Users\\andy\\.nuget\\packages\\microsoft.testplatform.testhost\\17.6.0\\microsoft.testplatform.testhost.17.6.0.nupkg.sha512",
     "C:\\Users\\andy\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
-    "C:\\Users\\andy\\.nuget\\packages\\moq\\4.18.1\\moq.4.18.1.nupkg.sha512",
+    "C:\\Users\\andy\\.nuget\\packages\\moq\\4.20.70\\moq.4.20.70.nupkg.sha512",
     "C:\\Users\\andy\\.nuget\\packages\\moq.entityframeworkcore\\7.0.0.2\\moq.entityframeworkcore.7.0.0.2.nupkg.sha512",
     "C:\\Users\\andy\\.nuget\\packages\\mstest.testadapter\\3.0.4\\mstest.testadapter.3.0.4.nupkg.sha512",
     "C:\\Users\\andy\\.nuget\\packages\\mstest.testframework\\3.0.4\\mstest.testframework.3.0.4.nupkg.sha512",
@@ -116,7 +116,14 @@
     "C:\\Users\\andy\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
     "C:\\Users\\andy\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
     "C:\\Users\\andy\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\andy\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+    "C:\\Users\\andy\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
+    "C:\\Users\\andy\\.nuget\\packages\\xunit\\2.6.6\\xunit.2.6.6.nupkg.sha512",
+    "C:\\Users\\andy\\.nuget\\packages\\xunit.abstractions\\2.0.3\\xunit.abstractions.2.0.3.nupkg.sha512",
+    "C:\\Users\\andy\\.nuget\\packages\\xunit.analyzers\\1.10.0\\xunit.analyzers.1.10.0.nupkg.sha512",
+    "C:\\Users\\andy\\.nuget\\packages\\xunit.assert\\2.6.6\\xunit.assert.2.6.6.nupkg.sha512",
+    "C:\\Users\\andy\\.nuget\\packages\\xunit.core\\2.6.6\\xunit.core.2.6.6.nupkg.sha512",
+    "C:\\Users\\andy\\.nuget\\packages\\xunit.extensibility.core\\2.6.6\\xunit.extensibility.core.2.6.6.nupkg.sha512",
+    "C:\\Users\\andy\\.nuget\\packages\\xunit.extensibility.execution\\2.6.6\\xunit.extensibility.execution.2.6.6.nupkg.sha512"
   ],
   "logs": []
 }

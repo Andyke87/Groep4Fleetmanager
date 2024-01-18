@@ -1,6 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+
+using AutoMapper;
 using Back_end.Controllers;
 using FleetManager.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -77,8 +76,8 @@ namespace Back_end.Tests.Controllers
             );
 
             var driverId = 1;
-            var updatedDriverDto = new DriverDTO { IdDriver = driverId, Name = "Updated Driver" };
-            var existingDriver = new Driver { IdDriver = driverId, Name = "John Doe" };
+            var updatedDriverDto = new DriverDTO { IdDriver = driverId, FirstName = "John", Name = "Doe", RegistryNumber = "123456789", CategoryLicense = "B" };
+            var existingDriver = new Driver { IdDriver = driverId, FirstName = "John", Name = "Doe", RegistryNumber = "123456789", CategoryLicense = "B" };
             _dbContextMock.Setup(db => db.Drivers.FirstOrDefaultAsync(It.IsAny<Func<Driver, bool>>()))
                 .ReturnsAsync(existingDriver);
 
