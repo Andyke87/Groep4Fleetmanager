@@ -26,7 +26,7 @@ namespace Back_end
         {
             Log.Logger = new LoggerConfiguration()
                 .WriteTo.Console()
-                .WriteTo.File("log.txt", rollingInterval: RollingInterval.Day)
+                .WriteTo.File("log2.txt", rollingInterval: RollingInterval.Day)
                 .CreateLogger();
 
             var builder = WebApplication.CreateBuilder(args);

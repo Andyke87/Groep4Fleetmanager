@@ -15,11 +15,15 @@
     </None>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.1" />
     <PackageReference Include="Moq.EntityFrameworkCore" Version="7.0.0.2" />
+    <PackageReference Include="xunit.extensibility.core" Version="2.6.6" />
     <ProjectReference Include="C:\Users\andy\OneDrive - Hogeschool Gent\Bureaublad\Groep4Fleetmanager\FleetmanagerBack-end\Back-end.csproj" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="3.0.4" />
     <PackageReference Include="MSTest.TestFramework" Version="3.0.4" />
     <PackageReference Include="coverlet.collector" Version="6.0.0" />
   </ItemGroup>
+<ItemGroup>
+  <ProjectReference Include="..\FleetmanagerBackend\Back-end.csproj" />
+</ItemGroup>
 
 </Project>
