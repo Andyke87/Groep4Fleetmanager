@@ -2004,3 +2004,39 @@ Timestamp: 18/01/2024 2:50:11
  	  5 users where found
 Timestamp: 18/01/2024 2:50:11 
  	  5 users where found
+Timestamp: 18/01/2024 2:55:30 
+ 	 User was logged in
+Timestamp: 18/01/2024 2:55:30 
+ 	  5 users where found
+Timestamp: 18/01/2024 2:55:32
+ 	 40 drivers were found
+Timestamp: 18/01/2024 2:55:32
+ 	 40 drivers were found
+Timestamp: 18/01/2024 2:55:34 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 2:55:34 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 2:55:34 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 2:55:34 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 2:55:36 
+ 	  33 connections where found
+Timestamp: 18/01/2024 2:55:36
+ 	 40 drivers were found
+Timestamp: 18/01/2024 2:55:36 
+ 	  33 connections where found
+Timestamp: 18/01/2024 2:55:36 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 2:55:36
+ 	 40 drivers were found
+Timestamp: 18/01/2024 2:55:36 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 2:55:36 
+ 	 36 gas cards where found
+Timestamp: 18/01/2024 2:55:36 
+ 	 40 vehicles where found
+Timestamp: 18/01/2024 2:55:36 
+ 	  5 users where found
+Timestamp: 18/01/2024 2:55:36 
+ 	  5 users where found
