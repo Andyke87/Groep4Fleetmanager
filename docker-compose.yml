@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  backend:
+    image: fleetmanagerbackend
+    container_name: fleetmanagerBackend
+    build: 
+          context: ./FleetmanagerBackend
+          dockerfile: Dockerfile
+    ports:
+      - "5043:5043"
+    stdin_open: true
+    tty: true
+
+  frontend:
+    image: fleetmanagerfrontend
+    container_name: fleetmanagerFrontend
+    build: 
+          context: ./FleetmanagerFrontend
+          dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    stdin_open: true
+    tty: true
+
+
