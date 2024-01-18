@@ -26,7 +26,7 @@ const ButtonUpdateVehicle = ({IdVehicle, Brand, Model, ChassisNumber, LicensePla
         const confirmUpdate = window.confirm('Are you sure you want to update this vehicle?');
 
         if (confirmUpdate) {
-            if (!Brand || !Model || !ChassisNumber || !LicensePlate || !Fuel || !VehicleType || !Color || !NumberOfDoors) {
+            if (!Brand || !Model || !ChassisNumber || !LicensePlate || !Fuel || !VehicleType || !Color) {
                 throw new Error("One or more fields are empty or contain invalid values");
             }
 

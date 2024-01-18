@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
-import '../Formulieren/Formulieren.css';
 import ButtonDeleteVehicle from '../Buttons/ButtonsVehicles/ButtonDeleteVehicle';
 import ButtonUpdateVehicle from '../Buttons/ButtonsVehicles/ButtonUpdateVehicle';
 import ButtonClearInput from '../Buttons/ButtonClearInput';
@@ -85,20 +84,21 @@ const FormulierenVoertuigen = ({searchTerm}) => {
         <table >
           <thead>
             <tr>
-              <th className='tdVehiclec'>Vehicle Id</th>
-              <th className='tdVehicle'>Brand</th>
-              <th className='tdVehicle'>Model</th>
-              <th className='tdVehicle'>Chassis Number</th>
-              <th className='tdVehicle'>License Plate</th>
-              <th className='tdVehicle'>Fuel</th>
-              <th className='tdVehicle'>Vehicle Type</th>
-              <th className='tdVehicle'>Color</th>
-              <th className='tdVehicle'>Doors</th>
+              <th className='id'>Vehicle Id</th>
+              <th>Brand</th>
+              <th>Model</th>
+              <th>Chassis Number</th>
+              <th>License Plate</th>
+              <th>Fuel</th>
+              <th>Vehicle Type</th>
+              <th>Color</th>
+              <th>Doors</th>
             </tr>
           </thead>
           <tbody>
             {filteredVehicles.map(vehicle => (
-              <tr className='trData' key={vehicle.idVehicle} onClick={() => handleRowClick(vehicle)}>
+              <tr key={vehicle.idVehicle} onClick={() => handleRowClick(vehicle)}
+              className={selectedRow && selectedRow.idVehicle === vehicle.idVehicle ? 'selected-row trData' : 'trData'}>     
                 <td>{vehicle.idVehicle}</td>
                 <td>{vehicle.brand}</td>
                 <td>{vehicle.model}</td>
@@ -228,7 +228,7 @@ const FormulierenVoertuigen = ({searchTerm}) => {
         </div>
 
         <div className="col">
-          <label htmlFor="numberOfDoors">Number Of Doors</label>
+          <label htmlFor="numberOfDoors">Doors</label>
           <input
             className="input"
             placeholder='Only numbers'

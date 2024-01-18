@@ -13,6 +13,8 @@ using Microsoft.Data.SqlClient;
 using Microsoft.AspNetCore.Server.Kestrel.Https;
 using System.Security.Cryptography.X509Certificates;
 using Microsoft.AspNetCore.HttpOverrides;
+using Serilog;
+using FleetManager.Logging;
 
 namespace Back_end
 {
@@ -22,6 +24,11 @@ namespace Back_end
     {
         public static void Main(string[] args)
         {
+            Log.Logger = new LoggerConfiguration()
+                .WriteTo.Console()
+                .WriteTo.File("log2.txt", rollingInterval: RollingInterval.Day)
+                .CreateLogger();
+
             var builder = WebApplication.CreateBuilder(args);
 
             // Voeg SqlConnection toe aan de DI-container
@@ -207,14 +214,16 @@ namespace Back_end
                 try
                 {
                     await _connection.OpenAsync(cancellationToken);
+                    Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t {Name} is healthy");
+                    return HealthCheckResult.Healthy();
                 }
                 catch (SqlException)
                 {
+                    Logging.LogToFile($"Timestamp: {DateTime.Now} \n \t {Name} is unhealthy");
                     return HealthCheckResult.Unhealthy();
                 }
-
-                return HealthCheckResult.Healthy();
             }
+
         }
 
         private static void LogHealthCheckResults(IHost app)
@@ -225,6 +234,7 @@ namespace Back_end
 
             foreach (var result in results.Entries)
             {
+                // roep de klasse Logging aan
                 app.Services.GetRequiredService<ILogger<Program>>().LogInformation($"{result.Key}: DB is {result.Value.Status}");
             }
         }

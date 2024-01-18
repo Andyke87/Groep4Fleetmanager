@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
-import '../Formulieren/Formulieren.css';
 import ButtonDeleteDriver from '../Buttons/ButtonsDrivers/ButtonDeleteDriver';
 import ButtonUpdateDriver from '../Buttons/ButtonsDrivers/ButtonUpdateDriver';
 import ButtonAddDriver from '../Buttons/ButtonsDrivers/ButtonAddDriver';
@@ -92,32 +91,36 @@ const FormulierBestuurders = ({searchTerm}) => {
         <table >
           <thead>
             <tr >
-              <th className='thDriver'>Driver Id</th>
-              <th className='thDriver'>First Name</th>
-              <th className='thDriver'>Name</th>
-              <th className='thDriver'>Street</th>
-              <th className='thDriver'>Number</th>
-              <th className='thDriver'>City</th>
-              <th className='thDriver'>Zip Code</th>
-              <th className='thDriver'>Day Of Birth</th>
-              <th className='thDriver'>Registry Number</th>
-              <th className='thDriver'>Category License</th>
+              <th className='id'>Driver Id</th>
+              <th>First Name</th>
+              <th>Name</th>
+              <th>Street</th>
+              <th>Number</th>
+              <th>City</th>
+              <th>Zip Code</th>
+              <th>Day Of Birth</th>
+              <th>Registry Number</th>
+              <th>License</th>
             </tr>
           </thead>
           <tbody>
             {filteredDrivers.map(driver => (
-            <tr key={driver.idDriver}  onClick={() => handleRowClick(driver)}>
-              <td>{driver.idDriver}</td>
-              <td>{driver.firstName}</td>
-              <td>{driver.name}</td>
-              <td>{driver.street}</td>
-              <td>{driver.number}</td>
-              <td>{driver.city}</td>
-              <td>{driver.zipCode}</td>
-              <td>{formatDate(driver.dayOfBirth)}</td>
-              <td>{driver.registryNumber}</td>
-              <td>{driver.categoryLicense}</td>
-            </tr>
+              <tr
+                key={driver.idDriver}
+                onClick={() => handleRowClick(driver)}
+                className={selectedRow && selectedRow.idDriver === driver.idDriver ? 'selected-row' : ''}
+              >
+                <td className='id'>{driver.idDriver}</td>
+                <td>{driver.firstName}</td>
+                <td>{driver.name}</td>
+                <td>{driver.street}</td>
+                <td>{driver.number}</td>
+                <td>{driver.city}</td>
+                <td>{driver.zipCode}</td>
+                <td>{formatDate(driver.dayOfBirth)}</td>
+                <td>{driver.registryNumber}</td>
+                <td>{driver.categoryLicense}</td>
+              </tr>
             ))}
           </tbody>
         </table>
@@ -208,13 +211,23 @@ const FormulierBestuurders = ({searchTerm}) => {
 
         <div className="col">
           <label htmlFor="dayOfBirth">Day Of Birth</label>
-          <input
-            className="input"
-            type="date"
-            name="dayOfBirth"
-            value={dayOfBirth}
-            onChange={handleChange}
-          />
+          {selectedRow ? (
+            <input
+              className="input"
+              type="text"
+              name="dayOfBirth"
+              value={formatDate(dayOfBirth)}
+              onChange={handleChange}
+            />
+          ) : (
+            <input
+              className="input"
+              type="date"
+              name="dayOfBirth"
+              value={dayOfBirth}
+              onChange={handleChange}
+            />
+          )}
         </div>
 
         <div className="col">
@@ -230,7 +243,7 @@ const FormulierBestuurders = ({searchTerm}) => {
         </div>
 
         <div className="col">
-          <label htmlFor="categoryLicense">Category License</label>
+          <label htmlFor="categoryLicense">License</label>
           <select
             className="input"
             type="text"

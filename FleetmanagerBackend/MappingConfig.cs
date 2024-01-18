@@ -1,4 +1,5 @@
 using AutoMapper;
+using FleetManager.DTOs;
 using FleetManager.Models;
 
 namespace FleetManager.Profiles

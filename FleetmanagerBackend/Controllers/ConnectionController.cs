@@ -4,6 +4,7 @@ using FleetManager.Models;
 using Swashbuckle.AspNetCore.Annotations;
 using AutoMapper;
 using FleetManager.Logging;
+using FleetManager.DTOs;
 
 namespace Back_end.Controllers;
 

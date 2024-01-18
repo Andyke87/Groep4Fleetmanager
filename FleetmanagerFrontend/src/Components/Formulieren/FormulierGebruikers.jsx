@@ -10,7 +10,7 @@ import ButtonUpdateUser from '../Buttons/ButtonsUsers/ButtonUpdateUser';
 import ButtonDeleteUser from '../Buttons/ButtonsUsers/ButtonDeleteUser';
 
 const FormulierGebruikers = ({searchTerm}) => {
-
+  const [selectedRow, setSelectedRow] = useState(null);
   const [id, setIdUser] = useState('');
   const [name, setName] = useState('');
   const [firstName, setFirstName] = useState('');
@@ -54,6 +54,7 @@ const FormulierGebruikers = ({searchTerm}) => {
 
 
   const handleRowClick = (selectedRow) => {
+    setSelectedRow(selectedRow);
     setIdUser(selectedRow.id);
     setName(selectedRow.name);
     setFirstName(selectedRow.firstName);
@@ -78,7 +79,7 @@ const FormulierGebruikers = ({searchTerm}) => {
         <table >
           <thead>
             <tr >
-              <th>User Id</th>
+              <th className='id'>User Id</th>
               <th>First Name</th>
               <th>Name</th>              
               <th>Email</th>
@@ -88,7 +89,8 @@ const FormulierGebruikers = ({searchTerm}) => {
           </thead>
           <tbody>
             {filteredUsers.map(user => (
-            <tr key={user.id}  onClick={() => handleRowClick(user)}>
+            <tr key={user.id}  onClick={() => handleRowClick(user)}
+            className={selectedRow && selectedRow.id === user.id ? 'selected-row' : ''}>
               <td>{user.id}</td>
               <td>{user.firstName}</td>
               <td>{user.name}</td>
@@ -148,7 +150,8 @@ const FormulierGebruikers = ({searchTerm}) => {
           <label htmlFor="password">Password</label>
             <input
                 className="input"
-                placeholder='Max 50 characters'
+                placeholder='plaintext max 50'
+                title='plaintext only'
                 type="text"
                 name="password"
                 value={password.trim()}
