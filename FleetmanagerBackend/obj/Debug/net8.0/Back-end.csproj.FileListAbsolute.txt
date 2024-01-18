@@ -304,3 +304,12 @@ C:\Users\andy\OneDrive - Hogeschool Gent\Bureaublad\Groep4Fleetmanager\Fleetmana
 C:\Users\andy\OneDrive - Hogeschool Gent\Bureaublad\Groep4Fleetmanager\FleetmanagerBackend\obj\Debug\net8.0\Back-end.pdb
 C:\Users\andy\OneDrive - Hogeschool Gent\Bureaublad\Groep4Fleetmanager\FleetmanagerBackend\obj\Debug\net8.0\Back-end.genruntimeconfig.cache
 C:\Users\andy\OneDrive - Hogeschool Gent\Bureaublad\Groep4Fleetmanager\FleetmanagerBackend\obj\Debug\net8.0\ref\Back-end.dll
+C:\Users\andy\OneDrive - Hogeschool Gent\Bureaublad\Groep4Fleetmanager\FleetmanagerBackend\bin\Debug\net8.0\Serilog.dll
+C:\Users\andy\OneDrive - Hogeschool Gent\Bureaublad\Groep4Fleetmanager\FleetmanagerBackend\bin\Debug\net8.0\Serilog.AspNetCore.dll
+C:\Users\andy\OneDrive - Hogeschool Gent\Bureaublad\Groep4Fleetmanager\FleetmanagerBackend\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+C:\Users\andy\OneDrive - Hogeschool Gent\Bureaublad\Groep4Fleetmanager\FleetmanagerBackend\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\andy\OneDrive - Hogeschool Gent\Bureaublad\Groep4Fleetmanager\FleetmanagerBackend\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+C:\Users\andy\OneDrive - Hogeschool Gent\Bureaublad\Groep4Fleetmanager\FleetmanagerBackend\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+C:\Users\andy\OneDrive - Hogeschool Gent\Bureaublad\Groep4Fleetmanager\FleetmanagerBackend\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\andy\OneDrive - Hogeschool Gent\Bureaublad\Groep4Fleetmanager\FleetmanagerBackend\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+C:\Users\andy\OneDrive - Hogeschool Gent\Bureaublad\Groep4Fleetmanager\FleetmanagerBackend\bin\Debug\net8.0\Serilog.Sinks.File.dll

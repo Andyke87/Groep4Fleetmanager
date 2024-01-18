@@ -58,7 +58,8 @@ html {
 }
 
 .selected-row {
-  background-color: #0074d9; 
+  background-color: #0074d9;
+  color: #ffffff;
 }
 
 @media (min-width: 0px) {

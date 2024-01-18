@@ -7,8 +7,21 @@ namespace FleetManager.Logging
 
         public static void LogToFile(string logMessage)
         {
-            using var streamWriter = new StreamWriter(LogFilePath, true);
-            streamWriter.WriteLine(logMessage);
+            try
+            {
+                if (!File.Exists(LogFilePath))
+                {
+                    File.Create(LogFilePath).Dispose();
+                }
+                using var streamWriter = new StreamWriter(LogFilePath, true);
+                streamWriter.WriteLine(logMessage);
+            }
+            catch (Exception ex)
+            {
+                // Handel de fout af, log deze naar de console of een ander logkanaal.
+                Console.WriteLine($"Error logging to file: {ex.Message}");
+            }
         }
+
     }
 }
